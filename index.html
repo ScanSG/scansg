@@ -1,46 +1,784 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Website Under Construction</title>
-  
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HL77S9PP18"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-HL77S9PP18');
-  </script>
-
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      background-color: #0a0a23; /* dark blue-purple similar to previous */
-      color: #fff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      flex-direction: column;
-    }
-    h1 {
-      font-size: 3rem;
-      margin: 0 0 0.5em 0;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-    p {
-      font-size: 1.5rem;
-      opacity: 0.8;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Singapore Mega-Guide: Travel, Fines, Stats & More</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+<style>
+body{font-family:'Open Sans',sans-serif;background:#fafafa;color:#2e2e2e;}
+:root { --main:#e02332; --accent:#ffb400;}
+header{background:var(--main);color:#fff;padding:2rem 0 1.2rem;text-align:center;}
+header h1{font-family:'Montserrat',sans-serif;font-size:2.25rem;margin:0 0 0.3rem;}
+nav{background:#232323;position:sticky;top:0;z-index:100;} /* Added z-index for sticky nav */
+nav ul{display:flex;flex-wrap:wrap;justify-content:center;list-style:none;padding:0;margin:0;}
+nav li{margin:0.45rem 1rem;}
+nav a{color:#fff;text-decoration:none;font-weight:600;transition:color 0.2s;}
+nav a:hover{color:var(--accent);}
+main{max-width:1200px;margin:2.1rem auto 3.7rem;padding:0 0.5rem;} /* Increased max-width */
+section{background:#fff;border-radius:8px;box-shadow:0 2px 7px rgba(200,210,222,0.12);padding:1.15rem 1.35rem 1.1rem;margin-bottom:2rem; overflow-x: auto;} /* Allow horizontal scroll */
+h2{color:var(--main);font-family:'Montserrat',sans-serif;border-bottom:2px solid var(--accent);padding-bottom:0.18rem;margin-bottom:0.7rem;}
+h3{margin:1.04rem 0 0.42rem;color:#353535;font-size:1.09rem;}
+ul,dl,table{margin-bottom:1rem;}
+ul{padding-left:1.09rem;}
+ul li{margin-bottom:0.27rem;}
+table{border-collapse:collapse;width:100%;min-width: 600px;} /* Allow full width, set minimum */
+th,td{border:1px solid #ddd;padding:0.5rem 0.8rem;text-align:left;vertical-align:top;}
+th{background:var(--accent);color:#282828;}
+a{color:var(--red);text-decoration:none;}
+a:hover{ text-decoration:underline;}
+.sgloss4{display:grid;grid-template-columns:repeat(4,1fr);gap:0.33rem 0.8rem;max-width:980px;margin:0 auto 0.8rem auto;}
+.sgloss4 dt{font-weight:600;color:var(--main);margin-top:0.50rem;font-size:0.97em;}
+.sgloss4 dd{margin-left:0;margin-bottom:0.2rem;font-size:0.97em;line-height:1.28;}
+footer{background:#111;color:#bbb;text-align:center;padding:1.1rem 2rem 0.8rem;font-size:0.95rem;}
+.disclaimer{margin-top:0.7rem;color:#888;font-size:0.90rem;}
+/* Adjustments for wider tables and responsiveness */
+@media (max-width:768px){
+  nav ul{flex-direction:column;align-items:center;}nav li{margin:0.24rem 0;}
+  section{padding:0.88rem; overflow-x: auto;} /* Ensure scroll on small screens */
+  table { font-size: 0.9em; min-width: 500px; } /* Smaller text, smaller min width on very small screens */
+  table th, table td { padding: 0.4rem 0.5rem; } /* Reduce padding */
+  .sgloss4{grid-template-columns:1fr;}
+  main{padding:0 0.3rem; max-width: 100%;} /* Ensure main doesn't overflow */
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main { max-width: 1100px; } /* Intermediate width */
+  table { font-size: 0.95em; }
+}
+/* New styles for the two-column deals layout */
+.deals-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.deals-column {
+  flex: 1;
+  min-width: 300px; /* Ensures columns don't get too narrow */
+}
+.deals-column h3 {
+  color: var(--main);
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 0.3rem;
+  margin-top: 0;
+}
+</style>
 </head>
 <body>
-  <h1>Website Under Construction</h1>
-  <p>Preparing your experience...</p>
+<header>
+  <h1>Singapore Mega-Guide: Explore, Save, Know, and Stay Smart</h1>
+  <p style="margin-top:0.17rem;">All the newest travel highlights, hacks, rules, stats, fines, and a rich “Good to Know” section.</p>
+</header>
+<nav>
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <!-- <li><a href="#littleindia">Little India</a></li> --> <!-- Removed as content is merged -->
+    <li><a href="#deals">Where to Get Good Deals</a></li>
+    <li><a href="#free">Free Places</a></li>
+    <li><a href="#planner">3-5 Day Plan</a></li>
+    <li><a href="#penalties">Fines & Penalties</a></li>
+    <li><a href="#goodtoknow">Good to Know (Stats)</a></li>
+    <li><a href="#singlish">Singlish (Quick Glossary)</a></li>
+    <li><a href="#tips">Singapore Tips & Tricks</a></li>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="#history">History & Leaders</a></li>
+  </ul>
+</nav>
+<main>
+<section id="overview">
+  <h2>Overview: Must-See Neighborhoods & Venues</h2>
+  <table>
+    <tr><th>Popular Area</th><th>Hawkers</th><th>Malls</th><th>Parks / Nature</th><th>Key Activities</th></tr>
+    <tr>
+      <td>Central / Downtown</td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Lau Pa Sat (18 Raffles Quay)</li>
+          <li>Maxwell FC (1 Kadayanallur St)</li>
+          <li>Chinatown Complex (335 Smith St)</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Bugis Junction</li>
+          <li>Funan</li>
+          <li>Raffles City</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Fort Canning Park</li>
+          <li>Singapore River</li>
+          <li>Jubilee Bridge</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Visit historical landmarks like Raffles Hotel and the Merlion.</li>
+          <li>Explore cultural districts (Chinatown, Kampong Glam).</li>
+          <li>Attend performances at the Esplanade.</li>
+          <li>Enjoy Clarke Quay nightlife.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Little India</td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Tekka Centre (665 Buffalo Rd)</li>
+          <li>Mustafa Centre Food Court</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Mustafa Centre (24/7 shopping)</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Sri Veeramakaliamman Temple grounds</li>
+          <li>Little India Mural Trail</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Shop for spices, textiles, and souvenirs along Serangoon Road.</li>
+          <li>Experience vibrant festivals like Deepavali.</li>
+          <li>Explore street art on Dunlop St/Campbell Lane.</li>
+          <li>Bargain hunt at Mustafa Centre late night.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Sentosa / HarbourFront</td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Seah Im (2 Seah Im Road)</li>
+          <li>Food Courts on Sentosa</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>VivoCity</li>
+          <li>HarbourFront Centre</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Mount Faber</li>
+          <li>Sentosa Beaches</li>
+          <li>Boardwalk</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Enjoy theme parks (Universal Studios, S.E.A. Aquarium).</li>
+          <li>Relax on beaches.</li>
+          <li>Take the cable car for views.</li>
+          <li>Explore S.E.A. Aquarium or Adventure Cove.</li>
+          <li>Walk the Sentosa Boardwalk.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Orchard / Shopping Belt</td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Food Republic (ION, Wisma)</li>
+          <li>Lucky Plaza Food Court</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>ION</li>
+          <li>Takashimaya</li>
+          <li>Plaza Singapura</li>
+          <li>Paragon</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Emerald Hill</li>
+          <li>Istana Park</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Shop extensively along Orchard Road.</li>
+          <li>Visit iconic department stores like Takashimaya.</li>
+          <li>Explore Somerset area boutiques.</li>
+          <li>Dine at Orchard Road's diverse food scene.</li>
+          <li>Catch a movie at Cathay Cineplexes.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Marina Bay</td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Satay by the Bay (18 Marina Gardens Dr)</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Shoppes at MBS</li>
+          <li>Esplanade Mall</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Gardens by the Bay</li>
+          <li>Esplanade Outdoor</li>
+          <li>Helix Bridge</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Visit the iconic Marina Bay Sands (sky park, infinity pool, mall).</li>
+          <li>Explore Gardens by the Bay (Supertree Grove, Cloud Forest, Flower Dome).</li>
+          <li>Attend events at the Esplanade.</li>
+          <li>See the light show Spectra.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>North (Woodlands/Yishun)</td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Yishun 925 Market</li>
+          <li>Woodlands FC (10 Woodlands Sq)</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Causeway Point</li>
+          <li>Northpoint City</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Sungei Buloh Wetland</li>
+          <li>Lower Seletar Reservoir</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Visit Sungei Buloh Wetland Reserve for birdwatching.</li>
+          <li>Explore nature trails at Lower Seletar.</li>
+          <li>Shop at Causeway Point or Northpoint City.</li>
+          <li>Experience local hawker culture in residential areas.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>East (Tampines/Changi)</td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Bedok 85 (Blk 85 Bedok Nth)</li>
+          <li>Changi Village FC (2 Changi Village Rd)</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Tampines Mall</li>
+          <li>Bedok Mall</li>
+          <li>Changi City Point</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>East Coast Park</li>
+          <li>Pasir Ris Park</li>
+          <li>Jewel Changi</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Relax at East Coast Park (cycling, BBQs, beaches).</li>
+          <li>Explore Jewel Changi (Rain Vortex, Butterfly Garden).</li>
+          <li>Visit Changi Village for local food and ferry rides to Pulau Ubin.</li>
+          <li>Shop at Tampines Mall.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>West (Jurong/Bukit Batok)</td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Jurong West 505 Mkt</li>
+          <li>Boon Lay Place Mkt</li>
+          <li>Bukit Batok St 11</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Jem</li>
+          <li>Westgate</li>
+          <li>IMM</li>
+          <li>Jurong Point</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Jurong Lake Gardens</li>
+          <li>Bukit Batok Town Park</li>
+          <li>West Coast Park</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li>Visit Jurong Lake Gardens for nature and events.</li>
+          <li>Explore Bukit Batok Nature Park.</li>
+          <li>Shop at Westgate or Jem.</li>
+          <li>Enjoy family time at Jurong Bird Park (nearby).</li>
+          <li>Access manufacturing sales at IMM.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</section>
+<!-- The original Little India section has been removed -->
+<section id="deals">
+  <h2>Where to Get Good Deals</h2>
+  <div class="deals-container">
+    <div class="deals-column">
+      <h3>Offline Deals</h3>
+      <ul>
+        <li><strong>Mustafa Centre (Little India):</strong> 24/7 bargains on electronics, luggage, watches, snacks.</li>
+        <li><strong>Bugis Street Market:</strong> Bargain fashion, souvenirs, lunch deals (4 Bugis Street)</li>
+        <li><strong>IMM Outlet Mall (Jurong):</strong> Factory and branded outlet discounts for fashion, home</li>
+        <li><strong>Changi City Point (East):</strong> Outlet sports apparel, food coupons available</li>
+        <li><strong>Lucky Plaza (Orchard):</strong> Budget gadgets, remittance, cheap opticians</li>
+        <li><strong>Food specials:</strong> <a href="https://burpple.com" target="_blank">Burpple</a>, <a href="https://eatigo.com" target="_blank">Eatigo</a> apps for last-minute 1-for-1 meals and discounts</li>
+        <li><strong>RedMart, FairPrice, Giant:</strong> Supermarket chains with regular sales, best for snacks to go</li>
+        <li><strong>Singpromos:</strong> <a href="https://www.singpromos.com" target="_blank">www.singpromos.com</a> has updated sale flyers and 1-for-1 events</li>
+      </ul>
+    </div>
+    <div class="deals-column">
+      <h3>Online Deals</h3>
+      <ul>
+        <li><strong><a href="https://www.qoo10.sg" target="_blank">Qoo10.sg</a>:</strong> General marketplace, wide variety, frequent deals</li>
+        <li><strong><a href="https://www.lazada.sg" target="_blank">Lazada.sg</a>:</strong> Major platform, electronics, fashion, home</li>
+        <li><strong><a href="https://www.shopee.sg" target="_blank">Shopee.sg</a>:</strong> Popular local platform, wide range, games/coins</li>
+        <li><strong><a href="https://www.amazon.sg" target="_blank">Amazon.sg</a>:</strong> International items, Prime available</li>
+        <li><strong><a href="https://www.zalora.sg" target="_blank">Zalora.sg</a>:</strong> Fashion, shoes, accessories</li>
+        <li><strong><a href="https://www.courts.com.sg" target="_blank">Courts.com.sg</a>:</strong> Electronics, appliances, furniture</li>
+        <li><strong><a href="https://www.harveynorman.com.sg" target="_blank">Harvey Norman</a>:</strong> Electronics, IT, furniture, bedding</li>
+        <li><strong><a href="https://www.fairprice.com.sg" target="_blank">FairPrice Online</a>:</strong> Groceries, household essentials</li>
+        <li><strong><a href="https://www.giant.sg" target="_blank">Giant Online</a>:</strong> Groceries, household essentials</li>
+        <li><strong><a href="https://www.redmart.com" target="_blank">RedMart (LazMall)</a>:</strong> Premium groceries, organic, specialty items</li>
+        <li><strong><a href="https://www.honestbee.sg" target="_blank">Honestbee</a> / <a href="https://grab.com/sg/food/groceries/" target="_blank">GrabExpress Groceries</a>:</strong> On-demand grocery delivery from multiple retailers</li>
+        <li><strong><a href="https://www.sistic.com.sg" target="_blank">Sistic</a>:</strong> Pop-up events, cheap last-minute show or concert tickets</li>
+        <li><strong><a href="https://www.kkday.com" target="_blank">KKday</a>:</strong> Travel deals, tours, activities</li>
+        <li><strong><a href="https://www.agoda.com" target="_blank">Agoda</a>:</strong> Hotel deals</li>
+        <li><strong><a href="https://www.klook.com/en-SG/" target="_blank">Klook</a>:</strong> Attractions, tours, airport transfers</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section id="free">
+  <h2>Places You Can Visit for Free in Singapore (Lah!)</h2>
+  <ul>
+    <li><strong>All Parks:</strong> <a href="https://www.nparks.gov.sg/sbg" target="_blank">Singapore Botanic Gardens</a> (Open 24/7, but gates close at 12am), <a href="https://www.nparks.gov.sg" target="_blank">all NParks green sites</a> (Generally 5am-12am)</li>
+    <li><strong>Gardens by the Bay:</strong> Supertree Grove, outdoor gardens, Bayfront promenade (Open 24/7; Conservatories are paid)</li>
+    <li><strong>Sentosa Beaches:</strong> Palawan, Siloso, Tanjong Beach (no entry fee as of 2025) (Open 24/7)</li>
+    <li><strong>Light Shows:</strong>
+      <ul>
+        <li><a href="https://www.marinabaysands.com/attractions/spectra.html" target="_blank">Marina Bay Sands Spectra</a>: 8pm, 9pm, 10pm (Check website for seasonal changes)</li>
+        <li><a href="https://www.jewelchangiairport.com/en/attractions-and-services/jewel-rain-vortex.html" target="_blank">Jewel Changi Rain Vortex</a>: Every hour from 7:30pm to 10:30pm</li>
+      </ul>
+    </li>
+    <li><strong>Walking districts:</strong> Little India murals, Chinatown Street, Clarke Quay riverside promenades (Open 24/7 - Explore during the day or night for different vibes lah!)</li>
+    <li><strong>Hiking spots:</strong> MacRitchie Reservoir (5am-7:30pm), Southern Ridges (Check signage, generally dawn-dusk), Bukit Timah Nature Reserve (5am-7pm)</li>
+    <li><strong>Mall & food sampling:</strong> Free samples at basement food halls in ION Orchard, Takashimaya (During mall hours, usually 10am-10pm)</li>
+    <li><strong>Festivals & public events:</strong> National Day Fireworks (Aug 9th area), Chinese New Year in Chinatown, Deepavali lights in Little India (Dates vary yearly, check event websites)</li>
+    <li><strong>Public Art & Installations:</strong> Scattered across the city, including sculptures in Esplanade Park, Merlion Park (Open 24/7)</li>
+    <li><strong>Marina Barrage:</strong> Rooftop park and sustainability showcase (9am-9pm, Closed Wednesdays)</li>
+    <li><strong>Changi Chapel and Museum:</strong> Historical site dedicated to WWII history (10am-5pm, closed Mondays & Public Holidays)</li>
+    <li><strong>Punggol Waterway Park:</strong> Scenic waterfront park with boardwalks and playgrounds (5am-12am)</li>
+    <li><strong>Library Branches (NLB):</strong> Many beautifully designed branches like the one at Gardens by the Bay (Hours vary by branch, generally 9am-9pm. Check <a href="https://www.nlb.gov.sg" target="_blank">NLB website</a>)</li>
+    <li><strong>Coney Island Park:</strong> Rustic park with cycling trails and coastal views (7am-7pm)</li>
+    <li><strong>Pasir Ris Park:</strong> Beachfront park with a laid-back kampung feel (Open 24/7)</li>
+    <li><strong>Kampung Admiralty:</strong> Unique community complex with sky gardens (Open to public spaces during reasonable hours)</li>
+    <li><strong>Free Walking Tours:</strong> Check out free tours (tip-based) offered by <a href="https://www.myactivesg.com/facilities" target="_blank">ActiveSG</a> or community groups for different districts (Schedules vary, book in advance)</li>
+    <li><strong>Observation Decks:</strong> Some shopping malls (like ION Orchard) have free public observation areas (Accessible during mall hours)</li>
+    <li><strong>National Gallery Singapore Courtyard:</strong> Parts of the outdoor courtyard area (Check gallery hours, usually 10am-7pm)</li>
+    <li><strong>Stroll the HDB Heartlands:</strong> Explore the unique architecture and community spaces in estates like Punggol, Tengah, or mature estates like Queenstown (Anytime, but respectful visiting please!)</li>
+    <li><strong>Watch the Sunset... Anywhere:</strong> Find a nice spot at East Coast Park, West Coast Park, Labrador Nature Reserve, or even a rooftop bar (some allow free entry during non-peak hours) - Just don't play play, respect the space!</li>
+  </ul>
+  <p><em><strong>Singlish Tip:</strong></em> Many of these places are <em>steady</em> (reliable) for a free outing. Just remember, even if it's free, don't be <em>sian</em> (lazy) about cleaning up after yourself or following rules, okay? Keep Singapore <em>shiok</em> (great) for everyone!</p>
+</section>
+<section id="planner">
+  <h2>3-5 Day Singapore Trip Plan by Area (Detailed)</h2>
+  <p style="font-style: italic; color: #e02332;">Pro Tip: Download the <a href="https://www.transitlink.com.sg/eservice/eguide/index.jsp" target="_blank">TransitLink eGuide</a> app for real-time MRT/bus info and the <a href="https://www.mytransport.sg/content/mytransport/home.html" target="_blank">LTA app</a> for traffic conditions. Use <a href="https://www.ezlink.com.sg" target="_blank">EZ-Link/SimplyGo</a> for seamless public transport payments.</p>
+  <table>
+    <tr>
+      <th>Day</th>
+      <th>Area/Focus</th>
+      <th>Detailed Itinerary (with Approx. Times)</th>
+      <th>Tips & Tricks</th>
+    </tr>
+    <tr>
+      <td rowspan="2">1</td>
+      <td rowspan="2">Central / Downtown Core</td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li><strong>Morning (9:00 AM - 12:00 PM):</strong> Start at <em>Raffles Place MRT</em>. Walk to <strong>Raffles Hotel</strong> (15 min) for photos. Head to <strong>Lau Pa Sat</strong> (5 min walk) for breakfast/lunch. Explore <strong>Chinatown</strong> (Maxwell FC, Buddha Tooth Relic Temple).</li>
+          <li><strong>Afternoon (12:30 PM - 4:00 PM):strong> Take MRT to <em>Dhoby Ghaut</em> (2 stops). Visit <strong>Haji Lane</strong> & <strong>Bugis Street</strong> (1.5 hrs). Lunch at <strong>Far East Square</strong> or <strong>Chinatown Complex</strong>. Walk to <strong>Clarke Quay</strong> (30 min) for riverside views.</li>
+          <li><strong>Evening (4:30 PM - 7:30 PM):</strong> Explore <strong>Merlion Park</strong> (15 min). Walk to <strong>Esplanade</strong> (15 min) for architecture. Dinner at <strong>Clarke Quay</strong> or <strong>Boat Quay</strong> (allow 1.5-2 hrs including meal).</li>
+        </ul>
+      </td>
+      <td rowspan="2">
+        <ul style="margin:0; padding-left:1rem;">
+          <li><strong>Morning:</strong> Avoid Raffles Hotel area during peak office hours if you want fewer crowds for photos.</li>
+          <li><strong>Afternoon:</strong> Haji Lane can get crowded; visit Bugis Street Market early. Far East Square has great food courts.</li>
+          <li><strong>Evening:</strong> Clarke Quay lights up beautifully after 6 PM. Many restaurants here offer great views but can be pricier.</li>
+          <li><strong>General:</strong> Wear comfortable shoes, this area involves a lot of walking. Keep an EZ-Link card topped up.</li>
+          <li><strong>Timing:</strong> Total estimated time: ~9.5 hrs (excluding travel time between distant points).</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li><strong>Alternative/Extension:</strong> If time permits or interests align, visit the <strong>National Gallery Singapore</strong> (near City Hall MRT) or the <strong>Asian Civilisations Museum</strong> (near Raffles Place MRT) in the morning instead of/after Raffles Hotel.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2">2</td>
+      <td rowspan="2">Marina Bay / Gardens by the Bay / Sentosa</td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li><strong>Morning (9:00 AM - 12:30 PM):</strong> Start at <em>Bayfront MRT</em>. Explore <strong>Gardens by the Bay</strong> (Supertree Grove, Cloud Forest, Flower Dome) - Allow 2.5-3 hrs. Walk along the <strong>Promenade</strong> for Marina Bay views.</li>
+          <li><strong>Afternoon (1:00 PM - 5:00 PM):</strong> Lunch near Marina Bay Sands. Optional: Visit <strong>ArtScience Museum</strong> or <strong>Sands SkyPark</strong> (book tickets online). Head to <strong>Resorts World Sentosa</strong> (take MRT to HarbourFront, then Sentosa Express or cable car).</li>
+          <li><strong>Evening (5:30 PM - 10:00 PM):</strong> Explore Sentosa: Visit <strong>S.E.A. Aquarium</strong> (allow 2 hrs) or <strong>Universal Studios</strong> (allow 4-5 hrs, best for theme park fans). Dinner on Sentosa. Watch the <strong>Spectra Light Show</strong> at Marina Bay Sands (check timing, usually 8/9/10 PM) or <strong>Rain Vortex Show</strong> at Jewel (hourly from 7:30 PM).</li>
+        </ul>
+      </td>
+      <td rowspan="2">
+        <ul style="margin:0; padding-left:1rem;">
+          <li><strong>Morning:</strong> Gardens by the Bay is extremely popular; arrive early to avoid crowds, especially for the Cloud Forest. Entry to outdoor areas is free, but conservatories require tickets.</li>
+          <li><strong>Afternoon:</strong> Sentosa Express/Cable Car can have queues. Pre-book MBS attractions. Universal Studios is huge; prioritize rides if time is limited.</li>
+          <li><strong>Evening:</strong> Spectra and Rain Vortex shows are free but popular viewing spots fill up quickly. Plan your dinner location near the show venue. Sentosa has many dining options, but prices can be higher.</li>
+          <li><strong>General:</strong> This is a packed day. Consider splitting Sentosa to Day 3 if you prefer a slower pace. Wear sunscreen and a hat for Gardens by the Bay.</li>
+          <li><strong>Timing:</strong> Total estimated time: ~11.5 hrs (excluding travel time, assumes prioritizing either S.E.A. or Universal Studios).</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li><strong>Alternative:</strong> Skip Universal Studios and focus on S.E.A. Aquarium + Adventure Cove + beach time + Sentosa Boardwalk for a more relaxed afternoon/evening.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2">3</td>
+      <td rowspan="2">Cultural Quarters (Little India / Kampong Glam) & East Coast</td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li><strong>Morning (9:30 AM - 12:30 PM):</strong> Start at <em>Little India MRT</em>. Explore <strong>Tekka Centre</strong> for breakfast/snacks (1 hr). Wander <strong>Serangoon Road</strong> for shops/murals (1 hr). Visit <strong>Sri Veeramakaliamman Temple</strong> (30 min).</li>
+          <li><strong>Afternoon (1:00 PM - 4:00 PM):</strong> Lunch at Little India. Take MRT to <em>Farrer Park</em>, walk to <strong>Kampong Glam</strong>. Explore <strong>Sultan Mosque</strong> (30 min) and <strong>Haji Lane/Bussorah Street</strong> (1.5 hrs).</li>
+          <li><strong>Evening (4:30 PM - 8:00 PM):</strong> Head to <strong>East Coast Park</strong> (via MRT to Eunos/Paya Lebar then bus, or take a Grab). Rent bikes, rollerblades, or enjoy the beach. Dinner at <strong>East Coast Lagoon Food Centre (ECLFC)</strong> or one of the nearby hawker centers/malls. End the day with a stroll or night cycling.</li>
+        </ul>
+      </td>
+      <td rowspan="2">
+        <ul style="margin:0; padding-left:1rem;">
+          <li><strong>Morning:</strong> Tekka Centre is busiest around lunchtime. Go early for a wider selection and less crowd. Serangoon Road shops might close for lunch (1-2 PM), so plan your visit accordingly.</li>
+          <li><strong>Afternoon:</strong> Kampong Glam can get hot; plan indoor activities (shopping, cafes) during peak heat. Haji Lane/Bussorah Street are great for souvenirs and street food.</li>
+          <li><strong>Evening:</strong> East Coast Park is huge. ECLFC is famous but can be crowded and noisy. Consider <strong>Amoy Quee Food Centre</strong> (near Katong) as an alternative. Sunset views are great from the western end of the park.</li>
+          <li><strong>General:</strong> This day combines culture and relaxation. Public transport to East Coast can take 45min-1hr. Consider Grab for convenience, especially with luggage.</li>
+          <li><strong>Timing:</strong> Total estimated time: ~9.5 hrs (excluding travel time to/from East Coast).</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li><strong>Alternative:</strong> If you prefer shopping, spend the afternoon in <strong>Orchard Road</strong> (ION, Takashimaya, Paragon) instead of Kampong Glam, and do Kampong Glam on Day 4 morning.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2">4</td>
+      <td rowspan="2">Nature & Local Life (Optional)</td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li><strong>Morning (8:30 AM - 12:00 PM):</strong> Early start to <strong>Sungei Buloh Wetland Reserve</strong> (accessible via MRT + short bus ride/Grab). Allow 2.5-3 hrs for birdwatching and nature walks. It's quieter and cooler in the morning.</li>
+          <li><strong>Afternoon (12:30 PM - 4:00 PM):</strong> Lunch near Sungei Buloh or in Woodlands. Explore <strong>Woodlands Town Centre</strong> or <strong>Admiralty Park</strong> (short walk). Visit a local <strong>hawker centre</strong> like Woodlands Food Centre for an authentic experience.</li>
+          <li><strong>Evening (4:30 PM - 7:30 PM):</strong> Return to the city or stay in the North. Optional: Visit <strong>Mandai</strong> area (Singapore Zoo, Night Safari - requires advance booking and significant time).</li>
+        </ul>
+      </td>
+      <td rowspan="2">
+        <ul style="margin:0; padding-left:1rem;">
+          <li><strong>Morning:</strong> Sungei Buloh is a haven for nature lovers but requires a bit of travel. It's seasonal for migratory birds. Bring binoculars and insect repellent. Entry is free.</li>
+          <li><strong>Afternoon:</strong> Woodlands offers a glimpse into everyday Singaporean life. Hawker centres here are more local and often cheaper than tourist areas.</li>
+          <li><strong>Evening:</strong> Mandai is a big commitment for half a day. If skipping, use this time for last-minute shopping or visiting a missed spot from previous days.</li>
+          <li><strong>General:</strong> This day is about experiencing local life and nature. It's less touristy and provides a good balance. Travel time to the North is longer.</li>
+          <li><strong>Timing:</strong> Total estimated time: ~9.5 hrs (excluding travel time, assumes skipping Mandai or doing a quick visit).</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li><strong>Alternative:</strong> Replace Sungei Buloh/North with <strong>Jurong Lake Gardens</strong> (West) or <strong>Southern Ridges</strong> walk (connects HortPark, Kent Ridge Park, Telok Blangah Hill Park). Both are closer to the city centre but still offer great greenery.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Flexible / Catch-up / Departure</td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li><strong>Morning:</strong> Use this day to revisit a favorite spot, explore a missed museum (like Peranakan Museum), or shop for last-minute souvenirs.</li>
+          <li><strong>Afternoon:</strong> Relax at a nearby park (like Fort Canning if in Central area) or indulge in a spa treatment.</li>
+          <li><strong>Evening:</strong> Depending on your departure time, enjoy a final dinner at a hawker centre or a nice restaurant. Ensure you have all necessary documents and check-out from accommodation.</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="margin:0; padding-left:1rem;">
+          <li><strong>General:</strong> This day is intentionally left flexible. It's perfect for catching up on anything missed or simply relaxing before departure. Check your flight/bus/train time and plan accordingly for return transport from your hotel.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+  <ul>
+    <li><strong>Overall Planning Tips:</strong></li>
+    <ul style="margin:0; padding-left:1rem;">
+      <li><strong>MRT Travel Time:</strong> Allow 10–30 minutes between major clusters, longer for cross-island trips (e.g., North to East). Avoid peak hours (7:30–9:30 AM, 5:30–7:30 PM) if possible.</li>
+      <li><strong>Meals:</strong> Factor in 1–2 hours per main meal, especially at popular hawker centres or malls during lunch/dinner rushes.</li>
+      <li><strong>Attraction Tickets:</strong> Book major paid attractions (Gardens Conservatories, Universal Studios, S.E.A. Aquarium, MBS SkyPark) online in advance to save time and potentially money.</li>
+      <li><strong>Weather:</strong> Be prepared for rain and heat. Carry an umbrella/small raincoat and stay hydrated. Indoor alternatives are good backup plans.</li>
+      <li><strong>Chope-ing Seats:</strong> In hawker centres, placing a tissue packet or small item can save a table while you queue for food (but be reasonable about time).</li>
+      <li><strong>Carry Essentials:</strong> Water bottle (refill stations available), comfortable walking shoes, portable charger, and a small umbrella.</li>
+      <li><strong>Stay Connected:</strong> Purchase a local SIM card or portable WiFi for maps, Grab, and communication.</li>
+    </ul>
+  </ul>
+</section>
+<section id="penalties">
+  <h2>Fines & Penalties: Updated for 2025</h2>
+  <table>
+    <tr><th>Offense</th><th>Fine / Penalty</th></tr>
+    <tr><td>Chewing gum import/sale</td><td>Up to SGD 1,000 (repeat: up to $2,000)</td></tr>
+    <tr><td>Littering (minor)</td><td>SGD 300 (1st), up to $1,000 (repeat/offensive litter)</td></tr>
+    <tr><td>Jaywalking</td><td>SGD 50 spot fine</td></tr>
+    <tr><td>Smoking in prohibited places</td><td>SGD 200-1,000 depending on area</td></tr>
+    <tr><td>Eating/drinking on MRT/bus</td><td>SGD 500</td></tr>
+    <tr><td>Feeding wild birds/wildlife</td><td>SGD 500</td></tr>
+    <tr><td>Not flushing public toilets</td><td>SGD 150</td></tr>
+    <tr><td>Spitting in public</td><td>SGD 1,000</td></tr>
+    <tr><td>Alcohol in public (restricted zones 10:30pm–7am)</td><td>Up to SGD 1,000 (repeat: jail possible)</td></tr>
+    <tr><td>Drug trafficking</td><td>Mandatory death penalty</td></tr>
+    <tr><td>Vandalism</td><td>Up to 8 strokes of cane and/or jail, plus fines</td></tr>
+    <tr><td>Unauthorized drone use</td><td>Up to SGD 20,000</td></tr>
+    <tr><td>Failure to return food tray in hawker centre</td><td>Up to SGD 300</td></tr>
+    <tr><td>Scams / online fraud</td><td>Hefty fines, up to 10 years’ jail</td></tr>
+  </table>
+  <ul>
+    <li>All fines are enforced stringently—do not test the rules!</li>
+    <li>When in doubt, ask staff or look for official signposts before acting.</li>
+    <li>For emergencies: Police 999, Ambulance/Fire 995</li>
+  </ul>
+</section>
+<section id="goodtoknow">
+  <h2>Good to Know: Singapore Statistics (2025)</h2>
+  <table>
+    <tr><th>Item</th><th>Detail</th></tr>
+    <tr><td>Population</td><td>~5.9 million</td></tr>
+    <tr><td>Official Languages</td><td>English, Mandarin, Malay, Tamil</td></tr>
+    <tr><td>Median Monthly Household Income</td><td>SGD 10,099</td></tr>
+    <tr><td>Home Ownership Rate</td><td>88%</td></tr>
+    <tr><td>MRT Network Length</td><td>262 km (6 lines, extensive new downtown/Jurong lines)</td></tr>
+    <tr><td>Top 5 Visited Attractions 2024</td>
+      <td>Gardens by the Bay, Sentosa, Marina Bay Sands, Jewel Changi, Singapore Zoo</td>
+    </tr>
+    <tr><td>Average Summer Temp</td><td>31°C (day), 27°C (night)</td></tr>
+    <tr><td>Cleanliness World Ranking</td><td>Top 5 globally (World Economic Forum)</td></tr>
+    <tr><td>Crime Rate</td><td>Among lowest worldwide</td></tr>
+    <tr><td>Main Races</td><td>Chinese 74%, Malay 13%, Indian 9%, Others 4%</td></tr>
+    <tr><td>Currency</td><td>SGD (Singapore Dollar)</td></tr>
+    <tr><td>General Election Cycle</td><td>Every 5 years (last: May 2025, next: by Nov 2029)</td></tr>
+    <!-- New Interesting Stats -->
+    <tr><td>Number of Mobile Subscriptions</td><td>~6.2 million (More than population!)</td></tr>
+    <tr><td>Avg. Hours Worked Per Week (Full-time employed residents)</td><td>44.5 hours</td></tr>
+    <tr><td>Life Expectancy at Birth</td><td>~83.6 years (One of the highest globally)</td></tr>
+    <tr><td>Percentage of Land Area Covered by Greenery</td><td>~47% (Including parks, nature reserves, roadside greenery)</td></tr>
+    <tr><td>Total Registered Cars (Including motorcycles, buses, goods vehicles)</td><td>~970,000 (As of end 2024)</td></tr>
+    <tr><td>Water Self-Sufficiency</td><td>~90% (Goal is 100% by 2060)</td></tr>
+    <tr><td>Number of Hawker Centres</td><td>~110</td></tr>
+    <tr><td>Avg. Time for Food Delivery (Metro Areas)</td><td>Under 20 minutes (Often much faster!)</td></tr>
+    <tr><td>Internet Penetration Rate</td><td>~95% (Households with internet access)</td></tr>
+    <tr><td>Recycling Rate (Overall)</td><td>~20% (Ongoing efforts to increase this)</td></tr>
+    <tr><td>Number of Shopping Malls</td><td>~300+ (Yes, really!)</td></tr>
+    <tr><td>Public Transport Modal Share</td><td>~67% (For all journeys, including walking/cycling)</td></tr>
+    <tr><td>Avg. Rainfall Per Year</td><td>~2,340 mm (It does rain a lot!)</td></tr>
+    <tr><td>Number of Food & Beverage Establishments</td><td>Est. ~18,000+</td></tr>
+    <tr><td>Singapore's Global Competitiveness Rank</td><td>Usually Top 5 (IMD World Competitiveness Ranking)</td></tr>
+  </table>
+</section>
+<section id="singlish">
+  <h2>Singlish (Quick Glossary)</h2>
+  <dl class="sgloss4">
+    <dt>Lah</dt> <dd>Emphasis</dd>
+    <dt>Lor</dt> <dd>Resignation</dd>
+    <dt>Leh</dt> <dd>Doubt</dd>
+    <dt>Meh</dt> <dd>Surprise</dd>
+    <dt>Sian</dt> <dd>Bored/fed up</dd>
+    <dt>Kiasu</dt> <dd>Scared to lose out</dd>
+    <dt>Kiasi</dt> <dd>Scared to get in trouble</dd>
+    <dt>Bo Jio</dt> <dd>Didn't invite!</dd>
+    <dt>Steady</dt> <dd>Cool/reliable</dd>
+    <dt>Atas</dt> <dd>High class/snobby</dd>
+    <dt>Chope</dt> <dd>Reserve seat</dd>
+    <dt>Ang Moh</dt> <dd>Caucasian</dd>
+    <dt>Blur Like Sotong</dt><dd>Forgetful/clueless</dd>
+    <dt>Catch No Ball</dt><dd>Don't get it</dd>
+    <dt>Shiok</dt><dd>Amazing taste/comfy</dd>
+    <dt>Paiseh</dt><dd>Embarrassed</dd>
+    <dt>Tahan</dt><dd>Bare/endure</dd>
+    <dt>Lobang</dt><dd>Tip/deal</dd>
+    <dt>Gabra</dt><dd>Disorganised</dd>
+    <dt>Wah Lau</dt><dd>Surprise/frustration</dd>
+    <dt>Don’t play play</dt><dd>This is serious!</dd>
+    <dt>Tapao</dt><dd>Takeaway food</dd>
+    <dt>Eat snake</dt><dd>Slack off</dd>
+    <dt>Saboh</dt><dd>Sabotage/accuse</dd>
+    <dt>Confirm Plus Chop</dt><dd>Absolutely certain!</dd>
+    <dt>Jialat</dt><dd>In trouble/terrible</dd>
+    <dt>Makan</dt><dd>Eat/food time</dd>
+    <dt>Ah Beng</dt><dd>Rough young man</dd>
+    <dt>Huh</dt><dd>What?/I don't get it</dd>
+    <dt>Cockanaden</dt><dd>Messed up, mistake</dd>
+    <dt>Donch</dt><dd>Don't (slang)</dd>
+    <dt>Onz</dt><dd>Ready/keen</dd>
+  </dl>
+</section>
+<section id="tips">
+  <h2>Singapore Tips & Tricks (Expanded!)</h2>
+  <ul>
+    <li>Travel cashless: Use <a href="https://www.ezlink.com.sg" target="_blank">EZ-Link/SimplyGo</a> for all buses/MRT. Credit/debit tap available on all major lines.</li>
+    <li>Good food is everywhere but the best is at local hawkers; peak lunch (12-2pm) gets crowded, go early/late for easier finds.</li>
+    <li>Weekday evenings at public parks (<a href="https://www.nparks.gov.sg" target="_blank">NParks list</a>) are relaxed, and often have buskers and fitness classes—public and free.</li>
+    <li>Download apps: <a href="https://app.transitlink.com.sg/eservice/eguide/index.jsp" target="_blank">TransitLink eGuide</a> for bus/MRT, <a href="https://grab.com/sg" target="_blank">Grab</a> for e-hailing, <a href="https://www.sgsecure.sg" target="_blank">SGSecure</a> for safe travel alerts.</li>
+    <li>Burpple & Eatigo (see <a href="#deals">deals section</a>) for flash food discounts. Also, supermarkets mark down bakery/sushi after 7pm.</li>
+    <li>Check <a href="https://www.sistic.com.sg" target="_blank">Sistic</a> for pop-up events, cheap last-minute show or concert tickets.</li>
+    <li>Use “chope” etiquette: a tissue pack, umbrella or small card saves your table while you pick up food.</li>
+    <li>Keep receipts: They sometimes double as discount coupons or GST cash-back for tourists at counters in malls!</li>
+    <li>Carry a water bottle (refill at public water points, good for the planet & wallet).</li>
+    <li>Free charging stations in many malls/fast food outlets; look for the charging symbol or ask counter staff.</li>
+    <li>Flash your student/ISIC card—many attractions offer unseen international/youth rates on request.</li>
+    <li>Use “Wireless@SGx” network for public WiFi—register free with your phone number at any hotspot.</li>
+    <li>Locals love supermarkets like NTUC FairPrice, Sheng Siong, Giant—best snack/souvenir deals on kaya, seaweed, “kopi” blends.</li>
+    <li>When in Little India, Chinatown, Geylang—ALWAYS ask the price first in small eateries and wet markets if items are unlabelled.</li>
+    <li>Ask about festival markets: Deepavali street lights (Serangoon), Ramadan bazaars (Geylang/Kampong Glam), CNY in Chinatown.</li>
+    <li>Don't chew gum/litter/smoke outside zones, don't try to argue if caught—just accept and pay the fine!</li>
+  </ul>
+</section>
+<section id="resources">
+  <h2>Useful Government & Travel Resource Links</h2>
+  <ul>
+    <li><a href="https://www.visitsingapore.com" target="_blank">VisitSingapore (Tourist Board)</a></li>
+    <li><a href="https://www.transitlink.com.sg" target="_blank">TransitLink MRT/Bus Info</a></li>
+    <li><a href="https://www.nparks.gov.sg" target="_blank">Singapore Parks (Events/Maps)</a></li>
+    <li><a href="https://www.klook.com/en-SG/" target="_blank">Attraction Tickets</a></li>
+    <li><a href="https://www.hdb.gov.sg" target="_blank">Public Housing (HDB)</a></li>
+    <li><a href="https://www.ica.gov.sg" target="_blank">Immigration & Border Info</a></li>
+    <li><a href="https://www.sentosa.com.sg" target="_blank">Sentosa Island Official</a></li>
+    <li><a href="https://www.mom.gov.sg" target="_blank">Ministry of Manpower (work matters)</a></li>
+  </ul>
+</section>
+<section id="history">
+  <h2>Singapore History & Leadership (In-depth)</h2>
+  <h3>Name and Early Days</h3>
+  <p>
+    <strong>Singapura</strong> means "Lion City" (from Sanskrit “Simha” + “pura”), named by <b>Sang Nila Utama</b> who, according to the Malay Annals, saw a "lion" on the island in the 13th century. The area was a fishing outpost known as <b>Temasek</b> even earlier.
+  </p>
+  <h3>British Rule to Independence</h3>
+  <ul>
+    <li>1819: Founded as a British trading post by <b>Sir Stamford Raffles</b></li>
+    <li>1942–45: Japanese occupation during WWII</li>
+    <li>1959: Full internal self-government; <b>Lee Kuan Yew</b> becomes first Prime Minister</li>
+    <li>1963: Merger with Malaysia</li>
+    <li>1965: Full independence after separation from Malaysia</li>
+  </ul>
+  <h3>Lee Kuan Yew (LKY) - The Founding Father</h3>
+  <ul>
+    <li>PM from 1959 to 1990 (longest-serving in world history at the time)</li>
+    <li>Oversaw Singapore’s transformation from port city to “first-world” nation: housing, education, public health, and relentless anti-corruption drive</li>
+    <li>Established strict but efficient rule of law (including the “no gum, no litter” regime), zero tolerance for corruption, bilingual education policy, and massive public housing program.</li>
+    <li>Remained influential (as “Minister Mentor”) until his death in 2015; remains a revered but sometimes controversial figure for both hard discipline and rapid economic growth.</li>
+  </ul>
+  <h3>Leadership Timeline/Parties</h3>
+  <table>
+    <tr><th>Role</th><th>Name</th><th>Term/Notes</th></tr>
+    <tr><td>Prime Minister</td><td>Lee Kuan Yew</td><td>1959–1990, founding PM; PAP</td></tr>
+    <tr><td>Prime Minister</td><td>Goh Chok Tong</td><td>1990–2004; PAP</td></tr>
+    <tr><td>Prime Minister</td><td>Lee Hsien Loong</td><td>2004–2024; PAP</td></tr> <!-- Updated -->
+    <tr><td>Prime Minister</td><td>Lawrence Wong</td><td>2024–present; PAP</td></tr> <!-- Updated -->
+    <tr><td>President</td><td>Yusof Ishak</td><td>1965–1970</td></tr>
+    <tr><td>President</td><td>Benjamin Sheares</td><td>1971–1981</td></tr>
+    <tr><td>President</td><td>Wee Kim Wee</td><td>1985–1993</td></tr>
+    <tr><td>President</td><td>Ong Teng Cheong</td><td>1993–1999</td></tr>
+    <tr><td>President</td><td>S. R. Nathan</td><td>1999–2011</td></tr>
+    <tr><td>President</td><td>Tony Tan</td><td>2011–2017</td></tr>
+    <tr><td>President</td><td>Halimah Yacob</td><td>2017–2023</td></tr>
+    <tr><td>President</td><td>Tharman Shanmugaratnam</td><td>2023–present</td></tr> <!-- Updated -->
+  </table>
+  <h3>Political Parties & Elections</h3>
+  <table>
+    <tr>
+      <th>Party</th>
+      <th>Role</th>
+      <th>Description/Highlights</th>
+    </tr>
+    <tr>
+      <td>PAP (People's Action Party)</td>
+      <td>Ruling since 1959</td>
+      <td>Founded by LKY; majoritarian, pro-investment, dominant in Parliament (2025: 88 of 94 seats)</td> <!-- Updated -->
+    </tr>
+    <tr>
+      <td>WP (Workers' Party)</td>
+      <td>Largest opposition</td>
+      <td>Progressive; won 6 seats in the May 2025 election</td> <!-- Updated -->
+    </tr>
+    <tr>
+      <td>PSP (Progress Singapore Party)</td>
+      <td>Opposition</td>
+      <td>Founded by former PAP MP Tan Cheng Bock; lost parliamentary representation in May 2025</td> <!-- Updated -->
+    </tr>
+    <tr>
+      <td>SDP, NSP, SPP, RP, others</td>
+      <td>Minor opposition</td>
+      <td>Contested in previous GEs; limited seat success</td>
+    </tr>
+  </table>
+  <h3>May 2025 General Election Results</h3> <!-- New Section -->
+  <ul>
+    <li><b>Date:</b> Held in May 2025.</li>
+    <li><b>Context:</b> Determined the composition of the 14th Parliament of Singapore.</li>
+    <li><b>Key Changes:</b> Lawrence Wong led the PAP as its Secretary-General and Prime Ministerial candidate, following Lee Hsien Loong's stepping down.</li>
+    <li><b>Results:</b>
+      <ul>
+        <li><b>PAP:</b> Won 88 out of 94 seats, maintaining a strong majority.</li>
+        <li><b>WP:</b> Retained 6 seats.</li>
+        <li><b>PSP:</b> Lost its parliamentary representation.</li>
+        <li><b>Others:</b> No seats won.</li>
+      </ul>
+    </li>
+    <li><b>Issues:</b> Campaign themes focused on economic resilience post-pandemic/inflation, cost of living, housing affordability, healthcare for an aging population, and social policies.</li>
+    <li><b>Electoral Boundaries:</b> New electoral boundaries gazetted in 2023 were used.</li>
+    <li><b>Outcome:</b> The PAP retained power with a slightly increased seat count compared to 2020, while the WP lost ground, particularly in the Aljunied GRC.</li>
+  </ul>
+  <ul>
+    <li><b>Previous Election (2020):</b> PAP won 83 of 93 seats, WP won 10 seats, PSP won 2 NCMP seats.</li>
+    <li>Presidential Election: Tharman Shanmugaratnam elected in 2023 as Singapore's ninth President.</li>
+    <li>Next General Election must be called by November 2029.</li> <!-- Updated -->
+  </ul>
+</section>
+</main>
+<footer>
+  <p>© 2025 Singapore Mega-Guide — All Rights Reserved</p>
+  <div class="disclaimer"><strong>Disclaimer:</strong> Content is for general info. Users must verify addresses, opening hours, law changes, and election/fine updates before action. The publisher bears no liability for discrepancies.</div>
+</footer>
 </body>
 </html>
