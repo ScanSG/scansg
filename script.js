@@ -1,7 +1,7 @@
 // Redirect after loading animation completes
 setTimeout(function() {
     // Replace with your actual website URL when ready
-    window.location.href = "https://example.com"; // CHANGE THIS
+    window.location.href = "https://scansg.com"; // CHANGE THIS
 }, 3000);
 
 // Update progress bar
