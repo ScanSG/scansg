@@ -1,67 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Singapore Mega-Guide: Travel, Fines, Stats & More</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
-<style>
-body{font-family:'Open Sans',sans-serif;background:#fafafa;color:#2e2e2e;}
-:root { --main:#e02332; --accent:#ffb400;}
-header{background:var(--main);color:#fff;padding:2rem 0 1.2rem;text-align:center;}
-header h1{font-family:'Montserrat',sans-serif;font-size:2.25rem;margin:0 0 0.3rem;}
-nav{background:#232323;position:sticky;top:0;z-index:100;} /* Added z-index for sticky nav */
-nav ul{display:flex;flex-wrap:wrap;justify-content:center;list-style:none;padding:0;margin:0;}
-nav li{margin:0.45rem 1rem;}
-nav a{color:#fff;text-decoration:none;font-weight:600;transition:color 0.2s;}
-nav a:hover{color:var(--accent);}
-main{max-width:1200px;margin:2.1rem auto 3.7rem;padding:0 0.5rem;} /* Increased max-width */
-section{background:#fff;border-radius:8px;box-shadow:0 2px 7px rgba(200,210,222,0.12);padding:1.15rem 1.35rem 1.1rem;margin-bottom:2rem; overflow-x: auto;} /* Allow horizontal scroll */
-h2{color:var(--main);font-family:'Montserrat',sans-serif;border-bottom:2px solid var(--accent);padding-bottom:0.18rem;margin-bottom:0.7rem;}
-h3{margin:1.04rem 0 0.42rem;color:#353535;font-size:1.09rem;}
-ul,dl,table{margin-bottom:1rem;}
-ul{padding-left:1.09rem;}
-ul li{margin-bottom:0.27rem;}
-table{border-collapse:collapse;width:100%;min-width: 600px;} /* Allow full width, set minimum */
-th,td{border:1px solid #ddd;padding:0.5rem 0.8rem;text-align:left;vertical-align:top;}
-th{background:var(--accent);color:#282828;}
-a{color:var(--red);text-decoration:none;}
-a:hover{ text-decoration:underline;}
-.sgloss4{display:grid;grid-template-columns:repeat(4,1fr);gap:0.33rem 0.8rem;max-width:980px;margin:0 auto 0.8rem auto;}
-.sgloss4 dt{font-weight:600;color:var(--main);margin-top:0.50rem;font-size:0.97em;}
-.sgloss4 dd{margin-left:0;margin-bottom:0.2rem;font-size:0.97em;line-height:1.28;}
-footer{background:#111;color:#bbb;text-align:center;padding:1.1rem 2rem 0.8rem;font-size:0.95rem;}
-.disclaimer{margin-top:0.7rem;color:#888;font-size:0.90rem;}
-/* Adjustments for wider tables and responsiveness */
-@media (max-width:768px){
-  nav ul{flex-direction:column;align-items:center;}nav li{margin:0.24rem 0;}
-  section{padding:0.88rem; overflow-x: auto;} /* Ensure scroll on small screens */
-  table { font-size: 0.9em; min-width: 500px; } /* Smaller text, smaller min width on very small screens */
-  table th, table td { padding: 0.4rem 0.5rem; } /* Reduce padding */
-  .sgloss4{grid-template-columns:1fr;}
-  main{padding:0 0.3rem; max-width: 100%;} /* Ensure main doesn't overflow */
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  main { max-width: 1100px; } /* Intermediate width */
-  table { font-size: 0.95em; }
-}
-/* New styles for the two-column deals layout */
-.deals-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-.deals-column {
-  flex: 1;
-  min-width: 300px; /* Ensures columns don't get too narrow */
-}
-.deals-column h3 {
-  color: var(--main);
-  border-bottom: 1px solid var(--accent);
-  padding-bottom: 0.3rem;
-  margin-top: 0;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Singapore Mega-Guide: Travel, Fines, Stats & More</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #fafafa;
+      color: #2e2e2e;
+      margin: 0; /* Reset default margin */
+      padding: 0; /* Reset default padding */
+    }
+
+    :root {
+      --main: #e02332;
+      --accent: #ffb400;
+    }
+
+    header {
+      background: var(--main);
+      color: #fff;
+      padding: 2rem 0 1.2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.25rem;
+      margin: 0 0 0.3rem;
+    }
+
+    nav {
+      background: #232323;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      /* Added z-index for sticky nav */
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      margin: 0.45rem 1rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 2.1rem auto 3.7rem;
+      padding: 0 0.5rem;
+      /* Increased max-width */
+    }
+
+    section {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 7px rgba(200, 210, 222, 0.12);
+      padding: 1.15rem 1.35rem 1.1rem;
+      margin-bottom: 2rem;
+      overflow-x: auto;
+      /* Allow horizontal scroll */
+    }
+
+    h2 {
+      color: var(--main);
+      font-family: 'Montserrat', sans-serif;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.18rem;
+      margin-bottom: 0.7rem;
+    }
+
+    h3 {
+      margin: 1.04rem 0 0.42rem;
+      color: #353535;
+      font-size: 1.09rem;
+    }
+
+    ul,
+    dl,
+    table {
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.09rem;
+    }
+
+    ul li {
+      margin-bottom: 0.27rem;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 600px;
+      /* Allow full width, set minimum */
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 0.5rem 0.8rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--accent);
+      color: #282828;
+    }
+
+    a {
+      color: var(--main); /* Changed from var(--red) to match defined vars */
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .sgloss4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.33rem 0.8rem;
+      max-width: 980px;
+      margin: 0 auto 0.8rem auto;
+    }
+
+    .sgloss4 dt {
+      font-weight: 600;
+      color: var(--main);
+      margin-top: 0.50rem;
+      font-size: 0.97em;
+    }
+
+    .sgloss4 dd {
+      margin-left: 0;
+      margin-bottom: 0.2rem;
+      font-size: 0.97em;
+      line-height: 1.28;
+    }
+
+    footer {
+      background: #111;
+      color: #bbb;
+      text-align: center;
+      padding: 1.1rem 1rem 0.8rem;
+      /* Reduced side padding for mobile */
+      font-size: 0.95rem;
+    }
+
+    .disclaimer {
+      margin-top: 0.7rem;
+      color: #888;
+      font-size: 0.90rem;
+      padding: 0 0.5rem; /* Add padding for mobile */
+    }
+
+    /* Adjustments for wider tables and responsiveness */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav li {
+        margin: 0.24rem 0;
+      }
+
+      section {
+        padding: 0.88rem;
+        overflow-x: auto;
+        /* Ensure scroll on small screens */
+      }
+
+      table {
+        font-size: 0.9em;
+        min-width: 500px;
+        /* Smaller text, smaller min width on very small screens */
+      }
+
+      table th,
+      table td {
+        padding: 0.4rem 0.5rem;
+        /* Reduce padding */
+      }
+
+      .sgloss4 {
+        grid-template-columns: 1fr;
+      }
+
+      main {
+        padding: 0 0.3rem;
+        max-width: 100%;
+        /* Ensure main doesn't overflow */
+      }
+
+      /* --- Enhanced Mobile Styles for Overview Table --- */
+      /* Target mobile view specifically for the overview table */
+      #overview table,
+      #overview thead,
+      #overview tbody,
+      #overview th,
+      #overview td,
+      #overview tr {
+        display: block;
+        width: 100%;
+      }
+
+      /* Hide the original table headers (but keep them for screen readers if needed) */
+      #overview thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+
+      /* Style the table rows to look like cards/blocks */
+      #overview tr {
+        border: 1px solid #ccc;
+        margin-bottom: 1rem;
+        /* Space between "rows" */
+        padding: 0.5rem;
+        border-radius: 5px;
+        /* Optional rounded corners */
+        background-color: #f9f9f9;
+        /* Slightly different background */
+      }
+
+      /* Style the table cells to look like labeled items */
+      #overview td {
+        border: none;
+        /* Remove default cell borders */
+        position: relative;
+        padding: 0.5rem 0.5rem 0.5rem 35%;
+        /* Space for label on the left */
+        text-align: left;
+        /* Align content to the left */
+        /* Ensure list items inside don't inherit text-align */
+      }
+
+      /* Create a "label" effect using the :before pseudo-element */
+      /* This requires hardcoding the header names */
+      #overview td:nth-of-type(1):before {
+        content: "Area";
+        font-weight: bold;
+        position: absolute;
+        left: 0.5rem;
+        top: 0.5rem;
+      }
+
+      #overview td:nth-of-type(2):before {
+        content: "Hawkers";
+        font-weight: bold;
+        position: absolute;
+        left: 0.5rem;
+        top: 0.5rem;
+      }
+
+      #overview td:nth-of-type(3):before {
+        content: "Malls";
+        font-weight: bold;
+        position: absolute;
+        left: 0.5rem;
+        top: 0.5rem;
+      }
+
+      #overview td:nth-of-type(4):before {
+        content: "Parks/Nature";
+        font-weight: bold;
+        position: absolute;
+        left: 0.5rem;
+        top: 0.5rem;
+      }
+
+      #overview td:nth-of-type(5):before {
+        content: "Activities";
+        font-weight: bold;
+        position: absolute;
+        left: 0.5rem;
+        top: 0.5rem;
+      }
+
+      /* Adjust padding inside lists for mobile */
+      #overview td ul {
+        padding-left: 0;
+        /* Remove default padding as label is absolute */
+        margin-top: 1.5rem;
+        /* Space below the absolute label */
+        margin-bottom: 0.5rem;
+      }
+
+      #overview td ul li {
+        /* Optional: Add a bit of spacing or a bullet if needed */
+        margin-bottom: 0.3rem;
+        padding-left: 0.5rem;
+        /* Add a little padding for list items */
+      }
+
+      /* Specific adjustments for the first cell (Area name) */
+      #overview td:first-child {
+        font-weight: bold;
+        color: var(--main);
+        /* Use the main color for the area name */
+        background-color: #fff;
+        /* Make it stand out */
+        border-bottom: 1px solid #eee;
+        margin-bottom: 0.5rem;
+        padding-left: 0.5rem;
+        /* Align with other content */
+      }
+
+      #overview td:first-child:before {
+        content: "Area: ";
+        /* Add a prefix for clarity */
+        font-weight: bold;
+      }
+
+      /* Ensure internal lists don't get extra padding from section rules */
+      #overview td ul {
+        margin-bottom: 0.5rem;
+        /* Override potential larger margin from section */
+      }
+
+      #overview td ul li {
+        margin-bottom: 0.2rem;
+        /* Override potential larger margin from section */
+      }
+
+      /* Adjust table min-width for mobile to prevent extreme squishing */
+      #overview table {
+        min-width: auto;
+        /* Allow it to shrink */
+      }
+
+       /* Ensure header within overview section maintains style */
+      #overview h2 {
+        color: var(--main);
+        font-family: 'Montserrat', sans-serif;
+        border-bottom: 2px solid var(--accent);
+        padding-bottom: 0.18rem;
+        margin-bottom: 0.7rem;
+      }
+
+       /* Ensure footer disclaimer text doesn't touch edges */
+       .disclaimer {
+         padding: 0 0.5rem;
+       }
+
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      main {
+        max-width: 1100px;
+        /* Intermediate width */
+      }
+
+      table {
+        font-size: 0.95em;
+      }
+    }
+
+    /* New styles for the two-column deals layout */
+    .deals-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .deals-column {
+      flex: 1;
+      min-width: 300px;
+      /* Ensures columns don't get too narrow */
+    }
+
+    .deals-column h3 {
+      color: var(--main);
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: 0.3rem;
+      margin-top: 0;
+    }
+
+    /* Ensure body/html don't create horizontal scroll unintentionally */
+    /* Uncomment the lines below if you still see slight horizontal overflow */
+    /*
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    */
+  </style>
+
+
+
 </head>
 <body>
 <header style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; text-align: center; padding: 1rem 2rem;">
@@ -81,13 +430,14 @@ footer{background:#111;color:#bbb;text-align:center;padding:1.1rem 2rem 0.8rem;f
     <li><a href="#planner">3-5 Day Plan</a></li>
     <li><a href="#penalties">Fines & Penalties</a></li>
     <li><a href="#goodtoknow">Good to Know</a></li>
-    <li><a href="#singlish">Singlish Terms</a></li>
+    <li><a href="#glossary">Singlish Terms</a></li>
     <li><a href="#tips">Singapore Tips & Tricks</a></li>
     <li><a href="#resources">Resources</a></li>
     <li><a href="#history">History & Leaders</a></li>
   </ul>
 </nav>
 <main>
+
 <section id="overview">
   <h2>Overview: Must-See Neighborhoods & Venues</h2>
   <table>
@@ -96,31 +446,31 @@ footer{background:#111;color:#bbb;text-align:center;padding:1.1rem 2rem 0.8rem;f
       <td>Central / Downtown</td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Lau Pa Sat (18 Raffles Quay)</li>
-          <li>Maxwell FC (1 Kadayanallur St)</li>
-          <li>Chinatown Complex (335 Smith St)</li>
+          <li><strong>Lau Pa Sat:</strong> Historic market at 18 Raffles Quay, famous for satay and seafood.</li>
+          <li><strong>Maxwell Food Centre:</strong> Home to Tian Tian Hainanese Chicken Rice at 1 Kadayanallur St.</li>
+          <li><strong>Chinatown Complex:</strong> Large complex at 335 Smith St with diverse stalls.</li>
         </ul>
       </td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Bugis Junction</li>
-          <li>Funan</li>
-          <li>Raffles City</li>
+          <li><strong>Bugis Junction:</strong> Mid-range mall with retail and F&B.</li>
+          <li><strong>Funan:</strong> Tech-focused mall with rooftop garden.</li>
+          <li><strong>Raffles City:</strong> Iconic mall linked to City Hall MRT, near Raffles Hotel.</li>
         </ul>
       </td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Fort Canning Park</li>
-          <li>Singapore River</li>
-          <li>Jubilee Bridge</li>
+          <li><strong>Fort Canning Park:</strong> Historic hilltop park with museums and greenery.</li>
+          <li><strong>Singapore River:</strong> Scenic waterfront for strolls and bumboat rides.</li>
+          <li><strong>Jubilee Bridge:</strong> Pedestrian bridge with views of Merlion and Marina Bay.</li>
         </ul>
       </td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Visit historical landmarks like Raffles Hotel and the Merlion.</li>
-          <li>Explore cultural districts (Chinatown, Kampong Glam).</li>
-          <li>Attend performances at the Esplanade.</li>
-          <li>Enjoy Clarke Quay nightlife.</li>
+          <li>Visit <strong>Raffles Hotel</strong> and the <strong>Merlion</strong>.</li>
+          <li>Explore <strong>Chinatown</strong>, <strong>Kampong Glam</strong>.</li>
+          <li>Attend shows at the <strong>Esplanade</strong>.</li>
+          <li>Enjoy <strong>Clarke Quay</strong> nightlife.</li>
         </ul>
       </td>
     </tr>
@@ -128,27 +478,32 @@ footer{background:#111;color:#bbb;text-align:center;padding:1.1rem 2rem 0.8rem;f
       <td>Little India</td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Tekka Centre (665 Buffalo Rd)</li>
-          <li>Mustafa Centre Food Court</li>
+          <li><strong>Tekka Centre:</strong> Bustling wet market/food center at 665 Buffalo Rd.</li>
+          <li><strong>Mustafa Centre Food Court:</strong> Affordable options in the 24/7 store.</li>
+          <li><strong>Kitchener Complex Food Stalls:</strong> Additional dining options above Tekka Centre.</li>
         </ul>
       </td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Mustafa Centre (24/7 shopping)</li>
+          <li><strong>Mustafa Centre:</strong> Massive 24/7 department store for bargains.</li>
+          <li><strong>Kitchener Complex (Tekka Centre Mall):</strong> Adjacent 5-storey mall above Tekka Centre with budget fashion, electronics, and services.</li>
+          <li><strong>Little India Shopping Belt:</strong> Vibrant street shopping along Serangoon Rd for textiles, spices, and souvenirs.</li>
         </ul>
       </td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Sri Veeramakaliamman Temple grounds</li>
-          <li>Little India Mural Trail</li>
+          <li><strong>Sri Veeramakaliamman Temple:</strong> Vibrant temple complex.</li>
+          <li><strong>Little India Mural Trail:</strong> Colorful street art on Dunlop/Campbell.</li>
+          <li><strong>Indian Heritage Trail:</strong> Explore the cultural heart including the temple, mosques, and traditional shophouses.</li>
+          <li><strong>Vivocity Park (HarbourFront):</strong> Small green space with playgrounds near Vivocity/HarbourFront MRT, convenient for families.</li>
         </ul>
       </td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Shop for spices, textiles, and souvenirs along Serangoon Road.</li>
-          <li>Experience vibrant festivals like Deepavali.</li>
-          <li>Explore street art on Dunlop St/Campbell Lane.</li>
-          <li>Bargain hunt at Mustafa Centre late night.</li>
+          <li>Shop <strong>Serangoon Road</strong> for spices and textiles.</li>
+          <li>Experience vibrant festivals like <strong>Deepavali</strong>.</li>
+          <li>Explore street art on <strong>Dunlop St</strong>.</li>
+          <li>Bargain hunt at <strong>Mustafa Centre</strong> late night.</li>
         </ul>
       </td>
     </tr>
@@ -156,30 +511,39 @@ footer{background:#111;color:#bbb;text-align:center;padding:1.1rem 2rem 0.8rem;f
       <td>Sentosa / HarbourFront</td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Seah Im (2 Seah Im Road)</li>
-          <li>Food Courts on Sentosa</li>
+          <li><strong>Seah Im:</strong> Seafood haven at 2 Seah Im Road, near Pasir Panjang.</li>
+          <li><strong>Sentosa Food Courts:</strong> Quick bites in Resorts World & Boardwalk area.</li>
+          <li><strong>Pasir Panjang Food Centre:</strong> Local hawker center offering a variety of affordable meals, close to Seah Im.</li>
+          <li><strong>Telok Blangah Drive Food Centre:</strong> Air-conditioned hawker center with diverse stalls, located near the Southern Islands.</li>
+          <li><strong>Alexandra Food Link (Red House):</strong> Historic shophouse hawker center known for local delights like BBQ stingray and chicken rice, near Alexandra Hospital.</li>
         </ul>
       </td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>VivoCity</li>
-          <li>HarbourFront Centre</li>
+          <li><strong>VivoCity:</strong> Singapore's largest mall with rooftop cinema.</li>
+          <li><strong>HarbourFront Centre:</strong> Convenient mall with direct link to Sentosa.</li>
+          <li><strong>Keppel Bay Tower Shoppes:</strong> Upscale waterfront retail and dining options near VivoCity and Resorts World Sentosa.</li>
+          <li><strong>Alexandra Central:</strong> Integrated development with retail and services near Queenstown.</li>
+          <li><strong>One 15 Marina:</strong> Lifestyle mall along the marina with dining options, near VivoCity.</li>
         </ul>
       </td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Mount Faber</li>
-          <li>Sentosa Beaches</li>
-          <li>Boardwalk</li>
+          <li><strong>Mount Faber:</strong> Panoramic views via cable car or hike.</li>
+          <li><strong>Sentosa Beaches:</strong> Palawan, Siloso, Tanjong for relaxation.</li>
+          <li><strong>Sentosa Boardwalk:</strong> Scenic walkway to Sentosa Island.</li>
+          <li><strong>Labrador Nature Reserve:</strong> Scenic coastal park with historical fortifications and walking trails, perfect for sunset views.</li>
+          <li><strong>Henderson Waves:</strong> Iconic wooden bridge connecting Telok Blangah Hill Park to Mount Faber, offering elevated forest walkways.</li>
+          <li><strong>Southern Ridges (Access Point):</strong> Part of the longer Southern Ridges trail, connecting parks like HortPark and Kent Ridge Park, accessible from nearby HarbourFront/VivoCity area.</li>
+          <li><strong>Telok Blangah Hill Park:</strong> Features the Henderson Waves bridge and offers forest trails and hilltop views.</li>
         </ul>
       </td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Enjoy theme parks (Universal Studios, S.E.A. Aquarium).</li>
-          <li>Relax on beaches.</li>
-          <li>Take the cable car for views.</li>
-          <li>Explore S.E.A. Aquarium or Adventure Cove.</li>
-          <li>Walk the Sentosa Boardwalk.</li>
+          <li>Visit <strong>Universal Studios</strong> and <strong>S.E.A. Aquarium</strong>.</li>
+          <li>Relax on <strong>Sentosa Beaches</strong>.</li>
+          <li>Take the <strong>Cable Car</strong> for island views.</li>
+          <li>Walk the <strong>Sentosa Boardwalk</strong>.</li>
         </ul>
       </td>
     </tr>
@@ -187,31 +551,35 @@ footer{background:#111;color:#bbb;text-align:center;padding:1.1rem 2rem 0.8rem;f
       <td>Orchard / Shopping Belt</td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Food Republic (ION, Wisma)</li>
-          <li>Lucky Plaza Food Court</li>
+          <li><strong>Food Republic:</strong> Curated food courts in <strong>ION</strong>, <strong>Wisma</strong>.</li>
+          <li><strong>Lucky Plaza Food Court:</strong> Budget-friendly options.</li>
+          <li><strong>Orchard Central Food Street:</strong> Food court within the Orchard Central mall complex.</li>
+          <li><strong>Somerset Food Court (Far East Plaza):</strong> Popular spot for quick, tasty meals among office workers.</li>
         </ul>
       </td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>ION</li>
-          <li>Takashimaya</li>
-          <li>Plaza Singapura</li>
-          <li>Paragon</li>
+          <li><strong>ION Orchard:</strong> Upscale mall with luxury brands and an observation deck.</li>
+          <li><strong>Takashimaya:</strong> Japanese department store known for quality.</li>
+          <li><strong>Plaza Singapura:</strong> Family-friendly mall with a cinema.</li>
+          <li><strong>Paragon:</strong> High-end mall with luxury brands and fine dining.</li>
         </ul>
       </td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Emerald Hill</li>
-          <li>Istana Park</li>
+          <li><strong>Emerald Hill:</strong> Conserved shophouse street with boutiques.</li>
+          <li><strong>Istana Park:</strong> Small park opposite the President's residence.</li>
+          <li><strong>Orchard Road Green Corridor:</strong> Tree-lined stretch offering a bit of greenery amidst the shopping.</li>
+          <li><strong>Tanglin Heritage District:</strong> Nearby area with lush greenery, colonial bungalows, and the Botanic Gardens nearby.</li>
+          <li><strong>Oxley Park (Bukit Timah):</strong> Adjacent green space offering nature trails and a playground, easily accessible from Orchard area.</li>
         </ul>
       </td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Shop extensively along Orchard Road.</li>
-          <li>Visit iconic department stores like Takashimaya.</li>
-          <li>Explore Somerset area boutiques.</li>
-          <li>Dine at Orchard Road's diverse food scene.</li>
-          <li>Catch a movie at Cathay Cineplexes.</li>
+          <li>Shop extensively along <strong>Orchard Road</strong>.</li>
+          <li>Visit iconic stores like <strong>Takashimaya</strong>.</li>
+          <li>Explore <strong>Somerset</strong> area boutiques.</li>
+          <li>Dine at <strong>Orchard Road</strong>'s diverse food scene.</li>
         </ul>
       </td>
     </tr>
@@ -219,28 +587,29 @@ footer{background:#111;color:#bbb;text-align:center;padding:1.1rem 2rem 0.8rem;f
       <td>Marina Bay</td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Satay by the Bay (18 Marina Gardens Dr)</li>
+          <li><strong>Satay by the Bay:</strong> Waterfront spot at 18 Marina Gardens Dr for grilled fare.</li>
+          <li><strong>Marina Bay Food District:</strong> Various food courts and restaurants within MBS and Esplanade complexes.</li>
         </ul>
       </td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Shoppes at MBS</li>
-          <li>Esplanade Mall</li>
+          <li><strong>Shoppes at MBS:</strong> High-end mall within <strong>Marina Bay Sands</strong>.</li>
+          <li><strong>Esplanade Mall:</strong> Integrated mall above the <strong>Esplanade Theatres</strong>.</li>
         </ul>
       </td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Gardens by the Bay</li>
-          <li>Esplanade Outdoor</li>
-          <li>Helix Bridge</li>
+          <li><strong>Gardens by the Bay:</strong> Futuristic Supertree Grove, Cloud Forest, Flower Dome.</li>
+          <li><strong>Esplanade Outdoor:</strong> Waterfront promenade near the arts hub.</li>
+          <li><strong>Helix Bridge:</strong> Iconic pedestrian bridge with great views.</li>
         </ul>
       </td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Visit the iconic Marina Bay Sands (sky park, infinity pool, mall).</li>
-          <li>Explore Gardens by the Bay (Supertree Grove, Cloud Forest, Flower Dome).</li>
-          <li>Attend events at the Esplanade.</li>
-          <li>See the light show Spectra.</li>
+          <li>Visit <strong>Marina Bay Sands</strong> (sky park, infinity pool, mall).</li>
+          <li>Explore <strong>Gardens by the Bay</strong> (Supertree Grove, conservatories).</li>
+          <li>Attend events at the <strong>Esplanade</strong>.</li>
+          <li>See the <strong>Spectra</strong> light show.</li>
         </ul>
       </td>
     </tr>
@@ -248,28 +617,29 @@ footer{background:#111;color:#bbb;text-align:center;padding:1.1rem 2rem 0.8rem;f
       <td>North (Woodlands/Yishun)</td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Yishun 925 Market</li>
-          <li>Woodlands FC (10 Woodlands Sq)</li>
+          <li><strong>Yishun 925 Market:</strong> Local wet market and cooked food center.</li>
+          <li><strong>Woodlands Food Centre:</strong> Convenient food court at 10 Woodlands Sq.</li>
         </ul>
       </td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Causeway Point</li>
-          <li>Northpoint City</li>
+          <li><strong>Causeway Point:</strong> Large mall with rooftop amphitheatre.</li>
+          <li><strong>Northpoint City:</strong> Twin-tower mall complex.</li>
         </ul>
       </td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Sungei Buloh Wetland</li>
-          <li>Lower Seletar Reservoir</li>
+          <li><strong>Sungei Buloh Wetland:</strong> Premier birdwatching destination.</li>
+          <li><strong>Lower Seletar Reservoir:</strong> Scenic park for cycling and picnicking.</li>
+          <li><strong>Mandai Boardwalk:</strong> Scenic walkway connecting Mandai Park to the Singapore Zoo and Night Safari area (requires advance booking for nearby attractions).</li>
         </ul>
       </td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Visit Sungei Buloh Wetland Reserve for birdwatching.</li>
-          <li>Explore nature trails at Lower Seletar.</li>
-          <li>Shop at Causeway Point or Northpoint City.</li>
-          <li>Experience local hawker culture in residential areas.</li>
+          <li>Visit <strong>Sungei Buloh Wetland</strong> for birdwatching.</li>
+          <li>Explore nature trails at <strong>Lower Seletar</strong>.</li>
+          <li>Shop at <strong>Causeway Point</strong> or <strong>Northpoint City</strong>.</li>
+          <li>Experience local hawker culture.</li>
         </ul>
       </td>
     </tr>
@@ -277,30 +647,30 @@ footer{background:#111;color:#bbb;text-align:center;padding:1.1rem 2rem 0.8rem;f
       <td>East (Tampines/Changi)</td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Bedok 85 (Blk 85 Bedok Nth)</li>
-          <li>Changi Village FC (2 Changi Village Rd)</li>
+          <li><strong>Bedok 85:</strong> Famous for laksa/chicken rice at Blk 85 Bedok Nth.</li>
+          <li><strong>Changi Village Food Centre:</strong> Casual food court at 2 Changi Village Rd.</li>
         </ul>
       </td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Tampines Mall</li>
-          <li>Bedok Mall</li>
-          <li>Changi City Point</li>
+          <li><strong>Tampines Mall:</strong> Major suburban mall with cinema.</li>
+          <li><strong>Bedok Mall:</strong> Convenient mall for the Bedok area.</li>
+          <li><strong>Changi City Point:</strong> Lifestyle mall near Changi Village.</li>
         </ul>
       </td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>East Coast Park</li>
-          <li>Pasir Ris Park</li>
-          <li>Jewel Changi</li>
+          <li><strong>East Coast Park:</strong> Massive coastal park for cycling, BBQs, beaches.</li>
+          <li><strong>Pasir Ris Park:</strong> Family-friendly park with beachfront.</li>
+          <li><strong>Jewel Changi:</strong> Aviation-themed complex with Rain Vortex waterfall.</li>
         </ul>
       </td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Relax at East Coast Park (cycling, BBQs, beaches).</li>
-          <li>Explore Jewel Changi (Rain Vortex, Butterfly Garden).</li>
-          <li>Visit Changi Village for local food and ferry rides to Pulau Ubin.</li>
-          <li>Shop at Tampines Mall.</li>
+          <li>Relax at <strong>East Coast Park</strong> (cycling, BBQs, beaches).</li>
+          <li>Explore <strong>Jewel Changi</strong> (Rain Vortex, Butterfly Garden).</li>
+          <li>Visit <strong>Changi Village</strong> for food and Pulau Ubin ferry.</li>
+          <li>Shop at <strong>Tampines Mall</strong>.</li>
         </ul>
       </td>
     </tr>
@@ -308,39 +678,40 @@ footer{background:#111;color:#bbb;text-align:center;padding:1.1rem 2rem 0.8rem;f
       <td>West (Jurong/Bukit Batok)</td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Jurong West 505 Mkt</li>
-          <li>Boon Lay Place Mkt</li>
-          <li>Bukit Batok St 11</li>
+          <li><strong>Jurong West 505 Market:</strong> Local wet market and food center.</li>
+          <li><strong>Boon Lay Place Market:</strong> Hawker center near transport hubs/malls.</li>
+          <li><strong>Bukit Batok St 11:</strong> Popular for char kway teow and mee siam.</li>
         </ul>
       </td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Jem</li>
-          <li>Westgate</li>
-          <li>IMM</li>
-          <li>Jurong Point</li>
+          <li><strong>Jem:</strong> Modern mall with rooftop garden and cinema.</li>
+          <li><strong>Westgate:</strong> Large mall with rooftop garden.</li>
+          <li><strong>IMM:</strong> Outlet mall for discounted brands.</li>
+          <li><strong>Jurong Point:</strong> Family-oriented mall for western suburbs.</li>
         </ul>
       </td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Jurong Lake Gardens</li>
-          <li>Bukit Batok Town Park</li>
-          <li>West Coast Park</li>
+          <li><strong>Jurong Lake Gardens:</strong> Beautiful lakeside park with themed gardens.</li>
+          <li><strong>Bukit Batok Town Park:</strong> Large park on old quarry grounds.</li>
+          <li><strong>West Coast Park:</strong> Scenic waterfront park for cycling.</li>
+          <li><strong>Coney Island Park:</strong> Rustic park with cycling trails and coastal views.</li>
         </ul>
       </td>
       <td>
         <ul style="margin:0; padding-left:1rem;">
-          <li>Visit Jurong Lake Gardens for nature and events.</li>
-          <li>Explore Bukit Batok Nature Park.</li>
-          <li>Shop at Westgate or Jem.</li>
-          <li>Enjoy family time at Jurong Bird Park (nearby).</li>
-          <li>Access manufacturing sales at IMM.</li>
+          <li>Visit <strong>Jurong Lake Gardens</strong> for nature and events.</li>
+          <li>Explore <strong>Bukit Batok Nature Park</strong>.</li>
+          <li>Shop at <strong>Westgate</strong> or <strong>Jem</strong>.</li>
+          <li>Access manufacturing sales at <strong>IMM</strong>.</li>
         </ul>
       </td>
     </tr>
   </table>
 </section>
-<!-- The original Little India section has been removed -->
+
+
 <section id="deals">
   <h2>Where to Get Good Deals</h2>
   <div class="deals-container">
@@ -352,9 +723,20 @@ footer{background:#111;color:#bbb;text-align:center;padding:1.1rem 2rem 0.8rem;f
         <li><strong>IMM Outlet Mall (Jurong):</strong> Factory and branded outlet discounts for fashion, home</li>
         <li><strong>Changi City Point (East):</strong> Outlet sports apparel, food coupons available</li>
         <li><strong>Lucky Plaza (Orchard):</strong> Budget gadgets, remittance, cheap opticians</li>
-        <li><strong>Food specials:</strong> <a href="https://burpple.com" target="_blank">Burpple</a>, <a href="https://eatigo.com" target="_blank">Eatigo</a> apps for last-minute 1-for-1 meals and discounts</li>
-        <li><strong>RedMart, FairPrice, Giant:</strong> Supermarket chains with regular sales, best for snacks to go</li>
-        <li><strong>Singpromos:</strong> <a href="https://www.singpromos.com" target="_blank">www.singpromos.com</a> has updated sale flyers and 1-for-1 events</li>
+        <li><strong>FairPrice, Giant, ColdStorage:</strong> Supermarket chains with regular sales, best for snacks to go</li>
+
+        <!-- New entries for Little India, Bugis, Chinatown -->
+        <li><strong>Tekka Centre (Little India):</strong> Bustling wet market and food center (665 Buffalo Rd), great for authentic Indian-Muslim cuisine, fresh produce, and spices.</li>
+        <li><strong>Kitchener Complex (Little India):</strong> Adjacent 5-storey mall above Tekka Centre with budget fashion, electronics, and services.</li>
+        <li><strong>Little India Shopping Belt (Little India):</strong> Vibrant street shopping along Serangoon Rd and surrounding streets for textiles, Indian/Muslim goods, spices, and souvenirs.</li>
+        <li><strong>Bugis Junction (Bugis):</strong> Mid-range shopping mall with a mix of retail stores, F&B outlets, and a rooftop garden.</li>
+        <li><strong>Chinatown Complex (Chinatown):</strong> Large complex (335 Smith St) with diverse food stalls, including BBQ Seafood, and shops selling traditional goods and souvenirs.</li>
+        <li><strong>People's Park Centre (Chinatown):</strong> Multi-level shopping mall known for textiles, fashion, and souvenirs at competitive prices, located near Chinatown MRT.</li>
+        <li><strong>Sri Veeramakaliamman Temple Area (Little India):</strong> Surrounding shops often sell religious items, flowers, and colorful decorations, especially vibrant during festivals.</li>
+        <li><strong>Sim Lim Square (Rochor):</strong> Electronics, gadgets, souvenirs – compare prices carefully (Sim Lim Square, Rochor).</li>
+        <li><strong>Golden Mile Complex (Beach Road):</strong> Electronics, IT, fashion, and beauty products at competitive prices (1st 5 floors) near Bugis.</li>
+        <li><strong>Geylang Serai Market (Geylang):</strong> Affordable Malay/Indian/Muslim groceries, snacks, textiles, and everyday essentials.</li>
+        <li><strong>Hong Lim Market & Food Centre (Chinatown):</strong> Wet market downstairs, cheap cooked food upstairs, especially popular after 7pm for dinner.</li>
       </ul>
     </div>
     <div class="deals-column">
@@ -375,10 +757,25 @@ footer{background:#111;color:#bbb;text-align:center;padding:1.1rem 2rem 0.8rem;f
         <li><strong><a href="https://www.kkday.com" target="_blank">KKday</a>:</strong> Travel deals, tours, activities</li>
         <li><strong><a href="https://www.agoda.com" target="_blank">Agoda</a>:</strong> Hotel deals</li>
         <li><strong><a href="https://www.klook.com/en-SG/" target="_blank">Klook</a>:</strong> Attractions, tours, airport transfers</li>
+
+        <!-- Updated/ New entries for China-based delivery (Temu removed) -->
+        <li><strong><a href="https://www.shein.com" target="_blank">Shein</a>:</strong> Trendy and affordable fashion. Delivery to Singapore typically takes 5-12 business days. Frequent sales and voucher codes available.</li>
+        <li><strong><a href="https://www.uniqlo.com/sg/" target="_blank">Uniqlo (SG)</a>:</strong> Japanese casual wear known for basics and technical fabrics (like Heattech, AIRism). Regular promotions, especially seasonal sales. Delivery usually 2-5 business days for stocked items.</li>
+        <li><strong><a href="https://www.aliexpress.com" target="_blank">AliExpress</a>:</strong> Massive marketplace directly from Chinese suppliers. Delivery times vary widely (5-30+ days) depending on shipping option (ePacket, seller's choice, etc.) selected at checkout.</li>
+        <li><strong><a href="https://sg.taobao.com" target="_blank">Taobao Global (via third-party forwarders)</a>:</strong> Access to vast selection on Taobao. Requires using a Singapore-based shipping forwarder. Delivery times are generally longer (2-6 weeks) due to forwarding process.</li>
+
+         <!-- New entries for Travel Tickets -->
+         <li><strong><a href="https://www.pelago.com/en-SG/" target="_blank">Pelago</a>:</strong> Aggregator for local tours, activities, attractions, and some travel deals in Asia. Often features discounts and unique experiences.</li>
+         <li><strong><a href="https://www.skyscanner.com.sg/" target="_blank">Skyscanner</a>:</strong> Compare and book international and domestic flights. Also searches for car rentals and hotel deals. Good for finding flight bargains.</li>
+         <li><strong><a href="https://www.expedia.com.sg" target="_blank">Expedia (SG)</a>:</strong> Book flights, hotels, vacation packages. Bundling can sometimes offer savings. Check for member discounts.</li>
+         <li><strong>Ferry/Bus Tickets:</strong> For regional travel (e.g., to Batam, Bintan, Malaysia), tickets are often bought directly from operator websites (like <a href="https://www.easybook.com/en-sg" target="_blank">Easybook</a> for Indonesia ferries - Note: check official operator sites) or at the respective terminals. For Malaysian buses, <a href="https://www.redbus.sg" target="_blank">RedBus</a> is a common platform. Always verify details and book in advance during peak times.</li>
+
       </ul>
     </div>
   </div>
 </section>
+
+
 <section id="free">
   <h2>Places You Can Visit for Free in Singapore</h2>
   <ul>
@@ -388,7 +785,7 @@ footer{background:#111;color:#bbb;text-align:center;padding:1.1rem 2rem 0.8rem;f
     <li><strong>Light Shows:</strong>
       <ul>
         <li><a href="https://www.marinabaysands.com/attractions/spectra.html" target="_blank">Marina Bay Sands Spectra</a>: 8pm, 9pm, 10pm (Check website for seasonal changes)</li>
-        <li><a href="https://www.jewelchangiairport.com/en/attractions-and-services/jewel-rain-vortex.html" target="_blank">Jewel Changi Rain Vortex</a>: Every hour from 7:30pm to 10:30pm</li>
+        <li><a href="https://www.jewelchangiairport.com/en/attractions/rain-vortex.html" target="_blank">Jewel Changi Rain Vortex</a>: Every hour from 7:30pm to 10:30pm</li>
       </ul>
     </li>
     <li><strong>Walking districts:</strong> Little India murals, Chinatown Street, Clarke Quay riverside promenades (Open 24/7 - Explore during the day or night for different vibes lah!)</li>
@@ -776,43 +1173,245 @@ footer{background:#111;color:#bbb;text-align:center;padding:1.1rem 2rem 0.8rem;f
     <tr><td>Singapore's Global Competitiveness Rank</td><td>Usually Top 5 (IMD World Competitiveness Ranking)</td></tr>
   </table>
 </section>
-<section id="singlish">
-  <h2>Singlish (Quick Glossary)</h2>
-  <dl class="sgloss4">
-    <dt>Lah</dt> <dd>Emphasis</dd>
-    <dt>Lor</dt> <dd>Resignation</dd>
-    <dt>Leh</dt> <dd>Doubt</dd>
-    <dt>Meh</dt> <dd>Surprise</dd>
-    <dt>Sian</dt> <dd>Bored/fed up</dd>
-    <dt>Kiasu</dt> <dd>Scared to lose out</dd>
-    <dt>Kiasi</dt> <dd>Scared to get in trouble</dd>
-    <dt>Bo Jio</dt> <dd>Didn't invite!</dd>
-    <dt>Steady</dt> <dd>Cool/reliable</dd>
-    <dt>Atas</dt> <dd>High class/snobby</dd>
-    <dt>Chope</dt> <dd>Reserve seat</dd>
-    <dt>Ang Moh</dt> <dd>Caucasian</dd>
-    <dt>Blur Like Sotong</dt><dd>Forgetful/clueless</dd>
-    <dt>Catch No Ball</dt><dd>Don't get it</dd>
-    <dt>Shiok</dt><dd>Amazing taste/comfy</dd>
-    <dt>Paiseh</dt><dd>Embarrassed</dd>
-    <dt>Tahan</dt><dd>Bare/endure</dd>
-    <dt>Lobang</dt><dd>Tip/deal</dd>
-    <dt>Gabra</dt><dd>Disorganised</dd>
-    <dt>Wah Lau</dt><dd>Surprise/frustration</dd>
-    <dt>Don’t play play</dt><dd>This is serious!</dd>
-    <dt>Tapao</dt><dd>Takeaway food</dd>
-    <dt>Eat snake</dt><dd>Slack off</dd>
-    <dt>Saboh</dt><dd>Sabotage/accuse</dd>
-    <dt>Confirm Plus Chop</dt><dd>Absolutely certain!</dd>
-    <dt>Jialat</dt><dd>In trouble/terrible</dd>
-    <dt>Makan</dt><dd>Eat/food time</dd>
-    <dt>Ah Beng</dt><dd>Rough young man</dd>
-    <dt>Huh</dt><dd>What?/I don't get it</dd>
-    <dt>Cockanaden</dt><dd>Messed up, mistake</dd>
-    <dt>Donch</dt><dd>Don't (slang)</dd>
-    <dt>Onz</dt><dd>Ready/keen</dd>
-  </dl>
-</section>
+
+    <section id="glossary">
+      <h2>Glossary of Singlish Terms</h2>
+      <div class="sgloss4">
+        <!-- EXISTING GLOSSARY TERMS -->
+        <div><dt>Ah Beng / Ah Lian</dt>
+          <dd>Stereotypical terms for young Singaporeans (male/female) perceived as materialistic or lacking refinement.</dd>
+        </div>
+        <div><dt>Bo Jio</dt>
+          <dd>Didn't invite or inform someone (e.g., "Why you bo jio me for the party?")</dd>
+        </div>
+        <div><dt>Can or Cannot?</dt>
+          <dd>"Is it possible?" or "Are you able to do it?" (e.g., "Can or not?" = "Is that okay?")</dd>
+        </div>
+        <div><dt>Chiong</dt>
+          <dd>To rush or charge forward enthusiastically (e.g., "Chiong ah! Let's go!")</dd>
+        </div>
+        <div><dt>Die Die Must Try</dt>
+          <dd>A must-try item, often used in food marketing.</dd>
+        </div>
+        <div><dt>Don't Play Play</dt>
+          <dd>Don't fool around or be unserious.</dd>
+        </div>
+        <div><dt>Ek Shio</dt>
+          <dd>Describes someone who is shy or easily embarrassed.</dd>
+        </div>
+        <div><dt>Gabra</dt>
+          <dd>Flustered or panicky (e.g., "Don't gabra, we still have time.")</dd>
+        </div>
+        <div><dt>Hai Mei</dt>
+          <dd>Describes something that is dangerous or risky.</dd>
+        </div>
+        <div><dt>Jam-packed</dt>
+          <dd>Extremely crowded (e.g., "The MRT during peak hour is jam-packed.")</dd>
+        </div>
+        <div><dt>Kiasu</dt>
+          <dd>Fear of missing out or losing, leading to competitive or selfish behavior.</dd>
+        </div>
+        <div><dt>Lah / Leh / Mah / Ah</dt>
+          <dd>Common sentence-final particles used for emphasis, softening, or questioning.</dd>
+        </div>
+        <div><dt>Mai Cai</dt>
+          <dd>Not good or lacking in quality (e.g., "This food very mai cai.")</dd>
+        </div>
+        <div><dt>Paiseh</dt>
+          <dd>Feeling embarrassed or ashamed (e.g., "I feel paiseh for being late.")</dd>
+        </div>
+        <div><dt>Shiok</dt>
+          <dd>Feeling great pleasure or satisfaction (e.g., "This laksa very shiok!")</dd>
+        </div>
+        <div><dt>Steady</dt>
+          <dd>Reliable, okay, under control (e.g., "No problem, steady lah.")</dd>
+        </div>
+        <div><dt>Where Got?</dt>
+          <dd>"Where is it?" or "How come there is?" (e.g., "Where got toilet here?")</dd>
+        </div>
+        <div><dt>Wah Kao</dt>
+          <dd>Expression of surprise, shock, or disbelief.</dd>
+        </div>
+        <div><dt>Wah Lao</dt>
+          <dd>Expression of frustration, annoyance, or exasperation.</dd>
+        </div>
+        <div><dt>Waste Man / Waste Time</dt>
+          <dd>Someone/something that is useless or time-wasting.</dd>
+        </div>
+        <!-- END OF EXISTING GLOSSARY TERMS -->
+
+        <!-- NEW ADDITIONAL SINGLISH TERMS -->
+        <div><dt>Ang Moh</dt>
+          <dd>Caucasian person.</dd>
+        </div>
+        <div><dt>Atas</dt>
+          <dd>High class, snobbish, or fancy.</dd>
+        </div>
+        <div><dt>Blur</dt>
+          <dd>Clueless, confused, or slow to understand.</dd>
+        </div>
+        <div><dt>Blur Like Sotong</dt>
+          <dd>Very clueless (like a squid/octopus).</dd>
+        </div>
+        <div><dt>Chope</dt>
+          <dd>To reserve a seat or table, often using a tissue packet or small item.</dd>
+        </div>
+        <div><dt>Catch No Ball</dt>
+          <dd>Don't understand or "get it".</dd>
+        </div>
+        <div><dt>Confirm Plus Chop</dt>
+          <dd>Absolutely certain or guaranteed (often said with emphasis).</dd>
+        </div>
+        <div><dt>Eh</dt>
+          <dd>Hey! (Used to get attention).</dd>
+        </div>
+        <div><dt>Huh</dt>
+          <dd>What? / I don't understand.</dd>
+        </div>
+        <div><dt>Jialat</dt>
+          <dd>In trouble, problematic, or terrible.</dd>
+        </div>
+        <div><dt>Kiasi</dt>
+          <dd>Scared of getting into trouble or being unlucky.</dd>
+        </div>
+        <div><dt>Lepak</dt>
+          <dd>To hang out, chill, or loaf around idly.</dd>
+        </div>
+        <div><dt>Liao</dt>
+          <dd>Finished, done, or settled (e.g., "Got liao!" = "Got it!").</dd>
+        </div>
+        <div><dt>Lor</dt>
+          <dd>Expression of resignation or acceptance (e.g., "Okay lor...").</dd>
+        </div>
+        <div><dt>Makan</dt>
+          <dd>To eat or have a meal.</dd>
+        </div>
+        <div><dt>Meh</dt>
+          <dd>Expression of doubt or surprise (e.g., "You sure meh?").</dd>
+        </div>
+        <div><dt>Onz</dt>
+          <dd>Enthusiastic, ready, or "on it".</dd>
+        </div>
+        <div><dt>Saboh</dt>
+          <dd>To sabotage or falsely accuse someone.</dd>
+        </div>
+        <div><dt>Shiok</dt>
+          <dd>Feeling great pleasure or satisfaction (e.g., "This laksa very shiok!").</dd>
+        </div>
+        <div><dt>Sian</dt>
+          <dd>Bored, fed up, or lacking motivation.</dd>
+        </div>
+         <div><dt>Tahan</dt>
+          <dd>To endure or bear with something.</dd>
+        </div>
+        <div><dt>Tapao</dt>
+          <dd>To take away food (ordering takeaway).</dd>
+        </div>
+        <div><dt>Wah</dt>
+          <dd>Expression of surprise, shock, or exasperation (shorter version of Wah Kao/Lao).</dd>
+        </div>
+        <div><dt>Yah</dt>
+          <dd>Yes (informal).</dd>
+        </div>
+        <div><dt>Zao</dt>
+          <dd>Breakfast.</dd>
+        </div>
+        <div><dt>Lobang</dt>
+          <dd>A tip, secret, or inside information (e.g., "Got good lobang for food?").</dd>
+        </div>
+        <!-- END OF NEW ADDITIONAL SINGLISH TERMS -->
+      </div>
+
+      <!-- NEW SECTION: How to Order Your Drink -->
+      <h3 style="margin-top: 1.5rem; color: #353535; border-bottom: 1px solid #eee; padding-bottom: 0.3rem;">How to Order Your Drink (Coffee/Tea)</h3>
+      <p style="margin-bottom: 1rem;">Understanding local coffee shop lingo is key to navigating hawker centres and kopitiams. Here's a guide to ordering like a local:</p>
+
+      <div class="sgloss4">
+        <!-- Coffee Terms -->
+        <div><dt>Kopi</dt>
+          <dd>Coffee with condensed milk and sugar.</dd>
+        </div>
+        <div><dt>Kopi O</dt>
+          <dd>Black coffee (no milk) with sugar.</dd>
+        </div>
+        <div><dt>Kopi C</dt>
+          <dd>Coffee with evaporated milk and sugar.</dd>
+        </div>
+        <div><dt>Kopi Kosong</dt>
+          <dd>Black coffee with no sugar (and no milk).</dd>
+        </div>
+        <div><dt>Kopi Siew Dai</dt>
+          <dd>Coffee with less sugar.</dd>
+        </div>
+        <div><dt>Kopi Gao</dt>
+          <dd>Strong coffee (more coffee powder).</dd>
+        </div>
+        <div><dt>Kopi Peng</dt>
+          <dd>Iced coffee.</dd>
+        </div>
+        <div><dt>Kopi Gu You</dt>
+          <dd>Coffee with butter.</dd>
+        </div>
+        <div><dt>Kopi Di Lo</dt>
+          <dd>Extra thick coffee with no water added.</dd>
+        </div>
+        <div><dt>Kopi Pua Sio</dt>
+          <dd>Coffee with some hot water replaced with room temperature water.</dd>
+        </div>
+        <div><dt>Kopi Ka Koi</dt>
+          <dd>Coffee with an egg (often served as an eggnog-like drink).</dd>
+        </div>
+
+        <!-- Tea Terms -->
+        <div><dt>Teh</dt>
+          <dd>Tea with condensed milk and sugar.</dd>
+        </div>
+        <div><dt>Teh O</dt>
+          <dd>Black tea (no milk) with sugar.</dd>
+        </div>
+        <div><dt>Teh C</dt>
+          <dd>Tea with evaporated milk and sugar.</dd>
+        </div>
+        <div><dt>Teh Peng</dt>
+          <dd>Iced tea.</dd>
+        </div>
+
+        <!-- Modifiers -->
+        <div><dt>Gao</dt>
+          <dd>Make it strong (for coffee or tea).</dd>
+        </div>
+        <div><dt>Po / Pok</dt>
+          <dd>Make it weak (for coffee or tea).</dd>
+        </div>
+        <div><dt>Gah Dai</dt>
+          <dd>Make it sweeter (for coffee or tea).</dd>
+        </div>
+        <div><dt>Siew Dai</dt>
+          <dd>Make it less sweet (for coffee or tea).</dd>
+        </div>
+        <div><dt>Peng</dt>
+          <dd>Make it iced (for coffee or tea).</dd>
+        </div>
+
+        <!-- Other Useful Terms -->
+        <div><dt>Dapao / Bungkus</dt>
+          <dd>To take away.</dd>
+        </div>
+        <div><dt>Simi</dt>
+          <dd>What. (e.g., "Simi drink you want?" = "What drink do you want?")</dd>
+        </div>
+        <div><dt>Gao Kao / Kao Kao</dt>
+          <dd>Very strong.</dd>
+        </div>
+        <div><dt>Kurang / Kah Kiu</dt>
+          <dd>Less (sugar/water).</dd>
+        </div>
+      </div>
+      <!-- END OF NEW SECTION -->
+    </section>
+
+
+
 <section id="tips">
   <h2>Singapore Tips & Tricks</h2>
   <ul>
