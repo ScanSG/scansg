@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4636396521329327" crossorigin="anonymous"></script>
+
 <meta name="google-adsense-account" content="ca-pub-4636396521329327">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="Singapore travel, Singapore guide, hawker food, free attractions, Singlish, our all-in-one Singapore guide—discover top attractions, hidden gems, travel tips, MRT & transport, best hawker food, street markets, shopping, free activities, must-try experiences, medical facilities, local laws, fines, and essential Singlish terms. Plan the ultimate 5 day itinerary, save money with expert deals, and explore safe, clean, and vibrant neighborhoods. Stay updated on government resources, weather, and insider tricks for both tourists and locals. Boost your Singapore adventure with trusted, detailed info for 2025 and beyond!">
+    <meta name="author" content="ScanSG">
+
+
 <!-- Primary Meta Tags -->
 <title>ScanSG: Your Ultimate Guide to Exploring, Saving, and Staying Smart in Singapore</title>
 <meta name="title" content="ScanSG: Your Ultimate Guide to Exploring, Saving, and Staying Smart in Singapore">
@@ -215,6 +220,11 @@ footer {
         --nav-width: 0px; /* Hide nav width on mobile */
         --ad-width: 0px; /* Hide ad space on mobile */
     }
+
+  header {
+    position: relative;
+    z-index: 101; /* Keep header above other content, but below nav if needed */
+  }
     #content-wrapper {
         display: flex;
         flex-wrap: nowrap;
@@ -226,12 +236,17 @@ footer {
         position: relative;
     }
     nav {
-        position: relative; /* Not fixed on mobile */
-        width: 100%;
-        height: auto;
-        margin-top: 0;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #232323;
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     }
     nav ul {
         flex-direction: row; /* Horizontal scroll on mobile */
@@ -240,6 +255,8 @@ footer {
         -webkit-overflow-scrolling: touch; /* Smooth scrolling */
         justify-content: flex-start;
         padding: 0 0.5rem;
+white-space: nowrap;
+justify-content: flex-start;
     }
     nav li {
         flex-shrink: 0; /* Prevent items from shrinking */
@@ -250,7 +267,7 @@ footer {
         padding: 0.3rem 0.5rem;
     }
     main {
-        margin-left: 0;
+        margin-left: 0.5;
         padding: 0 0.7rem 1.5rem;
         max-width: 100%;
     }
