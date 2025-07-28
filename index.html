@@ -539,8 +539,8 @@ footer {
     .affiliate-sidebar {
         /* - Increased Width & Made Scrollable - */
         width: 310px; /* Slightly wider */
-        /* Reduced height calculation slightly */
-        height: calc(400vh - 2rem - 2rem); /* Use most of the viewport height */
+    height: calc(100vh - 2rem);
+    max-height: calc(100vh - 2rem);
         overflow-y: auto; /* Enable vertical scrolling */
         box-sizing: border-box; /* Crucial for width/height calc */
         display: block;
@@ -814,7 +814,7 @@ footer {
 <div id="content-wrapper">
     <!-- Main Content Area -->
     <main>
-        
+      
 
 <section id="welcome">
             <p style="font-size: 1.2rem; margin-bottom: 1.5rem; padding: 0 1rem;"><strong>Welcome to ScanSG!</strong> Your ultimate guide to navigating, discovering, and enjoying Singapore like a local—whether you're a first-time visitor or a long-time resident looking for hidden gems and updated tips.</p>
@@ -2277,9 +2277,14 @@ footer {
                 </li>
             </ul>
         </div>
-
+</aside>
     </div>
     <!-- END OF Affliate Links Sidebar -->
+
+
+
+
+
 </div> <!-- End of #content-wrapper -->
 <footer>
     <p>© 2025 ScanSG.com - Your Singapore Guide — All Rights Reserved</p>
