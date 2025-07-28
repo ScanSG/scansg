@@ -75,7 +75,8 @@ nav {
     height: 100vh; /* Full viewport height */
     overflow-y: auto; /* Scroll if content is long */
     z-index: 100; /* Ensure it's above main content */
-    margin-top: calc(2rem + 1.2rem + 2*1rem); /* Height of header + padding */
+    margin-top: 0; /* Remove vertical offset */
+    padding-top: 4rem; /* Add padding to leave space for header inside nav */
     /* Adjust nav internal styles for vertical layout */
     padding-top: 1rem;
 }
