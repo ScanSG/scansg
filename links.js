@@ -586,6 +586,9 @@ const scanSgLinks = {
   "lee_kuan_yew": "https://www.pmo.gov.sg/our-leadership/founding-prime-minister", // (File 2)
   "sook_ching": "https://www.nhb.gov.sg/nationalmuseum/our-exhibitions/permanent-exhibitions/singapore-history-gallery", // (File 2)
   "stamford_raffles": "https://www.nhb.gov.sg/nationalmuseum/our-exhibitions/permanent-exhibitions/singapore-history-gallery", // (File 2)
+  "pm_wong_official": "https://www.pmo.gov.sg/Prime-Minister",
+  "president_tharman": "https://www.presidency.gov.sg",
+  "majulah_singapura": "https://www.nhb.gov.sg/culture-heritage/our-heritage/national-symbols/national-anthem",
 
   // ==========================================
   // 📧 CONTACT & POLICIES
