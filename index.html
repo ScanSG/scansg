@@ -571,9 +571,19 @@ tr:hover td {
   background: #f5f5f5;
 }
 
-/* Ensure tables don’t overflow */
-table, .content-and-sidebar, main, body {
-  overflow-x: hidden;
+/* =============== RESPONSIVE OVERFLOW CONTROL =============== */
+/* Prevent horizontal scroll on desktop only */
+@media (min-width: 769px) {
+  table, .content-and-sidebar, main, body {
+    overflow-x: hidden;
+  }
+}
+
+/* Allow body to handle natural flow on mobile */
+@media (max-width: 768px) {
+  body, .content-and-sidebar, main {
+    overflow-x: visible;
+  }
 }
 
       #overview thead tr { position: absolute; top: -9999px; left: -9999px; }
