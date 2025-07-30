@@ -700,23 +700,55 @@ SIMILAR FUNCTION:
 - kitchener_complex_food_stalls & kitchener_complex_mall (same complex)
 - serangoon_road & little_india_shopping_belt (related areas)
 */
-// Function to automatically populate links on page load
+
+
+// ===== FINAL populateLinks() FUNCTION =====
 function populateLinks() {
   const linkElements = document.querySelectorAll('a[data-link-key]');
+  const affiliateDomains = [
+    'klook.com', 'shopee.', 'lazada.', 'grab.com', 'foodpanda.', 'deliveroo.', 'pelago.', 
+    'getyourguide.', 'viator.', 'tiqets.', 'skyscanner.', 'kayak.', 'google.com/flights', 
+    'momondo.', 'airalo.', 'saily.', 'expressvpn.', 'duolingo.', 'preply.', 'coursera.', 
+    'airbnb.', 'booking.', 'agoda.', 'expedia.', 'hotels.com', 'amazon.', 'qoo10.', 
+    'anker.', 'peakdesign.', 'sony.', 'gopro.', 'apple.', 'daiso-', 'ikea.', 'mustafa'
+  ];
+
   linkElements.forEach(element => {
     const key = element.getAttribute('data-link-key');
-    if (scanSgLinks[key]) {
-      element.href = scanSgLinks[key];
-    } else {
-      console.warn(`Link key '${key}' not found in links.js`);
+    const url = scanSgLinks[key];
+
+    if (!url || url === '') {
+      console.warn(`Link key '${key}' has no URL or is invalid`);
+      return;
+    }
+
+    // ✅ Set href
+    element.href = url;
+
+    // 🔐 Add rel="noopener" for security if target="_blank"
+    let rel = '';
+    if (element.getAttribute('target') === '_blank') {
+      rel += 'noopener ';
+    }
+
+    // 🚫 Add rel="sponsored" for affiliate/commercial links
+    if (affiliateDomains.some(domain => url.includes(domain))) {
+      rel += 'sponsored ';
+    }
+
+    // 📦 Set rel attribute if needed
+    if (rel.trim()) {
+      element.setAttribute('rel', rel.trim());
     }
   });
 }
-// Run populateLinks when the DOM is fully loaded
+
+// Run on DOM load
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', populateLinks);
 } else {
   populateLinks();
 }
-// Optional: Make the links object globally accessible for debugging or direct access
+
+// Make available globally for debugging
 window.scanSgLinks = scanSgLinks;
