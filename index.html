@@ -534,7 +534,14 @@ justify-content: flex-start;
 }
 /* - Desktop Styles (Wider, Scrollable Sidebar) - */
 
-
+@media (max-width: 1024px) {
+  .affiliate-sidebar {
+    display: block !important;
+    width: 100%;
+    margin-top: 1.5rem;
+    order: 999; /* Ensures it's at the bottom */
+  }
+}
 
 
 @media screen and (min-width: 1025px) {
