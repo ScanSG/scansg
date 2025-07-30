@@ -460,23 +460,25 @@ main {
         padding-left: 0;
       }
 
-      /* Mobile navigation - Make it MUCH bigger and more visible */
+      /* Mobile navigation - SUPER AGGRESSIVE OVERRIDE */
       nav {
         width: 100% !important;
-        min-height: 70px !important;
+        min-height: 80px !important;
         height: auto !important;
         position: static !important;
         flex-direction: row !important;
         overflow-x: auto !important;
         overflow-y: visible !important;
         white-space: nowrap !important;
-        padding: 1.8rem 0 !important;
-        background: #232323 !important;
-        z-index: 100 !important;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+        padding: 2rem 0 !important;
+        background: #ff0000 !important; /* Bright red for testing */
+        z-index: 9999 !important;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5) !important;
         display: flex !important;
         visibility: visible !important;
+        opacity: 1 !important;
         margin: 0 !important;
+        border: 5px solid #00ff00 !important; /* Green border for testing */
       }
 
       nav ul {
