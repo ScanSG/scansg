@@ -2565,6 +2565,8 @@ font-family: 'Montserrat', sans-serif;
       <a href="#glossary" class="footer-nav" style="color: #bbb; text-decoration: none;">🗣️ Talk</a>
       <a href="#planner" class="footer-nav" style="color: #bbb; text-decoration: none;">🗓️ Plan</a>
       <a href="#medical" class="footer-nav" style="color: #bbb; text-decoration: none;">🩺 Help</a>
+      <span>•</span>
+      <a id="toggle-about-footer" style="color: #bbb; text-decoration: none; cursor: pointer;">✨ About</a>
     </div>
 
 <!-- Subtle Disclaimer (Always Visible) -->
@@ -2634,6 +2636,54 @@ font-family: 'Montserrat', sans-serif;
   </p>
 </div>
 
+<!-- =============== ABOUT US SECTION (Toggleable) =============== -->
+<div id="about" style="display: none; margin-top: 1.8rem; padding: 1.4rem; background: #232323; color: #ddd; border-radius: 8px; font-size: 0.92rem; line-height: 1.6; border: 1px solid #444; max-width: 800px; margin-left: auto; margin-right: auto; text-align: left;">
+  <h3 style="color: #fff; margin-top: 0; font-size: 1.1rem; border-bottom: 1px solid #555; padding-bottom: 0.4rem;">✨ About ScanSG</h3>
+  <p><em>A quiet project by someone who just really likes Singapore.</em></p>
+
+  <p>
+    Look, I’ll be honest — I’m not the government. Not a travel company. Not even a proper website guy. Just a <strong>foreigner who’s been living in Singapore for 4 years</strong>, falling in love with this place one kaya toast at a time.
+  </p>
+
+  <p>
+    This site started as a personal list of notes: where to eat, how not to get fined, which MRT pass saves money, why durian smells like that… Then one day I thought: <em>“Hey, maybe someone else could use this too.”</em>
+  </p>
+
+  <p>
+    So I cleaned it up. Added some structure. Fixed a million typos. And here we are — <strong>ScanSG</strong>, a no-frills, no-ego guide built entirely from <strong>personal experience and public info</strong>.
+  </p>
+
+  <p>
+    Everything here is gathered from official sources, forums, friends, and my own trial-and-error (sometimes <em>a lot</em> of error). I update it regularly because I care — not because I’m selling anything.
+  </p>
+
+  <p>
+    This is <strong>not an official website</strong>. It’s not affiliated with any government agency, tourism board, or corporation. Just one person trying to help others navigate Singapore a little easier — whether you're here for 3 days or 3 years.
+  </p>
+
+  <p>
+    If you found this useful, I’m glad. And if you want to say thanks?
+  </p>
+
+  <div style="background: #333; padding: 0.8rem; border-radius: 6px; margin: 1rem 0; font-style: italic;">
+    You can:
+    <ul style="padding-left: 1.3rem; margin: 0.5rem 0 0;">
+      <li>📧 <strong>Email me</strong> at <a data-link-key="contact_email" style="color: #4fc3f7; text-decoration: underline;">scansg365@gmail.com</a> — no pressure, just say hi or share a tip.</li>
+      <li>☕ <strong>Buy me a coffee</strong> (or a Teh Tarik) — purely optional, but it helps keep the lights on.</li>
+      <li>📢 <strong>Share this page</strong> with someone who’s coming to SG</li>
+       <li>📢 <strong>Give me PR :D haha!</strong></li>
+    </ul>
+  </div>
+
+  <p>
+    Either way, thank you for reading. <strong>Thank you, Singapore</strong>, for being such a safe, clean, efficient, and surprisingly warm place to call home — even if just for a while.
+  </p>
+
+  <p style="font-weight: 600; color: #4fc3f7; margin-top: 1rem;">
+    Stay curious. Stay kind. And don’t chew gum on the MRT. 😉 🇸🇬
+  </p>
+</div>
+
     <!-- Invisible Anchor for #disclaimer and #contact -->
     <div id="disclaimer" style="height: 1px;"></div>
     <div id="contact" style="height: 1px;"></div>
@@ -2684,6 +2734,31 @@ font-family: 'Montserrat', sans-serif;
     }
   });
 </script>
+
+<!-- Toggle About Us in Footer -->
+<script>
+document.getElementById('toggle-about-footer')?.addEventListener('click', function(e) {
+  e.preventDefault();
+  const aboutBox = document.getElementById('about');
+  if (aboutBox.style.display === 'block') {
+    aboutBox.style.display = 'none';
+  } else {
+    aboutBox.style.display = 'block';
+    aboutBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+});
+
+// Optional: Close About when clicking outside
+document.addEventListener('click', function(e) {
+  const aboutBox = document.getElementById('about');
+  const toggleBtn = document.getElementById('toggle-about-footer');
+  if (!aboutBox.contains(e.target) && e.target !== toggleBtn && !toggleBtn?.contains(e.target)) {
+    aboutBox.style.display = 'none';
+  }
+});
+</script>
+
+
 
 <!-- =============== STICKY SCROLL BUTTONS (Mobile-Friendly) =============== -->
 <div class="scroll-controls" style="position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 8px; z-index: 999; pointer-events: none;">
