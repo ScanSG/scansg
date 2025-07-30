@@ -26,18 +26,19 @@
 <link rel="canonical" href="https://scansg.com/" />
 <meta name="robots" content="index, follow">
 
-<!-- Schema.org Structured Data (JSON-LD) -->
+<!-- Schema.org Structured Data (JSON-LD) - Enhanced for SEO -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "TravelGuide",
-  "name": "ScanSG - Your Ultimate Singapore Guide",
-  "description": "The most comprehensive, up-to-date guide to Singapore for tourists, expats, and locals. Food, transport, laws, deals, and culture.",
+  "name": "ScanSG - Complete Singapore Travel Guide 2025",
+  "description": "The most comprehensive Singapore travel guide covering food, transport, attractions, cultural experiences, and local tips for tourists and expats visiting Singapore.",
   "url": "https://scansg.com",
   "image": "https://scansg.com/images/scansg-social-preview.jpg",
   "author": {
     "@type": "Organization",
-    "name": "ScanSG"
+    "name": "ScanSG",
+    "url": "https://scansg.com"
   },
   "publisher": {
     "@type": "Organization",
@@ -48,11 +49,85 @@
     }
   },
   "datePublished": "2024-05-01",
-  "dateModified": "2025-04-05",
+  "dateModified": "2025-07-30",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://scansg.com"
+  },
+  "about": {
+    "@type": "Place",
+    "name": "Singapore",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "1.3521",
+      "longitude": "103.8198"
+    }
+  },
+  "keywords": "Singapore travel guide, Singapore tourism, hawker centers, MRT transport, Marina Bay Sands, Gardens by the Bay, Singapore food, Singapore attractions, things to do Singapore",
+  "inLanguage": "en-SG",
+  "potentialAction": {
+    "@type": "ReadAction",
+    "target": "https://scansg.com"
+  },
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "tourists, expats, travelers"
   }
+}
+</script>
+
+<!-- Additional Local Business Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "ScanSG",
+  "url": "https://scansg.com",
+  "description": "Complete Singapore travel guide with local insights",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://scansg.com/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "sameAs": [
+    "https://www.facebook.com/ScanSG",
+    "https://www.instagram.com/ScanSG",
+    "https://twitter.com/ScanSG"
+  ]
+}
+</script>
+
+<!-- FAQ Schema for better SERP features -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the best way to get around Singapore?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The MRT (Mass Rapid Transit) system is the most efficient way to travel around Singapore. It's clean, affordable, and connects all major attractions and neighborhoods."
+      }
+    },
+    {
+      "@type": "Question", 
+      "name": "What are the must-try foods in Singapore?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Must-try Singapore foods include Hainanese Chicken Rice, Laksa, Char Kway Teow, Satay, and Chili Crab. Visit hawker centers like Maxwell Food Centre and Lau Pa Sat for authentic local cuisine."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the top attractions in Singapore?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Top Singapore attractions include Marina Bay Sands, Gardens by the Bay, Sentosa Island, Universal Studios, Singapore Zoo, and the iconic Merlion Park."
+      }
+    }
+  ]
 }
 </script>
 
@@ -679,7 +754,6 @@ table, .content-and-sidebar, main, body {
 
 <body>
 
-<!-- =============== TIGHT-LEFT HEADER: SCANSG + TAGLINE (NO GAP) =============== -->
 <!-- =============== SCANSG LEFT | TAGLINE 5CM AWAY =============== -->
 <header style=
 "background: var(--main); 
@@ -701,7 +775,7 @@ font-family: 'Montserrat', sans-serif;
     ScanSG
   </div>
 
-  <!-- Tagline (Exactly ~5cm from ScanSG) -->
+  <!-- SEO-Optimized Tagline -->
   <div style="
     display: flex;
     flex-direction: column;
@@ -717,7 +791,7 @@ font-family: 'Montserrat', sans-serif;
       margin: 0;
       line-height: 1.3;
     ">
-      Your Ultimate Guide to Exploring, Saving & Staying Smart in Singapore
+      Singapore Travel Guide 2025 | Local Food, MRT Transport & Attraction Tips
     </h1>
     <p style="
       color: #fff;
@@ -725,7 +799,7 @@ font-family: 'Montserrat', sans-serif;
       font-size: 1.05rem;
       margin: 0;
     ">
-      Food • Transport • Laws • Deals • Local Hacks
+      Hawker Centers • MRT Guide • Marina Bay • Gardens by the Bay • Local Deals
     </p>
   </div>
 </header>
@@ -736,20 +810,20 @@ font-family: 'Montserrat', sans-serif;
     <!-- Left Navigation -->
     <nav>
       <ul>
-<!-- RECOMMENDED NAVIGATION ORDER -->
-    <li><a data-link-key="transport_internal" href="#transport">🚀 Move</a></li>
-    <li><a data-link-key="overview_internal" href="#overview">📍 Zones</a></li>
-    <li><a data-link-key="deals_internal" href="#deals">💸 Save</a></li>
-    <li><a data-link-key="free_internal" href="#free">🎁 Freebies</a></li>
-    <li><a data-link-key="musttry_internal" href="#musttry">🍜 Must-Try</a></li>
-    <li><a data-link-key="goodtoknow_internal" href="#goodtoknow">🧠 Fact Bank</a></li>
-    <li><a data-link-key="tips_internal" href="#tips">🎯 Hacks</a></li>
-    <li><a data-link-key="penalties_internal" href="#penalties">⚠️ Don't</a></li>
-    <li><a data-link-key="glossary_internal" href="#glossary">🗣️ Talk Local</a></li>
-    <li><a data-link-key="planner_internal" href="#planner">🗓️ Hint Plan</a></li>
-    <li><a data-link-key="history_internal" href="#history">🏛️ Roots</a></li>
-    <li><a data-link-key="medical_internal" href="#medical">🩺 Help</a></li>
-    <li><a data-link-key="resources_internal" href="#resources">🔗 Links</a></li>
+<!-- RECOMMENDED NAVIGATION ORDER - SEO Optimized -->
+    <li><a data-link-key="transport_internal" href="#transport" title="Singapore MRT Transport Guide">🚀 Transport</a></li>
+    <li><a data-link-key="overview_internal" href="#overview" title="Singapore Districts Guide">📍 Districts</a></li>
+    <li><a data-link-key="deals_internal" href="#deals" title="Singapore Shopping Deals">💸 Shopping Deals</a></li>
+    <li><a data-link-key="free_internal" href="#free" title="Free Things to Do Singapore">🎁 Free Activities</a></li>
+    <li><a data-link-key="musttry_internal" href="#musttry" title="Must Try Singapore Food">🍜 Local Food</a></li>
+    <li><a data-link-key="goodtoknow_internal" href="#goodtoknow" title="Singapore Travel Tips">🧠 Travel Tips</a></li>
+    <li><a data-link-key="tips_internal" href="#tips" title="Singapore Local Hacks">🎯 Local Hacks</a></li>
+    <li><a data-link-key="penalties_internal" href="#penalties" title="Singapore Laws Rules">⚠️ Laws & Rules</a></li>
+    <li><a data-link-key="glossary_internal" href="#glossary" title="Singapore Local Language">🗣️ Local Lingo</a></li>
+    <li><a data-link-key="planner_internal" href="#planner" title="Singapore Itinerary Planner">🗓️ Itinerary</a></li>
+    <li><a data-link-key="history_internal" href="#history" title="Singapore History Culture">🏛️ History</a></li>
+    <li><a data-link-key="medical_internal" href="#medical" title="Singapore Healthcare Guide">🩺 Healthcare</a></li>
+    <li><a data-link-key="resources_internal" href="#resources" title="Singapore Travel Resources">🔗 Resources</a></li>
       </ul>
     </nav>
 
