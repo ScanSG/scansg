@@ -135,7 +135,7 @@
     /* =============== BASE STYLES =============== */
     :root {
       --main: #e02332;
-      --accent: #ffb400;
+      --accent: #ffb600;
       --nav-width: 180px;
     }
 
@@ -229,7 +229,7 @@
   display: flex;
   gap: 1.8rem; /* Slightly airy space between main & sidebar */
   padding: 0 1.2rem;
-  max-width: 1400px; /* Wider than before */
+  max-width: 1600px; /* Wider than before */
   width: 100%;
   margin: 0; /* Remove auto margin (this was causing centering + gap) */
 }
@@ -337,19 +337,59 @@ main {
       margin-bottom: 0.27rem;
     }
 
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      min-width: 500px;
-      font-size: 0.9em;
-    }
+/* =============== TABLE STYLES: LIGHT RED GRID (DESKTOP) =============== */
+table {
+  width: 100%;
+  min-width: 500px;
+  font-size: 0.9em;
+  border-collapse: collapse;
+  border: 1px solid #ec9a9a; /* 🔹 Soft outer border */
+  border-radius: 6px;
+  overflow: hidden; /* Required for border-radius to work */
+}
 
-    th, td {
-      border: 1px solid #ddd;
-      padding: 0.5rem 0.8rem;
-      text-align: left;
-      vertical-align: top;
-    }
+/* Apply light red border to all cells */
+th, td {
+  border: 1px solid #ec9a9a; /* 🔹 Light red grid */
+  padding: 0.5rem 0.8rem;
+  text-align: left;
+  vertical-align: top;
+  font-weight: 600; /* 🔥 Makes ALL text bold */
+}
+
+/* Header styling */
+th {
+  background: var(--accent); /* e.g., #1565c0 */
+  color: #282828;
+}
+
+/* Vertical divider between columns — but subtle */
+th:not(:last-child),
+td:not(:last-child) {
+  border-right: 1px solid #ec9a9a; /* 🔹 Match grid color — not too bold */a
+}
+
+/* Optional: Soft background on first column */
+td:first-child {
+  background-color: #ec9a9a;
+}
+
+/* Optional: Add top border on header */
+th {
+  background: var(--accent);
+  color: #282828;
+  border-top: 1px solid #ec9a9a;
+}
+
+/* Remove bottom border on last row */
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Optional: Slight background tint on first column */
+td:first-child {
+  background-color: #fdf2f2;
+}
 
     th {
       background: var(--accent);
@@ -608,64 +648,31 @@ main {
 /* =============== MOBILE-FRIENDLY TABLES (ALL SECTIONS) =============== */
 
 /* Make all tables responsive */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1rem 0;
-  overflow: hidden;
-  display: block;
-  max-width: 100%;
-  font-size: 0.95rem;
+/* =============== MOBILE: CARD-LIKE TABLE LAYOUT =============== */
+@media (max-width: 768px) {
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+
+
+  tr {
+    display: block;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    background: #f9f9f9;
+    border-radius: 6px;
+  }
+
+
+
+
 }
 
-thead, tbody, th, td, tr {
-  display: block;
-}
 
-/* Hide table headers visually (but keep for screen readers) */
-thead {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-}
-
-/* Add space between rows */
-tr {
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 1rem;
-  padding-bottom: 0.8rem;
-  background: #f9f9f9;
-  border-radius: 6px;
-  padding: 0.8rem;
-}
-
-/* Use data-label to show column names */
-td {
-  position: relative;
-  padding: 1.8rem 0.8rem 0.6rem;
-  border: none;
-  text-align: left;
-}
-
-/* Show column label before each cell */
-td:before {
-  content: attr(data-label);
-  font-weight: bold;
-  position: absolute;
-  left: 0.8rem;
-  top: 0.5rem;
-  background: #eee;
-  padding: 0.15rem 0.4rem;
-  border-radius: 3px;
-  font-size: 0.8rem;
-  color: #444;
-  white-space: nowrap;
-}
-
-/* Optional: Add subtle hover effect */
-tr:hover td {
-  background: #f5f5f5;
-}
 
 /* Ensure tables don't overflow */
 table, .content-and-sidebar, main, body {
@@ -1678,84 +1685,106 @@ font-family: 'Montserrat', sans-serif;
   <table style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.95rem;">
     <thead>
       <tr style="background-color: #f0f0f0; color: #333;">
-        <th style="text-align: left; padding: 0.6rem 0.8rem; font-weight: 600; width: 30%;">🎯 For You</th>
-        <th style="text-align: left; padding: 0.6rem 0.8rem; font-weight: 600;">💡 The Truth</th>
+        <th style="text-align: left; padding: 0.6rem 0.8rem; font-weight: 600; width: 30%;" data-label="🎯 For You">🎯 For You</th>
+        <th style="text-align: left; padding: 0.6rem 0.8rem; font-weight: 600;" data-label="💡 The Truth">💡 The Truth</th>
       </tr>
     </thead>
     <tbody>
 
       <!-- 👋 FOR VISITORS -->
-      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">🌡️ Climate</td>
-        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Hot and humid year-round (28–32°C). Sudden rain showers are common. Always carry an umbrella or light raincoat.</td>
+      <tr>
+        <td data-label="🎯 For You" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">🌡️ Climate</td>
+        <td data-label="💡 The Truth" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">Hot and humid year-round (28–32°C). Sudden rain showers are common. Always carry an umbrella or light raincoat.</td>
       </tr>
-      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">💧 Tap Water is Safe</td>
-        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Yes, you can drink it. Refill bottles at water coolers in malls, MRT stations, and hawker centres.</td>
+      <tr>
+        <td data-label="🎯 For You" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">💧 Tap Water is Safe</td>
+        <td data-label="💡 The Truth" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">Yes, you can drink it. Refill bottles at water coolers in malls, MRT stations, and hawker centres.</td>
       </tr>
-      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">🔌 Power Plugs</td>
-        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Type G (UK-style) 3-pin. Voltage: 230V, 50Hz. Bring an adapter if needed.</td>
+      <tr>
+        <td data-label="🎯 For You" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">🔌 Power Plugs</td>
+        <td data-label="💡 The Truth" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">Type G (UK-style) 3-pin. Voltage: 230V, 50Hz. Bring an adapter if needed.</td>
       </tr>
-      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">📶 Free Wi-Fi</td>
-        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Available at MRT stations, libraries, hawker centres, and public areas via <strong>Wireless@SG</strong>.</td>
+      <tr>
+        <td data-label="🎯 For You" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">📶 Free Wi-Fi</td>
+        <td data-label="💡 The Truth" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">Available at MRT stations, libraries, hawker centres, and public areas via <strong>Wireless@SG</strong>.</td>
       </tr>
-      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">🚻 Toilets</td>
-        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Usually clean and free. Some malls or petrol stations may charge a small fee (SGD 0.20–0.50).</td>
+      <tr>
+        <td data-label="🎯 For You" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">🚻 Toilets</td>
+        <td data-label="💡 The Truth" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">Usually clean and free. Some malls or petrol stations may charge a small fee (SGD 0.20–0.50).</td>
       </tr>
-      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">🧃 Tipping</td>
-        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Not expected or required. Service charge (10%) is often included in restaurants and hotels.</td>
+      <tr>
+        <td data-label="🎯 For You" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">🧃 Tipping</td>
+        <td data-label="💡 The Truth" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">Not expected or required. Service charge (10%) is often included in restaurants and hotels.</td>
       </tr>
-      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">🛒 Tax-Free Shopping</td>
-        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Available for tourists at participating retailers (e.g., <a data-link-key="mustafa_centre_good_to_know" target="_blank">Mustafa Centre</a>).</td>
+      <tr>
+        <td data-label="🎯 For You" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">🛒 Tax-Free Shopping</td>
+        <td data-label="💡 The Truth" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">Available for tourists at participating retailers (e.g., <a data-link-key="mustafa_centre_good_to_know" target="_blank">Mustafa Centre</a>).</td>
       </tr>
-      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">📅 Public Holidays</td>
-        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Check <a data-link-key="mom_public_holidays" target="_blank">MOM website</a> for official list (varies yearly).</td>
+      <tr>
+        <td data-label="🎯 For You" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">📅 Public Holidays</td>
+        <td data-label="💡 The Truth" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">Check <a data-link-key="mom_public_holidays" target="_blank">MOM website</a> for official list (varies yearly).</td>
       </tr>
-      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">⏱️ Be Punctual</td>
-        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Being on time is highly valued in Singaporean culture.</td>
+      <tr>
+        <td data-label="🎯 For You" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">⏱️ Be Punctual</td>
+        <td data-label="💡 The Truth" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">Being on time is highly valued in Singaporean culture.</td>
       </tr>
 
       <!-- 🌏 FOR EVERYONE (WOW FACTS) -->
-      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 2px solid #ddd;">🇸🇬 Population (2025)</td>
-        <td style="padding: 0.6rem 0.8rem; border-top: 2px solid #ddd;">Approximately 5.9 million. One of the most densely populated countries in the world.</td>
+      <tr>
+        <td data-label="🎯 For You" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">🇸🇬 Population (2025)</td>
+        <td data-label="💡 The Truth" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">Approximately 5.9 million. One of the most densely populated countries in the world.</td>
       </tr>
-      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">🎨 Ethnic Makeup</td>
-        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Chinese (74.3%), Malay (13.5%), Indian (9%), Others (3.2%). One of the most multicultural societies globally.</td>
+      <tr>
+        <td data-label="🎯 For You" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">🎨 Ethnic Makeup</td>
+        <td data-label="💡 The Truth" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">Chinese (74.3%), Malay (13.5%), Indian (9%), Others (3.2%). One of the most multicultural societies globally.</td>
       </tr>
-      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">🗣️ Official Languages</td>
-        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Four official: English (admin), Mandarin, Malay (national), Tamil. Most locals speak 2–3 languages.</td>
+      <tr>
+        <td data-label="🎯 For You" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">🗣️ Official Languages</td>
+        <td data-label="💡 The Truth" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">Four official: English (admin), Mandarin, Malay (national), Tamil. Most locals speak 2–3 languages.</td>
       </tr>
-      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">⏰ Time Zone</td>
-        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Singapore Standard Time (SGT): UTC+8. No daylight saving.</td>
+      <tr>
+        <td data-label="🎯 For You" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">⏰ Time Zone</td>
+        <td data-label="💡 The Truth" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">Singapore Standard Time (SGT): UTC+8. No daylight saving.</td>
       </tr>
-      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">🔒 Crime Rate</td>
-        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">One of the safest countries in the world. Violent crime is extremely rare.</td>
+      <tr>
+        <td data-label="🎯 For You" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">🔒 Crime Rate</td>
+        <td data-label="💡 The Truth" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">One of the safest countries in the world. Violent crime is extremely rare.</td>
       </tr>
-      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">🍽️ Hawker Culture</td>
-        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">UNESCO-recognized. Over 100 hawker centres. Some Michelin-starred meals cost under SGD 5.</td>
+      <tr>
+        <td data-label="🎯 For You" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">🍽️ Hawker Culture</td>
+        <td data-label="💡 The Truth" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">UNESCO-recognized. Over 100 hawker centres. Some Michelin-starred meals cost under SGD 5.</td>
       </tr>
-      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">💸 GDP per Capita (PPP)</td>
-        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Ranked #1 globally by IMF (2025). Higher than the US and Switzerland.</td>
+      <tr>
+        <td data-label="🎯 For You" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">💸 GDP per Capita (PPP)</td>
+        <td data-label="💡 The Truth" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">Ranked #1 globally by IMF (2025). Higher than the US and Switzerland.</td>
       </tr>
 
       <!-- 🚗 FOR RESIDENTS & LONG-TERMERS -->
-      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 2px solid #ddd;">🚗 Car Ownership = Luxury</td>
-        <td style="padding: 0.6rem 0.8rem; border-top: 2px solid #ddd;">One of the most expensive in the world. A basic car can cost 3–5x its overseas price.</td>
+      <tr>
+        <td data-label="🎯 For You" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">🚗 Car Ownership = Luxury</td>
+        <td data-label="💡 The Truth" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">One of the most expensive in the world. A basic car can cost 3–5x its overseas price.</td>
       </tr>
-      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">💰 COE (Certificate of Entitlement)</td>
-        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">You bid for a COE first. It gives you the right to own a vehicle for 10 years. Prices can exceed SGD 100,000.</td>
+      <tr>
+        <td data-label="🎯 For You" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">💰 COE (Certificate of Entitlement)</td>
+        <td data-label="💡 The Truth" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">You bid for a COE first. It gives you the right to own a vehicle for 10 years. Prices can exceed SGD 100,000.</td>
       </tr>
-      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">🚦 ERP (Electronic Road Pricing)</td>
-        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Toll system charges during peak hours. Rates change dynamically. Check <a data-link-key="mytransport_sg" target="_blank">MyTransport.sg</a>.</td>
+      <tr>
+        <td data-label="🎯 For You" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">🚦 ERP (Electronic Road Pricing)</td>
+        <td data-label="💡 The Truth" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">Toll system charges during peak hours. Rates change dynamically. Check <a data-link-key="mytransport_sg" target="_blank">MyTransport.sg</a>.</td>
       </tr>
-      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">🅿️ HDB Parking</td>
-        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Resident parking only. Visitors need permits or use nearby car parks. No permit? Tow-away zone.</td>
+      <tr>
+        <td data-label="🎯 For You" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">🅿️ HDB Parking</td>
+        <td data-label="💡 The Truth" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">Resident parking only. Visitors need permits or use nearby car parks. No permit? Tow-away zone.</td>
       </tr>
-      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">🚗 No Need to Drive</td>
-        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Most locals don’t own cars. MRT + Grab is faster and cheaper. Cars are a status symbol, not a necessity.</td>
+      <tr>
+        <td data-label="🎯 For You" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">🚗 No Need to Drive</td>
+        <td data-label="💡 The Truth" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">Most locals don’t own cars. MRT + Grab is faster and cheaper. Cars are a status symbol, not a necessity.</td>
       </tr>
 
       <!-- 🚨 EMERGENCY NUMBERS -->
-      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 2px solid #ddd;">🚨 Emergency Numbers</td>
-        <td style="padding: 0.6rem 0.8rem; border-top: 2px solid #ddd;">Police/General Emergencies: <strong>999</strong>, Ambulance/Fire: <strong>995</strong></td>
+      <tr>
+        <td data-label="🎯 For You" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">🚨 Emergency Numbers</td>
+        <td data-label="💡 The Truth" style="font-weight: 600; padding: 0.6rem 0.8rem; border: 1px solid #ec9a9a;">Police/General Emergencies: <strong>999</strong>, Ambulance/Fire: <strong>995</strong></td>
       </tr>
 
     </tbody>
@@ -1794,178 +1823,178 @@ font-family: 'Montserrat', sans-serif;
         </section>
 
 <section id="penalties">
-  <h2>Fines & Penalties — Don’t Be Siao: Singapore Edition</h2>
-  <p>Singapore is clean, safe, and efficient — because <strong>rules are rules, and fines hit faster than a durian in monsoon season</strong>. Whether you're a tourist, expat, or local, ignorance is not an excuse. Break the law? The fine will come with a side of shame and CCTV footage.</p>
+  <h2>💰 Fines & Penalties — Don’t Be Siao: Singapore Edition 🚨</h2>
+  <p>🇸🇬 Singapore is clean, safe, and efficient — because <strong>rules are rules, and fines hit faster than a durian in monsoon season 🌩️💨</strong>. Whether you're a tourist, expat, or local, ignorance is not an excuse. Break the law? The fine will come with a side of shame 🍳 and CCTV footage 📹👀.</p>
 
   <table>
     <thead>
       <tr>
-        <th>Offense</th>
-        <th>Penalty (SGD)</th>
-        <th>Reality Check (No Blur)</th>
+        <th>⚠️ Offense</th>
+        <th>💸 Penalty (SGD)</th>
+        <th>🔍 Reality Check (No Blur)</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><strong>Chewing Gum (Import/Sale)</strong></td>
-        <td>Up to $100,000 and/or 2 years jail</td>
-        <td>❌ You can chew it if you bought it here (some therapeutic gum available), but <strong>bringing it in = criminal offense</strong>. Even 2 sticks in luggage? NEA might ask: "You open shop or what?"</td>
+        <td><strong>껌 Chewing Gum (Import/Sale)</strong></td>
+        <td>Up to $100,000 💰 and/or 2 years jail ⛓️</td>
+        <td>❌ You can chew it if you bought it here (some therapeutic gum available), but <strong>bringing it in = criminal offense</strong>. Even 2 sticks in luggage? 🧳 NEA might ask: "You open shop or what? 🤨"</td>
       </tr>
       <tr>
-        <td><strong>Littering (Cigarette Butt, Tissue, Food)</strong></td>
-        <td>$300 (1st), up to $1,000 (repeat)</td>
-        <td>✅ NEA officers patrol like hawks. Drop a tissue? Flash of yellow vest and <em>"Sir, composition fine!"</em> before you finish your kopi.</td>
+        <td><strong>🗑️ Littering (Cigarette Butt, Tissue, Food)</strong></td>
+        <td>$300 (1st), up to $1,000 (repeat) 💸</td>
+        <td>✅ NEA officers patrol like hawks 🦅. Drop a tissue? 🧻 Flash of yellow vest and <em>"Sir, composition fine! 🧾"</em> before you finish your kopi ☕.</td>
       </tr>
       <tr>
-        <td><strong>Littering from Vehicle</strong></td>
-        <td>$500</td>
-        <td>🔺 All passengers can be fined unless driver names the culprit. Even a candy wrapper? <em>Wah, you think car is private kingdom?</em> CCTV sees all.</td>
+        <td><strong>🚗 Littering from Vehicle</strong></td>
+        <td>$500 💵</td>
+        <td>🔺 All passengers can be fined unless driver names the culprit 🙋‍♂️. Even a candy wrapper? 🍬 <em>Wah, you think car is private kingdom? 👑</em> CCTV sees all 📹👁️.</td>
       </tr>
       <tr>
-        <td><strong>Jaywalking</strong></td>
-        <td>$50–$150</td>
-        <td>✅ "But the light was green on the other side!" — doesn’t matter. If the sign says "Wait", you wait. Or pay. Simple.</td>
+        <td><strong>🚶‍♂️ Jaywalking</strong></td>
+        <td>$50–$150 💰</td>
+        <td>✅ "But the light was green on the other side!" — doesn’t matter. 🚫 If the sign says "Wait", you wait ⏸️. Or pay 💳. Simple.</td>
       </tr>
       <tr>
-        <td><strong>Smoking in Prohibited Areas</strong></td>
-        <td>$200–$1,000</td>
-        <td>🔺 Includes hawker centres, parks, bus stops, MRT stations. And <strong>e-cigarettes? FULLY BANNED</strong>. Even vaping in your hotel room? Risky. NEA officers don’t play.</td>
+        <td><strong>🚭 Smoking in Prohibited Areas</strong></td>
+        <td>$200–$1,000 💸</td>
+        <td>🔺 Includes hawker centres 🍜, parks 🌳, bus stops 🚌, MRT stations 🚇. And <strong>e-cigarettes? 🔴 FULLY BANNED</strong>. Even vaping in your hotel room? 🏨 Risky. NEA officers don’t play. 😠</td>
       </tr>
       <tr>
-        <td><strong>Vaping / E-Cigarette Use</strong></td>
-        <td>$1,000 (1st), up to $2,000 + jail</td>
-        <td>🔺 Since 2020: full ban. Possession or use = fine. Repeat offenses may lead to <strong>6 months jail</strong>. Even disposable vapes? <em>Confiscated, bro.</em></td>
+        <td><strong>💨 Vaping / E-Cigarette Use</strong></td>
+        <td>$1,000 (1st), up to $2,000 + jail ⛓️</td>
+        <td>🔺 Since 2020: full ban 🚫. Possession or use = fine. Repeat offenses may lead to <strong>6 months jail 🕳️</strong>. Even disposable vapes? <em>Confiscated, bro. 🚮</em></td>
       </tr>
       <tr>
-        <td><strong>Urine in Elevator / Public Toilet</strong></td>
-        <td>$500–$1,000</td>
-        <td>🔺 Yes, people do this. Yes, it’s caught on CCTV. Yes, the whole block will know. And yes, the fine is just the start — you might get a personal visit from the town council.</td>
+        <td><strong>🚽 Urine in Elevator / Public Toilet</strong></td>
+        <td>$500–$1,000 💰</td>
+        <td>🔺 Yes, people do this. 🤢 Yes, it’s caught on CCTV 📹. Yes, the whole block will know 🗣️. And yes, the fine is just the start — you might get a personal visit from the town council 🏢👮‍♂️.</td>
       </tr>
       <tr>
-        <td><strong>Eating/Drinking on MRT/LRT</strong></td>
-        <td>$500</td>
-        <td>✅ Transit officers love this one. Even a sip of bubble tea? <em>"Uncle, just one sip!"</em> — doesn’t matter. Water and medicine only. Babies? Exempt. You? Not a baby.</td>
+        <td><strong>🚇 Eating/Drinking on MRT/LRT</strong></td>
+        <td>$500 💵</td>
+        <td>✅ Transit officers love this one 🕵️‍♂️. Even a sip of bubble tea? 🧋 <em>"Uncle, just one sip!"</em> — doesn’t matter. 💧 Water and medicine only 💊. Babies? 👶 Exempt. You? Not a baby. 🙅‍♂️</td>
       </tr>
       <tr>
-        <td><strong>Vandalism (Graffiti, Scratching Cars)</strong></td>
-        <td>Up to $2,000 + 3 years jail + caning</td>
-        <td>🔺 <strong>Caning is MANDATORY.</strong> Doesn’t matter if you’re foreigner or local. Spray paint a train? You’ll get strokes. Michael Fay still has nightmares.</td>
+        <td><strong>🎨 Vandalism (Graffiti, Scratching Cars)</strong></td>
+        <td>Up to $2,000 + 3 years jail + 🪢 caning</td>
+        <td>🔺 <strong>🪢 Caning is MANDATORY.</strong> Doesn’t matter if you’re foreigner or local. Spray paint a train? 🚆 You’ll get strokes. Michael Fay still has nightmares 😱.</td>
       </tr>
       <tr>
-        <td><strong>Drugs (Even a Tiny Bit)</strong></td>
-        <td>Mandatory rehab, jail, or death</td>
-        <td>🔺 <strong>Zero. Tolerance.</strong> Possession of cannabis? Rehab or jail. Trafficking? Death penalty. Don’t even think about it. <em>Chope your life, not drugs.</em></td>
+        <td><strong>💊 Drugs (Even a Tiny Bit)</strong></td>
+        <td>Mandatory rehab 🛌, jail ⛓️, or death ⚰️</td>
+        <td>🔺 <strong>🚫 Zero. Tolerance.</strong> Possession of cannabis? Rehab or jail. Trafficking? Death penalty. Don’t even think about it. <em>Chope your life, not drugs. 🛑</em></td>
       </tr>
       <tr>
-        <td><strong>Feeding Pigeons / Ducks</strong></td>
-        <td>$300–$1,000</td>
-        <td>🔺 "But they look hungry!" — not your problem. Feeding wildlife attracts pests and mess. NEA runs sting operations. Yes, really.</td>
+        <td><strong>🕊️ Feeding Pigeons / Ducks</strong></td>
+        <td>$300–$1,000 💸</td>
+        <td>🔺 "But they look hungry!" — not your problem. 🙅‍♀️ Feeding wildlife attracts pests 🐀 and mess 💩. NEA runs sting operations 🕵️‍♀️. Yes, really.</td>
       </tr>
       <tr>
-        <td><strong>Not Flushing Public Toilet</strong></td>
-        <td>$150</td>
-        <td>🔺 Yes, it’s a real fine. And yes, there’s CCTV. Be a good human. Flush. It’s not hard.</td>
+        <td><strong>🚽 Not Flushing Public Toilet</strong></td>
+        <td>$150 💰</td>
+        <td>🔺 Yes, it’s a real fine. And yes, there’s CCTV 📹. Be a good human. Flush 💦. It’s not hard.</td>
       </tr>
       <tr>
-        <td><strong>Illegal Hawking (Street Vending)</strong></td>
-        <td>$1,000–$5,000</td>
-        <td>🔺 Selling phone cases, socks, or "genuine fake" bags on the street? Goods will be <strong>confiscated</strong>. No license = no business.</td>
+        <td><strong>🛒 Illegal Hawking (Street Vending)</strong></td>
+        <td>$1,000–$5,000 💵</td>
+        <td>🔺 Selling phone cases 📱, socks 🧦, or "genuine fake" bags on the street? 👜 Goods will be <strong>confiscated 🚫</strong>. No license = no business. 🚫💼</td>
       </tr>
       <tr>
-        <td><strong>Parking Violations</strong></td>
-        <td>$40–$320+</td>
-        <td>✅ Use <strong>Parking.sg</strong> app. No excuses. Even 5 minutes over? <em>Tickety-boo, here's your fine.</em></td>
+        <td><strong>🅿️ Parking Violations</strong></td>
+        <td>$40–$320+ 💸</td>
+        <td>✅ Use <strong>Parking.sg 📱</strong> app. No excuses. Even 5 minutes over? ⏰ <em>Tickety-boo, here's your fine. 🧾</em></td>
       </tr>
       <tr>
-        <td><strong>Driving Without Insurance</strong></td>
-        <td>Up to $3,000 or 12 months jail</td>
-        <td>🔺 Also 6 demerit points and possible license suspension. Even if car is parked illegally? Still applies.</td>
+        <td><strong>🚗 Driving Without Insurance</strong></td>
+        <td>Up to $3,000 or 12 months jail ⛓️</td>
+        <td>🔺 Also 6 demerit points ⚠️ and possible license suspension 🪪. Even if car is parked illegally? Still applies. 🚫</td>
       </tr>
       <tr>
-        <td><strong>Using Phone While Driving</strong></td>
-        <td>$1,000 + 12 demerit points</td>
-        <td>🔺 Even hands-free is <strong>not allowed</strong> unless via Bluetooth. Caught via traffic cameras? <em>Game over, bro.</em></td>
+        <td><strong>📱 Using Phone While Driving</strong></td>
+        <td>$1,000 + 12 demerit points ⚠️</td>
+        <td>🔺 Even hands-free is <strong>not allowed</strong> unless via Bluetooth 🎧. Caught via traffic cameras? 📹 <em>Game over, bro. 💀</em></td>
       </tr>
       <tr>
-        <td><strong>Not Wearing Seatbelt (Front/Back)</strong></td>
-        <td>$120 per unsecured occupant</td>
-        <td>✅ Driver is responsible. Kids? Must be in car seats. No excuses.</td>
+        <td><strong>🪑 Not Wearing Seatbelt (Front/Back)</strong></td>
+        <td>$120 per unsecured occupant 💰</td>
+        <td>✅ Driver is responsible. Kids? 👧👦 Must be in car seats. No excuses. 🚫</td>
       </tr>
       <tr>
-        <td><strong>Overstaying Visa</strong></td>
-        <td>$100–$3,000 + possible caning/deportation</td>
-        <td>🔺 Even 1 day late? You may be fined, detained, or banned from re-entry. Sponsors (e.g. hotels) lose bond money too.</td>
+        <td><strong>🛂 Overstaying Visa</strong></td>
+        <td>$100–$3,000 + possible caning/🪢 deportation ✈️🚫</td>
+        <td>🔺 Even 1 day late? You may be fined 💸, detained 🚔, or banned from re-entry 🚫. Sponsors (e.g. hotels) lose bond money too 💸.</td>
       </tr>
       <tr>
-        <td><strong>Working Without Pass</strong></td>
-        <td>$20,000 fine + 2 years jail (employer), deportation (worker)</td>
-        <td>🔺 Includes freelancing, tutoring, or helping a friend’s stall. Tourist visa ≠ work permit.</td>
+        <td><strong>💼 Working Without Pass</strong></td>
+        <td>$20,000 fine + 2 years jail (employer) ⛓️, deportation (worker) ✈️</td>
+        <td>🔺 Includes freelancing ✍️, tutoring 📚, or helping a friend’s stall 🤝. Tourist visa ≠ work permit 🚫.</td>
       </tr>
       <tr>
-        <td><strong>Drone Flying (No Permit)</strong></td>
-        <td>Up to $20,000 and/or 12 months jail</td>
-        <td>🔺 Even small drones. Must register and get CAAS approval. Only allowed in designated zones (e.g. Punggol, West Coast Park).</td>
+        <td><strong>🛸 Drone Flying (No Permit)</strong></td>
+        <td>Up to $20,000 💰 and/or 12 months jail ⛓️</td>
+        <td>🔺 Even small drones 🚁. Must register and get CAAS approval ✅. Only allowed in designated zones (e.g. Punggol, West Coast Park) 📍.</td>
       </tr>
       <tr>
-        <td><strong>Public Drunkenness / Disorderly Conduct</strong></td>
-        <td>Up to $1,000 or 3 months jail</td>
-        <td>🔺 Loud fights, offensive language, or falling asleep on MRT? Police can arrest. Not worth it for $8 beer.</td>
+        <td><strong>🍺 Public Drunkenness / Disorderly Conduct</strong></td>
+        <td>Up to $1,000 or 3 months jail ⛓️</td>
+        <td>🔺 Loud fights 🗣️, offensive language 💬, or falling asleep on MRT? 🚇 Police can arrest 👮. Not worth it for $8 beer. 🍻</td>
       </tr>
       <tr>
-        <td><strong>Disrespecting National Symbols</strong></td>
-        <td>Up to $10,000 and/or 3 years jail</td>
-        <td>🔺 Includes mocking the National Anthem, flag desecration, or refusing to stand during pledge. Serious offense.</td>
+        <td><strong>🇸🇬 Disrespecting National Symbols</strong></td>
+        <td>Up to $10,000 💰 and/or 3 years jail ⛓️</td>
+        <td>🔺 Includes mocking the National Anthem 🎵, flag desecration 🚩, or refusing to stand during pledge 🙇‍♂️. Serious offense.</td>
       </tr>
       <tr>
-        <td><strong>Bringing in Illegal Medication</strong></td>
-        <td>Up to $10,000 + 10 years jail</td>
-        <td>🔺 ADHD meds (e.g. Adderall), codeine cough syrup, sleeping pills — all controlled. Check <a href="https://www.hsa.gov.sg" target="_blank">HSA</a> first.</td>
+        <td><strong>💊 Bringing in Illegal Medication</strong></td>
+        <td>Up to $10,000 + 10 years jail ⛓️</td>
+        <td>🔺 ADHD meds (e.g. Adderall) 💊, codeine cough syrup 🤧, sleeping pills — all controlled. Check <a href="https://www.hsa.gov.sg" target="_blank">HSA 🌐</a> first.</td>
       </tr>
       <tr>
-        <td><strong>Queue Jumping (Serious Cases)</strong></td>
-        <td>Up to $1,000</td>
-        <td>🔺 While rare, aggressive cutting (e.g. at passport control) can be charged under public order laws. Singaporeans take queues seriously.</td>
+        <td><strong>🛑 Queue Jumping (Serious Cases)</strong></td>
+        <td>Up to $1,000 💸</td>
+        <td>🔺 While rare, aggressive cutting (e.g. at passport control) can be charged under public order laws. Singaporeans take queues seriously. ⏳</td>
       </tr>
     </tbody>
   </table>
 
-  <h3>Repeat Offenses? Say Hello to Court (and Possibly Caning)</h3>
+  <h3>🔁 Repeat Offenses? Say Hello to Court 🏛️ (and Possibly Caning 🪢)</h3>
   <ul>
-    <li>First time? Maybe a warning. Second time? <strong>Composition fine or court summons</strong>.</li>
-    <li>Some offenses use a <strong>demerit point system</strong> — collect enough, and you’ll be explaining yourself to a magistrate.</li>
-    <li><strong>Caning</strong> applies for serious stuff like vandalism, drug trafficking, illegal entry, and rape. Yes, even foreigners can be caned (males under 50).</li>
-    <li><strong>Deportation</strong> is automatic for drug offenses, overstaying, or working illegally. May be banned from re-entry for years.</li>
+    <li>First time? Maybe a warning 🟡. Second time? <strong>Composition fine or court summons ⚖️</strong>.</li>
+    <li>Some offenses use a <strong>demerit point system ⚠️</strong> — collect enough, and you’ll be explaining yourself to a magistrate 🧑‍⚖️.</li>
+    <li><strong>🪢 Caning</strong> applies for serious stuff like vandalism, drug trafficking, illegal entry, and rape. Yes, even foreigners can be caned (males under 50).</li>
+    <li><strong>✈️ Deportation</strong> is automatic for drug offenses, overstaying, or working illegally. May be banned from re-entry for years.</li>
   </ul>
 
-  <h3>Pro Tips to Stay Out of Trouble</h3>
+  <h3>💡 Pro Tips to Stay Out of Trouble ✅</h3>
   <ul>
-    <li><strong>When in doubt, DON’T.</strong> If there’s a sign, follow it. If unsure, ask.</li>
-    <li><strong>Carry a small trash bag</strong> when eating on the go. Be the hero who doesn’t litter.</li>
-    <li><strong>Use Parking.sg app</strong> — no excuses for expired coupons.</li>
-    <li><strong>Download SGSecure</strong> — get real-time safety alerts from the government.</li>
-    <li><strong>Never touch someone else’s car or property</strong> — scratching a door = vandalism.</li>
-    <li><strong>Check your meds</strong> at <a href="https://www.hsa.gov.sg" target="_blank" rel="noopener">HSA</a> — some ADHD meds are illegal here.</li>
-    <li><strong>Don’t fly drones without permit</strong> — even a mini one. CAAS is watching.</li>
-    <li><strong>Respect queues</strong> — no cutting, even if you’re in a hurry. <em>Chiong later, stand properly now.</em></li>
+    <li><strong>When in doubt, DON’T. 🚫</strong> If there’s a sign, follow it. If unsure, ask.</li>
+    <li><strong>Carry a small trash bag 🗑️</strong> when eating on the go. Be the hero who doesn’t litter. 🦸‍♂️</li>
+    <li><strong>Use Parking.sg app 📱</strong> — no excuses for expired coupons.</li>
+    <li><strong>Download SGSecure 🛡️</strong> — get real-time safety alerts from the government 🚨.</li>
+    <li><strong>Never touch someone else’s car or property 🚫🚗</strong> — scratching a door = vandalism 🎨.</li>
+    <li><strong>Check your meds 💊</strong> at <a href="https://www.hsa.gov.sg" target="_blank" rel="noopener">HSA 🌐</a> — some ADHD meds are illegal here.</li>
+    <li><strong>Don’t fly drones without permit 🚫🛸</strong> — even a mini one. CAAS is watching 👀.</li>
+    <li><strong>Respect queues 🚶‍♂️🚶‍♀️</strong> — no cutting, even if you’re in a hurry. <em>Chiong later, stand properly now. ⏳</em></li>
   </ul>
 
   <div class="warning-box" style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 1rem; border-radius: 8px; margin: 1.5rem 0; font-size: 1.05rem;">
-    <p><strong>🚨 Emergency & Fine Wisdom (Straight from the Kopitiam):</strong></p>
+    <p><strong>🚨 Emergency & Fine Wisdom (Straight from the Kopitiam): ☕</strong></p>
     <ul style="margin: 0.5rem 0 0 1.5rem;">
-      <li>For emergencies: <strong>Police 999, Ambulance/Fire 995</strong>.</li>
-      <li>For fines: <strong>Your wallet</strong>. Keep it handy — and preferably empty of gum, vapes, and loose trash.</li>
-      <li>If you feel like doing something "harmless" but sketchy? <em>Wah, better not. This is Singapore, not a blur holiday.</em></li>
-      <li>Being <em>savvy</em> beats being <em>siao</em> (crazy/foolish) every single time.</li>
-      <li>Remember: <strong>CCTV sees all. NEA aunties are everywhere. And the system does not forgive.</strong></li>
+      <li>For emergencies: <strong>📞 Police 999, Ambulance/Fire 995 🚑🔥</strong>.</li>
+      <li>For fines: <strong>Your wallet 💸</strong>. Keep it handy — and preferably empty of gum 🚫껌, vapes 🚫💨, and loose trash 🚫🗑️.</li>
+      <li>If you feel like doing something "harmless" but sketchy? <em>Wah, better not. This is Singapore, not a blur holiday. 🌴❌</em></li>
+      <li>Being <em>savvy 🧠</em> beats being <em>siao 🤪</em> (crazy/foolish) every single time.</li>
+      <li>Remember: <strong>CCTV sees all 📹👁️. NEA aunties are everywhere 👵. And the system does not forgive. ⚖️</strong></li>
     </ul>
   </div>
 
-  <p><strong>Official Sources:</strong> Always double-check at:
-    <a href="https://www.nea.gov.sg" target="_blank" rel="noopener">NEA</a> | 
-    <a href="https://www.lta.gov.sg" target="_blank" rel="noopener">LTA</a> | 
-    <a href="https://www.hsa.gov.sg" target="_blank" rel="noopener">HSA</a> | 
-    <a href="https://www.caas.gov.sg" target="_blank" rel="noopener">CAAS (Drones)</a> | 
-    <a href="https://sso.agc.gov.sg" target="_blank" rel="noopener">Singapore Statutes</a>
+  <p><strong>✅ Official Sources:</strong> Always double-check at:<br>
+    <a href="https://www.nea.gov.sg" target="_blank" rel="noopener">NEA 🌿</a> | 
+    <a href="https://www.lta.gov.sg" target="_blank" rel="noopener">LTA 🚗</a> | 
+    <a href="https://www.hsa.gov.sg" target="_blank" rel="noopener">HSA 💊</a> | 
+    <a href="https://www.caas.gov.sg" target="_blank" rel="noopener">CAAS (Drones) 🛰️</a> | 
+    <a href="https://sso.agc.gov.sg" target="_blank" rel="noopener">Singapore Statutes 📜</a>
   </p>
 </section>
 
@@ -2545,6 +2574,18 @@ font-family: 'Montserrat', sans-serif;
 </p>
 
 <!-- =============== PRIVACY POLICY SECTION =============== -->
+
+<!-- Visitor Counter -->
+<div style="text-align: center; padding: 0.5rem 0; margin-top: 0.5rem; font-size: 0.85rem; color: #aaa; border-top: 1px solid #333;">
+  <a href="https://www.scansg.com.com" title="visitor statistics">
+    <img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=28qj1py2f4xx477zcg8eqg6uxusuha75" 
+         border="0" alt="visitor counter" 
+         style="height: 12px; margin-left: 0.2rem; vertical-align: middle;">
+    Views
+  </a>
+</div>
+
+
 <div id="privacy-policy" style="display: none; margin-top: 2rem; padding: 1.4rem; background: #232323; color: #ddd; border-radius: 8px; text-align: left; font-size: 0.92rem; line-height: 1.6; border: 1px solid #444;">
   <h3 style="color: #fff; margin-top: 0; font-size: 1.1rem; border-bottom: 1px solid #555; padding-bottom: 0.4rem;">🔐 Privacy Policy</h3>
   <p><strong>Last Updated:</strong> 27-07-2025</p>
@@ -2703,6 +2744,7 @@ font-family: 'Montserrat', sans-serif;
     });
   });
 </script>
+
 
 
 </body>
