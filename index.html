@@ -1,336 +1,591 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4636396521329327" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScanSG - Your Singapore Guide</title>
 
-<meta name="google-adsense-account" content="ca-pub-4636396521329327">
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="keywords" content="Singapore travel, Singapore guide, hawker food, free attractions, Singlish, our all-in-one Singapore guide—discover top attractions, hidden gems, travel tips, MRT & transport, best hawker food, street markets, shopping, free activities, must-try experiences, medical facilities, local laws, fines, and essential Singlish terms. Plan the ultimate 5 day itinerary, save money with expert deals, and explore safe, clean, and vibrant neighborhoods. Stay updated on government resources, weather, and insider tricks for both tourists and locals. Boost your Singapore adventure with trusted, detailed info for 2025 and beyond!">
-    <meta name="author" content="ScanSG">
+  <!-- Google Adsense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4636396521329327" crossorigin="anonymous"></script>
+  <meta name="google-adsense-account" content="ca-pub-4636396521329327">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:url" content="https://scansg.com/">
+  <meta property="og:title" content="ScanSG: Your Ultimate Guide to Exploring, Saving, and Staying Smart in Singapore">
+  <meta property="og:image" content="https://scansg.com/images/scansg-social-preview.jpg">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://scansg.com/">
+  <meta property="twitter:title" content="ScanSG: Your Ultimate Guide to Exploring, Saving, and Staying Smart in Singapore">
+  <meta property="twitter:image" content="https://scansg.com/images/scansg-social-preview.jpg">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
 
 
-<!-- Primary Meta Tags -->
-<title>ScanSG: Your Ultimate Guide to Exploring, Saving, and Staying Smart in Singapore</title>
-<meta name="title" content="ScanSG: Your Ultimate Guide to Exploring, Saving, and Staying Smart in Singapore">
-<meta name="description" content="Your all-in-one Singapore guide—discover top attractions, hidden gems, travel tips, MRT & transport, best hawker food, street markets, shopping, free activities, must-try experiences, medical facilities, local laws, fines, and essential Singlish terms. Plan the ultimate 5 day itinerary, save money with expert deals, and explore safe, clean, and vibrant neighborhoods. Stay updated on government resources, weather, and insider tricks for both tourists and locals. Boost your Singapore adventure with trusted, detailed info for 2025 and beyond!">
+  <!-- Essential Meta Tags -->
+<meta name="description" content="Your ultimate guide to Singapore: food, transport, laws, deals, culture & hidden gems. Everything tourists and expats need to know — updated for 2025.">
+<link rel="canonical" href="https://scansg.com/" />
+<meta name="robots" content="index, follow">
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://scansg.com/">
-<meta property="og:title" content="ScanSG: Your Ultimate Guide to Exploring, Saving, and Staying Smart in Singapore">
-<meta property="og:description" content="Your all-in-one Singapore guide—discover top attractions, hidden gems, travel tips, MRT & transport, best hawker food, street markets, shopping, free activities, must-try experiences, medical facilities, local laws, fines, and essential Singlish terms. Plan the ultimate 5 day itinerary, save money with expert deals, and explore safe, clean, and vibrant neighborhoods. Stay updated on government resources, weather, and insider tricks for both tourists and locals. Boost your Singapore adventure with trusted, detailed info for 2025 and beyond!">
-<meta property="og:image" content="https://scansg.com/images/scansg-social-preview.jpg">
-
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://scansg.com/">
-<meta property="twitter:title" content="ScanSG: Your Ultimate Guide to Exploring, Saving, and Staying Smart in Singapore">
-<meta property="twitter:description" content="Your all-in-one Singapore guide—discover top attractions, hidden gems, travel tips, MRT & transport, best hawker food, street markets, shopping, free activities, must-try experiences, medical facilities, local laws, fines, and essential Singlish terms. Plan the ultimate 5 day itinerary, save money with expert deals, and explore safe, clean, and vibrant neighborhoods. Stay updated on government resources, weather, and ins ider tricks for both tourists and locals. Boost your Singapore adventure with trusted, detailed info for 2025 and beyond!">
-<meta property="twitter:image" content="https://scansg.com/images/scansg-social-preview.jpg">
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
-<style>
-body {
-    font-family: 'Open Sans', sans-serif;
-    background: #fafafa;
-    color: #2e2e2e;
-    margin: 0;
-    padding: 0;
-    /* Prevent body from scrolling horizontally if ads push content */
-      overflow-x: clip; /* Softer than hidden */
-      min-width: 320px; /* Prevents collapse on tiny screens */
-}
-:root {
-    --main: #e02332;
-    --accent: #ffb400;
-    /* Define widths */
-    --nav-width: 180px; /* Width of the fixed left navigation */
-    --ad-width: 310px; /* Approximate width for ads on the right */
-}
-header {
-    background: var(--main);
-    color: #fff;
-    padding: 1rem 1rem; /* Reduced side padding */
-    text-align: center;
-    /* Header spans full width */
-}
-header h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem; /* Slightly smaller for better fit */
-    margin: 0 0 0.3rem;
-}
-/* - New Layout Structure - */
-#content-wrapper {
-    display: flex;
-    /* Adjust padding to leave space for ads on the right */
-    padding-right: var(--ad-width);
-    padding-left: 10px; /* Small left padding for body margin */
-    margin-top: 1rem; /* Space below header */
-    position: relative; /* Needed for potential ad positioning */
-}
-nav {
-    background: #232323;
-    width: var(--nav-width);
-    /* Flex shrink to 0 ensures it keeps its width */
-    flex-shrink: 0;
-    /* Make it fixed position to stay on the left */
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh; /* Full viewport height */
-    overflow-y: auto; /* Scroll if content is long */
-    z-index: 100; /* Ensure it's above main content */
-    margin-top: calc(2rem + 1.2rem + 2*1rem); /* Height of header + padding */
-    /* Adjust nav internal styles for vertical layout */
-    padding-top: 1rem;
-}
-nav ul {
-    display: flex;
-    /* Change flex direction to column for vertical layout */
-    flex-direction: column;
-    justify-content: flex-start;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-nav li {
-    /* Adjust margin for vertical spacing */
-    margin: 0.3rem 0.8rem;
-}
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem; /* Slightly smaller font */
-    transition: color 0.2s;
-    display: block; /* Make link fill list item width */
-    padding: 0.4rem 0.6rem; /* Add padding for better click area */
-    border-radius: 4px; /* Rounded corners */
-}
-nav a:hover {
-    color: var(--accent);
-    background-color: #444; /* Subtle hover background */
-}
-/* - End New Layout Structure - */
-main {
-    /* Main content area takes remaining space */
-    flex-grow: 1;
-    /* Account for the fixed nav width */
-    margin-left: var(--nav-width);
-    /* Add some padding inside the main content */
-    padding: 0 1.5rem 2rem 1.5rem;
-    /* Ensure it doesn't get too wide */
-    max-width: 1200px;
-    background: #fafafa; /* Match body background */
-}
-section {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 7px rgba(200, 210, 222, 0.12);
-    padding: 1rem 1rem 0.9rem;
-    margin-bottom: 0.5rem;
-    overflow-x: auto;
-}
-h2 {
-    color: var(--main);
-    font-family: 'Montserrat', sans-serif;
-    border-bottom: 2px solid var(--accent);
-    padding-bottom: 0.18rem;
-    margin-bottom: 0.7rem;
-}
-h3 {
-    margin: 1.04rem 0 0.42rem;
-    color: #353535;
-    font-size: 1.09rem;
-}
-h4 {
-    margin: 0.8rem 0 0.3rem;
-    color: #454545;
-    font-size: 1.0rem;
-}
-ul, dl, table {
-    margin-bottom: 1rem;
-}
-ul {
-    padding-left: 1.09rem;
-}
-ul li {
-    margin-bottom: 0.27rem;
-}
-table {
-    border-collapse: collapse;
-    width: 100%;
-    min-width: 600px;
-}
-th, td {
-    border: 1px solid #ddd;
-    padding: 0.5rem 0.8rem;
-    text-align: left;
-    vertical-align: top;
-}
-th {
-    background: var(--accent);
-    color: #282828;
-}
-a {
-    color: var(--main);
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-}
-.sgloss4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.33rem 0.8rem;
-    max-width: 980px;
-    margin: 0 auto 0.8rem auto;
-}
-.sgloss4 dt {
-    font-weight: 600;
-    color: var(--main);
-    margin-top: 0.50rem;
-    font-size: 0.97em;
-}
-.sgloss4 dd {
-    margin-left: 0;
-    margin-bottom: 0.2rem;
-    font-size: 0.97em;
-    line-height: 1.28;
-}
-footer {
-    background: #111;
-    color: #bbb;
-    text-align: center;
-    padding: 1.1rem 1rem 0.8rem; /* Adjusted padding */
-    font-size: 0.95rem;
-    /* Footer spans full width */
-    margin-left: 0;
-    width: 100%;
-}
-.disclaimer {
-    margin-top: 0.7rem;
-    color: #888;
-    font-size: 0.90rem;
-    padding: 0 0.5rem;
-}
-/* Adjustments for wider tables and responsiveness */
-@media (max-width: 768px) {
-    :root {
-        --nav-width: 0px; /* Hide nav width on mobile */
-        --ad-width: 0px; /* Hide ad space on mobile */
+<!-- Schema.org Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TravelGuide",
+  "name": "ScanSG - Your Ultimate Singapore Guide",
+  "description": "The most comprehensive, up-to-date guide to Singapore for tourists, expats, and locals. Food, transport, laws, deals, and culture.",
+  "url": "https://scansg.com",
+  "image": "https://scansg.com/images/scansg-social-preview.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "ScanSG"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ScanSG",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://scansg.com/images/logo.png"
     }
-
-  header {
-    position: relative;
-    z-index: 101; /* Keep header above other content, but below nav if needed */
+  },
+  "datePublished": "2024-05-01",
+  "dateModified": "2025-04-05",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://scansg.com"
   }
-    #content-wrapper {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: flex-start;
-        flex-direction: row; /* This is KEY for side-by-side layout */
-        padding-right: var(--ad-width); /* Adjust if needed */
-        padding-left: 10px;
-        margin-top: 1rem;
-        position: relative;
+}
+</script>
+
+
+  <style>
+    /* =============== BASE STYLES =============== */
+    :root {
+      --main: #e02332;
+      --accent: #ffb400;
+      --nav-width: 180px;
     }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #fafafa;
+      color: #2e2e2e;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* =============== HEADER =============== */
+    header {
+      background: var(--main);
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      margin: 0 0 0.3rem;
+    }
+
+/* =============== LAYOUT WRAPPER =============== */
+#content-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  margin-top: 1rem;
+  padding-left: 0; /* Must be 0 */
+  gap: 0;
+}
+
+    /* =============== LEFT NAVIGATION =============== */
     nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: #232323;
-    width: 100%;
-    height: auto;
-    margin-top: 0;
-    padding: 0.5rem 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #232323;
+      width: var(--nav-width);
+      min-height: calc(100vh - 1rem);
+      display: flex;
+      flex-direction: column;
+      padding: 0.5rem 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      overflow-y: auto;
     }
+
     nav ul {
-        flex-direction: row; /* Horizontal scroll on mobile */
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch; /* Smooth scrolling */
-        justify-content: flex-start;
-        padding: 0 0.5rem;
-white-space: nowrap;
-justify-content: flex-start;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      padding: 0;
+      list-style: none;
+      flex-grow: 1;
     }
+
     nav li {
-        flex-shrink: 0; /* Prevent items from shrinking */
-        margin: 0.2rem 0.5rem;
+      margin: 0.2rem 0.8rem;
     }
+
     nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.4rem 0.6rem;
+      border-radius: 4px;
+      display: block;
+      transition: color 0.2s, background 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+      background-color: #444;
+    }
+
+/* =============== MAIN + SIDEBAR CONTAINER =============== */
+.content-and-sidebar {
+  flex-grow: 1;
+  display: flex;
+  gap: 1.8rem; /* Slightly airy space between main & sidebar */
+  padding: 0 1.2rem;
+  max-width: 1400px; /* Wider than before */
+  width: 100%;
+  margin: 0; /* Remove auto margin (this was causing centering + gap) */
+}
+
+
+/* =============== GLOSSARY 4-COLUMN GRID =============== */
+#section-glossary .sgloss4,
+#glossary .sgloss4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+#section-glossary .sgloss4 > div,
+#glossary .sgloss4 > div {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+#section-glossary .sgloss4 dt,
+#glossary .sgloss4 dt {
+  font-weight: 600;
+  color: var(--main);
+  margin: 0 0 0.3rem;
+  font-size: 1.05rem;
+}
+
+#section-glossary .sgloss4 dd,
+#glossary .sgloss4 dd {
+  margin: 0;
+  color: #555;
+  line-height: 1.4;
+  font-size: 0.92rem;
+}
+
+/* =============== TRANSPORT SECTION STYLING =============== */
+.transport-step {
+  margin-bottom: 1.8rem;
+}
+
+.transport-step h3 {
+  color: var(--main);
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+.transport-tip-box {
+  background: #f0f8ff;
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #1565c0;
+  margin: 1.5rem 0;
+}
+
+
+
+    /* =============== MAIN CONTENT =============== */
+main {
+  flex-grow: 3; /* Takes more space than sidebar */
+  padding: 0;
+  min-width: 0;
+}
+
+    section {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 7px rgba(200, 210, 222, 0.12);
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+      overflow-x: auto;
+    }
+
+    h2 {
+      color: var(--main);
+      font-family: 'Montserrat', sans-serif;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.18rem;
+      margin-bottom: 0.7rem;
+    }
+
+    h3 {
+      margin: 1.04rem 0 0.42rem;
+      color: #353535;
+      font-size: 1.09rem;
+    }
+
+    h4 {
+      margin: 0.8rem 0 0.3rem;
+      color: #454545;
+      font-size: 1.0rem;
+    }
+
+    ul, dl, table {
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.09rem;
+    }
+
+    ul li {
+      margin-bottom: 0.27rem;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 500px;
+      font-size: 0.9em;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 0.5rem 0.8rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--accent);
+      color: #282828;
+    }
+
+    a {
+      color: var(--main);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .highlight { color: #34c759; font-weight: bold; }
+    .warning { color: #ff9500; font-weight: bold; }
+
+
+/* =============== SGLOSS CARD LAYOUT (Overview Section) =============== */
+.sgloss-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.sgloss-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(200, 210, 222, 0.12);
+  padding: 1rem;
+  flex: 1 1 calc(50% - 1.2rem); /* Exactly 2 per row, accounting for gap */
+  max-width: none;
+  border: 1px solid #eee;
+}
+
+.sgloss-area-title {
+  color: var(--main);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  margin: 0 0 0.8rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+.sgloss-category {
+  margin: 1rem 0;
+}
+
+.sgloss-category h4 {
+  color: #353535;
+  font-size: 1.05rem;
+  margin: 0.7rem 0 0.4rem;
+  font-weight: 600;
+}
+
+.sgloss-category ul {
+  padding-left: 1.1rem;
+}
+
+.sgloss-category li {
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+/* Responsive: On mobile, full width */
+@media (max-width: 768px) {
+  .sgloss-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .sgloss-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+
+
+/* =============== AFFILIATE SIDEBAR =============== */
+.affiliate-sidebar {
+  flex-grow: 1;
+  flex-basis: 280px;
+  flex-shrink: 0;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+@media (min-width: 1025px) {
+  .affiliate-sidebar {
+    position: sticky;
+    top: 1rem;
+    align-self: flex-start;
+    height: calc(100vh - 2rem);
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+    padding: 1rem;
+  }
+}
+    .affiliate-sidebar h2 {
+      color: #c62828;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.25rem;
+      margin: 0 0 1rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    .affiliate-category {
+      margin-bottom: 1.1rem;
+      background-color: #ffffff;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+      padding: 0.9rem;
+      transition: box-shadow 0.2s ease;
+    }
+
+    .affiliate-category h3 {
+      margin: 0 0 0.6rem;
+      color: #2c3e50;
+      font-size: 1.02rem;
+      font-weight: 600;
+    }
+
+    .affiliate-category ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.2rem 0 0;
+    }
+
+    .affiliate-category ul li {
+      margin-bottom: 0.45rem;
+      padding: 0.35rem 0.55rem;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+      transition: background-color 0.2s ease;
+    }
+
+    .affiliate-category ul li:hover {
+      background-color: #eeeeee;
+    }
+
+    .affiliate-category ul li a {
+      color: var(--main);
+      text-decoration: none;
+      font-weight: 600;
+      display: block;
+      font-size: 0.92rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .affiliate-category ul li a:hover {
+      color: #1565c0;
+      text-decoration: underline;
+    }
+
+    .affiliate-link-description {
+      font-size: 0.8rem;
+      color: #666;
+      margin: 0;
+      line-height: 1.3;
+    }
+
+    /* =============== DESKTOP: SIDEBAR STICKY =============== */
+    @media (min-width: 1025px) {
+      .affiliate-sidebar {
+        position: sticky;
+        top: 1rem;
+        align-self: flex-start;
+        height: calc(100vh - 2rem);
+        max-height: calc(100vh - 2rem);
+        overflow-y: auto;
+        padding: 1rem;
+      }
+    }
+
+    /* =============== MOBILE RESPONSIVENESS =============== */
+    @media (max-width: 768px) {
+      nav {
+        width: 100%;
+        min-height: auto;
+        flex-direction: row;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      nav ul {
+        flex-direction: row;
+        white-space: nowrap;
+        padding: 0 0.5rem;
+      }
+
+      nav li {
+        flex-shrink: 0;
+        margin: 0.2rem 0.5rem;
+      }
+
+      nav a {
         font-size: 0.9rem;
         padding: 0.3rem 0.5rem;
-    }
-    main {
-        margin-left: 0.5;
-        padding: 0 0.7rem 1.5rem;
-        max-width: 100%;
-    }
-    section {
-        padding: 0.7rem;
-        overflow-x: auto;
-    }
-    table {
-        font-size: 0.9em;
-        min-width: 500px;
-    }
-    table th,
-    table td {
-        padding: 0.4rem 0.5rem;
-    }
-    .sgloss4 {
-        grid-template-columns: 1fr;
-    }
-    header {
-        padding: 0.8rem 0.5rem; /* Adjust header padding for mobile */
-    }
-    header h1 {
-        font-size: 1.8rem;
-    }
-    footer {
-        padding: 0.8rem 0.5rem;
-    }
-    /* - Enhanced Mobile Styles for Overview Table - */
-    #overview table,
-    #overview thead,
-    #overview tbody,
-    #overview th,
-    #overview td,
-    #overview tr {
-        display: block;
+      }
+
+      .content-and-sidebar {
+        flex-direction: column;
+        padding: 0 1rem;
+        gap: 1rem;
+      }
+
+      .affiliate-sidebar {
         width: 100%;
-    }
-    #overview thead tr {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-    }
-    #overview tr {
+        margin-top: 0;
+      }
+
+      main {
+        padding: 0;
+      }
+
+/* =============== MOBILE-FRIENDLY TABLES (ALL SECTIONS) =============== */
+
+/* Make all tables responsive */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  overflow: hidden;
+  display: block;
+  max-width: 100%;
+  font-size: 0.95rem;
+}
+
+thead, tbody, th, td, tr {
+  display: block;
+}
+
+/* Hide table headers visually (but keep for screen readers) */
+thead {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+/* Add space between rows */
+tr {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1rem;
+  padding-bottom: 0.8rem;
+  background: #f9f9f9;
+  border-radius: 6px;
+  padding: 0.8rem;
+}
+
+/* Use data-label to show column names */
+td {
+  position: relative;
+  padding: 1.8rem 0.8rem 0.6rem;
+  border: none;
+  text-align: left;
+}
+
+/* Show column label before each cell */
+td:before {
+  content: attr(data-label);
+  font-weight: bold;
+  position: absolute;
+  left: 0.8rem;
+  top: 0.5rem;
+  background: #eee;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  color: #444;
+  white-space: nowrap;
+}
+
+/* Optional: Add subtle hover effect */
+tr:hover td {
+  background: #f5f5f5;
+}
+
+/* Ensure tables don’t overflow */
+table, .content-and-sidebar, main, body {
+  overflow-x: hidden;
+}
+
+      #overview thead tr { position: absolute; top: -9999px; left: -9999px; }
+
+      #overview tr {
         border: 1px solid #ccc;
         margin-bottom: 1rem;
         padding: 0.6rem;
         border-radius: 5px;
         background-color: #f9f9f9;
-        position: relative;
-    }
-    #overview td {
+      }
+
+      #overview td {
         border: none;
         position: relative;
-        padding: 1.8rem 0.5rem 0.5rem 0.5rem;
+        padding: 1.8rem 0.5rem 0.5rem;
         text-align: left;
-        min-height: 2.5em;
-    }
-    #overview td:nth-of-type(1):before,
-    #overview td:nth-of-type(2):before,
-    #overview td:nth-of-type(3):before,
-    #overview td:nth-of-type(4):before,
-    #overview td:nth-of-type(5):before {
+      }
+
+      #overview td:before {
+        content: attr(data-label);
         font-weight: bold;
         position: absolute;
         left: 0.5rem;
@@ -339,567 +594,335 @@ justify-content: flex-start;
         padding: 0.1rem 0.3rem;
         border-radius: 3px;
         font-size: 0.85em;
-        white-space: nowrap;
+      }
     }
-    #overview td:nth-of-type(1):before { content: "Area"; }
-    #overview td:nth-of-type(2):before { content: "Hawkers"; }
-    #overview td:nth-of-type(3):before { content: "Malls"; }
-    #overview td:nth-of-type(4):before { content: "Parks/Nature"; }
-    #overview td:nth-of-type(5):before { content: "Activities"; }
-    #overview td:first-child {
-        font-weight: bold;
-        color: var(--main);
-        background-color: #fff;
-        border-bottom: 1px solid #eee;
-        margin-bottom: 0.5rem;
-        padding-left: 0.5rem;
-        padding-top: 1.8rem;
+
+    /* =============== FOOTER =============== */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+      color: #bbb;
+      margin-top: 40px;
     }
-    #overview td:first-child:before {
-        content: "Area";
-        font-weight: bold;
-        background-color: transparent;
-        padding: 0;
-        border-radius: 0;
-        font-size: 1em;
-        white-space: normal;
-        left: 0.5rem;
-        top: 0.4rem;
+
+    .disclaimer {
+      margin-top: 0.7rem;
+      font-size: 0.9rem;
+      color: #888;
     }
-    #overview td ul {
-        padding-left: 0;
-        margin-top: 0;
-        margin-bottom: 0.5rem;
+
+    /* =============== PRIVACY POLICY TOGGLE =============== */
+    #privacy-policy {
+      display: none;
+      margin-top: 2rem;
+      padding: 1rem;
+      border-top: 1px solid #444;
+      text-align: left;
+      font-size: 0.9rem;
+      color: #ccc;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    #overview td ul li {
-        margin-bottom: 0.3rem;
-        padding-left: 0.5rem;
-    }
-    #overview td ul {
-        margin-bottom: 0.5rem;
-    }
-    #overview td ul li {
-        margin-bottom: 0.2rem;
-    }
-    #overview table {
-        min-width: auto;
-    }
-    #overview h2 {
-        color: var(--main);
-        font-family: 'Montserrat', sans-serif;
-        border-bottom: 2px solid var(--accent);
-        padding-bottom: 0.18rem;
-        margin-bottom: 0.7rem;
-    }
-    .deals-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-    }
-    .deals-column {
-        flex: 1;
-        min-width: 300px;
-    }
-    .deals-column h3 {
-        color: var(--main);
-        border-bottom: 1px solid var(--accent);
-        padding-bottom: 0.3rem;
-        margin-top: 0;
-    }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-    main {
-        max-width: 95%;
-        padding: 0 1rem;
-    }
-    table {
-        font-size: 0.95em;
-    }
-}
-.deals-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-.deals-column {
-    flex: 1;
-    min-width: 300px;
-}
-.deals-column h3 {
-    color: var(--main);
-    border-bottom: 1px solid var(--accent);
-    padding-bottom: 0.3rem;
-    margin-top: 0;
-}
-/*html, body {max-width: 100%;overflow-x: hidden;}*/
-/* - Beautiful & Attractive Affiliate Sidebar Styling - */
-/* Base sidebar styling - Visible on all screens, improved appearance */
-.affiliate-sidebar {
-    width: 100%; /* Full width on small screens */
-    padding: 1rem; /* Reduced padding */
-    background: linear-gradient(135deg, #f0f4f8 0%, #e6ecf2 100%); /* Subtle gradient background */
-    border-top: 1px solid #d1d1d1; /* Softer border color */
-    border-radius: 8px; /* Slightly smaller rounded corners */
-    margin-top: 1.2rem; /* Reduced margin */
-    box-sizing: border-box; /* Include padding/border in width */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04); /* Very subtle outer shadow */
-}
-/* Sidebar Title */
-.affiliate-sidebar h2 {
-    color: #c62828; /* Softer, elegant red */
-    font-family: 'Montserrat', sans-serif;
-    /* Replaced border-bottom with background bar for a cleaner look */
-    /* border-bottom: 2px solid #ffb74d; */
-    padding-bottom: 0.3rem; /* Reduced padding */
-    margin-top: 0;
-    margin-bottom: 1rem; /* Reduced margin */
-    font-size: 1.4rem; /* Slightly smaller */
-    text-align: center;
-    position: relative;
-}
-/* Decorative element under the main sidebar title */
-.affiliate-sidebar h2::after {
-    content: '';
-    width: 40px; /* Width of the decorative bar */
-    height: 3px; /* Thickness of the bar */
-    background-color: #ff9800; /* Accent color (Orange) */
-    margin: 0.3rem auto 0 auto; /* Center it, reduced margin */
-    border-radius: 2px; /* Slightly rounded bar */
-}
-/* Category Styling */
-.affiliate-category {
-    margin-bottom: 1.2rem; /* Reduced margin */
-    background-color: #ffffff;
-    border-radius: 6px; /* Smaller rounded corners */
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06); /* Slightly stronger inner shadow */
-    padding: 1rem; /* Reduced padding */
-    transition: box-shadow 0.2s ease, transform 0.15s ease; /* Smooth hover effect */
-}
-.affiliate-category:hover {
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Lift effect on hover */
-    transform: translateY(-1px); /* Slight upward movement on hover */
-}
-/* Category Title */
-.affiliate-category h3 {
-    margin-top: 0;
-    margin-bottom: 0.7rem; /* Reduced margin */
-    color: #2c3e50; /* Darker, richer text color */
-    font-size: 1.1rem; /* Slightly smaller */
-    font-weight: 600;
-    /* Removed display:flex and icons to save space */
-    /* display: flex; */
-    /* align-items: center; */
-    /* gap: 0.6rem; */ /* Space for icons */
-}
-/* Category List */
-.affiliate-category ul {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0.2rem; /* Reduced margin */
-    margin-bottom: 0;
-}
-/* Category List Items */
-.affiliate-category ul li {
-    margin-bottom: 0.5rem; /* Reduced margin */
-    padding: 0.4rem 0.6rem; /* Reduced padding */
-    border-radius: 4px; /* Smaller rounded corners */
-    transition: background-color 0.2s ease; /* Simplified transition */
-    background-color: #f9f9f9; /* Very light background */
-}
-.affiliate-category ul li:hover {
-    background-color: #eeeeee; /* Lighter grey on hover */
-    /* Removed transform for a simpler hover */
-    /* transform: translateX(3px); */ /* Subtle slide effect on hover */
-}
-/* Category Links */
-.affiliate-category ul li a {
-    color: var(--main); /* This was #e02332, now uses CSS variable */
-    text-decoration: none;
-    font-weight: 600;
-    display: block;
-    font-size: 0.95rem; /* Slightly smaller, readable size */
-    transition: color 0.2s ease; /* Smooth color change */
-    margin-bottom: 0.15rem; /* Space between link and description */
-}
-.affiliate-category ul li a:hover {
-    color: #1565c0; /* Pleasant blue */
-    text-decoration: underline;
-}
-/* Description under the link */
-.affiliate-link-description {
-    font-size: 0.82rem; /* Much smaller font for description */
-    color: #666; /* Muted color */
-    font-weight: normal;
-    margin: 0; /* No margin */
-    line-height: 1.3; /* Tighter line height */
-}
-/* - Desktop Styles (Wider, Scrollable Sidebar) - */
-
-@media (max-width: 1024px) {
-  .affiliate-sidebar {
-    display: block !important;
-    width: 100%;
-    margin-top: 1.5rem;
-    order: 999; /* Ensures it's at the bottom */
-  }
-}
-
-
-@media screen and (min-width: 1025px) {
-
-  .affiliate-sidebar {
-    width: 310px;
-    flex-shrink: 0; /* Prevents shrinking */
-    margin-left: 1.5rem;
-    position: sticky;
-    top: 1rem;
-    height: fit-content;
-    max-height: calc(100vh - 2rem);
-    overflow-y: auto;
-    padding: 1.1rem;
-    background: #fff;
-    border-left: 1px solid #d1d1d1;
-    border-radius: 0 8px 8px 0;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    z-index: 10; /* Ensure it stays visible */
-  }
-    /* Ensure content wrapper is flex row */
-    #content-wrapper {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: flex-start;
-        padding-right: var(--ad-width);
-        padding-left: 10px;
-        margin-top: 1rem;
-        position: relative;
-        flex-direction: row;
-    }
-    main {
-        flex-grow: 1;
-        margin-left: var(--nav-width);
-        padding: 0 1.5rem 2rem 1.5rem;
-        max-width: 1200px;
-        background: #fafafa;
-    }
-    /* - Key Changes for Desktop Sidebar - */
-    .affiliate-sidebar {
-        /* - Increased Width & Made Scrollable - */
-        width: 310px; /* Slightly wider */
-    height: calc(100vh - 2rem);
-    max-height: calc(100vh - 2rem);
-        overflow-y: auto; /* Enable vertical scrolling */
-        box-sizing: border-box; /* Crucial for width/height calc */
-        display: block;
-        /* - End Width & Scroll - */
-        /* Keep/adjust other desktop styles */
-        padding: 1.1rem; /* Adjusted padding */
-        background: linear-gradient(135deg, #f0f4f8 0%, #e6ecf2 100%);
-        border-left: 1px solid #d1d1d1;
-        border-top: none;
-        border-radius: 0 8px 8px 0; /* Rounded corners on right, smaller radius */
-        flex-shrink: 0;
-        margin-left: 1.2rem; /* Reduced margin */
-        position: sticky;
-        top: 1rem;
-        align-self: flex-start;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    }
-    .affiliate-sidebar h2 {
-        text-align: left; /* Align title left */
-        font-size: 1.25rem; /* Adjusted font size */
-    }
-    .affiliate-category {
-        margin-bottom: 1.1rem; /* Reduced margin */
-        padding: 0.9rem; /* Reduced padding */
-    }
-    .affiliate-category h3 {
-        font-size: 1.02rem; /* Adjusted font size */
-        margin-bottom: 0.6rem; /* Reduced margin */
-    }
-    .affiliate-category ul li {
-        margin-bottom: 0.45rem; /* Reduced margin */
-        padding: 0.35rem 0.55rem; /* Reduced padding */
-    }
-    .affiliate-category ul li a {
-        font-size: 0.92rem; /* Adjusted font size */
-        margin-bottom: 0.15rem; /* Reduced margin */
-    }
-    .affiliate-link-description {
-        font-size: 0.8rem; /* Adjusted font size */
-    }
-}
-/* - End Beautiful & Attractive Affiliate Sidebar Styling - */
-
-
-#history ul li {
-    font-weight: normal; /* Reset to normal weight */
-}
-#history ul li strong {
-    font-weight: bold; /* Ensure <strong> tags remain bold */
-}
-#history ul li a[data-link-key] strong,
-#history ul li strong a[data-link-key] {
-    font-weight: bold; /* Ensure names/links within <strong> are bold */
-}
-
-
-/* --- Fix for Singapore Tips & Tricks Section --- */
-/* Make list items normal weight by default */
-#tips ul li {
-    font-weight: normal;
-}
-
-/* Keep <strong> tags and links within them bold */
-#tips ul li strong,
-#tips ul li strong a[data-link-key] {
-    font-weight: bold;
-}
-
-/* Keep links bold if they are direct children of <li> and not within <strong> */
-#tips ul li > a[data-link-key]:not(strong *) {
-    font-weight: bold;
-}
-/* --- End Fix for Singapore Tips & Tricks Section --- */
-
-
-/* --- Fix for Essential Singlish Terms & Phrases Section --- */
-/* Make definition list items normal weight by default */
-/* Assuming the terms are in <dt> and definitions in <dd> within a <div> */
-#glossary .sgloss4 div dd {
-    font-weight: normal;
-}
-
-/* Keep <strong> tags and links within definitions bold if needed */
-/* This might not be necessary unless you use <strong> inside definitions */
-/*
-#glossary .sgloss4 div dd strong,
-#glossary .sgloss4 div dd strong a[data-link-key] {
-    font-weight: bold;
-}
-*/
-/* --- End Fix for Essential Singlish Terms & Phrases Section --- */
-
-/* --- Fix for Sample 5 Day Itinerary Section --- */
-/* Make list items normal weight by default */
-#planner ul li {
-    font-weight: normal;
-}
-
-/* Keep <strong> tags (e.g., "Morning:", "Lunch:") and links within them bold */
-#planner ul li strong,
-#planner ul li strong a[data-link-key] {
-    font-weight: bold;
-}
-/* --- End Fix for Sample 5 Day Itinerary Section --- */
-
-/* --- Fix for Medical Facilities & Health Section --- */
-/* Make list items normal weight by default */
-#medical ul li {
-    font-weight: normal;
-}
-
-/* Keep <strong> tags (e.g., "Quality:", "Cost:", list titles) and links within them bold */
-#medical ul li strong,
-#medical ul li strong a[data-link-key] {
-    font-weight: bold;
-}
-/* --- End Fix for Medical Facilities & Health Section --- */
-
-/* --- Fix for Essential Resources & Links Section --- */
-/* Make list items normal weight by default */
-#resources ul li {
-    font-weight: normal;
-}
-
-/* Keep links bold if they are direct children of <li> */
-/* This targets the main resource links */
-#resources ul li > a[data-link-key] {
-    font-weight: normal;
-}
-/* --- End Fix for Essential Resources & Links Section --- */
-
-
-
-/* --- Fix for Good to Know Section --- */
-/* Make list items normal weight by default */
-#goodtoknow ul li {
-    font-weight: normal;
-}
-
-/* Ensure <strong> tags within list items remain bold */
-#goodtoknow ul li strong {
-    font-weight: bold; /* Keep the container strong */
-}
-
-/* Make links inside <strong> tags (which are inside list items) normal weight */
-#goodtoknow ul li strong a[data-link-key] {
-    font-weight: normal !important; /* Target the specific links and make them normal */
-}
-
-/* Also ensure direct child links (if any exist outside <strong>) are normal */
-#goodtoknow ul li > a[data-link-key]:not(strong *) {
-    font-weight: normal;
-}
-/* --- End Fix for Good to Know Section --- */
-
-/* --- Singapore at a Glance Section Styles --- */
-
-#overview {
-  padding: 0.7rem 0.7rem 1.5rem; /* Add some bottom padding */
-  overflow-x: hidden; /* Prevent horizontal overflow */
-}
-
-.sgloss-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
-  gap: 1.5rem; /* Space between cards */
-  margin-top: 1rem;
-}
-
-.sgloss-card {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  padding: 1rem;
-  transition: box-shadow 0.2s ease-in-out;
-  overflow: hidden; /* Contain content */
-}
-
-.sgloss-card:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.sgloss-area-title {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #eee;
-  color: #353535;
-  font-size: 1.2rem;
-}
-
-.sgloss-category {
-  margin-bottom: 1rem;
-}
-
-.sgloss-category:last-child {
-  margin-bottom: 0;
-}
-
-.sgloss-category h4 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  color: #555;
-  font-size: 1rem;
-}
-
-.sgloss-category ul {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 1.2rem;
-  font-size: 0.9rem;
-}
-
-.sgloss-category li {
-  margin-bottom: 0.3rem;
-}
-
-.sgloss-category li:last-child {
-  margin-bottom: 0;
-}
-
-/* Optional: Adjust styles for very small screens if needed */
-@media screen and (max-width: 400px) {
-  .sgloss-container {
-    grid-template-columns: 1fr; /* Force single column on tiny screens */
-  }
-  .sgloss-card {
-    padding: 0.8rem; /* Slightly reduce padding */
-  }
-  .sgloss-area-title {
-    font-size: 1.1rem;
-  }
-  .sgloss-category h4 {
-    font-size: 0.95rem;
-  }
-  .sgloss-category ul {
-    font-size: 0.85rem;
-    padding-left: 1rem;
-  }
-}
-/* --- End of Singapore at a Glance Section Styles --- */
-
-</style>
+  </style>
 </head>
+
+<a href="#main" class="skip-link" style="position: absolute; top: -40px; left: 0; background: #000; color: #fff; padding: 8px 12px; z-index: 1000; text-decoration: none; font-size: 0.9rem;">
+  Skip to content
+</a>
+
+
 <body>
-<header style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; text-align: left; padding: 1rem 1.5rem; margin-bottom: 1rem;">
-    <h1 style="font-family:'Montserrat',sans-serif; margin: 0; color: #fff; flex-shrink: 0; display: flex; align-items: baseline; gap: 0.5rem;">
-        <span style="font-size: 1.8rem; font-weight: 700;">ScanSG</span>
-        <span style="font-size: 0.9rem; font-weight: 400;"> A guide at your fingertips</span>
+
+<!-- =============== TIGHT-LEFT HEADER: SCANSG + TAGLINE (NO GAP) =============== -->
+<!-- =============== SCANSG LEFT | TAGLINE 5CM AWAY =============== -->
+<header style="
+  background: var(--main);
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 275px; /* ≈5cm spacing */
+  flex-wrap: wrap;
+  font-family: 'Montserrat', sans-serif;
+">
+  <!-- ScanSG -->
+  <div style="
+    flex-shrink: 0;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #fff;
+  ">
+    ScanSG
+  </div>
+
+  <!-- Tagline (Exactly ~5cm from ScanSG) -->
+  <div style="
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin: 0;
+    padding: 0;
+  ">
+    <h1 style="
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: #fff;
+      margin: 0;
+      line-height: 1.3;
+    ">
+      Your Ultimate Guide to Exploring, Saving & Staying Smart in Singapore
     </h1>
-    <p style="flex-grow: 1; margin: 0.4rem 0 0 2rem; font-size: 1rem; color: #fff; padding: 0;">Live, Discover, and Explore Singapore—Unlock Secrets, Save Smarter, and Experience More</p>
+    <p style="
+      color: #fff;
+      opacity: 0.95;
+      font-size: 1.05rem;
+      margin: 0;
+    ">
+      Food • Transport • Laws • Deals • Local Hacks
+    </p>
+  </div>
 </header>
-<nav>
-    <ul>
-        <li><a data-link-key="overview_internal" href="#overview">Overview</a></li>
-        <li><a data-link-key="deals_internal" href="#deals">Where to Get Good Deals</a></li>
-        <li><a data-link-key="free_internal" href="#free">Free Places</a></li>
-        <li><a data-link-key="musttry_internal" href="#musttry">Must Try</a></li>
-        <li><a data-link-key="transport_internal" href="#transport">Local Transport</a></li>
-        <li><a data-link-key="penalties_internal" href="#penalties">Fines & Penalties</a></li>
-        <li><a data-link-key="goodtoknow_internal" href="#goodtoknow">Good to Know</a></li>
-        <li><a data-link-key="glossary_internal" href="#glossary">Singlish Terms</a></li>
-        <li><a data-link-key="tips_internal" href="#tips">Singapore Tips & Tricks</a></li>
-        <li><a data-link-key="history_internal" href="#history">History & Leaders</a></li>
-        <li><a data-link-key="planner_internal" href="#planner">5 Days itinerary</a></li>
-        <li><a data-link-key="medical_internal" href="#medical">Medical Facilities</a></li>
-        <li><a data-link-key="resources_internal" href="#resources">Resources</a></li>
-    </ul>
-</nav>
-<!-- Main Content Wrapper -->
-<div id="content-wrapper">
-    <!-- Main Content Area -->
-    <main>
-      
 
+
+
+  <!-- =============== NAV + CONTENT + SIDEBAR =============== -->
+ <div id="content-wrapper" id="main">
+
+    <!-- Left Navigation -->
+    <nav>
+      <ul>
+<!-- RECOMMENDED NAVIGATION ORDER -->
+    <li><a data-link-key="transport_internal" href="#transport">🚀 Move</a></li>
+    <li><a data-link-key="overview_internal" href="#overview">📍 Zones</a></li>
+    <li><a data-link-key="deals_internal" href="#deals">💸 Save</a></li>
+    <li><a data-link-key="free_internal" href="#free">🎁 Freebies</a></li>
+    <li><a data-link-key="musttry_internal" href="#musttry">🍜 Must-Try</a></li>
+    <li><a data-link-key="goodtoknow_internal" href="#goodtoknow">🧠 Fact Bank</a></li>
+    <li><a data-link-key="tips_internal" href="#tips">🎯 Hacks</a></li>
+    <li><a data-link-key="penalties_internal" href="#penalties">⚠️ Don't</a></li>
+    <li><a data-link-key="glossary_internal" href="#glossary">🗣️ Talk Local</a></li>
+    <li><a data-link-key="planner_internal" href="#planner">🗓️ Hint Plan</a></li>
+    <li><a data-link-key="history_internal" href="#history">🏛️ Roots</a></li>
+    <li><a data-link-key="medical_internal" href="#medical">🩺 Help</a></li>
+    <li><a data-link-key="resources_internal" href="#resources">🔗 Links</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content + Sidebar Wrapper -->
+    <div class="content-and-sidebar">
+
+      <!-- Main Content -->
+      <main>
+
+        
 <section id="welcome">
-            <p style="font-size: 1.2rem; margin-bottom: 1.5rem; padding: 0 1rem;"><strong>Welcome to ScanSG!</strong> Your ultimate guide to navigating, discovering, and enjoying Singapore like a local—whether you're a first-time visitor or a long-time resident looking for hidden gems and updated tips.</p>
-            <p style="padding: 0 1rem;">Singapore is a vibrant, multicultural city-state known for its cleanliness, safety, and unique blend of modernity and tradition. From iconic landmarks like Marina Bay Sands and Gardens by the Bay to bustling hawker centers serving delicious local cuisine, and from lush green parks to cutting-edge shopping malls, there's something for everyone.</p>
-            <p style="padding: 0 1rem;">This comprehensive guide is designed to help you make the most of your time here, offering practical advice, insider tips, and curated recommendations to enhance your experience. Whether you're planning a short trip or settling in for the long haul, ScanSG is your go-to resource.</p>
-            <h3 style="color: #353535; margin-top: 1.5rem; border-bottom: 1px solid #eee; padding-bottom: 0.3rem;">Quick Tips for an Amazing Experience</h3>
-            <ul style="margin-left: 1.5rem; margin-right: 1.5rem;">
-                <li><strong>Plan Your Transport:</strong> Download the <a data-link-key="transitlink_eguide" target="_blank">TransitLink app</a> for real-time MRT/bus info. An EZ-Link card is essential for seamless travel on public transport.</li>
-                <li><strong>Embrace the Hawker Culture:</strong> Don't miss out on local favorites like Hainanese Chicken Rice, Laksa, or Char Kway Teow. Check out our <a data-link-key="musttry_internal" href="#musttry">Must Try</a> section for top picks!</li>
-                <li><strong>Stay Hydrated & Sun-Safe:</strong> Singapore is hot and humid year-round. Carry water, wear sunscreen, and seek shade during peak sun hours (11am-3pm).</li>
-                <li><strong>Respect Local Customs & Laws:</strong> Singapore has strict rules (e.g., no littering, no smoking in certain areas). Familiarize yourself with <a data-link-key="penalties_internal" href="#penalties">local fines</a> to avoid unintentional penalties.</li>
-                <li><strong>Enjoy the Greenery:</strong> Explore beautiful parks like <a data-link-key="gardens_by_the_bay" target="_blank">Gardens by the Bay</a>, <a data-link-key="east_coast_park" target="_blank">East Coast Park</a>, or the <a data-link-key="southern_ridges" target="_blank">Southern Ridges</a> for a refreshing escape from the urban hustle.</li>
-                <li><strong>Watch the Sunset... Anywhere:</strong> Find a nice spot at <a data-link-key="east_coast_park" target="_blank">East Coast Park</a>, <a data-link-key="west_coast_park" target="_blank">West Coast Park</a>, <a data-link-key="labrador_nature_reserve" target="_blank">Labrador Nature Reserve</a>, or even a rooftop bar (some allow free entry during non-peak hours) - Just don't play play, respect the space!</li>
-            </ul>
-            <h3 style="color: #353535; margin-top: 1.5rem; border-bottom: 1px solid #eee; padding-bottom: 0.3rem;">Free Entry & Money-Saving Tips</h3>
-            <ul style="margin-left: 1.5rem; margin-right: 1.5rem;">
-                <li><strong>Free Attractions:</strong> Many of Singapore's best experiences are free! Explore our <a data-link-key="free_internal" href="#free">Free Places</a> list for parks, beaches, art installations, and more.</li>
-                <li><strong>Museum Sundays:</strong> National museums often have free or discounted entry on certain days (e.g., first Sunday of the month). Check individual websites.</li>
-                <li><strong>Public Events:</strong> Keep an eye out for free performances, festivals, and events happening around the island, especially in places like <a data-link-key="esplanade" target="_blank">Esplanade</a> and <a data-link-key="chinatown_sg" target="_blank">Chinatown</a>.</li>
-                <li><strong>Nature Walks:</strong> Hike or stroll through free trails in places like <a data-link-key="macritchie_reservoir" target="_blank">MacRitchie Reservoir</a>, <a data-link-key="bukit_timah_nature_reserve" target="_blank">Bukit Timah Nature Reserve</a>, or the <a data-link-key="southern_ridges" target="_blank">Southern Ridges</a>.</li>
-                <li><strong>Library Lounging:</strong> Singapore's public libraries are air-conditioned, modern spaces perfect for relaxing, reading, or working with free Wi-Fi.</li>
-                <li><strong>Observation Decks:</strong>
-                    <ul>
-                        <li><strong><a data-link-key="raffles_city_singapore" target="_blank">Raffles City</a>:</strong> The rooftop garden is usually free to access and offers great city views.</li>
-                        <li><strong><a data-link-key="capitol_sg" target="_blank">Capitol Singapore</a>:</strong> The rooftop garden (Sky Lawn) is generally open to the public for free.</li>
-                        <li><strong><a data-link-key="marina_bay_sands" target="_blank">Marina Bay Sands Skypark</a>:</strong> The deck typically requires hotel booking/reservation. Some visitors try visiting the <a data-link-key="ce_la_vi" target="_blank">Ce La Vi</a> bar/restaurant on the 57th floor, as access to the public deck area *might* be possible from there, although this isn't guaranteed and access can be restricted. Always check MBS policies.</li> <!-- Updated -->
-                    </ul>
-                </li>
-                <li><strong>Explore Neighborhoods:</strong> Wander through unique districts like <a data-link-key="haji_lane" target="_blank">Haji Lane</a> (funky shops/street art), <a data-link-key="chinatown_main" target="_blank">Chinatown</a> (culture/history), <a data-link-key="little_india_main" target="_blank">Little India</a> (vibrant sights/smells), and <a data-link-key="kampong_glam_main" target="_blank">Kampong Glam</a> (Arab Street heritage) - all free to explore!</li>
-                <li><strong>Beach Life:</strong> Singapore has several free public beaches, including <a data-link-key="east_coast_park" target="_blank">East Coast Park</a>, <a data-link-key="west_coast_park" target="_blank">West Coast Park</a>, and <a data-link-key="pasir_ris_park" target="_blank">Pasir Ris Park</a>, perfect for relaxation or picnics.</li>
-                <li><strong>Art in Public Spaces:</strong> Look out for public sculptures, murals, and installations scattered throughout the city, especially in areas like <a data-link-key="haji_lane" target="_blank">Haji Lane</a>, <a data-link-key="chinatown_main" target="_blank">Chinatown</a>, and along the <a data-link-key="southern_ridges" target="_blank">Southern Ridges</a>.</li>
-                <li><strong>Community Centers & Parks:</strong> Many void decks (residential ground floors) and neighborhood parks host free community events, exercise corners, and playgrounds.</li>
-                <li><strong>Walkable & Connected:</strong> Many areas are pedestrian-friendly, and air-conditioned linkways/connectors make walking between buildings comfortable even in rain/heat.</li>
-                <li><strong>Learn Basic Singlish/Gestures:</strong> Knowing a few local terms (<a data-link-key="glossary_internal" href="#glossary">see Glossary</a>) or understanding common gestures can enhance interactions and show cultural interest.</li>
-                <li><strong>Recycle Right:</strong> Use the blue bins for paper/cardboard and the grey bins for plastic/metal/glass. Keep recyclables clean and dry.</li>
-            </ul>
-            <p style="padding: 0 1rem; font-style: italic; color: #666;">Enjoy your time in Singapore! Let's go!"</p>
-        </section>
+  <div style="text-align: center; padding: 1rem; max-width: 900px; margin: 0 auto; font-size: 1.05rem; color: #555; line-height: 1.4;">
+    <h1 style="color: var(--main); font-size: 1.7rem; margin-bottom: 0.6rem;">Wah Lau… Welcome Lah! 🇸🇬</h1>
+    <p>
+      Whether you just landed or you’ve been here longer than your pass says, this one’s for you. 
+      <a data-link-key="transport_internal" href="#transport" style="color: var(--main); font-weight: 600;">Move like a pro</a>, 
+      <a data-link-key="musttry_internal" href="#musttry" style="color: var(--main); font-weight: 600;">eat like a king</a>, 
+      don’t get fined for 
+      <a data-link-key="penalties_internal" href="#penalties" style="color: var(--main); font-weight: 600;">chewing gum</a>, 
+      and learn to say 
+      <a data-link-key="glossary_internal" href="#glossary" style="color: var(--main); font-weight: 600;">"Alamak!"</a> 
+      like a true local.
+    </p>
+    <p style="margin-top: 0.4rem; font-style: italic;">
+      <em>No blur-blur. Just good info.</em>
+    </p>
+  </div>
+</section>
 
+
+
+
+<section id="transport">
+  <h2>🚀 You’ve Just Landed: Your First Steps in Singapore</h2>
+  <p>Welcome to Singapore! The plane’s wheels have touched down, and you’re about to step into one of the world’s most efficient cities. Whether you're here for 3 days or 3 years, this guide will get you from the tarmac to your destination like a pro — no stress, no confusion.</p>
+
+  <!-- Two-Column Layout: Journey + Expanded Tips -->
+  <div style="margin-top: 1.8rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.8rem;">
+    
+    <!-- LEFT COLUMN: Step-by-Step Journey -->
+    <div style="display: flex; flex-direction: column; gap: 1.4rem;">
+      
+      <!-- Step 1 -->
+      <div style="border-left: 3px solid #1565c0; padding: 0.6rem 0.8rem; background-color: #f9f9f9; border-radius: 6px;">
+        <h3 style="color: #353535; margin: 0 0 0.4rem; font-size: 1.05rem;">🛬 Step 1: Clear Immigration & Baggage</h3>
+        <p style="font-size: 0.95rem; margin: 0;">
+          Head to immigration with your passport. Automated gates for ePassport holders. Collect bags, then customs.
+        </p>
+        <p style="font-size: 0.88rem; color: #666; margin-top: 0.4rem;">
+          <strong>💡 Pro Tip:</strong> Check <a data-link-key="customs_sg" target="_blank">Singapore Customs</a> for import rules.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div style="border-left: 3px solid #1565c0; padding: 0.6rem 0.8rem; background-color: #f9f9f9; border-radius: 6px;">
+        <h3 style="color: #353535; margin: 0 0 0.4rem; font-size: 1.05rem;">🛍️ Step 2: Duty-Free & Essentials</h3>
+        <ul style="font-size: 0.95rem; margin: 0.3rem 0; padding-left: 1.2rem;">
+          <li><strong>Duty-free</strong>: Alcohol, perfume, chocolate</li>
+          <li><strong>Convenience stores</strong>: 7-Eleven, Cheers (snacks, meds)</li>
+          <li><strong>ATMs & currency</strong>: SGD is king. Cards accepted widely.</li>
+        </ul>
+      </div>
+
+      <!-- Step 3 -->
+      <div style="border-left: 3px solid #1565c0; padding: 0.6rem 0.8rem; background-color: #f9f9f9; border-radius: 6px;">
+        <h3 style="color: #353535; margin: 0 0 0.4rem; font-size: 1.05rem;">📱 Step 3: Buy a Tourist SIM</h3>
+        <p style="font-size: 0.95rem; margin: 0;">Available at counters in T1, T2, T3 after immigration or prebook a eSIM here.</p>
+        <ul style="font-size: 0.95rem; margin: 0.3rem 0; padding-left: 1.2rem;">
+          <li><a data-link-key="singtel_sg_aff" target="_blank">Singtel</a> – Fast 5G</li>
+          <li><a data-link-key="starhub_sg_aff" target="_blank">StarHub</a> – Great tourist packs</li>
+          <li><a data-link-key="m1_sg_aff" target="_blank">M1</a> – Budget-friendly</li>
+        </ul>
+        <p style="font-size: 0.88rem; color: #666;">
+          <strong>💬 Tip:</strong> ~SGD 15–30 for 5–10GB (7–30 days). Passport required.
+        </p>
+      </div>
+
+<!-- Step 4 -->
+<div style="border-left: 3px solid #1565c0; padding: 0.6rem 0.8rem; background-color: #f9f9f9; border-radius: 6px;">
+  <h3 style="color: #353535; margin: 0 0 0.4rem; font-size: 1.05rem;">🚇 Step 4: Get an EZ-Link Card</h3>
+  <p style="font-size: 0.95rem; margin: 0;">Your go-to card for MRT, buses, hawker centres, and convenience stores. Costs SGD 10 (includes SGD 5 refundable deposit).</p>
+
+  <h4 style="color: #353535; margin: 0.8rem 0 0.3rem; font-size: 1.02rem;">📍 Where to Buy</h4>
+  <ul style="font-size: 0.95rem; margin: 0.3rem 0; padding-left: 1.2rem; line-height: 1.5;">
+    <li><strong>Changi Airport:</strong> T2 & T3 MRT stations (Passenger Service Centre or vending machines)</li>
+    <li><strong>Any MRT station:</strong> Service counters or Add Value Machines</li>
+    <li><strong>Convenience stores:</strong> 7-Eleven, Cheers, Guardian (look for EZ-Link logo)</li>
+  </ul>
+
+  <h4 style="color: #353535; margin: 1rem 0 0.3rem; font-size: 1.02rem;">💰 Top Up Options</h4>
+  <ul style="font-size: 0.95rem; margin: 0.3rem 0; padding-left: 1.2rem; line-height: 1.5;">
+    <li><strong>MRT stations:</strong> Add Value Machines (cash or card)</li>
+    <li><strong>Stores:</strong> 7-Eleven, Cheers, FairPrice (cash or card)</li>
+    <li><strong>Minimum top-up:</strong> SGD 5 or 10 (machine-dependent)</li>
+  </ul>
+
+  <h4 style="color: #353535; margin: 1rem 0 0.3rem; font-size: 1.02rem;">📱 Digital Tools</h4>
+  <ul style="font-size: 0.95rem; margin: 0.3rem 0; padding-left: 1.2rem; line-height: 1.5;">
+    <li><a data-link-key="ezlink_app" target="_blank">EZ-Link App</a>: Check balance, top up online, transfer value at any MRT gate</li>
+    <li><a data-link-key="simplygo_transport" target="_blank">SimplyGo</a>: Skip the card — use your contactless bank card or phone (Apple/Google Pay)</li>
+  </ul>
+
+  <p style="font-size: 0.88rem; color: #666; margin-top: 0.6rem;">
+    <strong>💡 Pro Tip:</strong> Always <strong>tap in AND tap out</strong>. Forget to tap out = max fare. And remember: deposit is refundable at selected stations.
+  </p>
+</div>
+
+      <!-- Step 5 -->
+      <div style="border-left: 3px solid #1565c0; padding: 0.6rem 0.8rem; background-color: #f9f9f9; border-radius: 6px;">
+        <h3 style="color: #353535; margin: 0 0 0.4rem; font-size: 1.05rem;">🚆 Step 5: Ride the MRT into the City</h3>
+        <p style="font-size: 0.95rem; margin: 0;">Take the <strong>East-West Line (Green)</strong> from <strong>CG2</strong>.</p>
+        <ul style="font-size: 0.95rem; margin: 0.3rem 0; padding-left: 1.2rem;">
+          <li><strong>City Hall</strong> (~25 mins) – Central district</li>
+          <li><strong>Orchard</strong> (~35 mins) – Shopping</li>
+          <li><strong>HarbourFront</strong> (~30 mins) – Sentosa</li>
+          <li><strong>Jurong East</strong> (~45 mins) – West</li>
+        </ul>
+        <p style="font-size: 0.88rem; color: #666;">
+          Trains: 5:30 AM – past midnight | <a data-link-key="transitlink_eguide" target="_blank">Use TransitLink App</a>
+        </p>
+      </div>
+
+      <!-- Bonus -->
+      <div style="border-left: 3px solid #1565c0; padding: 0.6rem 0.8rem; background-color: #f0f8ff; border-radius: 6px;">
+        <h3 style="color: #353535; margin: 0 0 0.4rem; font-size: 1.05rem;">🧳 Traveling with Luggage?</h3>
+        <ul style="font-size: 0.95rem; margin: 0.3rem 0; padding-left: 1.2rem;">
+          <li>Spacious trains & elevators at every station</li>
+          <li>Clear signage in English</li>
+          <li>Avoid peak hours: 7:30–9:00 AM & 5:30–7:30 PM</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN: Expanded Quick Reference & Local Hacks -->
+    <div style="display: flex; flex-direction: column; gap: 1.4rem;">
+
+      <!-- Card: Master Transport -->
+      <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.06);">
+        <h3 style="color: #353535; margin: 0 0 0.6rem; font-size: 1.1rem; border-bottom: 1px solid #eee; padding-bottom: 0.4rem;">🚆 Master Public Transport</h3>
+        <ul style="font-size: 0.95rem; margin: 0; padding-left: 1.2rem; line-height: 1.5;">
+          <li><strong>Tap in & out</strong> — always! Missing tap = max fare.</li>
+          <li><strong>EZ-Link</strong>: Buy at MRT. <a data-link-key="ezlink_card" target="_blank">More info</a></li>
+          <li><strong>SimplyGo</strong>: Tap with contactless card/phone. <a data-link-key="simplygo" target="_blank">Learn how</a></li>
+          <li><strong>Apps</strong>: <a data-link-key="transitlink_eguide" target="_blank">TransitLink</a>, <a data-link-key="grab_main" target="_blank">Grab</a>, <a data-link-key="sgsecure" target="_blank">SGSecure</a></li>
+          <li><strong>Live Updates</strong>: Follow <a data-link-key="smrt_corp" target="_blank">SMRT</a> or <a data-link-key="sbs_transit" target="_blank">SBS Transit</a></li>
+        </ul>
+      </div>
+
+<!-- Card: Transit Tips -->
+<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: #f9f9f9; box-shadow: 0 1px 4px rgba(0,0,0,0.06);">
+  <h3 style="color: #353535; margin: 0 0 0.6rem; font-size: 1.1rem; border-bottom: 1px solid #eee; padding-bottom: 0.4rem;">🚍 Transit Tips</h3>
+  <ul style="font-size: 0.95rem; margin: 0; padding-left: 1.2rem; line-height: 1.5;">
+    <li><strong>Free transfers:</strong> Switch between MRT and bus within 45 mins for same fare — no extra cost.</li>
+    <li><strong>Tap before boarding:</strong> Always tap your EZ-Link or SimplyGo at the front door. Cash? Higher fare. <em>Why pay more?</em></li>
+    <li><strong>Real-time arrivals:</strong> Use <a data-link-key="transitlink_eguide" target="_blank">TransitLink</a> or <strong>MyTransport.sg</strong> to check bus arrival times at stops.</li>
+    <li><strong>Express routes:</strong> Look for “Express” or “Limited Stops” buses (e.g., 36e, 51e) for faster travel during peak hours.</li>
+    <li><strong>Senior/Child fares:</strong> Available for ages 65+ and 3–12 with concession card. Buy at MRT stations.</li>
+  </ul>
+
+  <h4 style="color: #353535; margin: 1rem 0 0.4rem; font-size: 1.05rem;">✈️ Changi Airport Shuttles & MRT Access</h4>
+  <ul style="font-size: 0.95rem; margin: 0; padding-left: 1.2rem; line-height: 1.5;">
+    <li><strong>Free inter-terminal shuttles:</strong> Run 24/7 between T1–T2–T3. Pick up at Level 2 (Arrivals). No need to exit secure zone.</li>
+    <li><strong>Jewel to T4:</strong> Free shuttle connects Jewel/Terminals 1–2–3 to <strong>Terminal 4</strong> (every 10 mins, Level 1).</li>
+    <li><strong>MRT Access:</strong> Terminals <strong>2 and 3</strong> have direct MRT stations (East-West Line). Use the free shuttle from T1 or T4.</li>
+    <li><strong>Train to City:</strong> From T2/T3, take the MRT directly to City Hall (~25 mins), Orchard (~35 mins), or HarbourFront (for Sentosa).</li>
+  </ul>
+</div>
+
+      <!-- Card: SIM & SimplyGo Deep Dive -->
+      <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: #f0f8ff; box-shadow: 0 1px 4px rgba(0,0,0,0.06);">
+        <h3 style="color: #353535; margin: 0 0 0.6rem; font-size: 1.1rem; border-bottom: 1px solid #b3d9ff; padding-bottom: 0.4rem;">📱 SIM + SimplyGo: Smart Combo</h3>
+        <p style="font-size: 0.95rem; margin: 0;">
+          Use your <strong>tourist SIM</strong> with <strong>Google Maps</strong> and <strong>Grab</strong>, then pair it with <strong>SimplyGo</strong> for seamless travel.
+        </p>
+        <ul style="font-size: 0.95rem; margin: 0.6rem 0 0; padding-left: 1.2rem; line-height: 1.5;">
+          <li>Link your SIM to Apple Pay/Google Pay for <strong>contactless MRT</strong>.</li>
+          <li>No need to top up — just pay per ride.</li>
+          <li>View trip history & billing via <a data-link-key="simplygo" target="_blank">SimplyGo Portal</a>.</li>
+          <li>Cap: <strong>SGD 5.60/day</strong> (adult) on public transport.</li>
+        </ul>
+      </div>
+
+<!-- Card: Accessibility & Family -->
+<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.06);">
+  <h3 style="color: #353535; margin: 0 0 0.6rem; font-size: 1.1rem; border-bottom: 1px solid #eee; padding-bottom: 0.4rem;">♿ Accessibility & Family Tips</h3>
+  <ul style="font-size: 0.95rem; margin: 0; padding-left: 1.2rem; line-height: 1.5;">
+    <li><strong>Wheelchair access:</strong> All MRT stations and ~95% of buses are wheelchair-friendly. Look for the wheelchair symbol for ramps, lifts, and priority boarding.</li>
+    <li><strong>Tactile guidance paths:</strong> Yellow tactile tiles on floors guide visually impaired travelers from entrances to platforms. Keep them clear!</li>
+    <li><strong>Hearing loops:</strong> Available at MRT station service counters and some bus interchanges for hearing aid users.</li>
+    <li><strong>Priority queues:</strong> Use the dedicated lanes at station entrances — for seniors, pregnant women, and families with young kids.</li>
+   <li><strong>Lost & Found:</strong> If you lose something, contact <a data-link-key="transitlink_contact" target="_blank">TransitLink</a> (1800-767 8666) or ask station staff. Report lost children immediately.</li>
+  </ul>
+
+  <p style="font-size: 0.88rem; color: #666; margin-top: 0.8rem; padding-top: 0.6rem; border-top: 1px dashed #ccc;">
+    <strong>💡 Pro Tips:</strong> 
+
+    • If traveling with a group, keep kids close — platforms are safe, but it’s easy to get separated in crowds.
+  </p>
+</div>
+
+    </div>
+  </div>
+
+<!-- Final Note -->
+<div style="margin-top: 1.8rem; padding: 1.2rem; background-color: #f0f8ff; border-radius: 8px; border-left: 4px solid #1565c0;">
+  <p style="margin: 0; color: #333; font-size: 0.98rem;">
+    <strong>🏁 You’re In!</strong> From immigration to your first MRT ride, you’ve just experienced Singapore’s legendary efficiency. Whether you're heading to Marina Bay, Choa Chu Kang, or back to Changi one day, this system will take you there — fast, clean, and without looking like a tourist.
+  </p>
+  <p style="margin-top: 0.6rem; color: #333; font-size: 0.98rem;">
+    Now that you’re settled in, it’s time to explore. Ready to get a quick snapshot of the best food, shopping, nature spots, and hidden gems across the island? 
+    <a data-link-key="overview_internal" href="#overview" style="color: #1565c0; font-weight: 600; text-decoration: underline;">Jump to "Singapore at a Glance"</a> — your shortcut to knowing where to go and what to do, without the overwhelm.
+  </p>
+</div>
+</section>
 
 
 <section id="overview">
@@ -1249,87 +1272,198 @@ justify-content: flex-start;
 
 </section>
 
-
-
-
-
 <section id="deals">
-            <h2>Where to Get Good Deals</h2>
-            <p>Save money while exploring Singapore! Here's how to find the best deals on food, shopping, and experiences.</p>
-            <div class="deals-container">
-                <div class="deals-column">
-                    <h3>Food & Dining</h3>
-                    <ul>
-                        <li><strong>Hawker Centers:</strong> The heart of local cuisine and the best value. Look for crowded stalls—they're usually the freshest and tastiest. Popular chains like <em><a data-link-key="jin_jin_hotspot" target="_blank">Jin Jin Hotspot</a></em> or <em><a data-link-key="lao_shi_chicken_rice" target="_blank">Lao Shi Hainanese Chicken Rice</a></em> offer consistent quality at great prices.</li>
-                        <li><strong>Food Delivery Apps:</strong> Use <a data-link-key="foodpanda_main" target="_blank">foodpanda</a>, <a data-link-key="deliveroo_main" target="_blank">Deliveroo</a>, or <a data-link-key="grab_food_main" target="_blank">GrabFood</a> for convenience, but check for delivery fees and minimum orders. Look for <strong>Promos</strong> and <strong>GrabPay deals</strong> for savings.</li>
-                        <li><strong>Lunch Sets:</strong> Many restaurants, especially in CBD, offer affordable lunch sets (SGD 8-15) from 11:30 AM to 2:30 PM. Great for office workers and visitors!</li>
-                        <li><strong>Buffets:</strong> For big eaters, lunch buffets (SGD 15-25) at hotels like <em><a data-link-key="grand_plaza_parkroyal" target="_blank">Grand Plaza Parkroyal</a></em> or <em><a data-link-key="hotel_81" target="_blank">Hotel 81</a></em> offer great variety.</li>
-                        <li><strong>Happy Hours:</strong> Bars and restaurants often have happy hour deals (usually 5-7 PM) on drinks and appetizers. Check out spots in <a data-link-key="clarke_quay_deals" target="_blank">Clarke Quay</a>, <a data-link-key="boat_quay_deals" target="_blank">Boat Quay</a>, or <a data-link-key="chinatown_deals" target="_blank">Chinatown</a>.</li>
-                        <li><strong>Kopitiams:</strong> Traditional coffee shops offer very cheap local fare like kaya toast, soft-boiled eggs, and local coffee/tea. Cash only at many.</li>
-                    </ul>
-                    <h3 style="color: #353535; margin-top: 1.5rem;">Bonus: Claim Your Tourist GST Refund (TRS)</h3>
-                    <p>As a tourist, you can get back the 9% Goods and Services Tax (GST) paid on purchases from <em>participating retailers</em>. This is an extra way to save!</p>
-                    <h4 style="margin-top: 1rem; color: #e02332;">How It Works:</h4>
-                    <ul>
-                        <li><strong>Shop:</strong> Buy goods (SGD 100+ per receipt) from stores displaying the "TRS Approved" logo.</li>
-                        <li><strong>Request Form:</strong> Ask the retailer for a Tax Refund Form (TRF) at the time of purchase. You'll need to show your passport.</li>
-                        <li><strong>Claim:</strong> Before checking in for your flight, go to the <strong>TRS Refund Counter</strong> at <a data-link-key="changi_airport" target="_blank">Changi</a>/<a data-link-key="seletar_airport" target="_blank">Seletar Airport</a> Departure Immigration to get your form stamped. Then, go to the <strong>Refund Processing Point</strong> (usually nearby) <em>after</em> passing through immigration/security. Show your stamped TRF, receipt, and payment card to get the refund (usually back to the original card).</li>
-                    </ul>
-                    <h4 style="margin-top: 1rem; color: #e02332;">Important:</h4>
-                    <ul>
-                        <li>Minimum spend per receipt is SGD 100 (before GST).</li>
-                        <li>You must claim the refund within 30 days of purchase.</li>
-                        <li>Refunds are processed to the original payment card used for purchase.</li>
-                        <li>Keep all receipts and TRFs safe until you've claimed the refund.</li>
-                    </ul>
-                </div>
-                <div class="deals-column">
-                    <h3>Shopping & Essentials</h3>
-                    <ul>
-                        <li><strong>Sale Periods:</strong> Singapore has two major sale seasons:
-                            <ul>
-                                <li><strong><a data-link-key="gss_official" target="_blank">Great Singapore Sale (GSS)</a>:</strong> Usually May-August. Huge discounts across department stores, shopping centers, and outlets. Look for "GSS" signage.</li>
-                                <li><strong><a data-link-key="cny_sale_official" target="_blank">Chinese New Year Sale</a>:</strong> January-February. Another round of big discounts, especially for fashion and electronics.</li>
-                            </ul>
-                        </li>
-                        <li><strong>Outlet Malls:</strong>
-                            <ul>
-                                <li><a data-link-key="alexandra_central" target="_blank">Alexandra Central</a> (Fashion, Home)</li>
-                                <li><a data-link-key="changi_city_point_deals" target="_blank">Changi City Point</a> (Electronics, Fashion)</li>
-                                <li><a data-link-key="balestier_plaza" target="_blank">Balestier Plaza</a> (Electronics, IT)</li>
-                            </ul>
-                        </li>
-                        <li><strong>Discount Stores:</strong>
-                            <ul>
-                                <li><a data-link-key="giant_hypermarket" target="_blank">Giant Hypermarket</a>: Large format, good for groceries, household items.</li>
-                                <li><a data-link-key="sheng_siong" target="_blank">Sheng Siong</a>: Popular local chain, known for fresh produce and good prices.</li>
-                                <li><a data-link-key="cold_storage" target="_blank">Cold Storage</a>: Premium supermarket, often has promotions.</li>
-                                <li><a data-link-key="mustafa_centre_main" target="_blank">Mustafa Centre</a>: 24-hour department store, tax-free for tourists, great for electronics, gold, and souvenirs. Located in Little India.</li>
-                            </ul>
-                        </li>
-                        <li><strong>Online Marketplaces:</strong> For electronics, fashion, and home goods, check <a data-link-key="lazada_main" target="_blank">Lazada</a>, <a data-link-key="shopee_main" target="_blank">Shopee</a>, and <a data-link-key="qoo10_main" target="_blank">Qoo10</a>. Compare prices and look for free shipping offers and vouchers.</li>
-                        <li><strong>Electronics:</strong> For the best deals on electronics, compare prices at <a data-link-key="sim_lim_square" target="_blank">Sim Lim Square</a> (Buggy, negotiate) or authorized dealers during sales. Check online marketplaces too.</li>
-                        <li><strong>Books & Stationery:</strong> <a data-link-key="kinokuniya_sg" target="_blank">Kinokuniya</a> (Orchard Central, Great World City) for a wide selection. <a data-link-key="popular_bookstore" target="_blank">Popular Bookstore</a> chain for cheaper alternatives and stationery.</li>
-                    </ul>
-                    <h3 style="color: #353535; margin-top: 1.5rem;">Useful Apps & Money-Saving Tips</h3>
-                    <ul>
-                        <li><strong>Useful Apps:</strong> <a data-link-key="transitlink_eguide" target="_blank">TransitLink eGuide</a> for bus/MRT, <a data-link-key="grab_main" target="_blank">Grab</a> for e-hailing, <a data-link-key="sgsecure" target="_blank">SGSecure</a> for safe travel alerts.</li>
-                        <li><strong>Money-Saving Tips:</strong>
-                            <ul>
-                                <li>Buy an <a data-link-key="ezlink_card" target="_blank">EZ-Link card</a> for convenience and potential discounts.</li>
-                                <li>Use <a data-link-key="simplygo" target="_blank">SimplyGo</a> for contactless payments without needing a physical card.</li>
-                                <li>Sign up for <a data-link-key="grabbpay" target="_blank">GrabPay</a> and link a local bank account for cashback on rides/payments.</li>
-                                <li>Check Grab's "Rewards" section for vouchers and discounts on food/delivery/rides.</li>
-                                <li>Use <a data-link-key="shopback_main" target="_blank">ShopBack</a> or <a data-link-key="grabrewards" target="_blank">GrabRewards</a> for cashback when shopping online (aff).</li>
-                                <li>Look for free walking tours (check Eventbrite, Facebook events).</li>
-                                <li>Bring a reusable water bottle; refill stations are common in malls and parks.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        
+  <h2>Where to Get Good Deals</h2>
+  <p>Save money while exploring Singapore! Whether you love wandering street markets or clicking through online deals, here’s how to find the best value — offline and online.</p>
+
+  <!-- Main Grid: Offline & Online -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(480px, 1fr)); gap: 2rem; margin-top: 1.8rem; align-items: start;">
+    
+    <!-- OFFLINE SHOPPING -->
+    <div style="background: #fff; border-radius: 10px; padding: 1.4rem; box-shadow: 0 3px 10px rgba(0,0,0,0.08); border: 1px solid #eee;">
+      <h3 style="color: var(--main); font-size: 1.3rem; margin: 0 0 1.2rem; border-bottom: 2px solid var(--accent); padding-bottom: 0.4rem; display: flex; align-items: center; gap: 0.6rem;">
+        <span>🛒</span> Offline Shopping
+      </h3>
+
+      <!-- Supermarkets -->
+      <div>
+        <h4 style="color: #c62828; margin: 0.8rem 0 0.6rem; font-size: 1.05rem;">🏪 Supermarkets & Grocers</h4>
+        <ul style="padding-left: 1.3rem; margin: 0.4rem 0; line-height: 1.5;">
+          <li><strong><a data-link-key="cold_storage" target="_blank">Cold Storage</a>:</strong> Premium supermarket under NTUC. Great for imported goods, cheese, wine, and ready-to-eat meals. Often has promotions for cardholders.</li>
+          <li><strong><a data-link-key="giant_hypermarket" target="_blank">Giant Hypermarket</a>:</strong> Large format stores with wide selection. Good for weekly family shopping. Frequent discounts and bundled deals.</li>
+          <li><strong><a data-link-key="sheng_siong" target="_blank">Sheng Siong</a>:</strong> Budget-friendly chain known for fresh produce and low prices. Check for weekend flash sales.</li>
+          <li><strong><a data-link-key="mustafa_centre_main" target="_blank">Mustafa Centre</a>:</strong> 24-hour tax-free shopping in Little India. Great for electronics, gold, spices, and souvenirs.</li>
+        </ul>
+      </div>
+
+      <hr style="border: 0; border-top: 1px solid #eee; margin: 1.2rem 0;">
+
+      <!-- Bakery Discounts -->
+      <div>
+        <h4 style="color: #c62828; margin: 0.8rem 0 0.6rem; font-size: 1.05rem;">🥖 Bakery Closing Discounts</h4>
+        <ul style="padding-left: 1.3rem; margin: 0.4rem 0; line-height: 1.5;">
+          <li><strong>Bakery Closing Discounts:</strong> Many bakeries (e.g., <em>BreadTalk, Food Republic, NTUC Foodfare</em>) offer <strong>30–70% off</strong> on bread, cakes, and buns <strong>1–2 hours before closing</strong> (usually 7–9 PM). Ask staff or look for red discount tags.</li>
+        </ul>
+      </div>
+
+      <hr style="border: 0; border-top: 1px solid #eee; margin: 1.2rem 0;">
+
+      <!-- Street Markets -->
+      <div>
+        <h4 style="color: #c62828; margin: 0.8rem 0 0.6rem; font-size: 1.05rem;">🛍️ Street Markets & Cultural Districts</h4>
+        <ul style="padding-left: 1.3rem; margin: 0.4rem 0; line-height: 1.5;">
+          <li>Explore vibrant markets like <em>Chinatown Street Market</em>, <em>Bugis Street</em>, and <em>Geylang Serai Market</em> for affordable fashion, souvenirs, and local snacks.</li>
+          <li>Visit <em>Katong/Joo Chiat</em> for Peranakan crafts and heritage food.</li>
+        </ul>
+      </div>
+
+      <hr style="border: 0; border-top: 1px solid #eee; margin: 1.2rem 0;">
+
+      <!-- Closing Down Sales -->
+      <div>
+        <h4 style="color: #c62828; margin: 0.8rem 0 0.6rem; font-size: 1.05rem;">🎯 Closing-Down & Clearance Sales</h4>
+        <ul style="padding-left: 1.3rem; margin: 0.4rem 0; line-height: 1.5;">
+          <li>Keep an eye out for <strong>"Closing Down Sale"</strong> signs in malls like <em>Great World, Plaza Singapura, or Bugis+</em>. These are often <strong>genuine</strong> and offer <strong>up to 90% off</strong>.</li>
+          <li>Stores relocating or shutting down (e.g., fashion boutiques, electronics shops) clear stock fast — perfect for deals on branded goods.</li>
+          <li>Check <a data-link-key="hardware_singapore" target="_blank">Hardware Singapore</a> or <a data-link-key="best_denki" target="_blank">Best Denki</a> for end-of-line electronics discounts.</li>
+        </ul>
+      </div>
+
+      <hr style="border: 0; border-top: 1px solid #eee; margin: 1.2rem 0;">
+
+      <!-- $2 Stores -->
+      <div>
+        <h4 style="color: #c62828; margin: 0.8rem 0 0.6rem; font-size: 1.05rem;">💵 $2 Stores & Value Shops</h4>
+        <ul style="padding-left: 1.3rem; margin: 0.4rem 0; line-height: 1.5;">
+          <li><strong><a data-link-key="value_dollar" target="_blank">Value Dollar</a>:</strong> Chain of $2 stores selling travel essentials, snacks, phone accessories, souvenirs, and household items. Great for last-minute buys. Locations in major malls and MRT stations.</li>
+          <li><strong>Daiso:</strong> Japanese variety store (similar to Value Dollar) with slightly higher quality. Great for kitchenware, stationery, and cute gifts.</li>
+          <li><strong>Miniso:</strong> Trendy, stylish items at low prices — think phone grips, organizers, and beauty tools.</li>
+        </ul>
+      </div>
+
+      <hr style="border: 0; border-top: 1px solid #eee; margin: 1.2rem 0;">
+
+      <!-- Malls & Discount Stores -->
+      <div>
+        <h4 style="color: #c62828; margin: 0.8rem 0 0.6rem; font-size: 1.05rem;">🏬 Malls & Discount Stores</h4>
+        <ul style="padding-left: 1.3rem; margin: 0.4rem 0; line-height: 1.5;">
+          <li><strong>Sale Seasons:</strong>
+            <ul style="margin: 0.4rem 0; padding-left: 1.2rem;">
+              <li><strong><a data-link-key="gss_official" target="_blank">Great Singapore Sale (GSS)</a>:</strong> May–Aug — huge discounts across stores.</li>
+              <li><strong><a data-link-key="cny_sale_official" target="_blank">Chinese New Year Sale</a>:</strong> Jan–Feb — fashion, electronics, home goods.</li>
+            </ul>
+          </li>
+          <li><strong>Outlet Malls:</strong>
+            <ul style="margin: 0.4rem 0; padding-left: 1.2rem;">
+              <li><a data-link-key="alexandra_central" target="_blank">Alexandra Central</a> (Fashion, Home)</li>
+              <li><a data-link-key="changi_city_point_deals" target="_blank">Changi City Point</a> (Electronics, Fashion)</li>
+              <li><a data-link-key="balestier_plaza" target="_blank">Balestier Plaza</a> (IT, Electronics)</li>
+            </ul>
+          </li>
+          <li><strong>Electronics:</strong> Compare prices at <a data-link-key="sim_lim_square" target="_blank">Sim Lim Square</a> — negotiate hard!</li>
+        </ul>
+      </div>
+  💡 Pro Tip: Always carry small bills.
+</p>
+    </div>
+
+    <!-- ONLINE SHOPPING -->
+    <div style="background: #fff; border-radius: 10px; padding: 1.4rem; box-shadow: 0 3px 10px rgba(0,0,0,0.08); border: 1px solid #eee;">
+      <h3 style="color: var(--main); font-size: 1.3rem; margin: 0 0 1.2rem; border-bottom: 2px solid var(--accent); padding-bottom: 0.4rem; display: flex; align-items: center; gap: 0.6rem;">
+        <span>🌐</span> Online Shopping
+      </h3>
+
+      <!-- Major Marketplaces -->
+      <div>
+        <h4 style="color: #c62828; margin: 0.8rem 0 0.6rem; font-size: 1.05rem;">🛒 Major Marketplaces</h4>
+        <ul style="padding-left: 1.3rem; margin: 0.4rem 0; line-height: 1.5;">
+          <li><strong><a data-link-key="shopee_main" target="_blank">Shopee.sg</a>:</strong> The most popular e-commerce platform in SG. Great for fashion, electronics, home goods. Frequent flash sales and free shipping.</li>
+          <li><strong><a data-link-key="lazada_main" target="_blank">Lazada.sg</a>:</strong> Backed by Alibaba. Strong in electronics, appliances, and branded goods. Often has voucher deals.</li>
+          <li><strong><a data-link-key="qoo10_main" target="_blank">Qoo10.sg</a>:</strong> Niche deals on fashion, beauty, and gadgets. Good for unique finds.</li>
+          <li><strong><a data-link-key="taobao_sg" target="_blank">Taobao (via SG proxy)</a>:</strong> For ultra-cheap goods from China. Use shipping proxies like <em>Superbuy</em> or <em>BuuPass</em> for delivery.</li>
+          <li><strong><a data-link-key="aliexpress_main" target="_blank">AliExpress</a>:</strong> Global platform for budget fashion, electronics, and lifestyle products. Long delivery times but low prices.</li>
+        </ul>
+      </div>
+
+      <hr style="border: 0; border-top: 1px solid #eee; margin: 1.2rem 0;">
+
+      <!-- Carousell Added -->
+      <div>
+        <h4 style="color: #c62828; margin: 0.8rem 0 0.6rem; font-size: 1.05rem;">🔄 Carousell (SG’s #1 Secondhand Marketplace)</h4>
+        <ul style="padding-left: 1.3rem; margin: 0.4rem 0; line-height: 1.5;">
+          <li><strong><a data-link-key="carousell_main" target="_blank">Carousell.sg</a>:</strong> Singapore’s go-to app for buying and selling secondhand goods — from phones and watches to furniture and concert tickets.</li>
+          <li>Negotiate prices directly with sellers. Look for “Meet-up” or “Shipping” options.</li>
+          <li>Search smart: Use keywords like <em>"like new", "bundle deal", "urgent sale"</em> for best bargains.</li>
+          <li>Pro Tip: Filter by location (e.g., “Near Me”) to avoid shipping fees.</li>
+        </ul>
+      </div>
+
+      <hr style="border: 0; border-top: 1px solid #eee; margin: 1.2rem 0;">
+
+      <!-- Fashion & Lifestyle -->
+      <div>
+        <h4 style="color: #c62828; margin: 0.8rem 0 0.6rem; font-size: 1.05rem;">👗 Fashion & Lifestyle</h4>
+        <ul style="padding-left: 1.3rem; margin: 0.4rem 0; line-height: 1.5;">
+          <li><strong><a data-link-key="uniqlo_sg" target="_blank">Uniqlo SG</a>:</strong> High-quality basics, seasonal collections, and Airism wear. Frequent online exclusives and sales.</li>
+          <li><strong><a data-link-key="shein_sg" target="_blank">SHEIN SG</a>:</strong> Trendy, ultra-affordable fashion. Fast shipping to SG. Great for casual wear and accessories.</li>
+          <li><strong><a data-link-key="zalora_sg" target="_blank">Zalora</a>:</strong> Local fashion hub with brands like Charles & Keith, Pedro, and more. Regular sales and style guides.</li>
+          <li><strong><a data-link-key="mr_diy_online" target="_blank">Mr. DIY Online</a>:</strong> Now available online! Buy household essentials, tools, stationery, and festive decor at fixed low prices.</li>
+        </ul>
+      </div>
+
+      <hr style="border: 0; border-top: 1px solid #eee; margin: 1.2rem 0;">
+
+      <!-- General & International -->
+      <div>
+        <h4 style="color: #c62828; margin: 0.8rem 0 0.6rem; font-size: 1.05rem;">📦 General & International</h4>
+        <ul style="padding-left: 1.3rem; margin: 0.4rem 0; line-height: 1.5;">
+          <li><strong><a data-link-key="amazon_sg" target="_blank">Amazon Singapore</a>:</strong> Reliable for books, electronics, imported goods, and Amazon Prime (fast delivery).</li>
+          <li><strong><a data-link-key="ebay_sg" target="_blank">eBay</a>:</strong> For rare or second-hand items. Check seller ratings and shipping costs.</li>
+        </ul>
+      </div>
+
+      <hr style="border: 0; border-top: 1px solid #eee; margin: 1.2rem 0;">
+
+      <!-- Food & Delivery Apps -->
+      <div>
+        <h4 style="color: #c62828; margin: 0.8rem 0 0.6rem; font-size: 1.05rem;">📱 Food & Delivery Apps</h4>
+        <ul style="padding-left: 1.3rem; margin: 0.4rem 0; line-height: 1.5;">
+          <li><strong><a data-link-key="grab_food_main" target="_blank">GrabFood</a>:</strong> Most popular. Look for "GrabPay" deals and first-order promos.</li>
+          <li><strong><a data-link-key="foodpanda_main" target="_blank">foodpanda</a>:</strong> Competitive prices, frequent voucher codes.</li>
+          <li><strong><a data-link-key="deliveroo_main" target="_blank">Deliveroo</a>:</strong> Best for Western food and premium restaurants.</li>
+        </ul>
+      </div>
+
+      <hr style="border: 0; border-top: 1px solid #eee; margin: 1.2rem 0;">
+
+      <!-- Money-Saving Tips -->
+      <div>
+        <h4 style="color: #c62828; margin: 0.8rem 0 0.6rem; font-size: 1.05rem;">🎯 Money-Saving Tips</h4>
+        <ul style="padding-left: 1.3rem; margin: 0.4rem 0; line-height: 1.5;">
+          <li>Compare prices across Shopee, Lazada, and Qoo10 before buying.</li>
+          <li>Use <strong>ShopBack</strong> or <strong>GrabRewards</strong> for cashback.</li>
+          <li>Wait for <strong>11.11</strong> or <strong>12.12</strong> mega sales for best online deals.</li>
+          <li>Check for <strong>free shipping</strong> thresholds and use vouchers.</li>
+          <li>Sign up for newsletters (Uniqlo, Zalora, Mr. DIY) for exclusive member discounts.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- GST Refund Box - Full Width -->
+  <div style="margin-top: 2.2rem; padding: 1.4rem; background-color: #f0f8ff; border-left: 4px solid #1565c0; border-radius: 8px;">
+    <h3 style="margin: 0 0 0.6rem; color: #1565c0; font-size: 1.15rem;">💡 Bonus: Claim Your Tourist GST Refund (TRS)</h3>
+    <p>As a tourist, you can claim back 8% GST on eligible purchases over $100 (including GST) at participating stores. Look for the <strong>“Tax Refund for Tourists”</strong> sign.</p>
+    <ul style="margin: 0.6rem 0 0; padding-left: 1.4rem; line-height: 1.5;">
+      <li>Get your <strong>TRS (Tax Refund Scheme)</strong> form at the store.</li>
+      <li>Purchase must be within 6 months of departure.</li>
+      <li>Present your passport, boarding pass, and receipts at the refund counter before check-in or at immigration.</li>
+      <li>Refund via credit card, cash, or PayNow.</li>
+    </ul>
+    <p style="margin-top: 0.6rem; font-size: 0.85rem; color: #555;"><em>Pro Tip: Keep all receipts and TRFs until you’ve claimed the refund.</em></p>
+  </div>
+</section>
+
 
 <section id="free">
     <h2>Free Places to Visit</h2>
@@ -1403,7 +1537,6 @@ justify-content: flex-start;
 
     <p style="margin-top: 1.5rem; font-style: italic;">Enjoy exploring Singapore on a budget! Let the adventure begin!</p>
 </section>
-        
 
 <section id="musttry">
             <h2>Must-Try Food & Experiences</h2>
@@ -1435,73 +1568,129 @@ justify-content: flex-start;
                 <li><strong><a data-link-key="singapore_flyer" target="_blank">Singapore Flyer</a>:</strong> Take a ride on one of the world's largest Giant Observation Wheels for panoramic city views (ticketed).</li>
             </ul>
         </section>
-        
 
-<section id="transport">
-            <h2>Getting Around: Local Transport</h2>
-            <p>Singapore boasts one of the world's most efficient and clean public transport systems. Here's how to navigate the city like a pro:</p>
-            <h3 style="color: #353535; margin-top: 1.5rem;">MRT (Mass Rapid Transit)</h3>
+
+<section id="goodtoknow">
+  <h2>Life in SG</h2>
+  <p>Whether you're visiting for 3 days or living here for 3 years, this section gives you the facts that matter — starting with what every visitor needs to know, then diving into the deeper truths locals live by.</p>
+
+  <table style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.95rem;">
+    <thead>
+      <tr style="background-color: #f0f0f0; color: #333;">
+        <th style="text-align: left; padding: 0.6rem 0.8rem; font-weight: 600; width: 30%;">🎯 For You</th>
+        <th style="text-align: left; padding: 0.6rem 0.8rem; font-weight: 600;">💡 The Truth</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <!-- 👋 FOR VISITORS -->
+      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">🌡️ Climate</td>
+        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Hot and humid year-round (28–32°C). Sudden rain showers are common. Always carry an umbrella or light raincoat.</td>
+      </tr>
+      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">💧 Tap Water is Safe</td>
+        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Yes, you can drink it. Refill bottles at water coolers in malls, MRT stations, and hawker centres.</td>
+      </tr>
+      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">🔌 Power Plugs</td>
+        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Type G (UK-style) 3-pin. Voltage: 230V, 50Hz. Bring an adapter if needed.</td>
+      </tr>
+      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">📶 Free Wi-Fi</td>
+        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Available at MRT stations, libraries, hawker centres, and public areas via <strong>Wireless@SG</strong>.</td>
+      </tr>
+      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">🚻 Toilets</td>
+        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Usually clean and free. Some malls or petrol stations may charge a small fee (SGD 0.20–0.50).</td>
+      </tr>
+      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">🧃 Tipping</td>
+        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Not expected or required. Service charge (10%) is often included in restaurants and hotels.</td>
+      </tr>
+      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">🛒 Tax-Free Shopping</td>
+        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Available for tourists at participating retailers (e.g., <a data-link-key="mustafa_centre_good_to_know" target="_blank">Mustafa Centre</a>).</td>
+      </tr>
+      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">📅 Public Holidays</td>
+        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Check <a data-link-key="mom_public_holidays" target="_blank">MOM website</a> for official list (varies yearly).</td>
+      </tr>
+      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">⏱️ Be Punctual</td>
+        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Being on time is highly valued in Singaporean culture.</td>
+      </tr>
+
+      <!-- 🌏 FOR EVERYONE (WOW FACTS) -->
+      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 2px solid #ddd;">🇸🇬 Population (2025)</td>
+        <td style="padding: 0.6rem 0.8rem; border-top: 2px solid #ddd;">Approximately 5.9 million. One of the most densely populated countries in the world.</td>
+      </tr>
+      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">🎨 Ethnic Makeup</td>
+        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Chinese (74.3%), Malay (13.5%), Indian (9%), Others (3.2%). One of the most multicultural societies globally.</td>
+      </tr>
+      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">🗣️ Official Languages</td>
+        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Four official: English (admin), Mandarin, Malay (national), Tamil. Most locals speak 2–3 languages.</td>
+      </tr>
+      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">⏰ Time Zone</td>
+        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Singapore Standard Time (SGT): UTC+8. No daylight saving.</td>
+      </tr>
+      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">🔒 Crime Rate</td>
+        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">One of the safest countries in the world. Violent crime is extremely rare.</td>
+      </tr>
+      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">🍽️ Hawker Culture</td>
+        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">UNESCO-recognized. Over 100 hawker centres. Some Michelin-starred meals cost under SGD 5.</td>
+      </tr>
+      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">💸 GDP per Capita (PPP)</td>
+        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Ranked #1 globally by IMF (2025). Higher than the US and Switzerland.</td>
+      </tr>
+
+      <!-- 🚗 FOR RESIDENTS & LONG-TERMERS -->
+      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 2px solid #ddd;">🚗 Car Ownership = Luxury</td>
+        <td style="padding: 0.6rem 0.8rem; border-top: 2px solid #ddd;">One of the most expensive in the world. A basic car can cost 3–5x its overseas price.</td>
+      </tr>
+      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">💰 COE (Certificate of Entitlement)</td>
+        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">You bid for a COE first. It gives you the right to own a vehicle for 10 years. Prices can exceed SGD 100,000.</td>
+      </tr>
+      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">🚦 ERP (Electronic Road Pricing)</td>
+        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Toll system charges during peak hours. Rates change dynamically. Check <a data-link-key="mytransport_sg" target="_blank">MyTransport.sg</a>.</td>
+      </tr>
+      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">🅿️ HDB Parking</td>
+        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Resident parking only. Visitors need permits or use nearby car parks. No permit? Tow-away zone.</td>
+      </tr>
+      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">🚗 No Need to Drive</td>
+        <td style="padding: 0.6rem 0.8rem; border-top: 1px solid #eee;">Most locals don’t own cars. MRT + Grab is faster and cheaper. Cars are a status symbol, not a necessity.</td>
+      </tr>
+
+      <!-- 🚨 EMERGENCY NUMBERS -->
+      <tr><td style="font-weight: 600; padding: 0.6rem 0.8rem; border-top: 2px solid #ddd;">🚨 Emergency Numbers</td>
+        <td style="padding: 0.6rem 0.8rem; border-top: 2px solid #ddd;">Police/General Emergencies: <strong>999</strong>, Ambulance/Fire: <strong>995</strong></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <div style="margin-top: 1rem; padding: 0.8rem; background-color: #f9f9f9; border-left: 4px solid #c62828; font-size: 0.9rem; color: #555;">
+    <p style="margin: 0;"><strong>Pro Tip:</strong> Whether you're here for 3 days or 3 years, the best way to experience Singapore is on foot — explore hawker centres, hidden alleys, and rooftop views. The real magic is in the details.</p>
+  </div>
+</section>
+
+
+
+
+<section id="tips">
+            <h2>Singapore Tips & Tricks</h2>
+            <p>Maximize your Singapore experience with these insider tips:</p>
             <ul>
-                <li><strong>Network:</strong> The MRT is the fastest way to travel long distances. It covers most major attractions and residential areas.</li>
-                <li><strong>Map:</strong> Download the <a data-link-key="mrt_network_map" target="_blank">MRT Network Map</a> or use the <a data-link-key="transitlink_app" target="_blank">TransitLink app</a>.</li>
-                <li><strong>Lines:</strong> Color-coded lines connect different parts of the island (e.g., North-South Line (Red), East-West Line (Green)).</li>
-                <li><strong>Etiquette:</strong>
-                    <ul>
-                        <li>Give priority seats to the elderly, pregnant women, and disabled.</li>
-                        <li>Keep noise levels down (no loud phone calls).</li>
-                        <li>Queue orderly to board trains.</li>
-                        <li>No food or drinks (except for infants).</li>
-                    </ul>
-                </li>
-                <li><strong>Fares:</strong> Distance-based, paid by <a data-link-key="ezlink_card_transport" target="_blank">EZ-Link card</a>, <a data-link-key="simplygo_transport" target="_blank">contactless bank cards (SimplyGo)</a>, or cash (higher cost). EZ-Link is the most convenient and often offers discounts.</li>
-            </ul>
-            <h4 style="color: #454545; margin-top: 1.2rem;">Understanding MRTs:</h4>
-            <ul>
-                <li><strong>Direction:</strong> Trains run in two directions (e.g., towards Marina Bay or towards Pasir Ris). Check the destination displayed on the platform screen and inside the train.</li>
-                <li><strong>Doors:</strong> Train doors open on the left or right side depending on the station platform. Pay attention to announcements and floor markings.</li>
-                <li><strong>Signage:</strong> Look for color-coded lines and station names in English, Chinese, Malay, and Tamil.</li>
-            </ul>
-            <h3 style="color: #353535; margin-top: 1.5rem;">Buses</h3>
-            <ul>
-                <li><strong>Network:</strong> Extensive network covering areas the MRT doesn't reach directly. Very reliable and frequent.</li>
-                <li><strong>Map/App:</strong> Use the <a data-link-key="transitlink_bus_service" target="_blank">TransitLink Bus Service</a> page or app for routes and real-time info.</li>
-                <li><strong>Boarding:</strong> Press the button outside the bus to hail it. Board through the front door, tap your card, and alight through the back/middle doors.</li>
-                <li><strong>Etiquette:</strong>
-                    <ul>
-                        <li>Give up seats to those in need.</li>
-                        <li>Keep aisles clear.</li>
-                        <li>Queue at bus stops.</li>
-                        <li>No food or drinks.</li>
-                    </ul>
-                </li>
-                <li><strong>Fares:</strong> Distance-based, paid by <a data-link-key="ezlink_card_transport" target="_blank">EZ-Link</a>, <a data-link-key="simplygo_transport" target="_blank">SimplyGo</a>, or cash (exact fare required).</li>
-            </ul>
-            <h3 style="color: #353535; margin-top: 1.5rem;">EZ-Link Card</h3>
-            <ul>
-                <li><strong>What it is:</strong> A reloadable contactless smart card used for MRT, buses, taxis, and even some retail outlets.</li>
-                <li><strong>Where to Buy:</strong> Available at MRT stations (General Ticketing Machines, Passenger Service Counters), 7-Eleven, and convenience stores. Cost is SGD 12 (SGD 7 deposit + SGD 5 stored value).</li>
-                <li><strong>Benefits:</strong> Convenience, discounts on MRT/Buses, and usable for small purchases.</li>
-                <li><strong>Top-Up:</strong> At MRT stations, 7-Eleven, or online via the <a data-link-key="ezlink_app" target="_blank">EZ-Link app</a>.</li>
-            </ul>
-            <h3 style="color: #353535; margin-top: 1.5rem;">SimplyGo</h3>
-            <ul>
-                <li><strong>What it is:</strong> A contactless payment option using your local bank card (Mastercard, Visa) or mobile wallet (Apple Pay, Google Pay) instead of an EZ-Link card.</li>
-                <li><strong>How it works:</strong> Just tap your card/wallet on the reader when boarding MRT/Buses. The fare is automatically calculated and deducted.</li>
-                <li><strong>Benefits:</strong> No need to carry a separate card or worry about top-ups.</li>
-                <li><strong>Requirements:</strong> A compatible contactless bank card or NFC-enabled mobile device linked to a participating bank account.</li>
-            </ul>
-            <h3 style="color: #353535; margin-top: 1.5rem;">Taxis & Ride-Hailing</h3>
-            <ul>
-                <li><strong>Taxis:</strong> Readily available but more expensive than public transport. Flag-down fares start around SGD 3-4. Look for official taxis (white with colored roof light).</li>
-                <li><strong>Ride-Hailing:</strong> <a data-link-key="grab_main" target="_blank">Grab</a> is the dominant app, offering cars, bikes (GrabBike), and shared rides (GrabShare). Usually cheaper than traditional taxis, especially with surge pricing.</li>
-            </ul>
-            <h3 style="color: #353535; margin-top: 1.5rem;">Walking & Cycling</h3>
-            <ul>
-                <li><strong>Pedestrian-Friendly:</strong> Many areas, especially in the city center, are walkable. Covered linkways connect many buildings, providing shelter from rain/heat.</li>
-                <li><strong>Cycling:</strong> Growing network of park connectors and cycling paths. You can bring your bike on MRT trains during off-peak hours. Bike-sharing services like <em><a data-link-key="sg_bike" target="_blank">SG Bike</a></em> are available.</li>
+                <li><strong>Plan for Rain:</strong> Carry a small umbrella or raincoat. Afternoon thundershowers are common and can be sudden and heavy.</li>
+                <li><strong>Master Public Transport:</strong> Download the <a data-link-key="transitlink_eguide" target="_blank">TransitLink app</a>. An <a data-link-key="ezlink_card" target="_blank">EZ-Link</a> or <a data-link-key="simplygo" target="_blank">SimplyGo</a> is essential for convenience and discounts.</li>
+                <li><strong>Embrace Hawker Culture:</strong> Don't be intimidated! It's clean, delicious, and cheap. Look for busy stalls with high turnover.</li>
+                <li><strong>Learn Basic Singlish:</strong> Knowing a few local terms can make interactions friendlier. Check our <a data-link-key="glossary_internal" href="#glossary">Glossary</a>.</li>
+                <li><strong>Respect Local Customs:</strong> Be aware of and respect local laws and customs (e.g., no chewing gum, no littering).</li>
+                <li><strong>Stay Cool:</strong> Singapore is hot and humid. Air-conditioned malls, MRTs, and public transport are lifesavers. Drink plenty of water.</li>
+                <li><strong>Carry Cash & Cards:</strong> While card payments are widespread, hawker centers and small vendors often prefer cash. ATMs are readily available.</li>
+                <li><strong>Get a Local SIM Card:</strong> For data and local calls, consider buying a prepaid SIM from <a data-link-key="m1_tips" target="_blank">M1</a>, <a data-link-key="singtel_tips" target="_blank">Singtel</a>, or <a data-link-key="starhub_tips" target="_blank">StarHub</a> at the airport or convenience stores.</li>
+                <li><strong>Explore Beyond the CBD:</strong> Venture into neighborhoods like <a data-link-key="tiong_bahru" target="_blank">Tiong Bahru</a>, <a data-link-key="katong_area" target="_blank">Katong</a>, or <a data-link-key="yishun_area" target="_blank">Yishun</a> for unique experiences and local vibes.</li>
+                <li><strong>Take Advantage of Freebies:</strong> Many attractions, parks, and galleries are free. See our <a data-link-key="free_internal" href="#free">Free Places</a> section.</li>
+                <li><strong>Visit During Sale Seasons:</strong> Time your shopping trip with the <a data-link-key="visit_sg_gss" target="_blank">Great Singapore Sale</a> (May-Aug) or <a data-link-key="visit_sg_cny_sales" target="_blank">Chinese New Year Sales</a> (Jan-Feb) for the best deals.</li>
+                <li><strong>Be Mindful of Peak Hours:</strong> Public transport is extremely crowded during morning (7:30-9:00 AM) and evening (5:30-7:30 PM) rush hours. Plan accordingly.</li>
+                <li><strong>Use Grab:</strong> For taxis, food delivery, and even grocery shopping (<a data-link-key="grabmart_tips" target="_blank">GrabMart</a>), <a data-link-key="grab_tips" target="_blank">Grab</a> is a super convenient app.</li>
+                <li><strong>Understand the Food Scene:</strong> <a data-link-key="kopitiam_generic" target="_blank">Kopitiam</a> (traditional coffee shop), <a data-link-key="hawker_centre_generic" target="_blank">Hawker Centre</a> (large food court), <a data-link-key="food_republic_generic" target="_blank">Food Republic</a> (aircon hawker), and Restaurants are different dining experiences.</li>
+                <li><strong>Recycle:</strong> Use the blue bins for paper/cardboard and grey bins for plastic/metal/glass. Keep recyclables clean.</li>
+                <li><strong>Be Punctual:</strong> Being on time is highly valued in Singaporean culture.</li>
+                <li><strong>Know Emergency Numbers:</strong> Police/General Emergencies: 999, Ambulance/Fire: 995.</li>
             </ul>
         </section>
-        
 
 <section id="penalties">
   <h2>Fines & Penalties — Don’t Be Siao: Singapore Edition</h2>
@@ -1678,92 +1867,10 @@ justify-content: flex-start;
     <a href="https://sso.agc.gov.sg" target="_blank" rel="noopener">Singapore Statutes</a>
   </p>
 </section>
-        
 
-<section id="goodtoknow">
-            <h2>Good to Know</h2>
-            <table>
-                <tr>
-                    <th>Item</th>
-                    <th>Detail</th>
-                </tr>
-                <tr>
-                    <td>Population</td>
-                    <td>~5.9 million</td>
-                </tr>
-                <tr>
-                    <td>Official Languages</td>
-                    <td>English, Mandarin, Malay, Tamil</td>
-                </tr>
-                <tr>
-                    <td>English Proficiency</td>
-                    <td>Very High - Easy to get by</td>
-                </tr>
-                <tr>
-                    <td>Currency</td>
-                    <td>Singapore Dollar (SGD $)</td>
-                </tr>
-                <tr>
-                    <td>Exchange Rate (Approx.)</td>
-                    <td>USD 1 ≈ SGD 1.35 (Check current rates)</td>
-                </tr>
-                <tr>
-                    <td>Electricity</td>
-                    <td>230V, 50Hz (Type G plugs - 3-pin square)</td>
-                </tr>
-                <tr>
-                    <td>Time Zone</td>
-                    <td>UTC+8 (No Daylight Saving)</td>
-                </tr>
-                <tr>
-                    <td>Weather</td>
-                    <td>Tropical - Hot & Humid year-round. Expect sudden, heavy showers.</td>
-                </tr>
-                <tr>
-                    <td>Dress Code</td>
-                    <td>Generally casual. Modest dress respectful when visiting places of worship.</td>
-                </tr>
-                <tr>
-                    <td>Tipping</td>
-                    <td>Not customary or expected. Service charge is usually included.</td>
-                </tr>
-                <tr>
-                    <td>Drinking Water</td>
-                    <td>Tap water is safe to drink. Bottled water is widely available.</td>
-                </tr>
-                <tr>
-                    <td>Healthcare</td>
-                    <td>Excellent but expensive. Travel insurance highly recommended.</td>
-                </tr>
-                <tr>
-                    <td>Safety</td>
-                    <td>Very safe. Low crime rate. Be aware of your belongings in crowded places.</td>
-                </tr>
-                <tr>
-                    <td>Emergency Numbers</td>
-                    <td>Police/General Emergencies: 999, Ambulance/Fire: 995</td>
-                </tr>
-                <tr>
-                    <td>Public Holidays</td>
-                    <td>Check <a data-link-key="mom_public_holidays" target="_blank">MOM website</a> for official list (varies yearly).</td>
-                </tr>
-                <tr>
-                    <td>Useful Apps</td>
-                    <td><a data-link-key="grab_good_to_know" target="_blank">Grab</a> (transport, food), <a data-link-key="transitlink_good_to_know" target="_blank">TransitLink</a> (MRT/Bus), <a data-link-key="whatsapp" target="_blank">WhatsApp</a> (communication)</td>
-                </tr>
-                <tr>
-                    <td>Tax-Free Shopping</td>
-                    <td>Available for tourists at participating retailers (e.g., <a data-link-key="mustafa_centre_good_to_know" target="_blank">Mustafa Centre</a>).</td>
-                </tr>
-                <tr>
-                    <td>GST (Tax)</td>
-                    <td>9% Goods and Services Tax on most goods/services. Tourists can claim refunds on purchases over SGD 100 in participating stores (TRS).</td>
-                </tr>
-            </table>
-        </section>
-        
 
-<section id="glossary">
+
+ <section id="glossary">
             <h2>Essential Singlish Terms & Phrases</h2>
             <p>Understanding some local lingo can make your interactions more fun and authentic. Here's a glossary of common Singlish words and phrases:</p>
             <div class="sgloss4">
@@ -1979,90 +2086,11 @@ justify-content: flex-start;
     <p style="margin: 0;"><strong>Tip:</strong> Combine terms freely! E.g., <em>Teh-C-Peng</em> (Iced tea w/ condensed milk). Point &amp; smile works too!</p>
 </div>
 
+</section>   
 
-        </section>
-        
-
-<section id="tips">
-            <h2>Singapore Tips & Tricks</h2>
-            <p>Maximize your Singapore experience with these insider tips:</p>
-            <ul>
-                <li><strong>Plan for Rain:</strong> Carry a small umbrella or raincoat. Afternoon thundershowers are common and can be sudden and heavy.</li>
-                <li><strong>Master Public Transport:</strong> Download the <a data-link-key="transitlink_eguide" target="_blank">TransitLink app</a>. An <a data-link-key="ezlink_card" target="_blank">EZ-Link</a> or <a data-link-key="simplygo" target="_blank">SimplyGo</a> is essential for convenience and discounts.</li>
-                <li><strong>Embrace Hawker Culture:</strong> Don't be intimidated! It's clean, delicious, and cheap. Look for busy stalls with high turnover.</li>
-                <li><strong>Learn Basic Singlish:</strong> Knowing a few local terms can make interactions friendlier. Check our <a data-link-key="glossary_internal" href="#glossary">Glossary</a>.</li>
-                <li><strong>Respect Local Customs:</strong> Be aware of and respect local laws and customs (e.g., no chewing gum, no littering).</li>
-                <li><strong>Stay Cool:</strong> Singapore is hot and humid. Air-conditioned malls, MRTs, and public transport are lifesavers. Drink plenty of water.</li>
-                <li><strong>Carry Cash & Cards:</strong> While card payments are widespread, hawker centers and small vendors often prefer cash. ATMs are readily available.</li>
-                <li><strong>Get a Local SIM Card:</strong> For data and local calls, consider buying a prepaid SIM from <a data-link-key="m1_tips" target="_blank">M1</a>, <a data-link-key="singtel_tips" target="_blank">Singtel</a>, or <a data-link-key="starhub_tips" target="_blank">StarHub</a> at the airport or convenience stores.</li>
-                <li><strong>Explore Beyond the CBD:</strong> Venture into neighborhoods like <a data-link-key="tiong_bahru" target="_blank">Tiong Bahru</a>, <a data-link-key="katong_area" target="_blank">Katong</a>, or <a data-link-key="yishun_area" target="_blank">Yishun</a> for unique experiences and local vibes.</li>
-                <li><strong>Take Advantage of Freebies:</strong> Many attractions, parks, and galleries are free. See our <a data-link-key="free_internal" href="#free">Free Places</a> section.</li>
-                <li><strong>Visit During Sale Seasons:</strong> Time your shopping trip with the <a data-link-key="visit_sg_gss" target="_blank">Great Singapore Sale</a> (May-Aug) or <a data-link-key="visit_sg_cny_sales" target="_blank">Chinese New Year Sales</a> (Jan-Feb) for the best deals.</li>
-                <li><strong>Be Mindful of Peak Hours:</strong> Public transport is extremely crowded during morning (7:30-9:00 AM) and evening (5:30-7:30 PM) rush hours. Plan accordingly.</li>
-                <li><strong>Use Grab:</strong> For taxis, food delivery, and even grocery shopping (<a data-link-key="grabmart_tips" target="_blank">GrabMart</a>), <a data-link-key="grab_tips" target="_blank">Grab</a> is a super convenient app.</li>
-                <li><strong>Understand the Food Scene:</strong> <a data-link-key="kopitiam_generic" target="_blank">Kopitiam</a> (traditional coffee shop), <a data-link-key="hawker_centre_generic" target="_blank">Hawker Centre</a> (large food court), <a data-link-key="food_republic_generic" target="_blank">Food Republic</a> (aircon hawker), and Restaurants are different dining experiences.</li>
-                <li><strong>Recycle:</strong> Use the blue bins for paper/cardboard and grey bins for plastic/metal/glass. Keep recyclables clean.</li>
-                <li><strong>Be Punctual:</strong> Being on time is highly valued in Singaporean culture.</li>
-                <li><strong>Know Emergency Numbers:</strong> Police/General Emergencies: 999, Ambulance/Fire: 995.</li>
-            </ul>
-        </section>
-
-
-<section id="history">
-  <h2>History & Leaders</h2>
-  <p>Ever wondered how a tiny island with no natural resources became one of the world’s most dynamic cities? Buckle up — Singapore’s story is a rollercoaster of survival, vision, and sheer grit. From ancient legends to modern miracles, here’s how it all unfolded.</p>
-
-  <h3 style="color: #353535; margin-top: 1.5rem;">How It All Began: From Singapura to British Colony</h3>
-  <ul>
-    <li><strong>Myth & Name Origins:</strong> Long before skyscrapers, locals spoke of <em>Singapura</em> — “Lion City” in Sanskrit. Legend says a Sumatran prince saw a lion here in the 13th century (though experts say lions never lived here — maybe it was a tiger?!). Still, the name stuck, and so did the symbol of strength.</li>
-    <li><strong>Early Days:</strong> Originally inhabited by Malays, the island was part of various regional kingdoms. <a data-link-key="stamford_raffles" target="_blank">Stamford Raffles</a> arrived in <strong>1819</strong> and saw its potential as a British trading post — strategically placed on major sea routes. He struck a deal with local rulers, and Singapore was open for business.</li>
-    <li><strong>Colonial Boom:</strong> Under British rule, Singapore exploded into a bustling port. Its free-trade policy attracted merchants from China, India, Arabia, and beyond — laying the foundation for today’s multicultural society.</li>
-    <li><strong>Japanese Occupation (1942–1945):</strong> A dark chapter. During WWII, Japan captured Singapore — a shock to the British Empire. The brutal period included the "<a data-link-key="sook_ching" target="_blank">Sook Ching</a>" massacre, a traumatic memory etched into national consciousness.</li>
-  </ul>
-
-  <h3 style="color: #353535; margin-top: 1.5rem;">Birth of a Nation: The Merlion, the Miracle, and the Leaders Who Made It</h3>
-  <ul>
-    <li><strong>Merlion: Why a Fish-Lion?</strong> Fast forward to 1964 — Singapore needed a symbol. Enter the <strong>Merlion</strong>: half-lion (for its "Lion City" roots), half-fish (for its maritime origins). Designed by the Singapore Tourism Board, it became the ultimate mascot. Today, the iconic statue stands proudly at <a data-link-key="merlion_park" target="_blank">Merlion Park</a>, spouting water like a boss.</li>
-    <li><strong>Independence & Transformation (1965–Present):</strong> In a twist no one saw coming, Singapore was <em>evicted</em> from Malaysia in <strong>1965</strong>. No room to fail. Under the <a data-link-key="pap_official" target="_blank">People's Action Party (PAP)</a> and the iron-willed <a data-link-key="lee_kuan_yew" target="_blank">Lee Kuan Yew</a> (<strong>1959–1990</strong>), the nation went from swamps to skyscrapers in a generation. Focus? Education, public housing (hello, HDB flats!), anti-corruption, and attracting global investment.</li>
-    <li><strong>The Legacy Continues:</strong> After LKY, <strong>Goh Chok Tong</strong> (<strong>1990–2004</strong>) softened the edges — more arts, more compassion. Then came <a data-link-key="lee_hsien_loong" target="_blank">Lee Hsien Loong</a> (<strong>2004–2024</strong>), who steered Singapore into the digital age, pushing innovation, sustainability, and social resilience through crises like SARS and COVID-19.</li>
-    <li><strong>Now & Next:</strong> In <strong>May 2024</strong>, <strong>Lawrence Wong</strong> took the helm as Prime Minister — a new chapter for a new generation. The PAP still leads, but the conversation is evolving: climate change, inequality, and identity in a globalized world.</li>
-  </ul>
-
-  <h3 style="color: #353535; margin-top: 1.5rem;">Key Leaders Who Shaped Singapore</h3>
-  <ul>
-    <li><strong><a data-link-key="lee_kuan_yew" target="_blank">Lee Kuan Yew</a> (1923–2015):</strong> The founding Prime Minister and architect of modern Singapore. Pragmatic, no-nonsense, and fiercely dedicated to survival. His policies — from bilingualism to strict laws — defined the nation’s DNA.</li>
-    <li><strong><a data-link-key="goh_keng_swee" target="_blank">Goh Keng Swee</a> (1918–2010):</strong> The mastermind behind Singapore’s economy and military. Built the foundations of our financial hub and defense force — the “quiet giant” of nation-building.</li>
-    <li><strong><a data-link-key="s_rajaratnam" target="_blank">S. Rajaratnam</a> (1915–2006):</strong> Co-founder of the PAP and voice of multiracialism. Wrote the <em>National Pledge</em> — “One united people…” — embedding unity in our identity.</li>
-    <li><strong><a data-link-key="lee_hsien_loong" target="_blank">Lee Hsien Loong:</a></strong> Prime Minister from <strong>2004</strong> to <strong>May 2024</strong>. A Cambridge-educated leader with military and civil service roots. Oversaw Singapore’s rise as a smart nation and global tech hub. Now serves as Coordinating Minister for National Security.</li>
-  </ul>
-
-<h3 style="color: #353535; margin-top: 1.5rem;">Who’s Leading Singapore Now?</h3>
-<p>Singapore has two key leadership roles: the <strong>President</strong> (Head of State, mostly ceremonial but with custodial powers over reserves and key appointments) and the <strong>Prime Minister</strong> (Head of Government, runs the day-to-day show).</p>
-<ul>
-  <li>
-    <strong>Prime Minister: <a data-link-key="pm_wong_official" target="_blank">Lawrence Wong</a></strong> 🇸🇬
-    <br>
-    Took office in <strong>May 2024</strong>, succeeding Lee Hsien Loong. A former economics professor and civil servant, he led Singapore’s pandemic recovery as Finance Minister and co-chair of the COVID-19 task force. Now steering the nation into a new era of climate resilience, innovation, and inclusive growth. You might spot him biking around the island or posting relatable TikToks!
-  </li>
-  <li>
-    <strong>President: <a data-link-key="president_tharman" target="_blank">Tharman Shanmugaratnam</a></strong> 🎓
-    <br>
-    Elected in <strong>September 2023</strong> in a landslide victory. A globally respected economist and former Deputy PM, he’s known for his warmth, wisdom, and deep commitment to social equity. While the presidency is non-partisan, his influence as a moral voice and guardian of national unity is growing.
-  </li>
-</ul>
-
-  <p>The <a data-link-key="pap_official" target="_blank">PAP</a> continues to lead under Prime Minister <strong>Lawrence Wong</strong>, with a cabinet comprising experienced ministers handling Finance, Education, Home Affairs, National Development, and Trade and Industry. While opposition parties hold a minority of seats, the PAP remains dominant — but the future promises fresh debates and new directions.</p>
-
-  <h3 style="color: #353535; margin-top: 1.5rem;">National Symbols</h3>
-  <ul>
-    <li><strong>Flag:</strong> Red for universal brotherhood, white for purity. The crescent represents a young nation on the rise, with five stars for democracy, peace, progress, justice, and equality.</li>
-    <li><strong>Anthem:</strong> <em><a data-link-key="majulah_singapura" target="_blank">Majulah Singapura</a></em> (“Onward Singapore”) — played at every school assembly, stirring pride in every heart.</li>
-    <li><strong>Merlion:</strong> Still the unofficial icon — a reminder of humble maritime roots and bold imagination.</li>
-  </ul>
-</section>
 
 <section id="planner">
-    <h2>Sample 5 Days Itinerary</h2>
+    <h2>Teaser Five-Day Plan</h2>
     <p>Planning a trip to Singapore? Here's a relaxed and realistic 5-day plan to experience the highlights without feeling rushed. Feel free to adjust based on your interests and trip length!</p>
 
     <h3 style="color: #353535; margin-top: 1.5rem;">Relaxed & Realistic 5-Day Plan</h3>
@@ -2149,6 +2177,60 @@ justify-content: flex-start;
 </section>
         
 
+<section id="history">
+  <h2>History & Leaders</h2>
+  <p>Ever wondered how a tiny island with no natural resources became one of the world’s most dynamic cities? Buckle up — Singapore’s story is a rollercoaster of survival, vision, and sheer grit. From ancient legends to modern miracles, here’s how it all unfolded.</p>
+
+  <h3 style="color: #353535; margin-top: 1.5rem;">How It All Began: From Singapura to British Colony</h3>
+  <ul>
+    <li><strong>Myth & Name Origins:</strong> Long before skyscrapers, locals spoke of <em>Singapura</em> — “Lion City” in Sanskrit. Legend says a Sumatran prince saw a lion here in the 13th century (though experts say lions never lived here — maybe it was a tiger?!). Still, the name stuck, and so did the symbol of strength.</li>
+    <li><strong>Early Days:</strong> Originally inhabited by Malays, the island was part of various regional kingdoms. <a data-link-key="stamford_raffles" target="_blank">Stamford Raffles</a> arrived in <strong>1819</strong> and saw its potential as a British trading post — strategically placed on major sea routes. He struck a deal with local rulers, and Singapore was open for business.</li>
+    <li><strong>Colonial Boom:</strong> Under British rule, Singapore exploded into a bustling port. Its free-trade policy attracted merchants from China, India, Arabia, and beyond — laying the foundation for today’s multicultural society.</li>
+    <li><strong>Japanese Occupation (1942–1945):</strong> A dark chapter. During WWII, Japan captured Singapore — a shock to the British Empire. The brutal period included the "<a data-link-key="sook_ching" target="_blank">Sook Ching</a>" massacre, a traumatic memory etched into national consciousness.</li>
+  </ul>
+
+  <h3 style="color: #353535; margin-top: 1.5rem;">Birth of a Nation: The Merlion, the Miracle, and the Leaders Who Made It</h3>
+  <ul>
+    <li><strong>Merlion: Why a Fish-Lion?</strong> Fast forward to 1964 — Singapore needed a symbol. Enter the <strong>Merlion</strong>: half-lion (for its "Lion City" roots), half-fish (for its maritime origins). Designed by the Singapore Tourism Board, it became the ultimate mascot. Today, the iconic statue stands proudly at <a data-link-key="merlion_park" target="_blank">Merlion Park</a>, spouting water like a boss.</li>
+    <li><strong>Independence & Transformation (1965–Present):</strong> In a twist no one saw coming, Singapore was <em>evicted</em> from Malaysia in <strong>1965</strong>. No room to fail. Under the <a data-link-key="pap_official" target="_blank">People's Action Party (PAP)</a> and the iron-willed <a data-link-key="lee_kuan_yew" target="_blank">Lee Kuan Yew</a> (<strong>1959–1990</strong>), the nation went from swamps to skyscrapers in a generation. Focus? Education, public housing (hello, HDB flats!), anti-corruption, and attracting global investment.</li>
+    <li><strong>The Legacy Continues:</strong> After LKY, <strong>Goh Chok Tong</strong> (<strong>1990–2004</strong>) softened the edges — more arts, more compassion. Then came <a data-link-key="lee_hsien_loong" target="_blank">Lee Hsien Loong</a> (<strong>2004–2024</strong>), who steered Singapore into the digital age, pushing innovation, sustainability, and social resilience through crises like SARS and COVID-19.</li>
+    <li><strong>Now & Next:</strong> In <strong>May 2024</strong>, <strong>Lawrence Wong</strong> took the helm as Prime Minister — a new chapter for a new generation. The PAP still leads, but the conversation is evolving: climate change, inequality, and identity in a globalized world.</li>
+  </ul>
+
+  <h3 style="color: #353535; margin-top: 1.5rem;">Key Leaders Who Shaped Singapore</h3>
+  <ul>
+    <li><strong><a data-link-key="lee_kuan_yew" target="_blank">Lee Kuan Yew</a> (1923–2015):</strong> The founding Prime Minister and architect of modern Singapore. Pragmatic, no-nonsense, and fiercely dedicated to survival. His policies — from bilingualism to strict laws — defined the nation’s DNA.</li>
+    <li><strong><a data-link-key="goh_keng_swee" target="_blank">Goh Keng Swee</a> (1918–2010):</strong> The mastermind behind Singapore’s economy and military. Built the foundations of our financial hub and defense force — the “quiet giant” of nation-building.</li>
+    <li><strong><a data-link-key="s_rajaratnam" target="_blank">S. Rajaratnam</a> (1915–2006):</strong> Co-founder of the PAP and voice of multiracialism. Wrote the <em>National Pledge</em> — “One united people…” — embedding unity in our identity.</li>
+    <li><strong><a data-link-key="lee_hsien_loong" target="_blank">Lee Hsien Loong:</a></strong> Prime Minister from <strong>2004</strong> to <strong>May 2024</strong>. A Cambridge-educated leader with military and civil service roots. Oversaw Singapore’s rise as a smart nation and global tech hub. Now serves as Coordinating Minister for National Security.</li>
+  </ul>
+
+<h3 style="color: #353535; margin-top: 1.5rem;">Who’s Leading Singapore Now?</h3>
+<p>Singapore has two key leadership roles: the <strong>President</strong> (Head of State, mostly ceremonial but with custodial powers over reserves and key appointments) and the <strong>Prime Minister</strong> (Head of Government, runs the day-to-day show).</p>
+<ul>
+  <li>
+    <strong>Prime Minister: <a data-link-key="pm_wong_official" target="_blank">Lawrence Wong</a></strong> 🇸🇬
+    <br>
+    Took office in <strong>May 2024</strong>, succeeding Lee Hsien Loong. A former economics professor and civil servant, he led Singapore’s pandemic recovery as Finance Minister and co-chair of the COVID-19 task force. Now steering the nation into a new era of climate resilience, innovation, and inclusive growth. You might spot him biking around the island or posting relatable TikToks!
+  </li>
+  <li>
+    <strong>President: <a data-link-key="president_tharman" target="_blank">Tharman Shanmugaratnam</a></strong> 🎓
+    <br>
+    Elected in <strong>September 2023</strong> in a landslide victory. A globally respected economist and former Deputy PM, he’s known for his warmth, wisdom, and deep commitment to social equity. While the presidency is non-partisan, his influence as a moral voice and guardian of national unity is growing.
+  </li>
+</ul>
+
+  <p>The <a data-link-key="pap_official" target="_blank">PAP</a> continues to lead under Prime Minister <strong>Lawrence Wong</strong>, with a cabinet comprising experienced ministers handling Finance, Education, Home Affairs, National Development, and Trade and Industry. While opposition parties hold a minority of seats, the PAP remains dominant — but the future promises fresh debates and new directions.</p>
+
+  <h3 style="color: #353535; margin-top: 1.5rem;">National Symbols</h3>
+  <ul>
+    <li><strong>Flag:</strong> Red for universal brotherhood, white for purity. The crescent represents a young nation on the rise, with five stars for democracy, peace, progress, justice, and equality.</li>
+    <li><strong>Anthem:</strong> <em><a data-link-key="majulah_singapura" target="_blank">Majulah Singapura</a></em> (“Onward Singapore”) — played at every school assembly, stirring pride in every heart.</li>
+    <li><strong>Merlion:</strong> Still the unofficial icon — a reminder of humble maritime roots and bold imagination.</li>
+  </ul>
+</section>
+
+
 <section id="medical">
             <h2>Medical Facilities & Health</h2>
             <p>Singapore has a world-class healthcare system, but it comes at a cost. Here's what you need to know:</p>
@@ -2184,6 +2266,7 @@ justify-content: flex-start;
             </ul>
         </section>
 
+
 <section id="resources">
           <h2>Essential Resources & Links</h2>
             <p>Bookmark these official and useful websites for up-to-date information during your stay:</p>
@@ -2218,330 +2301,308 @@ justify-content: flex-start;
                 <li><a data-link-key="mom_resources" target="_blank">Ministry of Manpower (work matters)</a></li>
             </ul>
         </section>
-    </main>
 
 
-    <!-- Affliate Links Sidebar -->
-    <aside class="affiliate-sidebar">
+      </main>
+
+      <!-- =============== AFFILIATE SIDEBAR =============== -->
+      <aside class="affiliate-sidebar">
         <h2>Explore & Save with Our Top Picks</h2>
 
         <div class="affiliate-category">
-            <h3>🎡 Book Attractions & Tours</h3>
-            <ul>
-                 <li>
-                    <a data-link-key="klook_aff" target="_blank" rel="noopener">Klook</a>
-                    <p class="affiliate-link-description">Book tours, attractions, and experiences.</p>
-                </li>
-                <li>
-                    <a data-link-key="Pelago_aff" target="_blank" rel="noopener">Pelago</a>
-                    <p class="affiliate-link-description"> Best curated things to do, activities, tours, attractions.</p>
-                </li>
-
-
-<li>
-  <!-- Main Title for the Passes Section -->
-  <span style="font-weight: 600; color: #2c3e50;">Attraction Passes</span>
-  <!-- Description for the whole section -->
-  <p class="affiliate-link-description" style="margin-top: 0.2rem; margin-bottom: 0.4rem;">Save money and time with passes for multiple attractions.</p>
-  <!-- Container for the individual pass links - Ensures they are on one line -->
-  <div style="margin-left: 1rem; margin-top: 0.3rem; margin-bottom: 0.1rem; display: flex; align-items: center; gap: 1rem;">
-    <a data-link-key="Klook_Pass" target="_blank" rel="noopener" style="font-size: 0.95rem; font-weight: normal;">Klook Pass</a>
-    <a data-link-key="pelago_pass" target="_blank" rel="noopener" style="font-size: 0.95rem; font-weight: normal;">Pelago Pass</a>
-  </div>
-</li>
-
-
-                 
-                <!--
-                <li>
-                    <a data-link-key="USS_aff" target="_blank" rel="noopener">Universal Studios Singapore</a>
-                    <p class="affiliate-link-description">Southeast Asia’s first and only Universal Studios theme park.</p>
-                </li>
-                -->
-                                       
-<li>
-  <!-- Main Title for Universal Studios Section -->
-  <span style="font-weight: 600; color: #2c3e50;">Universal Studios Singapore</span>
-  <!-- Description for Universal Studios -->
-  <p class="affiliate-link-description" style="margin-top: 0.2rem; margin-bottom: 0.4rem;">Southeast Asia’s first and only Universal Studios theme park.</p>
-  <!-- Container for the individual booking links - Ensures they are on one line -->
-  <div style="margin-left: 1rem; margin-top: 0.3rem; margin-bottom: 0.1rem; display: flex; align-items: center; gap: 1rem;">
-    <a data-link-key="klook_uss_aff" target="_blank" rel="noopener" style="font-size: 0.95rem; font-weight: normal;">Via Klook</a>
-    <a data-link-key="pelago_uss_aff" target="_blank" rel="noopener" style="font-size: 0.95rem; font-weight: normal;">Via Pelago</a>
-  </div>
-</li>
- 
-
-                 <li>
-                    <a data-link-key="duolingo_sg_aff" target="_blank" rel="noopener">Duolingo</a>
-                    <p class="affiliate-link-description">Free app to learn basic local phrases.</p>
-                </li>
-            </ul>
+          <h3>🎡 Book Attractions & Tours</h3>
+          <ul>
+            <li>
+              <a data-link-key="klook_aff" target="_blank" rel="noopener">Klook</a>
+              <p class="affiliate-link-description">Book tours, attractions, and experiences.</p>
+            </li>
+            <li>
+              <a data-link-key="Pelago_aff" target="_blank" rel="noopener">Pelago</a>
+              <p class="affiliate-link-description">Best curated things to do, activities, tours, attractions.</p>
+            </li>
+            <li>
+              <span style="font-weight: 600; color: #2c3e50;">Attraction Passes</span>
+              <p class="affiliate-link-description" style="margin-top: 0.2rem; margin-bottom: 0.4rem;">Save money and time with passes for multiple attractions.</p>
+              <div style="margin-left: 1rem; margin-top: 0.3rem; margin-bottom: 0.1rem; display: flex; align-items: center; gap: 1rem;">
+                <a data-link-key="Klook_Pass" target="_blank" rel="noopener" style="font-size: 0.95rem; font-weight: normal;">Klook Pass</a>
+                <a data-link-key="pelago_pass" target="_blank" rel="noopener" style="font-size: 0.95rem; font-weight: normal;">Pelago Pass</a>
+              </div>
+            </li>
+            <li>
+              <a data-link-key="klook_uss_aff" target="_blank" rel="noopener">Universal Studios Singapore</a>
+              <div style="margin-left: 1rem; margin-top: 0.3rem; margin-bottom: 0.1rem; display: flex; align-items: center; gap: 1rem;">
+                <a data-link-key="klook_uss_aff" target="_blank" rel="noopener" style="font-size: 0.95rem; font-weight: normal;">Via Klook</a>
+                <a data-link-key="pelago_uss_aff" target="_blank" rel="noopener" style="font-size: 0.95rem; font-weight: normal;">Via Pelago</a>
+              </div>
+            </li>
+          </ul>
         </div>
 
         <div class="affiliate-category">
-            <h3>✈️ Cheap Flight & Travel Deals</h3>
-            <ul>
-                <li>
-                    <a data-link-key="skyscanner_aff" target="_blank" rel="noopener">Skyscanner</a>
-                    <p class="affiliate-link-description">Excellent flight comparison tool.</p>
-                </li>
-                <li>
-                    <a data-link-key="kayak_aff" target="_blank" rel="noopener">Kayak</a>
-                    <p class="affiliate-link-description">Comprehensive travel search, price alerts.</p>
-                </li>
-                <li>
-                    <a data-link-key="google_flights_aff" target="_blank" rel="noopener">Google Flights</a>
-                    <p class="affiliate-link-description">Easy to use, map view, good for finding deals.</p>
-                </li>
-                <li>
-                    <a data-link-key="momondo_aff" target="_blank" rel="noopener">Momondo</a>
-                    <p class="affiliate-link-description">Creative search features, insights on prices.</p>
-                </li>
-                <li>
-                    <a data-link-key="airasia_aff" target="_blank" rel="noopener">AirAsia</a>
-                    <p class="affiliate-link-description">Budget airline connecting Singapore to SEA.</p>
-                </li>
-            </ul>
+          <h3>🏨 Book Your Stay</h3>
+          <ul>
+            <li>
+              <a data-link-key="booking_aff" target="_blank" rel="noopener">Booking.com</a>
+              <p class="affiliate-link-description">Wide range of hotels, often with free cancellation.</p>
+            </li>
+            <li>
+              <a data-link-key="agoda_aff" target="_blank" rel="noopener">Agoda</a>
+              <p class="affiliate-link-description">Great deals on hotels in Asia.</p>
+            </li>
+            <li>
+              <a data-link-key="airbnb_aff" target="_blank" rel="noopener">Airbnb</a>
+              <p class="affiliate-link-description">Unique stays often cheaper than hotels.</p>
+            </li>
+          </ul>
         </div>
 
         <div class="affiliate-category">
-            <h3>🏨 Top Hotel Booking Sites</h3>
-            <ul>
-                <li>
-                    <a data-link-key="booking_com_aff" target="_blank" rel="noopener">Booking.com</a>
-                    <p class="affiliate-link-description">Wide selection, frequent discounts, free cancellation.</p>
-                </li>
-                <li>
-                    <a data-link-key="agoda_com_aff" target="_blank" rel="noopener">Agoda.com</a>
-                    <p class="affiliate-link-description">Strong in Asia, great deals on hotels.</p>
-                </li>
-                <li>
-                    <a data-link-key="expedia_aff" target="_blank" rel="noopener">Expedia</a>
-                    <p class="affiliate-link-description">Bundle deals on flights + hotels, member perks.</p>
-                </li>
-                <li>
-                    <a data-link-key="hotels_com_aff" target="_blank" rel="noopener">Hotels.com</a>
-                    <p class="affiliate-link-description">Earn free nights, frequent promotions.</p>
-                </li>
-                <li>
-                    <a data-link-key="airbnb_aff" target="_blank" rel="noopener">Airbnb</a>
-                    <p class="affiliate-link-description">Unique stays often cheaper than hotels.</p>
-                </li>
-            </ul>
+          <h3>🍜 Foodie Must-Haves</h3>
+          <ul>
+            <li>
+              <a data-link-key="grab_food_aff" target="_blank" rel="noopener">Grab</a>
+              <p class="affiliate-link-description">Food delivery, e-hailing, and more (Essential app!).</p>
+            </li>
+            <li>
+              <a data-link-key="chope_aff" target="_blank" rel="noopener">Chope</a>
+              <p class="affiliate-link-description">Reserve tables at popular restaurants.</p>
+            </li>
+          </ul>
         </div>
 
         <div class="affiliate-category">
-            <h3>🍜 Foodie Must-Haves</h3>
-            <ul>
-                <li>
-                    <a data-link-key="grab_food_aff" target="_blank" rel="noopener">Grab</a>
-                    <p class="affiliate-link-description">Food delivery, e-hailing, and more (Essential app!).</p>
-                </li>
-                <li>
-                    <a data-link-key="chope_aff" target="_blank" rel="noopener">Chope</a>
-                    <p class="affiliate-link-description">Reserve tables at popular restaurants.</p>
-                </li>
-                <li>
-                    <a data-link-key="deliveroo_aff" target="_blank" rel="noopener">Deliveroo</a>
-                    <p class="affiliate-link-description">Another major food delivery service.</p>
-                </li>
-                <li>
-                    <a data-link-key="foodpanda_aff" target="_blank" rel="noopener">Foodpanda</a>
-                    <p class="affiliate-link-description">Wide variety of restaurants for delivery.</p>
-                </li>
-                 <li>
-                    <a data-link-key="google_maps_offline_info" target="_blank" rel="noopener">Google Maps Offline</a>
-                    <p class="affiliate-link-description">Download city maps to navigate without data.</p>
-                </li>
-            </ul>
+          <h3>🎒 Travel Essentials</h3>
+          <ul>
+            <li>
+              <a data-link-key="amazon_travel_aff" target="_blank" rel="noopener">Amazon</a>
+              <p class="affiliate-link-description">Buy travel gear, adapters, power banks.</p>
+            </li>
+            <li>
+              <a data-link-key="shopee_travel_aff" target="_blank" rel="noopener">Shopee</a>
+              <p class="affiliate-link-description">Local deals on travel accessories.</p>
+            </li>
+            <li>
+              <a data-link-key="anker_powerbank_aff" target="_blank" rel="noopener">Anker Power Bank</a>
+              <p class="affiliate-link-description">Reliable portable charger for your devices.</p>
+            </li>
+            <li>
+              <a data-link-key="peak_design_backpack_aff" target="_blank" rel="noopener">Peak Design Travel Backpack</a>
+              <p class="affiliate-link-description">Stylish and functional for camera gear.</p>
+            </li>
+          </ul>
         </div>
 
         <div class="affiliate-category">
-            <h3>🛍️ Best Shopping Deals</h3>
-            <ul>
-                <li>
-                    <a data-link-key="amazon_sg_store" target="_blank" rel="noopener">Amazon Singapore Store</a>
-                    <p class="affiliate-link-description">Wide range of products, frequent deals.</p>
-                </li>
-                <li>
-                    <a data-link-key="shopee_sg" target="_blank" rel="noopener">Shopee SG</a>
-                    <p class="affiliate-link-description">Popular local platform with flash sales & free shipping.</p>
-                </li>
-                <li>
-                    <a data-link-key="lazada_sg" target="_blank" rel="noopener">Lazada SG</a>
-                    <p class="affiliate-link-description">Major e-commerce site, often competes with Shopee.</p>
-                </li>
-                <li>
-                    <a data-link-key="qoo10_sg" target="_blank" rel="noopener">Qoo10 SG</a>
-                    <p class="affiliate-link-description">Unique finds, international brands, live shopping.</p>
-                </li>
-                <li>
-                    <a data-link-key="mustafa_centre_aff" target="_blank" rel="noopener">Mustafa Centre</a>
-                    <p class="affiliate-link-description">24-hour tax-free shopping for tourists.</p>
-                </li>
-            </ul>
+          <h3>🎓 Learn & Earn</h3>
+          <ul>
+            <li>
+              <a data-link-key="duolingo_sg_aff" target="_blank" rel="noopener">Duolingo</a>
+              <p class="affiliate-link-description">Learn languages for free.</p>
+            </li>
+            <li>
+              <a data-link-key="coursera_aff" target="_blank" rel="noopener">Coursera</a>
+              <p class="affiliate-link-description">Take online courses from top universities.</p>
+            </li>
+          </ul>
         </div>
+      </aside>
 
-        <div class="affiliate-category">
-            <h3>📚 Plan & Explore</h3>
-            <ul>
-                 <li>
-                    <a data-link-key="xe_currency_app_aff" target="_blank" rel="noopener">XE Currency Converter App</a>
-                    <p class="affiliate-link-description">Track exchange rates on the go.</p>
-                </li>
-            </ul>
-        </div>
+    </div> <!-- End .content-and-sidebar -->
 
-        <div class="affiliate-category">
-            <h3>💡 Singapore Smart Buys</h3>
-            <ul>
-                <li>
-                    <a data-link-key="ezlink_card" target="_blank" rel="noopener">EZ-Link Card</a>
-                    <p class="affiliate-link-description">Essential for MRT/Buses (Buy locally).</p>
-                </li>
-                <li>
-                    <a data-link-key="simplygo" target="_blank" rel="noopener">SimplyGo</a>
-                    <p class="affiliate-link-description">Use your contactless bank card for transport.</p>
-                </li>
-                <li>
-                    <a data-link-key="grabbpay" target="_blank" rel="noopener">GrabPay</a>
-                    <p class="affiliate-link-description">Digital wallet integrated with Grab.</p>
-                </li>
-                <li>
-                    <a data-link-key="shopback_aff" target="_blank" rel="noopener">ShopBack</a>
-                    <p class="affiliate-link-description">Get cashback when shopping online (aff).</p>
-                </li>
-            </ul>
-        </div>
+  </div> <!-- End #content-wrapper -->
 
-        <div class="affiliate-category">
-            <h3>🧳 Travel Essentials</h3>
-            <ul>
-                <li>
-                    <a data-link-key="osprey_farpoint_aff" target="_blank" rel="noopener">Osprey Farpoint 40</a>
-                    <p class="affiliate-link-description">Highly rated carry-on backpack.</p>
-                </li>
-                <li>
-                    <a data-link-key="packing_cubes_aff" target="_blank" rel="noopener">Packing Cubes Set</a>
-                    <p class="affiliate-link-description">Keeps your suitcase organized.</p>
-                </li>
-                <li>
-                    <a data-link-key="travel_adapter_aff" target="_blank" rel="noopener">Universal Travel Adapter</a>
-                    <p class="affiliate-link-description">Essential for charging devices.</p>
-                </li>
-                <li>
-                    <a data-link-key="etsy_sg_souvenirs_aff" target="_blank" rel="noopener">Etsy Singapore Souvenirs</a>
-                    <p class="affiliate-link-description">Unique, handmade gifts and local art.</p>
-                </li>
-                <li>
-                    <a data-link-key="travel_towel_aff" target="_blank" rel="noopener">Travel Towel (PackTowl)</a>
-                    <p class="affiliate-link-description">Quick-drying, compact towel.</p>
-                </li>
-            </ul>
-        </div>
+<!-- =============== FOOTER =============== -->
+<!-- =============== SLIM, SMART FOOTER =============== -->
+<footer style="margin-top: 3rem; padding: 1.6rem 1rem; background: #1a1a1a; color: #ccc; font-size: 0.9rem; line-height: 1.5;">
+  <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
 
-        <div class="affiliate-category">
-            <h3>📸 Capture Your Memories</h3>
-            <ul>
-                <li>
-                    <a data-link-key="gopro_hero_aff" target="_blank" rel="noopener">GoPro HERO</a>
-                    <p class="affiliate-link-description">Perfect for action shots and underwater.</p>
-                </li>
-                <li>
-                    <a data-link-key="sony_alpha_a6000_aff" target="_blank" rel="noopener">Sony Alpha a6000</a>
-                    <p class="affiliate-link-description">Great mirrorless camera for travel.</p>
-                </li>
-                <li>
-                    <a data-link-key="iphone_15_pro_aff" target="_blank" rel="noopener">iPhone 15 Pro</a>
-                    <p class="affiliate-link-description">Excellent all-around camera in a smartphone.</p>
-                </li>
-                <li>
-                    <a data-link-key="anker_powercore_aff" target="_blank" rel="noopener">Anker PowerCore 10000</a>
-                    <p class="affiliate-link-description">Reliable portable charger for your devices.</p>
-                </li>
-                <li>
-                    <a data-link-key="peak_design_backpack_aff" target="_blank" rel="noopener">Peak Design Travel Backpack</a>
-                    <p class="affiliate-link-description">Stylish and functional for camera gear.</p>
-                </li>
-            </ul>
-        </div>
-</aside>
+    <!-- Main Footer Line (Always Visible) -->
+    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 1.2rem; font-size: 0.95rem; color: #ddd;">
+      <span>© 2025 ScanSG.com</span>
+      <span>•</span>
+      <span>Contact: <a data-link-key="contact_email" style="color: #4fc3f7; text-decoration: none;">scansg365@gmail.com</a></span>
+      <span>•</span>
+      <a href="#" id="toggle-privacy-footer" style="color: #4fc3f7; text-decoration: underline; cursor: pointer;">Privacy Policy</a>
     </div>
-    <!-- END OF Affliate Links Sidebar -->
 
-
-
-
-
-</div> <!-- End of #content-wrapper -->
-<footer>
-    <p>© 2025 ScanSG.com - Your Singapore Guide — All Rights Reserved</p>
-    <!-- New Paragraph for Contact, Affiliate Disclosure, and Privacy Policy -->
-    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #aaa;"><strong>Contact:</strong> <a data-link-key="contact_email">scansg365@gmail.com</a> | <strong>Affiliate Links:</strong> This site may contain affiliate links.<a href="#privacy-policy" style="color: #bbb; margin-left: 5px;">Privacy Policy</a></p>
-    <!-- End of New Paragraph -->
-    <div class="disclaimer"><strong>Disclaimer:</strong> Content is for general info. Users must verify addresses, opening hours, law changes, and updates before action. The publisher bears no liability for discrepancies.</div>
-    <!-- Placeholder for Privacy Policy Content (Hidden by default, shown when link is clicked) -->
-    <div id="privacy-policy" style="display: none; margin-top: 2rem; padding: 1rem; border-top: 1px solid #444; text-align: left; font-size: 0.9rem; color: #ccc; max-width: 800px; margin-left: auto; margin-right: auto;">
-        <h3 style="color: var(--accent);">Privacy Policy</h3>
-        <p><strong>Last Updated:</strong> [27-07-2025]</p>
-        <p><strong>1. Introduction</strong></p>
-        <p>Welcome to ScanSG ("we," "our," or "us"). We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website <strong>scansg.com</strong> (the "Site").</p>
-        <p>Please read this Privacy Policy carefully. If you do not agree with the terms of this Privacy Policy, please do not access the Site.</p>
-        <p><strong>2. Information We Collect</strong></p>
-        <p>We do not currently collect personal information directly from users through forms on the Site. However, we may collect information automatically as you navigate through the Site.</p>
-        <ul>
-            <li><strong>Usage Data:</strong> We may automatically collect certain information about your equipment and usage of the Site, including your IP address, browser type, operating system, referring URLs, access times, and pages viewed.</li>
-            <li><strong>Cookies and Tracking Technologies:</strong> We may use cookies and similar tracking technologies to track activity on the Site and hold certain information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.</li>
-        </ul>
-        <p><strong>3. Use of Your Information</strong></p>
-        <p>We may use information collected in the following ways:</p>
-        <ul>
-            <li>To improve and personalize your experience on the Site.</li>
-            <li>To analyze Site usage and trends.</li>
-            <li>To compile aggregate data for internal and external reporting.</li>
-        </ul>
-        <p><strong>4. Disclosure of Your Information</strong></p>
-        <p>We may share information we collect with third parties in the following situations:</p>
-        <ul>
-            <li><strong>Service Providers:</strong> We may share your information with third-party service providers who perform services on our behalf, such as analytics providers (e.g., Google Analytics).</li>
-            <li><strong>Affiliate Links:</strong> The Site contains links to third-party websites (like Amazon, Shopee, Lazada, etc.) as part of affiliate marketing programs. These third parties may collect information about your visits to and use of the Site. We are not responsible for the privacy practices or content of these third-party sites.</li>
-            <li><strong>Legal Requirements:</strong> We may disclose your information if required to do so by law or in response to valid requests by public authorities (e.g., a court or government agency).</li>
-        </ul>
-        <p><strong>5. Third-Party Websites</strong></p>
-        <p>The Site may contain links to third-party websites. These sites have their own independent privacy policies, and we have no responsibility or liability for their content or activities.</p>
-        <p><strong>6. Security of Your Information</strong></p>
-        <p>We use administrative, technical, and physical security measures to help protect your personal information. However, no method of transmission over the Internet or method of electronic storage is 100% secure.</p>
-        <p><strong>7. Policy for Children</strong></p>
-        <p>We do not knowingly solicit information from or market to children under the age of 13. If we learn that we have collected personal information from a child under 13 without verification of parental consent, we will delete that information as quickly as possible.</p>
-        <p><strong>8. Changes to This Privacy Policy</strong></p>
-        <p>We may update this Privacy Policy from time to time. The updated version will be indicated by an updated "Last Updated" date. We encourage you to review this Privacy Policy periodically for any changes.</p>
-        <p><strong>9. Contact Us</strong></p>
-        <p>If you have questions or comments about this Privacy Policy, please contact us at: <a data-link-key="contact_email" style="color: #bbb;">scansg365@gmail.com</a></p>
+    <!-- Mini Internal Navigation -->
+    <div style="margin: 0.8rem 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; font-size: 0.92rem;">
+      <a href="#transport" class="footer-nav" style="color: #bbb; text-decoration: none;">🚀 Move</a>
+      <a href="#deals" class="footer-nav" style="color: #bbb; text-decoration: none;">💸 Save</a>
+      <a href="#musttry" class="footer-nav" style="color: #bbb; text-decoration: none;">🍜 Eat</a>
+      <a href="#free" class="footer-nav" style="color: #bbb; text-decoration: none;">🎁 Free</a>
+      <a href="#penalties" class="footer-nav" style="color: #bbb; text-decoration: none;">⚠️ Don't</a>
+      <a href="#glossary" class="footer-nav" style="color: #bbb; text-decoration: none;">🗣️ Talk</a>
+      <a href="#planner" class="footer-nav" style="color: #bbb; text-decoration: none;">🗓️ Plan</a>
+      <a href="#medical" class="footer-nav" style="color: #bbb; text-decoration: none;">🩺 Help</a>
     </div>
-    <!-- End of Privacy Policy Placeholder -->
-    <!-- Simple Script to Show Privacy Policy (Optional Enhancement) -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const policyLink = document.querySelector('a[href="#privacy-policy"]');
-            const policyDiv = document.getElementById('privacy-policy');
-            if (policyLink && policyDiv) {
-                policyLink.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    // Simple toggle or just show
-                    if (policyDiv.style.display === 'none' || policyDiv.style.display === '') {
-                        policyDiv.style.display = 'block';
-                        policyDiv.scrollIntoView({ behavior: 'smooth' });
-                    } else {
-                        policyDiv.style.display = 'none';
-                    }
-                });
-            }
-        });
-    </script>
-    <!-- End of Script -->
-    <!-- Include the external links management script -->
-    <script src="links.js"></script>
+
+<!-- Subtle Disclaimer (Always Visible) -->
+<p style="color: #999; font-size: 0.85rem; margin: 0.6rem 0 0; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+  <strong style="color: #ffeb3b;">⚠️ Disclaimer:</strong>
+  <span>Info is for general use only. Verify laws, prices, locations & hours before acting. Not liable for inaccuracies.</span>
+</p>
+
+<!-- =============== PRIVACY POLICY SECTION =============== -->
+<div id="privacy-policy" style="display: none; margin-top: 2rem; padding: 1.4rem; background: #232323; color: #ddd; border-radius: 8px; text-align: left; font-size: 0.92rem; line-height: 1.6; border: 1px solid #444;">
+  <h3 style="color: #fff; margin-top: 0; font-size: 1.1rem; border-bottom: 1px solid #555; padding-bottom: 0.4rem;">🔐 Privacy Policy</h3>
+  <p><strong>Last Updated:</strong> 27-07-2025</p>
+  <p>Welcome to <strong>ScanSG</strong>. We keep things simple and honest. This policy explains how we handle your information when you visit <strong>scansg.com</strong>.</p>
+
+  <p><strong>1. We Don’t Collect Your Personal Data</strong></p>
+  <ul style="padding-left: 1.3rem; margin: 0.4rem 0;">
+    <li>We do <strong>not collect</strong> your name, email, location, or any personal information — unless you contact us directly via email.</li>
+    <li>We do <strong>not use cookies, trackers, or local storage</strong> for advertising, profiling, or user monitoring.</li>
+  </ul>
+
+  <p><strong>2. Analytics: Just the Basics</strong></p>
+  <p>We use <strong>Google Analytics</strong> in a privacy-friendly way to understand how many people visit our site and how they use it. This includes:</p>
+  <ul style="padding-left: 1.3rem; margin: 0.4rem 0;">
+    <li>Total number of visitors</li>
+    <li>Which pages are viewed most</li>
+    <li>General location (country/city, not your address)</li>
+    <li>Device type (phone, laptop, etc.)</li>
+  </ul>
+  <p>This data is <strong>fully anonymized</strong> — no individual is identified. We use this info only to improve our content and help more people find useful Singapore tips.</p>
+
+  <p><strong>3. Third-Party Services</strong></p>
+  <p>While we don’t track you, this site includes services that may involve limited data use:</p>
+  <ul style="padding-left: 1.3rem; margin: 0.4rem 0;">
+    <li><strong>Google AdSense:</strong> Serves ads and may use cookies for ad personalization (controlled by Google).</li>
+    <li><strong>Affiliate Links:</strong> If you click a link (e.g., Klook, Shopee), the destination site may use tracking.</li>
+    <li>We do not control these third parties and are not responsible for their privacy practices.</li>
+  </ul>
+
+  <p><strong>4. Your Privacy Choices</strong></p>
+  <ul style="padding-left: 1.3rem; margin: 0.4rem 0;">
+    <li>You can disable Google Analytics tracking by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener" style="color: #4fc3f7;">Google Analytics Opt-out Browser Add-on</a>.</li>
+    <li>You can opt out of personalized ads at <a href="https://adssettings.google.com" target="_blank" rel="noopener" style="color: #4fc3f7;">Google Ads Settings</a>.</li>
+    <li>You can browse in incognito/private mode for full anonymity.</li>
+  </ul>
+
+  <p><strong>5. No Data Sharing or Selling</strong></p>
+  <p>We do <strong>not sell, share, or rent</strong> any user data to third parties. Ever.</p>
+
+  <p><strong>6. Policy Changes</strong></p>
+  <p>If our practices change, we’ll update this page and the "Last Updated" date. But our promise stays: <strong>No personal data collection. No creepy tracking.</strong></p>
+
+  <p><strong>7. Contact Us</strong></p>
+  <p>For questions, email: 
+    <a data-link-key="contact_email" style="color: #4fc3f7; text-decoration: none;">scansg365@gmail.com</a>
+  </p>
+</div>
+
+    <!-- Invisible Anchor for #disclaimer and #contact -->
+    <div id="disclaimer" style="height: 1px;"></div>
+    <div id="contact" style="height: 1px;"></div>
+
+  </div>
 </footer>
+
+  <!-- =============== SCRIPTS =============== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const policyLink = document.querySelector('a[href="#privacy-policy"]');
+      const policyDiv = document.getElementById('privacy-policy');
+      if (policyLink && policyDiv) {
+        policyLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          if (policyDiv.style.display === 'none' || policyDiv.style.display === '') {
+            policyDiv.style.display = 'block';
+            policyDiv.scrollIntoView({ behavior: 'smooth' });
+          } else {
+            policyDiv.style.display = 'none';
+          }
+        });
+      }
+    });
+  </script>
+  <script src="links.js"></script>
+
+
+<script>
+  // Toggle Privacy Policy in Footer
+  document.getElementById('toggle-privacy-footer')?.addEventListener('click', function(e) {
+    e.preventDefault();
+    const privacyBox = document.getElementById('privacy-policy');
+    if (privacyBox.style.display === 'block') {
+      privacyBox.style.display = 'none';
+    } else {
+      privacyBox.style.display = 'block';
+      privacyBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+
+  // Optional: Collapse privacy when clicking outside
+  document.addEventListener('click', function(e) {
+    const privacyBox = document.getElementById('privacy-expandable');
+    const toggleBtn = document.getElementById('toggle-privacy-footer');
+    if (!privacyBox.contains(e.target) && e.target !== toggleBtn && !toggleBtn?.contains(e.target)) {
+      privacyBox.style.display = 'none';
+    }
+  });
+</script>
+
+<!-- =============== STICKY SCROLL BUTTONS (Mobile-Friendly) =============== -->
+<div class="scroll-controls" style="position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 8px; z-index: 999; pointer-events: none;">
+  
+  <!-- Back to Top -->
+  <button id="scrollToTop" title="Back to Top" style="
+    width: 44px; height: 44px; border: none; border-radius: 50%; background: #c62828; color: white; font-size: 1.3rem; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.25); display: none; align-items: center; justify-content: center; pointer-events: auto; transition: transform 0.2s, box-shadow 0.2s;"
+    aria-label="Back to top"
+  >
+    ⬆️
+  </button>
+
+  <!-- Jump to Footer -->
+  <button id="scrollToFooter" title="Go to Footer" style="
+    width: 44px; height: 44px; border: none; border-radius: 50%; background: #1565c0; color: white; font-size: 1.3rem; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.25); display: flex; align-items: center; justify-content: center; pointer-events: auto; transition: transform 0.2s, box-shadow 0.2s;"
+    aria-label="Go to footer"
+  >
+    ⬇️
+  </button>
+
+</div>
+
+<script>
+  const scrollToTopBtn = document.getElementById("scrollToTop");
+  const scrollToFooterBtn = document.getElementById("scrollToFooter");
+
+  // Show "Back to Top" only after scrolling down 300px
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 300) {
+      scrollToTopBtn.style.display = "flex";
+    } else {
+      scrollToTopBtn.style.display = "none";
+    }
+  });
+
+  // Click: Scroll to Top
+  scrollToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+
+  // Click: Scroll to Footer
+  scrollToFooterBtn.addEventListener("click", () => {
+    document.querySelector("footer").scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+
+  // Optional: Add tiny animation on tap (mobile feedback)
+  [scrollToTopBtn, scrollToFooterBtn].forEach(btn => {
+    btn.addEventListener("touchstart", () => {
+      btn.style.transform = "scale(0.95)";
+    });
+    btn.addEventListener("touchend", () => {
+      btn.style.transform = "scale(1)";
+    });
+  });
+</script>
+
+
 </body>
 </html>
