@@ -535,91 +535,47 @@ main {
         padding-left: 0;
       }
 
-      /* Mobile navigation - SUPER AGGRESSIVE OVERRIDE */
-      nav {
-        width: 100% !important;
-        min-height: 80px !important;
-        height: auto !important;
-        position: static !important;
-        flex-direction: row !important;
-        overflow-x: auto !important;
-        overflow-y: visible !important;
-        white-space: nowrap !important;
-        padding: 2rem 0 !important;
-        background: #ff0000 !important; /* Bright red for testing */
-        z-index: 9999 !important;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5) !important;
-        display: flex !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        margin: 0 !important;
-        border: 5px solid #00ff00 !important; /* Green border for testing */
-      }
-
-      nav ul {
-        flex-direction: row !important;
-        padding: 0 2rem !important;
-        gap: 1.2rem !important;
-        align-items: center !important;
-        white-space: nowrap !important;
-        margin: 0 !important;
-        list-style: none !important;
-        display: flex !important;
-      }
-
-      nav li {
-        flex-shrink: 0 !important;
-        margin: 0 !important;
-        white-space: nowrap !important;
-        display: block !important;
-      }
-
-      nav a {
-        font-size: 1.3rem !important;
-        font-weight: 700 !important;
-        padding: 1.2rem 1.8rem !important;
-        white-space: nowrap !important;
-        border-radius: 12px !important;
-        background-color: rgba(224, 35, 50, 0.9) !important;
-        border: 2px solid rgba(255, 180, 0, 0.8) !important;
-        min-width: 140px !important;
-        text-align: center !important;
-        display: block !important;
-        color: #fff !important;
-        text-decoration: none !important;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
-      }
-
-      nav a:hover,
-      nav a:active,
-      nav a:focus {
-        background-color: var(--main) !important;
-        border-color: var(--accent) !important;
-        transform: scale(1.05) !important;
-        transition: all 0.2s ease !important;
-      }
-
-      /* Content layout fixes */
-      .content-and-sidebar {
-        flex-direction: column;
-        padding: 0 1rem;
-        gap: 1rem;
-        margin-top: 1rem;
-      }
-
-      .affiliate-sidebar {
-        width: 100%;
-        margin-top: 0;
-        position: static;
-        height: auto;
-        max-height: none;
-      }
-
-      main {
-        padding: 0;
-        width: 100%;
-      }
-
+ nav {
+    width: 100% !important;
+    min-height: auto !important;
+    height: auto !important;
+    position: static !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    white-space: nowrap !important;
+    padding: 0.8rem 0 !important;
+    background: #232323 !important;
+    box-shadow: none !important;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #444;
+  }
+  nav ul {
+    flex-direction: row !important;
+    gap: 0.2rem;
+    padding: 0 0.5rem;
+  }
+  nav li {
+    margin: 0;
+  }
+  nav a {
+    padding: 0.4rem 0.8rem !important;
+    font-size: 0.85rem !important;
+    white-space: nowrap;
+  }
+  .content-and-sidebar {
+    flex-direction: column;
+    padding: 0 1rem;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .affiliate-sidebar {
+    width: 100%;
+    margin-top: 0;
+    position: static;
+    height: auto;
+    max-height: none;
+  }
 /* =============== MOBILE-FRIENDLY TABLES (ALL SECTIONS) =============== */
 
 /* Make all tables responsive */
