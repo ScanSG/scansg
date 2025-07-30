@@ -106,20 +106,20 @@
   gap: 0;
 }
 
-    /* =============== LEFT NAVIGATION =============== */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: #232323;
-      width: var(--nav-width);
-      min-height: calc(100vh - 1rem);
-      display: flex;
-      flex-direction: column;
-      padding: 0.5rem 0;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      overflow-y: auto;
-    }
+/* =============== LEFT NAVIGATION =============== */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #232323;
+  width: var(--nav-width);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
 
     nav ul {
       display: flex;
@@ -371,6 +371,7 @@ main {
   box-shadow: 0 1px 4px rgba(0,0,0,0.06);
 }
 
+/* Make it STICKY on desktop */
 @media (min-width: 1025px) {
   .affiliate-sidebar {
     position: sticky;
@@ -379,7 +380,6 @@ main {
     height: calc(100vh - 2rem);
     max-height: calc(100vh - 2rem);
     overflow-y: auto;
-    padding: 1rem;
   }
 }
     .affiliate-sidebar h2 {
@@ -461,23 +461,21 @@ main {
 
     /* =============== MOBILE RESPONSIVENESS =============== */
 @media (max-width: 768px) {
-  /* Make header wrap content */
   header {
     flex-wrap: wrap;
   }
 
   /* STICKY + HORIZONTAL SCROLLING NAV */
   nav {
-    position: sticky;          /* THIS is key */
-    top: 0;                    /* Stick to top */
-    z-index: 1000;             /* Stay above content */
-    width: 100%;               /* Full width */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
     background: #232323;
-    overflow-x: auto;          /* Enable horizontal scroll */
-    white-space: nowrap;       /* Keep items in one line */
+    overflow-x: auto;
+    white-space: nowrap;
     flex-direction: row;
     padding: 0.5rem 1rem;
-    margin: 0;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
 
@@ -490,7 +488,7 @@ main {
   }
 
   nav li {
-    flex-shrink: 0;            /* Prevent collapsing */
+    flex-shrink: 0;
     margin: 0;
   }
 
@@ -512,7 +510,6 @@ main {
     width: 100%;
   }
 
-  /* Prevent double scrollbars */
   body {
     overflow-x: hidden;
   }
