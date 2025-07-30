@@ -374,12 +374,27 @@ main {
 @media (min-width: 1025px) {
   .affiliate-sidebar {
     position: sticky;
-    top: 1rem;
-    align-self: flex-start;
-    height: calc(100vh - 2rem);
-    max-height: calc(100vh - 2rem);
-    overflow-y: auto;
+    top: 1rem;                    /* Starts 1rem from top of viewport */
+    height: fit-content;          /* Let it grow naturally */
+    max-height: calc(100vh - 2rem); /* Never taller than screen */
+    overflow-y: auto;             /* Scroll inside if too long */
     padding: 1rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    scrollbar-width: thin;        /* Optional: cleaner scroll bar */
+  }
+
+  /* Ensure smooth scrolling inside */
+  .affiliate-sidebar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .affiliate-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .affiliate-sidebar::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
   }
 }
     .affiliate-sidebar h2 {
@@ -446,18 +461,7 @@ main {
       line-height: 1.3;
     }
 
-    /* =============== DESKTOP: SIDEBAR STICKY =============== */
-    @media (min-width: 1025px) {
-      .affiliate-sidebar {
-        position: sticky;
-        top: 1rem;
-        align-self: flex-start;
-        height: calc(100vh - 2rem);
-        max-height: calc(100vh - 2rem);
-        overflow-y: auto;
-        padding: 1rem;
-      }
-    }
+
 
     /* =============== MOBILE RESPONSIVENESS =============== */
 @media (max-width: 768px) {
@@ -571,8 +575,12 @@ tr:hover td {
 }
 
 /* Ensure tables don’t overflow */
-table, .content-and-sidebar, main, body {
+body, main, table {
   overflow-x: hidden;
+}
+
+.content-and-sidebar {
+  overflow-x: visible; /* Ensure sticky works */
 }
 
       #overview thead tr { position: absolute; top: -9999px; left: -9999px; }
