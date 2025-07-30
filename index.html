@@ -38,7 +38,8 @@ body {
     margin: 0;
     padding: 0;
     /* Prevent body from scrolling horizontally if ads push content */
-    overflow-x: hidden;
+      overflow-x: clip; /* Softer than hidden */
+      min-width: 320px; /* Prevents collapse on tiny screens */
 }
 :root {
     --main: #e02332;
