@@ -4,6 +4,77 @@
 // URLs updated with better links found in File 2 (Pasted_Text_1753711624501.txt) and File 3 (Pasted_Text_1753711821435.txt) where possible.
 // IMPORTANT: Review and update all URLs and key names for accuracy.
 const scanSgLinks = {
+
+// FIRST STEPS IN SINGAPORE
+
+  // ==========================================
+  // 📱 SIM CARDS & eSIM AFFILIATES
+  // ==========================================
+  "airalo_aff": "https://www.airalo.com/",
+  "saily_aff": "https://saily.com/",
+  "singtel_sg_aff": "https://invl.me/clmv1dr",
+  "starhub_sg_aff": "https://invl.me/clmv1ea",
+  "m1_sg_aff": "https://invl.me/clmv1ed",
+
+  "ezlink_sg_aff": "https://invl.me/clmv1f2",
+
+
+  // ==========================================
+  // SINGAPORE AT A GLANCE SECTION AFFILIATES
+  // ==========================================
+
+  "marina_bay_sands_aff": "https://invl.me/clmv1hs",
+  "gardens_by_the_bay_aff": "https://invl.me/clmv1hv",  
+  "singapore_flyer_aff": "https://invl.me/clmv1i3",
+  "national_gallery_sg_aff": "https://invl.me/clmv1ia",
+  "artscience_museum_aff": "https://invl.me/clmv1ir",
+  "singapore_river_cruise_aff": "https://invl.me/clmv1iy",
+  "highlights_sg_aff": "https://invl.me/clmv1j1",
+  "aroma_sg_aff": "https://invl.me/clmv1jh",
+  "sg_city_tour_bus_aff": "https://invl.me/clmv1jm",
+  "helix_bridge_aff": "https://invl.me/clmv1lj",
+
+  "sentosa_island_aff": "https://invl.me/clmv1mk",
+  "uss_aff": "https://invl.me/clmv1n1",
+  "sea_aquarium_aff": "https://invl.me/clmv1n5",
+  "adventure_cove_aff": "https://invl.me/clmv1ng",
+  "discovery_cove_aff": "https://invl.me/clmv1no",
+  "cable_car_sg_aff": "https://invl.me/clmv1nt",
+  "madame_tussauds_sg_aff": "https://invl.me/clmv1nz",
+  "sg_spa_aff": "https://invl.me/clmv1o7",
+  "sg_wine_tasting_aff": "https://invl.me/clmv1of",
+  "wings_of_time_aff": "https://invl.me/clmv1om",
+
+
+  // ==========================================
+  // 🚗 TRANSPORT & GETTING AROUND
+  // ==========================================
+  
+  "lta_sg": "https://www.lta.gov.sg", // Updated from File 2 & 3 (Removed /content/ltagov/en.html)
+  "grab_sg": "https://www.grab.com/sg/", // Updated from File 2 & 3 (File 1 had extra slash)
+  "gojek_sg": "http://gjk.sg/sgdriver",
+  "transitlink_eguide": "https://www.transitlink.com.sg", // Updated from File 2 & 3 (File 1 pointed to simplygo)
+  // Added from File 3
+  "cable_car_sg": "https://mountfaberleisure.com/attraction/singapore-cable-car/",
+  "ezlink_app": "https://www.ezlink.com.sg",
+  "ezlink_card": "https://www.ezlink.com.sg",
+  "ezlink_card_transport": "https://www.ezlink.com.sg", // Duplicate key from File 3
+  "mrt_network_map": "https://www.lta.gov.sg/content/ltagov/en/map.html",
+  "mytransport_sg": "https://www.mytransport.sg/",
+  "sg_bike": "https://sg.bcycle.com/",
+  "sg_city_tour_bus": "https://citytours.sg/",
+  "simplygo_transport": "https://www.simplygo.sg", // Duplicate key from File 3
+  "transitlink_app": "https://www.transitlink.com.sg",
+  "transitlink_bus_service": "https://www.transitlink.com.sg",
+  "transitlink_good_to_know": "https://www.transitlink.com.sg", // Duplicate key from File 3
+  "transitlink_resources": "https://www.transitlink.com.sg", // Duplicate key from File 3
+
+
+
+
+
+
+
   // ==========================================
   // 🛍️ SHOPPING & E-COMMERCE
   // ==========================================
@@ -59,25 +130,20 @@ const scanSgLinks = {
   // Added from File 3
   "momondo_aff": "https://www.momondo.sg",
 
-  // ==========================================
-  // 📱 SIM CARDS & eSIM
-  // ==========================================
-  "airalo_aff": "https://www.airalo.com/",
-  "saily_aff": "https://saily.com/",
+
 
   // ==========================================
   // 🎟️ TOURS & ACTIVITIES
   // ==========================================
-  "klook_aff": "https://www.klook.com/en-SG/", // Updated from File 2 & 3 (Was affiliate link)
+  "klook_aff": "https://invl.me/clmv1gx", // Updated from File 2 & 3 (Was affiliate link)
   "getyourguide_aff": "https://www.getyourguide.com/",
   "viator_aff": "https://www.viator.com/",
   "tiqets_aff": "https://www.tiqets.com/en-us/",
-  "Pelago_aff": "https://www.pelago.co", // Updated from File 2 & 3 (Was affiliate link)
-  "Klook_Pass": "https://www.klook.com/en-SG/promo/sg-passes", // Updated from File 2 & 3 (Was affiliate link)
-  "pelago_pass": "https://www.pelago.co", // Updated from File 2 & 3 (Was affiliate link)
-  "USS_aff": "https://www.rwsentosa.com/en/attractions/universal-studios-singapore", // Updated from File 2 & 3 (Was affiliate link)
-  "klook_uss_aff": "https://www.klook.com/en-SG/activity/127-universal-studios-singapore/", // Updated from File 2 & 3 (Was affiliate link)
-  "pelago_uss_aff": "https://www.pelago.co/activity/universal-studios-singapore-tickets", // Updated from File 2 & 3 (Was affiliate link)
+  "Pelago_aff": "https://invl.me/clmv1hd", // Updated from File 2 & 3 (Was affiliate link)
+  "Klook_Pass": "https://invl.me/clmv1h7", // Updated from File 2 & 3 (Was affiliate link)
+  "pelago_pass": "https://invl.me/clmv1hc", // Updated from File 2 & 3 (Was affiliate link)
+  "klook_uss_aff": "https://invl.me/clmv1p7", // Updated from File 2 & 3 (Was affiliate link)
+  //"pelago_uss_aff": "https://www.pelago.co/activity/universal-studios-singapore-tickets", // Updated from File 2 & 3 (Was affiliate link)
   // Added from File 3
   "madame_tussauds_sg": "https://www.madametussauds.com/singapore/",
 
@@ -118,28 +184,7 @@ const scanSgLinks = {
   "weather_sg": "https://www.nea.gov.sg/weather",
   "accuweather_sg": "https://www.accuweather.com/en/sg/singapore/300540/weather-forecast/300540",
 
-  // ==========================================
-  // 🚗 TRANSPORT & GETTING AROUND
-  // ==========================================
-  "lta_sg": "https://www.lta.gov.sg", // Updated from File 2 & 3 (Removed /content/ltagov/en.html)
-  "grab_sg": "https://www.grab.com/sg/", // Updated from File 2 & 3 (File 1 had extra slash)
-  "gojek_sg": "http://gjk.sg/sgdriver",
-  "transitlink_eguide": "https://www.transitlink.com.sg", // Updated from File 2 & 3 (File 1 pointed to simplygo)
-  // Added from File 3
-  "cable_car_sg": "https://mountfaberleisure.com/attraction/singapore-cable-car/",
-  "ezlink_app": "https://www.ezlink.com.sg",
-  "ezlink_card": "https://www.ezlink.com.sg",
-  "ezlink_card_transport": "https://www.ezlink.com.sg", // Duplicate key from File 3
-  "mrt_network_map": "https://www.lta.gov.sg/content/ltagov/en/map.html",
-  "mytransport_sg": "https://www.mytransport.sg/",
-  "sg_bike": "https://sg.bcycle.com/",
-  "sg_city_tour_bus": "https://citytours.sg/",
-  "simplygo": "https://www.simplygo.sg",
-  "simplygo_transport": "https://www.simplygo.sg", // Duplicate key from File 3
-  "transitlink_app": "https://www.transitlink.com.sg",
-  "transitlink_bus_service": "https://www.transitlink.com.sg",
-  "transitlink_good_to_know": "https://www.transitlink.com.sg", // Duplicate key from File 3
-  "transitlink_resources": "https://www.transitlink.com.sg", // Duplicate key from File 3
+
 
   // ==========================================
   // 🏛️ GOVERNMENT & OFFICIAL INFO
@@ -169,6 +214,7 @@ const scanSgLinks = {
   "gss_official": "https://www.stb.gov.sg", // Duplicate key from File 3
   "visit_sg_gss": "https://www.stb.gov.sg", // Duplicate key from File 3
   "pap_official": "https://www.pap.org.sg/",
+  "customs_sg": "https://www.customs.gov.sg/",
 
   // ==========================================
   // 🛍️ SHOPPING MALLS & CENTERS
@@ -200,7 +246,7 @@ const scanSgLinks = {
   "alexandra_central": "https://www.commercialguru.com.sg/project/alexandra-central-21471", // Present in File 2 & 3
   "bugis_junction": "https://bugisjunctionsg.com/",
   "funan_sg": "https://www.capitaland.com/sg/malls/funan/en.html",
-  "raffles_city_singapore": "https://www.rafflescity.com.sg/", // Updated from File 3
+  "raffles_city_singapore": "https://www.onerafflesplace.com.sg/shopping", // Updated from File 3
   "changi_city_point": "https://www.changicitypoint.com.sg/", // Present in File 2 & 3
   "kitchener_complex_mall": "https://en.parkopedia.sg/parking/carpark/sdfrm/200808/singapore/",
   // Added from File 3
@@ -398,7 +444,7 @@ const scanSgLinks = {
   "marina_bay_singapore": "https://www.marinabaycountdown.gov.sg/",
   "marina_bay_promenade": "https://www.expandgroup.com.sg/track-record/marina-bay-promenade", // Updated from File 2 & 3
   "marina_bay_food_district": "https://www.marinabaysands.com/dining.html",
-  "merlion_park": "https://www.tripadvisor.com.sg/FAQ_Answers-g294265-d644919-t6209461-Hi_May_i_ask_if_what_is_the_best_way_to_reach_in.html",
+  "merlion_park": "https://www.visitsingapore.com/neighbourhood/featured-neighbourhood/marina-bay/merlion-park/",
   "spectra_light_show": "https://www.tripadvisor.com.sg/ShowTopic-g294265-i1748-k14495141-Spectra_light_show_Gardens_by_the_bay-Singapore.html",
   "helix_bridge": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=40fb2a37-ebfd-4d9b-8a6c-2a0759bc9b59", // Updated from File 2 & 3
   "singapore_river": "https://nuspress.nus.edu.sg/products/the-singapore-river",
@@ -636,7 +682,6 @@ const scanSgLinks = {
   "national_university_hospital": "https://www.nuh.com.sg", // (File 2)
   "qoo10_main": "https://www.qoo10.sg/", // (File 2)
   "qoo10_sg": "https://www.qoo10.sg/", // (File 2)
-  "uss_aff": "https://www.rwsentosa.com/en/attractions/universal-studios-singapore", // Duplicate key from File 3
   "tan_tock_seng_hospital": "https://www.ttsh.com.sg", // (File 2)
   "duolingo_sg_aff": "https://www.duolingo.com", // Duplicate key from File 3
 };
