@@ -4,17 +4,36 @@
 
 <!-- 🔥 PASTE THE REDIRECT SCRIPT HERE -->
 <script>
-if (
-window.location.hostname === 'www.scansg.com' ||
-window.location.protocol !== 'https:' ||
-!window.location.pathname.endsWith('/') && window.location.pathname !== ''
-) {
-window.location.href = 'https://scansg.com/' +
-(window.location.pathname + window.location.search + window.location.hash)
-.replace(/\/$/, '')
-.replace(/^\/$/, '');
-}
-</script> 
+(function() {
+  const targetHostname = 'scansg.com';
+  const currentHostname = window.location.hostname.toLowerCase();
+  const currentProtocol = window.location.protocol;
+  let pathname = window.location.pathname;
+  const search = window.location.search;
+  const hash = window.location.hash;
+
+  // Normalize pathname: should end with "/" except if it's the root "/"
+  if (pathname !== '/' && !pathname.endsWith('/')) {
+    pathname += '/';
+  }
+
+  // Check if hostname is not exactly target or protocol is not HTTPS or pathname format is incorrect
+  const needsRedirect =
+    currentHostname !== targetHostname ||
+    currentProtocol !== 'https:' ||
+    window.location.pathname !== pathname;
+
+  if (needsRedirect) {
+    // Build new URL with https and normalized hostname + pathname + search + hash
+    const newUrl = 'https://' + targetHostname + pathname + search + hash;
+    // Prevent redirect loop
+    if (window.location.href !== newUrl) {
+      window.location.href = newUrl;
+    }
+  }
+})();
+</script>
+
 
 
 
