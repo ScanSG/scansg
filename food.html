@@ -83,7 +83,7 @@
       line-height: 1.6;
       color: var(--text);
       background: var(--bg);
-      transition: background 0.3s ease;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     h1, h2, h3, h4, h5 {
@@ -165,13 +165,19 @@
       font-size: 1.8rem;
     }
 
-    /* Region Card */
+    /* Two-Column Layout */
+    .regions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
     .region-card {
       background: white;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      margin: 1.5rem 0;
       border: 1px solid var(--border);
     }
 
@@ -200,6 +206,7 @@
     .category ul {
       padding-left: 1.2rem;
       margin: 0.4rem 0;
+      line-height: 1.5;
     }
 
     .category li {
@@ -235,6 +242,11 @@
       .hero h1 {
         font-size: 1.6rem;
       }
+
+      /* Stack on mobile */
+      .regions-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -268,214 +280,214 @@
         <p>Complete list of hawker centres, malls, must-try food & nature spots — by region. No blur-blur.</p>
       </section>
 
-      <!-- Regions -->
-      <h2>📍 Food & Lifestyle by Region</h2>
-
-      <!-- Region 1: Central Core -->
-      <div class="region-card">
-        <div class="region-header">🏙️ Central Core</div>
-        <div class="region-content">
-          <div class="category">
-            <h4>🍽️ Hawkers</h4>
-            <ul>
-              <li><a data-link-key="lau_pa_sat" target="_blank">Lau Pa Sat</a>: Historic market at 18 Raffles Quay, famous for satay and seafood.</li>
-              <li><a data-link-key="chinatown_food_street" target="_blank">Chinatown Food Street</a>: Open-air hawker centre with diverse local dishes.</li>
-              <li><a data-link-key="amoy_street_food" target="_blank">Amoy Street Food Centre</a> (Blk 44): Popular for zi char and local delights.</li>
-              <li><a data-link-key="maxwell_food_centre" target="_blank">Maxwell Food Centre</a>: Famous for Tian Tian Chicken Rice.</li>
-              <li><a data-link-key="raffles_place_food" target="_blank">Raffles Place Food Scene</a>: Lunch hub for office workers.</li>
-            </ul>
-          </div>
-          <div class="category">
-            <h4>🛍️ Malls</h4>
-            <ul>
-              <li><a data-link-key="raffles_city_singapore" target="_blank">Raffles City</a>: Connected to City Hall MRT, rooftop garden.</li>
-              <li><a data-link-key="plazasingapura_sg" target="_blank">Plaza Singapura</a>: Near Dhoby Ghaut, known for dining & entertainment.</li>
-              <li><a data-link-key="ion_orchard" target="_blank">ION Orchard</a>: Luxury shopping on Orchard Road.</li>
-              <li><a data-link-key="marina_bay_sands_shoppes" target="_blank">Marina Bay Sands Shoppes</a>: High-end brands and dining.</li>
-            </ul>
-          </div>
-          <div class="category">
-            <h4>🔥 Must-Try</h4>
-            <ul>
-              <li><a data-link-key="tian_tian_chicken_rice" target="_blank">Tian Tian Chicken Rice</a> at Maxwell</li>
-              <li><a data-link-key="lau_pa_sat_satay" target="_blank">Satay at Lau Pa Sat</a></li>
-              <li><a data-link-key="chicken_rice_chinatown" target="_blank">Hainanese Chicken Rice at Chinatown Complex</a></li>
-            </ul>
-          </div>
-          <div class="category">
-            <h4>🌳 Parks & Nature</h4>
-            <ul>
-              <li><a data-link-key="gardens_by_the_bay" target="_blank">Gardens by the Bay</a>: Supertree Grove, Flower Dome</li>
-              <li><a data-link-key="marina_bay_promenade" target="_blank">Marina Bay Promenade</a>: Skyline views</li>
-              <li><a data-link-key="helix_bridge" target="_blank">Helix Bridge</a>: DNA-inspired walkway</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Region 2: Central South -->
-      <div class="region-card">
-        <div class="region-header">🌆 Central South</div>
-        <div class="region-content">
-          <div class="category">
-            <h4>🍽️ Hawkers</h4>
-            <ul>
-              <li><a data-link-key="tanjong_pagar_food" target="_blank">Tanjong Pagar Food Scene</a>: Diverse options, from hawker centres to upscale.</li>
-              <li><a data-link-key="outram_park_food" target="_blank">Outram Park Food Scene</a>: Mix of hawker centres and restaurants.</li>
-              <li><a data-link-key="redhill_food" target="_blank">Redhill Food Scene</a>: Local eateries near Redhill MRT.</li>
-              <li><a data-link-key="queenstown_food" target="_blank">Queenstown Food Scene</a>: Strong local food culture.</li>
-              <li><a data-link-key="vivo_city" target="_blank">VivoCity Food Court</a>: Largest mall’s food options.</li>
-            </ul>
-          </div>
-          <div class="category">
-            <h4>🛍️ Malls</h4>
-            <ul>
-              <li><a data-link-key="vivo_city" target="_blank">VivoCity</a>: Largest mall, connected to Sentosa.</li>
-              <li><a data-link-key="alexandra_centre" target="_blank">Alexandra Retail Centre</a>: Lifestyle mall near Queenstown.</li>
-              <li><a data-link-key="queensway_shopping_centre" target="_blank">Queensway Shopping Centre</a>: Local mall in Queenstown.</li>
-            </ul>
-          </div>
-          <div class="category">
-            <h4>🔥 Must-Try</h4>
-            <ul>
-              <li><a data-link-key="outram_park_kway_teow" target="_blank">Char Kway Teow at Outram Park</a></li>
-              <li><a data-link-key="adam_road_satay" target="_blank">Satay at Adam Road Food Centre</a></li>
-            </ul>
-          </div>
-          <div class="category">
-            <h4>🌳 Parks & Nature</h4>
-            <ul>
-              <li><a data-link-key="kent_ridge_park" target="_blank">Kent Ridge Park</a>: Scenic trails and views</li>
-              <li><a data-link-key="telok_blangah_hill_park" target="_blank">Telok Blangah Hill Park</a>: Waterfalls and greenery</li>
-            </ul>
+      <!-- Two-Column Regions -->
+      <div class="regions-grid">
+        <!-- Region 1: Central Core -->
+        <div class="region-card">
+          <div class="region-header">🏙️ Central Core</div>
+          <div class="region-content">
+            <div class="category">
+              <h4>🍽️ Hawkers</h4>
+              <ul>
+                <li><a data-link-key="lau_pa_sat" target="_blank">Lau Pa Sat</a>: Historic market at 18 Raffles Quay, famous for satay and seafood.</li>
+                <li><a data-link-key="chinatown_food_street" target="_blank">Chinatown Food Street</a>: Open-air hawker centre with diverse local dishes.</li>
+                <li><a data-link-key="amoy_street_food" target="_blank">Amoy Street Food Centre</a> (Blk 44): Popular for zi char and local delights.</li>
+                <li><a data-link-key="maxwell_food_centre" target="_blank">Maxwell Food Centre</a>: Famous for Tian Tian Chicken Rice.</li>
+                <li><a data-link-key="raffles_place_food" target="_blank">Raffles Place Food Scene</a>: Lunch hub for office workers.</li>
+              </ul>
+            </div>
+            <div class="category">
+              <h4>🛍️ Malls</h4>
+              <ul>
+                <li><a data-link-key="raffles_city_singapore" target="_blank">Raffles City</a>: Connected to City Hall MRT, rooftop garden.</li>
+                <li><a data-link-key="plazasingapura_sg" target="_blank">Plaza Singapura</a>: Near Dhoby Ghaut, known for dining & entertainment.</li>
+                <li><a data-link-key="ion_orchard" target="_blank">ION Orchard</a>: Luxury shopping on Orchard Road.</li>
+                <li><a data-link-key="marina_bay_sands_shoppes" target="_blank">Marina Bay Sands Shoppes</a>: High-end brands and dining.</li>
+              </ul>
+            </div>
+            <div class="category">
+              <h4>🔥 Must-Try</h4>
+              <ul>
+                <li><a data-link-key="tian_tian_chicken_rice" target="_blank">Tian Tian Chicken Rice</a> at Maxwell</li>
+                <li><a data-link-key="lau_pa_sat_satay" target="_blank">Satay at Lau Pa Sat</a></li>
+                <li><a data-link-key="chicken_rice_chinatown" target="_blank">Hainanese Chicken Rice at Chinatown Complex</a></li>
+              </ul>
+            </div>
+            <div class="category">
+              <h4>🌳 Parks & Nature</h4>
+              <ul>
+                <li><a data-link-key="gardens_by_the_bay" target="_blank">Gardens by the Bay</a>: Supertree Grove, Flower Dome</li>
+                <li><a data-link-key="marina_bay_promenade" target="_blank">Marina Bay Promenade</a>: Skyline views</li>
+                <li><a data-link-key="helix_bridge" target="_blank">Helix Bridge</a>: DNA-inspired walkway</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Region 3: East -->
-      <div class="region-card">
-        <div class="region-header">🌅 East</div>
-        <div class="region-content">
-          <div class="category">
-            <h4>🍽️ Hawkers</h4>
-            <ul>
-              <li><a data-link-key="east_coast_lagoon_food" target="_blank">East Coast Lagoon Food Village</a>: BBQ seafood, drinks by the sea.</li>
-              <li><a data-link-key="katong_laksa_village" target="_blank">Katong Laksa Village</a>: Home of Peranakan laksa.</li>
-              <li><a data-link-key="changi_village_food" target="_blank">Changi Village Food Centre</a>: Local hawker centre near airport.</li>
-              <li><a data-link-key="bedok_food_centre" target="_blank">Bedok Food Centre</a> (Blk 85): Large, popular hawker centre.</li>
-            </ul>
-          </div>
-          <div class="category">
-            <h4>🛍️ Malls</h4>
-            <ul>
-              <li><a data-link-key="katong_shopping_belt" target="_blank">Katong Shopping Belt</a>: Peranakan culture & unique shops.</li>
-              <li><a data-link-key="112_katong" target="_blank">112 Katong</a>: Modern mall with lifestyle focus.</li>
-            </ul>
-          </div>
-          <div class="category">
-            <h4>🔥 Must-Try</h4>
-            <ul>
-              <li><a data-link-key="katong_laksa" target="_blank">Katong Laksa</a></li>
-              <li><a data-link-key="bbq_seafood" target="_blank">BBQ Seafood at ECP</a></li>
-            </ul>
-          </div>
-          <div class="category">
-            <h4>🌳 Parks & Nature</h4>
-            <ul>
-              <li><a data-link-key="east_coast_park" target="_blank">East Coast Park</a>: Cycling, picnics, beach</li>
-              <li><a data-link-key="bedok_reservoir_park" target="_blank">Bedok Reservoir Park</a>: Waterfront views</li>
-            </ul>
+        <!-- Region 2: Central South -->
+        <div class="region-card">
+          <div class="region-header">🌆 Central South</div>
+          <div class="region-content">
+            <div class="category">
+              <h4>🍽️ Hawkers</h4>
+              <ul>
+                <li><a data-link-key="tanjong_pagar_food" target="_blank">Tanjong Pagar Food Scene</a>: Diverse options, from hawker centres to upscale.</li>
+                <li><a data-link-key="outram_park_food" target="_blank">Outram Park Food Scene</a>: Mix of hawker centres and restaurants.</li>
+                <li><a data-link-key="redhill_food" target="_blank">Redhill Food Scene</a>: Local eateries near Redhill MRT.</li>
+                <li><a data-link-key="queenstown_food" target="_blank">Queenstown Food Scene</a>: Strong local food culture.</li>
+                <li><a data-link-key="vivo_city" target="_blank">VivoCity Food Court</a>: Largest mall’s food options.</li>
+              </ul>
+            </div>
+            <div class="category">
+              <h4>🛍️ Malls</h4>
+              <ul>
+                <li><a data-link-key="vivo_city" target="_blank">VivoCity</a>: Largest mall, connected to Sentosa.</li>
+                <li><a data-link-key="alexandra_centre" target="_blank">Alexandra Retail Centre</a>: Lifestyle mall near Queenstown.</li>
+                <li><a data-link-key="queensway_shopping_centre" target="_blank">Queensway Shopping Centre</a>: Local mall in Queenstown.</li>
+              </ul>
+            </div>
+            <div class="category">
+              <h4>🔥 Must-Try</h4>
+              <ul>
+                <li><a data-link-key="outram_park_kway_teow" target="_blank">Char Kway Teow at Outram Park</a></li>
+                <li><a data-link-key="adam_road_satay" target="_blank">Satay at Adam Road Food Centre</a></li>
+              </ul>
+            </div>
+            <div class="category">
+              <h4>🌳 Parks & Nature</h4>
+              <ul>
+                <li><a data-link-key="kent_ridge_park" target="_blank">Kent Ridge Park</a>: Scenic trails and views</li>
+                <li><a data-link-key="telok_blangah_hill_park" target="_blank">Telok Blangah Hill Park</a>: Waterfalls and greenery</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Region 4: West -->
-      <div class="region-card">
-        <div class="region-header">🏭 West</div>
-        <div class="region-content">
-          <div class="category">
-            <h4>🍽️ Hawkers</h4>
-            <ul>
-              <li><a data-link-key="chinese_garden_food" target="_blank">Chinese Garden Food Centre</a> (Blk 505): Large hawker centre near Chinese Garden MRT.</li>
-              <li><a data-link-key="jurong_west_food" target="_blank">Jurong West Hawker Centre</a> (Blk 500): Serves Jurong West community.</li>
-              <li><a data-link-key="boon_lay_food" target="_blank">Boon Lay Place Food Village</a>: Near Boon Lay MRT.</li>
-              <li><a data-link-key="west_coast_food" target="_blank">West Coast Food Centre</a> (Blk 301): Serves Clementi/West Coast.</li>
-            </ul>
-          </div>
-          <div class="category">
-            <h4>🛍️ Malls</h4>
-            <ul>
-              <li><a data-link-key="jurong_point" target="_blank">Jurong Point</a>: Major mall in Jurong East.</li>
-              <li><a data-link-key="jem_west" target="_blank">Jem</a>: Modern mall with cantilevered design.</li>
-              <li><a data-link-key="westgate_sg" target="_blank">Westgate</a>: Modern mall with rooftop garden.</li>
-            </ul>
-          </div>
-          <div class="category">
-            <h4>🔥 Must-Try</h4>
-            <ul>
-              <li><a data-link-key="joo_choon_rojak" target="_blank">Rojak at Joo Choon Market</a></li>
-              <li><a data-link-key="jurong_mee_rebus" target="_blank">Mee Rebus at Jurong Point</a></li>
-            </ul>
-          </div>
-          <div class="category">
-            <h4>🌳 Parks & Nature</h4>
-            <ul>
-              <li><a data-link-key="jurong_lake_gardens" target="_blank">Jurong Lake Gardens</a>: Beautiful lakeside park</li>
-              <li><a data-link-key="coney_island_park" target="_blank">Coney Island Park</a>: Wild, natural island park</li>
-              <li><a data-link-key="admiralty_park" target="_blank">Admiralty Park</a>: Green space with fitness corners</li>
-            </ul>
+        <!-- Region 3: East -->
+        <div class="region-card">
+          <div class="region-header">🌅 East</div>
+          <div class="region-content">
+            <div class="category">
+              <h4>🍽️ Hawkers</h4>
+              <ul>
+                <li><a data-link-key="east_coast_lagoon_food" target="_blank">East Coast Lagoon Food Village</a>: BBQ seafood, drinks by the sea.</li>
+                <li><a data-link-key="katong_laksa_village" target="_blank">Katong Laksa Village</a>: Home of Peranakan laksa.</li>
+                <li><a data-link-key="changi_village_food" target="_blank">Changi Village Food Centre</a>: Local hawker centre near airport.</li>
+                <li><a data-link-key="bedok_food_centre" target="_blank">Bedok Food Centre</a> (Blk 85): Large, popular hawker centre.</li>
+              </ul>
+            </div>
+            <div class="category">
+              <h4>🛍️ Malls</h4>
+              <ul>
+                <li><a data-link-key="katong_shopping_belt" target="_blank">Katong Shopping Belt</a>: Peranakan culture & unique shops.</li>
+                <li><a data-link-key="112_katong" target="_blank">112 Katong</a>: Modern mall with lifestyle focus.</li>
+              </ul>
+            </div>
+            <div class="category">
+              <h4>🔥 Must-Try</h4>
+              <ul>
+                <li><a data-link-key="katong_laksa" target="_blank">Katong Laksa</a></li>
+                <li><a data-link-key="bbq_seafood" target="_blank">BBQ Seafood at ECP</a></li>
+              </ul>
+            </div>
+            <div class="category">
+              <h4>🌳 Parks & Nature</h4>
+              <ul>
+                <li><a data-link-key="east_coast_park" target="_blank">East Coast Park</a>: Cycling, picnics, beach</li>
+                <li><a data-link-key="bedok_reservoir_park" target="_blank">Bedok Reservoir Park</a>: Waterfront views</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Region 5: North -->
-      <div class="region-card">
-        <div class="region-header">🏞️ North</div>
-        <div class="region-content">
-          <div class="category">
-            <h4>🍽️ Hawkers</h4>
-            <ul>
-              <li><a data-link-key="ang_mo_kio_food" target="_blank">Ang Mo Kio Food Centre</a> (Blk 226A): Well-known hawker centre.</li>
-              <li><a data-link-key="bishan_park_hawker" target="_blank">Bishan Park Secondary School Canteen</a>: Famous for chilli crab mee sua.</li>
-              <li><a data-link-key="yishun_park_hawker" target="_blank">Yishun Park Hawker Centre</a> (Blk 235): Serves Yishun community.</li>
-              <li><a data-link-key="sembawang_springs_market" target="_blank">Sembawang Springs Market</a>: Food court with seaside views.</li>
-            </ul>
-          </div>
-          <div class="category">
-            <h4>🔥 Must-Try</h4>
-            <ul>
-              <li><a data-link-key="yishun_duck_rice" target="_blank">Roast Duck Rice at Yishun</a></li>
-              <li><a data-link-key="bishan_mee_sua" target="_blank">Chilli Crab Mee Sua at Bishan</a></li>
-            </ul>
-          </div>
-          <div class="category">
-            <h4>🌳 Parks & Nature</h4>
-            <ul>
-              <li><a data-link-key="sembawang_park" target="_blank">Sembawang Park</a>: Beach, kampong vibe</li>
-              <li><a data-link-key="punggol_waterway_park" target="_blank">Punggol Waterway Park</a>: Scenic boardwalks</li>
-              <li><a data-link-key="kranji_countryside" target="_blank">Kranji Countryside</a>: Farms and rustic charm</li>
-            </ul>
+        <!-- Region 4: West -->
+        <div class="region-card">
+          <div class="region-header">🏭 West</div>
+          <div class="region-content">
+            <div class="category">
+              <h4>🍽️ Hawkers</h4>
+              <ul>
+                <li><a data-link-key="chinese_garden_food" target="_blank">Chinese Garden Food Centre</a> (Blk 505): Large hawker centre near Chinese Garden MRT.</li>
+                <li><a data-link-key="jurong_west_food" target="_blank">Jurong West Hawker Centre</a> (Blk 500): Serves Jurong West community.</li>
+                <li><a data-link-key="boon_lay_food" target="_blank">Boon Lay Place Food Village</a>: Near Boon Lay MRT.</li>
+                <li><a data-link-key="west_coast_food" target="_blank">West Coast Food Centre</a> (Blk 301): Serves Clementi/West Coast.</li>
+              </ul>
+            </div>
+            <div class="category">
+              <h4>🛍️ Malls</h4>
+              <ul>
+                <li><a data-link-key="jurong_point" target="_blank">Jurong Point</a>: Major mall in Jurong East.</li>
+                <li><a data-link-key="jem_west" target="_blank">Jem</a>: Modern mall with cantilevered design.</li>
+                <li><a data-link-key="westgate_sg" target="_blank">Westgate</a>: Modern mall with rooftop garden.</li>
+              </ul>
+            </div>
+            <div class="category">
+              <h4>🔥 Must-Try</h4>
+              <ul>
+                <li><a data-link-key="joo_choon_rojak" target="_blank">Rojak at Joo Choon Market</a></li>
+                <li><a data-link-key="jurong_mee_rebus" target="_blank">Mee Rebus at Jurong Point</a></li>
+              </ul>
+            </div>
+            <div class="category">
+              <h4>🌳 Parks & Nature</h4>
+              <ul>
+                <li><a data-link-key="jurong_lake_gardens" target="_blank">Jurong Lake Gardens</a>: Beautiful lakeside park</li>
+                <li><a data-link-key="coney_island_park" target="_blank">Coney Island Park</a>: Wild, natural island park</li>
+                <li><a data-link-key="admiralty_park" target="_blank">Admiralty Park</a>: Green space with fitness corners</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Region 6: North-East -->
-      <div class="region-card">
-        <div class="region-header">🏘️ North-East</div>
-        <div class="region-content">
-          <div class="category">
-            <h4>🍽️ Hawkers</h4>
-            <ul>
-              <li><a data-link-key="hougang_food" target="_blank">Hougang 10 Food Centre</a> (Blk 109): Popular hawker centre.</li>
-              <li><a data-link-key="serangoon_garden_food" target="_blank">Serangoon Gardens Food Centre</a> (Blk 49A): Local gem.</li>
-            </ul>
+        <!-- Region 5: North -->
+        <div class="region-card">
+          <div class="region-header">🏞️ North</div>
+          <div class="region-content">
+            <div class="category">
+              <h4>🍽️ Hawkers</h4>
+              <ul>
+                <li><a data-link-key="ang_mo_kio_food" target="_blank">Ang Mo Kio Food Centre</a> (Blk 226A): Well-known hawker centre.</li>
+                <li><a data-link-key="bishan_park_hawker" target="_blank">Bishan Park Secondary School Canteen</a>: Famous for chilli crab mee sua.</li>
+                <li><a data-link-key="yishun_park_hawker" target="_blank">Yishun Park Hawker Centre</a> (Blk 235): Serves Yishun community.</li>
+                <li><a data-link-key="sembawang_springs_market" target="_blank">Sembawang Springs Market</a>: Food court with seaside views.</li>
+              </ul>
+            </div>
+            <div class="category">
+              <h4>🔥 Must-Try</h4>
+              <ul>
+                <li><a data-link-key="yishun_duck_rice" target="_blank">Roast Duck Rice at Yishun</a></li>
+                <li><a data-link-key="bishan_mee_sua" target="_blank">Chilli Crab Mee Sua at Bishan</a></li>
+              </ul>
+            </div>
+            <div class="category">
+              <h4>🌳 Parks & Nature</h4>
+              <ul>
+                <li><a data-link-key="sembawang_park" target="_blank">Sembawang Park</a>: Beach, kampong vibe</li>
+                <li><a data-link-key="punggol_waterway_park" target="_blank">Punggol Waterway Park</a>: Scenic boardwalks</li>
+                <li><a data-link-key="kranji_countryside" target="_blank">Kranji Countryside</a>: Farms and rustic charm</li>
+              </ul>
+            </div>
           </div>
-          <div class="category">
-            <h4>🔥 Must-Try</h4>
-            <ul>
-              <li><a data-link-key="serangoon_laksa" target="_blank">Laksa at Serangoon Gardens</a></li>
-              <li><a data-link-key="hougang_bak_kut_teh" target="_blank">Bak Kut Teh at Hougang</a></li>
-            </ul>
+        </div>
+
+        <!-- Region 6: North-East -->
+        <div class="region-card">
+          <div class="region-header">🏘️ North-East</div>
+          <div class="region-content">
+            <div class="category">
+              <h4>🍽️ Hawkers</h4>
+              <ul>
+                <li><a data-link-key="hougang_food" target="_blank">Hougang 10 Food Centre</a> (Blk 109): Popular hawker centre.</li>
+                <li><a data-link-key="serangoon_garden_food" target="_blank">Serangoon Gardens Food Centre</a> (Blk 49A): Local gem.</li>
+              </ul>
+            </div>
+            <div class="category">
+              <h4>🔥 Must-Try</h4>
+              <ul>
+                <li><a data-link-key="serangoon_laksa" target="_blank">Laksa at Serangoon Gardens</a></li>
+                <li><a data-link-key="hougang_bak_kut_teh" target="_blank">Bak Kut Teh at Hougang</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
