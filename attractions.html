@@ -53,8 +53,6 @@
       --light-gray: #f9f9f9;
       --border: #ec9a9a;
       --header-bg: #111;
-      --region-bg: #f8f9fa;
-      --separator: #e0e0e0;
     }
     [data-theme="dark"] {
       --text: #eee;
@@ -62,8 +60,6 @@
       --gray: #aaa;
       --light-gray: #1e1e1e;
       --border: #444;
-      --region-bg: #1e1e1e;
-      --separator: #333;
     }
     * {
       box-sizing: border-box;
@@ -180,53 +176,51 @@
     [data-theme="dark"] .trust-links a {
       color: #a5d6a7;
     }
-    /* Region Styling */
-    .region {
-      background: var(--region-bg);
-      padding: 1.5rem;
-      border-radius: 12px;
+    /* Region Grid */
+    .region-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      gap: 1.5rem;
       margin: 2rem 0;
-      border-left: 5px solid var(--accent);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .region {
+      background: var(--light-gray);
+      padding: 1.2rem;
+      border-radius: 10px;
+      border-left: 4px solid var(--accent);
     }
     [data-theme="dark"] .region {
       background: #1e1e1e;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
     .region h3 {
       color: var(--main);
-      font-size: 1.5rem;
       margin-bottom: 1rem;
+      font-size: 1.4rem;
       padding-bottom: 0.4rem;
       border-bottom: 2px solid var(--accent);
-      display: inline-block;
     }
-    /* Attraction Item */
-    .attraction {
-      padding: 1rem 0;
-      border-bottom: 1px dashed var(--separator);
-    }
-    .attraction:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-    .attraction h4 {
+    .attraction-list {
       margin: 0;
+      padding: 0;
+      list-style: none;
     }
-    .attraction h4 a {
+    .attraction-item {
+      margin-bottom: 0.8rem;
+    }
+    .attraction-item h4 {
+      margin: 0;
+      font-size: 1.05rem;
+    }
+    .attraction-item h4 a {
       color: var(--text);
-      font-size: 1.1rem;
       font-weight: 600;
-      display: inline-block;
-      padding: 0.4rem 0;
     }
     .tag {
-      display: inline-block;
       font-size: 0.75rem;
       font-weight: 600;
-      padding: 0.2rem 0.5rem;
+      padding: 0.15rem 0.4rem;
       border-radius: 4px;
-      margin-left: 0.5rem;
+      margin-left: 0.4rem;
     }
     .tag.paid {
       background: #ffe082;
@@ -244,25 +238,19 @@
       background: #0a3d0a;
       color: #a5d6a7;
     }
-    .attraction p {
-      margin: 0.4rem 0 0;
-      font-size: 0.95rem;
+    .attraction-item p {
+      margin: 0.2rem 0 0;
+      font-size: 0.9rem;
       color: var(--gray);
-      padding-left: 0.2rem;
     }
     .cheat {
-      font-size: 0.9rem;
-      color: #d81b60;
+      font-size: 0.85rem;
+      color: #666;
       font-style: italic;
-      padding: 0.5rem 0.8rem;
-      margin: 0.6rem 0 0;
-      background: #fce4ec;
-      border-radius: 6px;
-      border-left: 3px solid #d81b60;
+      margin: 0.3rem 0 0;
     }
     [data-theme="dark"] .cheat {
-      background: #381423;
-      color: #f8bbd0;
+      color: #aaa;
     }
     /* Footer */
     footer {
@@ -296,6 +284,9 @@
       .hero h1 {
         font-size: 1.6rem;
       }
+      .region-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -306,19 +297,19 @@
       <a href="index.html" class="logo-link">
         <div class="logo">ScanSG</div>
       </a>
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="food.html">Explore</a></li>
-    <li><a href="transport.html">Transport</a></li>
-    <li><a href="shopping.html">Shopping</a></li>
-    <li><a href="glossary.html">Singlish</a></li>
-    <li><a href="penalties.html">Penalties</a></li>
-    <li><a href="gst-refund.html">GST Refund</a></li>
-    <li><a href="attractions.html" style="font-weight:700;color:#fff;">Attractions</a></li>
-    <li><button class="dark-mode-toggle" id="darkModeToggle">🌙</button></li>
-  </ul>
-</nav>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li><a href="transport.html">Transport</a></li>
+          <li><a href="shopping.html">Shopping</a></li>
+          <li><a href="glossary.html">Singlish</a></li>
+          <li><a href="penalties.html">Penalties</a></li>
+          <li><a href="gst-refund.html">GST Refund</a></li>
+          <li><a href="attractions.html" style="font-weight:700;color:#fff;">Attractions</a></li>
+          <li><button class="dark-mode-toggle" id="darkModeToggle">🌙</button></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
@@ -328,7 +319,7 @@
       <!-- Hero Intro -->
       <section class="hero">
         <h1>🎫 Singapore Attractions 2025: Paid vs Free + Local Cheats</h1>
-        <p>Want to see Singapore without breaking the bank? We split every attraction by <strong>cost</strong> and give you <strong>cheat codes</strong> to save money. Local hacks included!</p>
+        <p>We’ve packed everything into a clean, scannable layout. See **paid & free attractions** side-by-side, with **local hacks** to save money — all in fewer scrolls.</p>
       </section>
 
       <!-- Trust Banner -->
@@ -342,317 +333,218 @@
         <small>👉 Click our links to support ScanSG & get the best deals!</small>
       </div>
 
-      <p>Singapore has <strong>world-class paid attractions</strong> and <strong>hidden free gems</strong>. Smart travelers use both. We’ve split each region into <strong>Paid</strong> and <strong>Free</strong> so you can plan like a pro.</p>
-      <p><strong>Pro Tip:</strong> Book paid attractions online for discounts. Free spots? Just show up!</p>
+      <p>Singapore has <strong>world-class paid attractions</strong> and <strong>hidden free gems</strong>. We’ve organized them by region in a **compact two-column layout** so you can plan faster and scroll less.</p>
 
-      <!-- Central Region -->
-      <div class="region">
-        <h3>🌆 Central Singapore</h3>
-
-        <div class="attraction">
-          <h4><a href="#" data-link-key="mbs-sky-park" target="_blank">Marina Bay Sands SkyPark <span class="tag paid">Paid</span></a></h4>
-          <p>Iconic infinity pool and panoramic city views. Access only for hotel guests or ticket holders.</p>
-          <div class="cheat">💡 <strong>Cheat:</strong> Book sunset slots via Klook — cheaper than walk-in!</div>
+      <!-- Region Grid -->
+      <div class="region-grid">
+        <!-- Central Region -->
+        <div class="region">
+          <h3>🌆 Central Singapore</h3>
+          <ul class="attraction-list">
+            <li class="attraction-item">
+              <h4><a href="#" data-link-key="mbs-sky-park" target="_blank">Marina Bay Sands SkyPark <span class="tag paid">Paid</span></a></h4>
+              <p>Iconic infinity pool and panoramic city views.</p>
+              <div class="cheat">Cheat: Book sunset slots via Klook — cheaper than walk-in.</div>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#" data-link-key="gardens-bay-combo" target="_blank">Gardens by the Bay (Cloud Forest & Flower Dome) <span class="tag paid">Paid</span></a></h4>
+              <p>Supertrees, futuristic domes, and floral wonders.</p>
+              <div class="cheat">Cheat: Supertree Grove lights are FREE at night.</div>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#" data-link-key="uss-tickets" target="_blank">Universal Studios Singapore (USS) <span class="tag paid">Paid</span></a></h4>
+              <p>Thrilling rides and themed zones on Sentosa Island.</p>
+              <div class="cheat">Cheat: Buy combo tickets with Sentosa Pass for 15% off.</div>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#" data-link-key="sea-aquarium" target="_blank">S.E.A. Aquarium <span class="tag paid">Paid</span></a></h4>
+              <p>One of the world’s largest aquariums.</p>
+              <div class="cheat">Cheat: Book via Pelago for free cancellation.</div>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#" data-link-key="national-gallery" target="_blank">National Gallery Singapore <span class="tag paid">Paid</span></a></h4>
+              <p>World-class Southeast Asian art.</p>
+              <div class="cheat">Cheat: Free entry on Fridays 7–9 PM.</div>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#">Marina Bay Light Show <span class="tag free">Free</span></a></h4>
+              <p>Daily show at 8 PM & 9 PM. Best viewed from Bayfront.</p>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#">Supertree Grove (Night Lights) <span class="tag free">Free</span></a></h4>
+              <p>Free light show at 7:45 PM & 8:45 PM.</p>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#">Southern Ridges & Henderson Waves <span class="tag free">Free</span></a></h4>
+              <p>10km scenic trail connecting parks. Iconic bridge.</p>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#">Chinatown, Little India & Haji Lane <span class="tag free">Free</span></a></h4>
+              <p>Vibrant streets, temples, and boutiques.</p>
+            </li>
+          </ul>
         </div>
 
-        <div class="attraction">
-          <h4><a href="#" data-link-key="gardens-bay-combo" target="_blank">Gardens by the Bay (Cloud Forest & Flower Dome) <span class="tag paid">Paid</span></a></h4>
-          <p>Supertrees, futuristic domes, and floral wonders.</p>
-          <div class="cheat">💡 <strong>Cheat:</strong> Visit Supertree Grove for FREE at night. Only domes require tickets.</div>
+        <!-- East Region -->
+        <div class="region">
+          <h3>🏖️ East Singapore</h3>
+          <ul class="attraction-list">
+            <li class="attraction-item">
+              <h4><a href="#" data-link-key="jewel-changi" target="_blank">Canopy Park @ Jewel Changi <span class="tag paid">Paid</span></a></h4>
+              <p>Topiaries, mazes, and bouncing nets.</p>
+              <div class="cheat">Cheat: Kids under 3 enter free. Visit on weekdays.</div>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#" data-link-key="pulau-ubin-tour" target="_blank">Pulau Ubin Cycling Tour <span class="tag paid">Paid</span></a></h4>
+              <p>Rent bikes and explore the island.</p>
+              <div class="cheat">Cheat: Rent locally for cheaper than tour packages.</div>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#">Rain Vortex @ Jewel Changi <span class="tag free">Free</span></a></h4>
+              <p>World’s tallest indoor waterfall. Open 24/7.</p>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#">East Coast Park <span class="tag free">Free</span></a></h4>
+              <p>Perfect for cycling, BBQs, and beach picnics.</p>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#">Punggol Waterway Park <span class="tag free">Free</span></a></h4>
+              <p>Scenic boardwalks and family trails.</p>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#">Cat Island (Pulau Ubin) <span class="tag free">Free</span></a></h4>
+              <p>Friendly cats near the jetty. Bring treats!</p>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#">Changi Beach Park <span class="tag free">Free</span></a></h4>
+              <p>Quiet beach with views of cargo ships.</p>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#">Simei & Tampines Hawker Centres <span class="tag free">Free</span></a></h4>
+              <p>Local favorites for affordable, delicious food.</p>
+            </li>
+          </ul>
         </div>
 
-        <div class="attraction">
-          <h4><a href="#" data-link-key="uss-tickets" target="_blank">Universal Studios Singapore (USS) <span class="tag paid">Paid</span></a></h4>
-          <p>Thrilling rides and themed zones on Sentosa Island.</p>
-          <div class="cheat">💡 <strong>Cheat:</strong> Buy combo tickets with Sentosa Pass for 15% off!</div>
+        <!-- West Region -->
+        <div class="region">
+          <h3>🎢 West Singapore</h3>
+          <ul class="attraction-list">
+            <li class="attraction-item">
+              <h4><a href="#" data-link-key="night-safari" target="_blank">Night Safari <span class="tag paid">Paid</span></a></h4>
+              <p>World’s first nocturnal zoo. Tram ride is a must!</p>
+              <div class="cheat">Cheat: Buy Mandai All-Access Pass for 3 parks.</div>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#" data-link-key="singapore-zoo" target="_blank">Singapore Zoo <span class="tag paid">Paid</span></a></h4>
+              <p>Top-rated zoo with open enclosures.</p>
+              <div class="cheat">Cheat: NTUC members get 20% off.</div>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#" data-link-key="river-safari" target="_blank">River Safari <span class="tag paid">Paid</span></a></h4>
+              <p>Home to giant pandas and river animals.</p>
+              <div class="cheat">Cheat: Combo tickets save 15%.</div>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#" data-link-key="science-centre" target="_blank">Science Centre Singapore <span class="tag paid">Paid</span></a></h4>
+              <p>Hands-on exhibits for kids and science lovers.</p>
+              <div class="cheat">Cheat: Free entry on your birthday (register online).</div>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#">West Coast Park <span class="tag free">Free</span></a></h4>
+              <p>Family-friendly with playgrounds and cycling paths.</p>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#">NTU Campus <span class="tag free">Free</span></a></h4>
+              <p>Beautiful architecture and art installations.</p>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#">Haw Par Villa <span class="tag free">Free</span></a></h4>
+              <p>Bizarre, colorful statues of Chinese folklore.</p>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#">Jurong Lake Gardens <span class="tag free">Free</span></a></h4>
+              <p>Tranquil lakeside park with walking trails.</p>
+            </li>
+          </ul>
         </div>
 
-        <div class="attraction">
-          <h4><a href="#" data-link-key="sea-aquarium" target="_blank">S.E.A. Aquarium <span class="tag paid">Paid</span></a></h4>
-          <p>One of the world’s largest aquariums.</p>
-          <div class="cheat">💡 <strong>Cheat:</strong> Book via Pelago for free cancellation & bundled deals.</div>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#" data-link-key="national-gallery" target="_blank">National Gallery Singapore <span class="tag paid">Paid</span></a></h4>
-          <p>World-class Southeast Asian art.</p>
-          <div class="cheat">💡 <strong>Cheat:</strong> Free entry on Fridays 7–9 PM!</div>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#" data-link-key="asia-civilisations-museum" target="_blank">Asian Civilisations Museum <span class="tag paid">Paid</span></a></h4>
-          <p>Cultural treasures from across Asia.</p>
-          <div class="cheat">💡 <strong>Cheat:</strong> Free for children under 6.</div>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Marina Bay Light Show <span class="tag free">Free</span></a></h4>
-          <p>Daily light & sound show at 8 PM & 9 PM. Best viewed from Bayfront.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Supertree Grove (Night Lights) <span class="tag free">Free</span></a></h4>
-          <p>Free light show at 7:45 PM & 8:45 PM. Skip the OCBC Skyway if on a budget.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Esplanade – Theatres on the Bay <span class="tag free">Free</span></a></h4>
-          <p>Free performances, rooftop views, and cultural events.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Fort Canning Park <span class="tag free">Free</span></a></h4>
-          <p>Historic green space with trails and ruins.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Chinatown, Little India & Haji Lane <span class="tag free">Free</span></a></h4>
-          <p>Walk through vibrant streets, temples, and boutiques.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Clarke Quay <span class="tag free">Free</span></a></h4>
-          <p>Riverside dining and nightlife. Great for evening walks.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Southern Ridges & Henderson Waves <span class="tag free">Free</span></a></h4>
-          <p>10km scenic trail connecting parks. Henderson Waves is Singapore’s most iconic bridge.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Mount Faber Park <span class="tag free">Free</span></a></h4>
-          <p>Scenic views and gateway to Southern Ridges.</p>
-        </div>
-      </div>
-
-      <!-- East Region -->
-      <div class="region">
-        <h3>🏖️ East Singapore</h3>
-
-        <div class="attraction">
-          <h4><a href="#" data-link-key="jewel-changi" target="_blank">Canopy Park @ Jewel Changi <span class="tag paid">Paid</span></a></h4>
-          <p>Topiaries, mazes, and bouncing nets. Separate from the free Rain Vortex.</p>
-          <div class="cheat">💡 <strong>Cheat:</strong> Kids under 3 enter free. Visit on weekdays!</div>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#" data-link-key="pulau-ubin-tour" target="_blank">Pulau Ubin Cycling Tour <span class="tag paid">Paid</span></a></h4>
-          <p>Rent bikes and explore the island.</p>
-          <div class="cheat">💡 <strong>Cheat:</strong> Rent bikes locally for cheaper than tour packages.</div>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Rain Vortex @ Jewel Changi <span class="tag free">Free</span></a></h4>
-          <p>World’s tallest indoor waterfall. Open to public 24/7.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">East Coast Park <span class="tag free">Free</span></a></h4>
-          <p>Perfect for cycling, BBQs, and beach picnics. Bike rentals available.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Changi Beach Park <span class="tag free">Free</span></a></h4>
-          <p>Quiet beach with views of cargo ships.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Cat Island (Pulau Ubin) <span class="tag free">Free</span></a></h4>
-          <p>Friendly cats near the jetty. Bring treats!</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Punggol Waterway Park <span class="tag free">Free</span></a></h4>
-          <p>Scenic boardwalks and family trails.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Simei & Tampines Hawker Centres <span class="tag free">Free</span></a></h4>
-          <p>Local favorites for affordable, delicious food.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Bedok Reservoir Park <span class="tag free">Free</span></a></h4>
-          <p>Fishing, jogging, and dragon boating. Local favorite.</p>
-        </div>
-      </div>
-
-      <!-- West Region -->
-      <div class="region">
-        <h3>🎢 West Singapore</h3>
-
-        <div class="attraction">
-          <h4><a href="#" data-link-key="night-safari" target="_blank">Night Safari <span class="tag paid">Paid</span></a></h4>
-          <p>World’s first nocturnal zoo. Tram ride is a must!</p>
-          <div class="cheat">💡 <strong>Cheat:</strong> Buy Mandai All-Access Pass for 3 parks in one!</div>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#" data-link-key="singapore-zoo" target="_blank">Singapore Zoo <span class="tag paid">Paid</span></a></h4>
-          <p>Top-rated zoo with open enclosures.</p>
-          <div class="cheat">💡 <strong>Cheat:</strong> NTUC members get 20% off!</div>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#" data-link-key="river-safari" target="_blank">River Safari <span class="tag paid">Paid</span></a></h4>
-          <p>Home to giant pandas and river animals.</p>
-          <div class="cheat">💡 <strong>Cheat:</strong> Combo tickets save 15% vs buying separately.</div>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#" data-link-key="science-centre" target="_blank">Science Centre Singapore <span class="tag paid">Paid</span></a></h4>
-          <p>Hands-on exhibits for kids and science lovers.</p>
-          <div class="cheat">💡 <strong>Cheat:</strong> Free entry on your birthday (register online).</div>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#" data-link-key="bird-park" target="_blank">Bird Paradise (Mandai) <span class="tag paid">Paid</span></a></h4>
-          <p>Home to 8000+ birds in naturalistic habitats.</p>
-          <div class="cheat">💡 <strong>Cheat:</strong> Buy combo with Night Safari for best value.</div>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">West Coast Park <span class="tag free">Free</span></a></h4>
-          <p>Family-friendly with playgrounds and cycling paths.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">NTU Campus <span class="tag free">Free</span></a></h4>
-          <p>Beautiful architecture and art installations.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Boat Quay & Robertson Quay <span class="tag free">Free</span></a></h4>
-          <p>Riverside walks with great sunset views.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Haw Par Villa <span class="tag free">Free</span></a></h4>
-          <p>Bizarre, colorful statues of Chinese folklore. Open 10 AM–7 PM.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Jurong Lake Gardens <span class="tag free">Free</span></a></h4>
-          <p>Tranquil lakeside park with walking trails and pavilions.</p>
-        </div>
-      </div>
-
-      <!-- North Region -->
-      <div class="region">
-        <h3>🌳 North Singapore</h3>
-
-        <div class="attraction">
-          <h4><a href="#" data-link-key="mandai-all-access" target="_blank">Mandai Wildlife Reserve All-Access Pass <span class="tag paid">Paid</span></a></h4>
-          <p>Entry to Zoo, Night Safari, River Safari & Bird Paradise.</p>
-          <div class="cheat">💡 <strong>Cheat:</strong> Buy online for 10% off gate price.</div>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#" data-link-key="mount-faber-park" target="_blank">Mount Faber Ropeway <span class="tag paid">Paid</span></a></h4>
-          <p>Scenic cable car ride with city views.</p>
-          <div class="cheat">💡 <strong>Cheat:</strong> Use an EZ-Link card for 20% off tourist pricing.</div>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#" data-link-key="changi-chapel-museum" target="_blank">Changi Chapel & Museum <span class="tag paid">Paid</span></a></h4>
-          <p>Poignant WWII history and stories of POWs.</p>
-          <div class="cheat">💡 <strong>Cheat:</strong> Free for Singaporeans & PRs.</div>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Bukit Timah Nature Reserve <span class="tag free">Free</span></a></h4>
-          <p>Hike Singapore’s highest point. Lush rainforest.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Sungei Buloh Wetland Reserve <span class="tag free">Free</span></a></h4>
-          <p>Mangroves, mudflats & migratory birds.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Yishun Rainbow Playground <span class="tag free">Free</span></a></h4>
-          <p>Colorful, Instagram-famous playground.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Sembawang Hot Spring Park <span class="tag free">Free</span></a></h4>
-          <p>Cook eggs in the natural hot spring!</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Thomson Nature Park <span class="tag free">Free</span></a></h4>
-          <p>Abandoned rubber plantation with wildlife.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Kranji War Memorial <span class="tag free">Free</span></a></h4>
-          <p>Poignant tribute to WWII soldiers.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Sembawang Park <span class="tag free">Free</span></a></h4>
-          <p>Beach, cycling, and historic naval base remnants.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Upper Peirce Reservoir Park <span class="tag free">Free</span></a></h4>
-          <p>Tranquil forest walk with a reservoir view.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Woodlands Waterfront Park <span class="tag free">Free</span></a></h4>
-          <p>Views of Johor Strait and Malaysia. Great for sunset.</p>
+        <!-- North Region -->
+        <div class="region">
+          <h3>🌳 North Singapore</h3>
+          <ul class="attraction-list">
+            <li class="attraction-item">
+              <h4><a href="#" data-link-key="mandai-all-access" target="_blank">Mandai Wildlife Reserve All-Access Pass <span class="tag paid">Paid</span></a></h4>
+              <p>Entry to Zoo, Night Safari, River Safari & Bird Paradise.</p>
+              <div class="cheat">Cheat: Buy online for 10% off gate price.</div>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#" data-link-key="mount-faber-park" target="_blank">Mount Faber Ropeway <span class="tag paid">Paid</span></a></h4>
+              <p>Scenic cable car ride with city views.</p>
+              <div class="cheat">Cheat: Use EZ-Link card for 20% off.</div>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#" data-link-key="changi-chapel-museum" target="_blank">Changi Chapel & Museum <span class="tag paid">Paid</span></a></h4>
+              <p>Poignant WWII history and stories of POWs.</p>
+              <div class="cheat">Cheat: Free for Singaporeans & PRs.</div>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#">Bukit Timah Nature Reserve <span class="tag free">Free</span></a></h4>
+              <p>Hike Singapore’s highest point. Lush rainforest.</p>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#">Sungei Buloh Wetland Reserve <span class="tag free">Free</span></a></h4>
+              <p>Mangroves, mudflats & migratory birds.</p>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#">Yishun Rainbow Playground <span class="tag free">Free</span></a></h4>
+              <p>Colorful, Instagram-famous playground.</p>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#">Sembawang Hot Spring Park <span class="tag free">Free</span></a></h4>
+              <p>Cook eggs in the natural hot spring!</p>
+            </li>
+            <li class="attraction-item">
+              <h4><a href="#">Kranji War Memorial <span class="tag free">Free</span></a></h4>
+              <p>Poignant tribute to WWII soldiers.</p>
+            </li>
+          </ul>
         </div>
       </div>
 
       <!-- Hidden Gems -->
       <div class="region">
         <h3>✨ Hidden Gems & Local Favorites</h3>
-
-        <div class="attraction">
-          <h4><a href="#" data-link-key="tiong-bahru-bakery" target="_blank">Tiong Bahru Bakery <span class="tag paid">Paid</span></a></h4>
-          <p>Famous for kaya croissants. Great coffee too.</p>
-          <div class="cheat">💡 <strong>Cheat:</strong> Go at 7 AM for fresh batch — no queue!</div>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">MacRitchie Reservoir <span class="tag free">Free</span></a></h4>
-          <p>Canopy walk and jogging trails. Otters sometimes appear!</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Bishan-Ang Mo Kio Park <span class="tag free">Free</span></a></h4>
-          <p>Beautiful riverside park with playgrounds.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Geylang Serai Market <span class="tag free">Free</span></a></h4>
-          <p>Malay culture, textiles, and food. Best during Ramadan.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Labrador Nature Reserve <span class="tag free">Free</span></a></h4>
-          <p>Coastal trails and WWII bunkers.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Old Hill Street Police Station <span class="tag free">Free</span></a></h4>
-          <p>Colorful heritage building with art galleries.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Telok Blangah Hill Park <span class="tag free">Free</span></a></h4>
-          <p>Scenic hilltop views and fitness corners.</p>
-        </div>
-
-        <div class="attraction">
-          <h4><a href="#">Jacob Ballas Gardens <span class="tag free">Free</span></a></h4>
-          <p>Peaceful Japanese-style garden near Bishan.</p>
-        </div>
+        <ul class="attraction-list">
+          <li class="attraction-item">
+            <h4><a href="#" data-link-key="tiong-bahru-bakery" target="_blank">Tiong Bahru Bakery <span class="tag paid">Paid</span></a></h4>
+            <p>Famous for kaya croissants. Great coffee too.</p>
+            <div class="cheat">Cheat: Go at 7 AM for fresh batch — no queue.</div>
+          </li>
+          <li class="attraction-item">
+            <h4><a href="#">MacRitchie Reservoir <span class="tag free">Free</span></a></h4>
+            <p>Canopy walk and jogging trails. Otters sometimes appear!</p>
+          </li>
+          <li class="attraction-item">
+            <h4><a href="#">Bishan-Ang Mo Kio Park <span class="tag free">Free</span></a></h4>
+            <p>Beautiful riverside park with playgrounds.</p>
+          </li>
+          <li class="attraction-item">
+            <h4><a href="#">Geylang Serai Market <span class="tag free">Free</span></a></h4>
+            <p>Malay culture, textiles, and food. Best during Ramadan.</p>
+          </li>
+          <li class="attraction-item">
+            <h4><a href="#">Labrador Nature Reserve <span class="tag free">Free</span></a></h4>
+            <p>Coastal trails and WWII bunkers.</p>
+          </li>
+          <li class="attraction-item">
+            <h4><a href="#">Old Hill Street Police Station <span class="tag free">Free</span></a></h4>
+            <p>Colorful heritage building with art galleries.</p>
+          </li>
+        </ul>
       </div>
 
-      <p><strong>Final Tip:</strong> Mix paid and free attractions each day. Use our <code>data-link-key</code> links to support this site and unlock the best deals!</p>
+      <p><strong>Pro Tip:</strong> Mix paid and free attractions each day. Use our <code>data-link-key</code> links to support this site and unlock the best deals!</p>
       <a href="#top" class="btn" style="font-size: 0.9rem;">⬆️ Back to Top</a>
     </main>
   </div>
@@ -663,8 +555,9 @@
       <p>&copy; 2025 ScanSG. All rights reserved.</p>
       <div style="margin: 1rem 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; font-size: 0.9rem;">
         <a href="index.html">Home</a>
-        <a href="food.html">Eat</a>
-        <a href="shopping.html">Shop</a>
+        <a href="explore.html">Explore</a>
+        <a href="transport.html">Transport</a>
+        <a href="shopping.html">Shopping</a>
         <a href="glossary.html">Singlish</a>
         <a href="penalties.html">Penalties</a>
         <a href="gst-refund.html">GST Refund</a>
