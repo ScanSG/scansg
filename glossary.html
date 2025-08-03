@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-SG">
+<html lang="en-SG" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -414,6 +414,32 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "sp1isxvzim");
 </script>
+
+  <script>
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  const html = document.documentElement;
+
+  if (localStorage.theme === 'dark') {
+    html.setAttribute('data-theme', 'dark');
+    darkModeToggle.textContent = '☀️';
+  } else {
+    html.setAttribute('data-theme', 'light');
+    darkModeToggle.textContent = '🌙';
+  }
+
+  darkModeToggle.addEventListener('click', () => {
+    if (html.getAttribute('data-theme') === 'dark') {
+      html.setAttribute('data-theme', 'light');
+      localStorage.theme = 'light';
+      darkModeToggle.textContent = '🌙';
+    } else {
+      html.setAttribute('data-theme', 'dark');
+      localStorage.theme = 'dark';
+      darkModeToggle.textContent = '☀️';
+    }
+  });
+</script>
+
   
 
 </body>
