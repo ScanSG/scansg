@@ -8,12 +8,18 @@
 }
 
 body {
+  transition: background 0.3s ease;
   font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
   color: var(--text);
   background: var(--bg);
   margin: 0;
   padding: 0;
+}
+
+[data-theme="dark"] {
+  --text: #eee;
+  --bg: #121212;
 }
 
 h1, h2, h3 {
