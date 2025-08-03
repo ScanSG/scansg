@@ -10,26 +10,43 @@
   --header-bg: #111;         /* Header background */
 }
 
+/* Dark Mode Override */
+[data-theme="dark"] {
+  --text: #eee;
+  --bg: #121212;
+  --light-gray: #1e1e1e;
+  --border: #444;
+}
+
+/* Base Body Styles */
 body {
-  transition: background 0.3s ease, color 0.3s ease;
   font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
   color: var(--text);
   background: var(--bg);
   margin: 0;
   padding: 0;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-[data-theme="dark"] {
-  --text: #eee;
-  --bg: #121212;
-}
-
-h1, h2, h3 {
+/* Headings */
+h1, h2, h3, h4 {
   font-family: 'Montserrat', sans-serif;
   color: var(--main);
+  margin: 1.2rem 0 0.6rem;
 }
 
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Logo */
 .logo-link {
   text-decoration: none;
 }
@@ -40,23 +57,30 @@ h1, h2, h3 {
   color: white;
 }
 
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 /* Mobile: Horizontal Scrollable Nav */
 @media (max-width: 768px) {
   nav ul {
     display: flex;
-    flex-wrap: nowrap; /* Prevents wrapping */
+    flex-wrap: nowrap;
     gap: 1rem;
     padding: 0.6rem 0;
-    overflow-x: auto; /* Enable horizontal scroll */
+    overflow-x: auto;
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch; /* Smooth on iOS */
+    -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
     scrollbar-color: var(--accent) transparent;
     margin: 0;
   }
 
   nav li {
-    flex: 0 0 auto; /* Prevent shrinking */
+    flex: 0 0 auto;
     margin: 0;
   }
 
@@ -66,15 +90,17 @@ h1, h2, h3 {
     white-space: nowrap;
   }
 
-  /* Hide scrollbar for Chrome/Safari */
   nav ul::-webkit-scrollbar {
     display: none;
   }
 }
 
-  /* Hide dark mode toggle in nav, move to end */
-  .dark-mode-toggle {
-    font-size: 1.1rem;
-    padding: 0.4rem 0.8rem;
-  }
-
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+  font-size: 1.1rem;
+  padding: 0.4rem 0.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
