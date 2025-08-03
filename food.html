@@ -54,37 +54,37 @@
 
   <!-- Inline CSS -->
   <style>
-:root {
-  --main: #c62828;
-  --accent: #1565c0;
-  --text: #222;
-  --bg: #fff;
-  --gray: #555;
-  --light-gray: #f9f9f9;
-  --border: #ec9a9a;
-  --header-bg: #111;
-}
+    :root {
+      --main: #c62828;
+      --accent: #1565c0;
+      --text: #222;
+      --bg: #fff;
+      --gray: #555;
+      --light-gray: #f9f9f9;
+      --border: #ec9a9a;
+      --header-bg: #111;
+    }
 
-[data-theme="dark"] {
-  --text: #eee;
-  --bg: #121212;
-  --light-gray: #1e1e1e;
-  --border: #444;
-}
+    [data-theme="dark"] {
+      --text: #eee;
+      --bg: #121212;
+      --light-gray: #1e1e1e;
+      --border: #444;
+    }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-body, body * {
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.6;
-  color: var(--text) !important;
-  background: var(--bg);
-  transition: background 0.3s ease, color 0.3s ease;
-}
+    body {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      transition: background 0.3s ease, color 0.3s ease;
+    }
 
     h1, h2, h3, h4, h5 {
       font-family: 'Montserrat', sans-serif;
@@ -174,7 +174,7 @@ body, body * {
     }
 
     .region-card {
-      background: white;
+      background: var(--light-gray);
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -243,7 +243,6 @@ body, body * {
         font-size: 1.6rem;
       }
 
-      /* Stack on mobile */
       .regions-grid {
         grid-template-columns: 1fr;
       }
