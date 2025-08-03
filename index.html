@@ -1,37 +1,110 @@
 <!DOCTYPE html>
 <html lang="en-SG">
 <head>
-
-  <meta name="google-site-verification" content="nLfitge0_MVfpEXIn4cL5qicj6K2hgJwnUShw-TSo1I" />
-
-  
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Your ultimate Singapore guide: transport, food, deals & Singlish. No blur-blur. Just real tips." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="description" content="Your ultimate Singapore guide: local food, transport, deals & cultural tips. No blur-blur. Just real info for tourists and expats." />
+  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://scansg.com/" />
 
   <!-- Preload Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="ScanSG - Real Singapore Tips (No Blur-Blur)" />
-  <meta property="og:description" content="Hawker food, MRT hacks, GST refund, Singlish & more. From 4 years in SG." />
-  <meta property="og:image" content="https://scansg.com/images/og-home.jpg" />
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="ScanSG - Ultimate Singapore Guide 2025" />
+  <meta property="og:description" content="Local food, MRT hacks, GST refunds, Singlish & more. Real tips from 4 years in SG." />
+  <meta property="og:image" content="https://scansg.com/images/og-preview.jpg" />
   <meta property="og:url" content="https://scansg.com" />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ScanSG" />
+  <meta property="og:locale" content="en_SG" />
 
-  <!-- Twitter -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@ScanSG365" />
+  <meta name="twitter:title" content="ScanSG - Ultimate Singapore Guide 2025" />
+  <meta name="twitter:description" content="Local food, MRT hacks, GST refunds, Singlish & more. Real tips from 4 years in SG." />
+  <meta name="twitter:image" content="https://scansg.com/images/og-preview.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/images/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="/images/logo.svg" type="image/svg+xml" />
 
   <!-- Title -->
   <title>ScanSG - Your Real Singapore Guide (No Blur-Blur)</title>
 
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4636396521329327" crossorigin="anonymous"></script>
+  <meta name="google-adsense-account" content="ca-pub-4636396521329327">
 
-  <!-- Favicon -->
-  <link rel="icon" href="/images/favicon.ico" sizes="32x32" />
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HL77S9PP18"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HL77S9PP18', {
+      'anonymize_ip': true  // PDPA-friendly
+    });
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "sp1isxvzim");
+  </script>
+
+  <!-- Redirect & HTTPS Enforcer -->
+  <script>
+    (function() {
+      const targetHostname = 'scansg.com';
+      const currentHostname = window.location.hostname.toLowerCase();
+      const currentProtocol = window.location.protocol;
+      let pathname = window.location.pathname;
+      const search = window.location.search;
+      const hash = window.location.hash;
+
+      if (pathname !== '/' && !pathname.endsWith('/')) {
+        pathname += '/';
+      }
+
+      const needsRedirect = 
+        currentHostname !== targetHostname || 
+        currentProtocol !== 'https:' || 
+        window.location.pathname !== pathname;
+
+      if (needsRedirect) {
+        const newUrl = 'https://' + targetHostname + pathname + search + hash;
+        if (window.location.href !== newUrl) {
+          window.location.href = newUrl;
+        }
+      }
+    })();
+  </script>
+
+  <!-- Structured Data: Website -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ScanSG",
+    "url": "https://scansg.com",
+    "description": "The no-BS Singapore guide for tourists and expats.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://scansg.com/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
+    "sameAs": [
+      "https://www.facebook.com/ScanSG",
+      "https://www.instagram.com/ScanSG",
+      "https://twitter.com/ScanSG"
+    ]
+  }
+  </script>
 
   <!-- Inline Critical CSS -->
   <style>
@@ -43,8 +116,6 @@
       --gray: #555;
       --light-gray: #f9f9f9;
       --border: #ec9a9a;
-      --header-bg: #111;
-      --footer-bg: #1a1a1a;
     }
 
     [data-theme="dark"] {
@@ -91,7 +162,7 @@
 
     /* Header */
     header {
-      background: var(--header-bg);
+      background: #111;
       color: white;
       padding: 0.8rem 0;
       position: sticky;
@@ -202,7 +273,7 @@
     footer {
       margin-top: 4rem;
       padding: 1.5rem 1rem;
-      background: var(--footer-bg);
+      background: #1a1a1a;
       color: #aaa;
       font-size: 0.9rem;
       text-align: center;
@@ -218,6 +289,39 @@
       margin-top: 0.6rem;
     }
 
+    /* Scroll Buttons */
+    .scroll-controls {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      z-index: 999;
+      pointer-events: none;
+    }
+
+    .scroll-btn {
+      width: 44px;
+      height: 44px;
+      border: none;
+      border-radius: 50%;
+      background: var(--accent);
+      color: white;
+      font-size: 1.3rem;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: auto;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .scroll-btn:hover {
+      transform: scale(1.1);
+    }
+
     @media (max-width: 768px) {
       .header-content {
         flex-direction: column;
@@ -229,19 +333,6 @@
       }
     }
   </style>
-<!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HL77S9PP18"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-HL77S9PP18', {
-    'anonymize_ip': true  // ✅ PDPA-FRIENDLY: Hides full IP
-  });
-</script>
-
-
-  
 </head>
 <body>
 
@@ -255,7 +346,6 @@
           <li><a href="food.html">Food</a></li>
           <li><a href="shopping.html">Shopping</a></li>
           <li><a href="glossary.html">Singlish</a></li>
-          <li><a href="penalties.html">Penalties</a></li>
           <li><button class="dark-mode-toggle" id="darkModeToggle">🌙</button></li>
         </ul>
       </nav>
@@ -312,6 +402,12 @@
     </div>
   </footer>
 
+  <!-- Scroll Buttons -->
+  <div class="scroll-controls">
+    <button id="scrollToTop" class="scroll-btn" aria-label="Back to top">⬆️</button>
+    <button id="scrollToFooter" class="scroll-btn" aria-label="Go to footer">⬇️</button>
+  </div>
+
   <!-- Dark Mode Script -->
   <script>
     const darkModeToggle = document.getElementById('darkModeToggle');
@@ -334,17 +430,30 @@
         darkModeToggle.textContent = '☀️';
       }
     });
+
+    // Scroll buttons
+    const scrollToTopBtn = document.getElementById("scrollToTop");
+    const scrollToFooterBtn = document.getElementById("scrollToFooter");
+
+    // Show "Back to Top" after scrolling down
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 300) {
+        scrollToTopBtn.style.display = "flex";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
+    });
+
+    // Click: Scroll to Top
+    scrollToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Click: Scroll to Footer
+    scrollToFooterBtn.addEventListener("click", () => {
+      document.querySelector("footer").scrollIntoView({ behavior: "smooth" });
+    });
   </script>
-
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "sp1isxvzim");
-</script>
-
-  
 
 </body>
 </html>
