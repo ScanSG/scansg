@@ -512,6 +512,89 @@
       </div>
       <p class="disclaimer">⚠️ Info is for general use. Verify before acting.</p>
     </div>
+
+    <!-- =============== PRIVACY POLICY SECTION =============== -->
+
+<!-- Visitor Counter -->
+<div style="text-align: center; padding: 0.5rem 0; margin-top: 0.5rem; font-size: 0.85rem; color: #aaa; border-top: 1px solid #555;">
+  <a href="https://www.scansg.com" title="Visitor statistics">
+    <img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=28qj1py2f4xx477zcg8eqg6uxusuha75" 
+         border="0" alt="visitor counter" 
+         style="height: 12px; margin-left: 0.2rem; vertical-align: middle;">
+    Views
+  </a>
+</div>
+
+<!-- Privacy Policy Toggle -->
+<div style="text-align: center; margin: 0.5rem 0;">
+  <button id="privacyToggle" style="background: none; border: none; color: #888; font-size: 0.85rem; cursor: pointer; text-decoration: underline;">
+    🔐 Privacy Policy
+  </button>
+</div>
+
+<!-- Privacy Policy Content (Hidden by Default) -->
+<div id="privacy-policy" style="display: none; margin-top: 1.5rem; padding: 1.4rem; background: #232323; color: #ddd; border-radius: 8px; text-align: left; font-size: 0.92rem; line-height: 1.6; border: 1px solid #444;">
+  <h3 style="color: #fff; margin-top: 0; font-size: 1.1rem; border-bottom: 1px solid #555; padding-bottom: 0.4rem;">🔐 Privacy Policy</h3>
+  <p><strong>Last Updated:</strong> 27-07-2025</p>
+  <p>Welcome to <strong>ScanSG</strong>. We keep things simple and honest. This policy explains how we handle your information when you visit <strong>scansg.com</strong>.</p>
+
+  <p><strong>1. We Don’t Collect Your Personal Data</strong></p>
+  <ul style="padding-left: 1.3rem; margin: 0.4rem 0;">
+    <li>We do <strong>not collect</strong> your name, email, location, or any personal information — unless you contact us directly via email.</li>
+    <li>We do <strong>not use cookies, trackers, or local storage</strong> for advertising, profiling, or user monitoring.</li>
+  </ul>
+
+  <p><strong>2. Analytics: Just the Basics</strong></p>
+  <p>We use <strong>Google Analytics</strong> in a privacy-friendly way to understand how many people visit our site and how they use it. This includes:</p>
+  <ul style="padding-left: 1.3rem; margin: 0.4rem 0;">
+    <li>Total number of visitors</li>
+    <li>Which pages are viewed most</li>
+    <li>General location (country/city, not your address)</li>
+    <li>Device type (phone, laptop, etc.)</li>
+  </ul>
+  <p>This data is <strong>fully anonymized</strong> — no individual is identified. We use this info only to improve our content and help more people find useful Singapore tips.</p>
+
+  <p><strong>3. Third-Party Services</strong></p>
+  <p>While we don’t track you, this site includes services that may involve limited data use:</p>
+  <ul style="padding-left: 1.3rem; margin: 0.4rem 0;">
+    <li><strong>Google AdSense:</strong> Serves ads and may use cookies for ad personalization (controlled by Google).</li>
+    <li><strong>Affiliate Links:</strong> If you click a link (e.g., Klook, Pelago), the destination site may use tracking.</li>
+    <li>We do not control these third parties and are not responsible for their privacy practices.</li>
+  </ul>
+
+  <p><strong>4. Your Privacy Choices</strong></p>
+  <ul style="padding-left: 1.3rem; margin: 0.4rem 0;">
+    <li>You can disable Google Analytics tracking by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener" style="color: #4fc3f7;">Google Analytics Opt-out Browser Add-on</a>.</li>
+    <li>You can opt out of personalized ads at <a href="https://adssettings.google.com" target="_blank" rel="noopener" style="color: #4fc3f7;">Google Ads Settings</a>.</li>
+    <li>You can browse in incognito/private mode for full anonymity.</li>
+  </ul>
+
+  <p><strong>5. No Data Sharing or Selling</strong></p>
+  <p>We do <strong>not sell, share, or rent</strong> any user data to third parties. Ever.</p>
+
+  <p><strong>6. Policy Changes</strong></p>
+  <p>If our practices change, we’ll update this page and the "Last Updated" date. But our promise stays: <strong>No personal data collection. No creepy tracking.</strong></p>
+
+  <p><strong>7. Contact Us</strong></p>
+  <p>For questions, email: 
+    <a href="mailto:scansg365@gmail.com" data-link-key="contact_email" style="color: #4fc3f7; text-decoration: none;">scansg365@gmail.com</a>
+  </p>
+</div>
+
+<script>
+  // Toggle Privacy Policy
+  const privacyToggle = document.getElementById('privacyToggle');
+  const privacyPolicy = document.getElementById('privacy-policy');
+  privacyToggle.addEventListener('click', () => {
+    if (privacyPolicy.style.display === 'block') {
+      privacyPolicy.style.display = 'none';
+    } else {
+      privacyPolicy.style.display = 'block';
+    }
+  });
+</script>
+
+    
   </footer>
 
   <!-- Dark Mode Script -->
