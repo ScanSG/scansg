@@ -29,6 +29,42 @@
   <!-- Favicon -->
   <link rel="icon" href="/images/favicon.ico" sizes="32x32" />
 
+  <!-- Redirect & HTTPS Enforcer -->
+<script>
+  (function() {
+    const targetHostname = 'scansg.com';
+    const currentHostname = window.location.hostname.toLowerCase();
+    const currentProtocol = window.location.protocol;
+    let pathname = window.location.pathname;
+    const search = window.location.search;
+    const hash = window.location.hash;
+
+    // ✅ FIX: Remove .html trailing slash
+    if (pathname.endsWith('/index.html')) {
+      pathname = '/'; // Redirect /index.html → /
+    } else if (pathname !== '/' && !pathname.endsWith('/') && !pathname.endsWith('.html')) {
+      pathname += '/'; // Only add slash if not root, not ending in /, and not an .html file
+    }
+
+    // Ensure no double slashes
+    pathname = pathname.replace(/\/+/g, '/');
+
+    const needsRedirect = 
+      currentHostname !== targetHostname || 
+      currentProtocol !== 'https:' || 
+      window.location.pathname !== pathname;
+
+    if (needsRedirect) {
+      const newUrl = 'https://' + targetHostname + pathname + search + hash;
+      if (window.location.href !== newUrl) {
+        window.location.href = newUrl;
+      }
+    }
+  })();
+</script>
+
+  
+
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HL77S9PP18"></script>
   <script>
