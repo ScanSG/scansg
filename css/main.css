@@ -41,30 +41,37 @@ h1, h2, h3 {
 @media (max-width: 768px) {
   nav ul {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; /* Prevents wrapping */
     gap: 1rem;
     padding: 0.6rem 0;
-    overflow-x: auto;
+    overflow-x: auto; /* Enable horizontal scroll */
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch; /* Smooth on iOS */
     scrollbar-width: thin;
     scrollbar-color: var(--accent) transparent;
-  }
-
-  nav li {
-    flex: 0 0 auto;
     margin: 0;
   }
 
-  nav a {
+  nav li {
+    flex: 0 0 auto; /* Prevent shrinking */
+    margin: 0;
+  }
+
+  nav a, .dark-mode-toggle {
     font-size: 0.9rem;
     padding: 0.4rem 0.8rem;
     white-space: nowrap;
   }
+
+  /* Hide scrollbar for Chrome/Safari */
+  nav ul::-webkit-scrollbar {
+    display: none;
+  }
+}
 
   /* Hide dark mode toggle in nav, move to end */
   .dark-mode-toggle {
     font-size: 1.1rem;
     padding: 0.4rem 0.8rem;
   }
-}
+
