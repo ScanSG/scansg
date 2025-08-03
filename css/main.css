@@ -1,14 +1,17 @@
 /* Global Styles */
 :root {
-  --main: #c62828;
-  --accent: #1565c0;
-  --text: #222;
-  --bg: #fff;
-  --light-gray: #f9f9f9;
+  --main: #c62828;           /* Red */
+  --accent: #1565c0;         /* Blue */
+  --text: #222;              /* Near black for light mode */
+  --bg: #fff;                /* White background */
+  --gray: #555;              /* Dark gray for subtitles */
+  --light-gray: #f9f9f9;     /* Light gray for cards */
+  --border: #ec9a9a;         /* Light red border */
+  --header-bg: #111;         /* Header background */
 }
 
 body {
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
   font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
   color: var(--text);
