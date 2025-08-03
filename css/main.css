@@ -36,3 +36,35 @@ h1, h2, h3 {
   font-size: 1.4rem;
   color: white;
 }
+
+/* Mobile: Horizontal Scrollable Nav */
+@media (max-width: 768px) {
+  nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    padding: 0.6rem 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) transparent;
+  }
+
+  nav li {
+    flex: 0 0 auto;
+    margin: 0;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+    white-space: nowrap;
+  }
+
+  /* Hide dark mode toggle in nav, move to end */
+  .dark-mode-toggle {
+    font-size: 1.1rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
