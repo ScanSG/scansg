@@ -5,30 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="The Real Singlish Dictionary 2025: Kopi-O, Teh-C-Peng, Shiok, Bo Jio & more. Learn real Singapore slang like a local — no blur-blur." />
   <link rel="canonical" href="https://scansg.com/glossary.html" />
-
   <!-- Preload Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-
   <!-- Open Graph -->
   <meta property="og:title" content="The Real Singlish Dictionary 2025 | No Blur-Blur Guide" />
   <meta property="og:description" content="Learn real Singlish: Kopi-O, Teh-C-Peng, Shiok, Bo Jio & more. From hawker stalls to office banter." />
   <meta property="og:image" content="https://scansg.com/images/og-glossary.jpg" />
   <meta property="og:url" content="https://scansg.com/glossary.html" />
   <meta property="og:type" content="article" />
-
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@ScanSG365" />
-
   <!-- Title -->
   <title>The Real Singlish Dictionary 2025 | No Blur-Blur Guide</title>
-
   <!-- Favicon -->
   <link rel="icon" href="/images/favicon.ico" sizes="32x32" />
-
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4636396521329327" crossorigin="anonymous"></script>
-
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HL77S9PP18"></script>
   <script>
@@ -39,7 +32,6 @@
       'anonymize_ip': true
     });
   </script>
-
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -48,10 +40,8 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "sp1isxvzim");
   </script>
-
   <!-- Load Your links.js -->
   <script src="/js/links.js" defer></script>
-
   <!-- Inline CSS -->
   <style>
     :root {
@@ -64,20 +54,17 @@
       --border: #ec9a9a;
       --header-bg: #111;
     }
-
     [data-theme="dark"] {
       --text: #eee;
       --bg: #121212;
       --light-gray: #1e1e1e;
       --border: #444;
     }
-
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-
     body {
       font-family: 'Open Sans', sans-serif;
       line-height: 1.6;
@@ -85,28 +72,23 @@
       background: var(--bg);
       transition: background 0.3s ease, color 0.3s ease;
     }
-
     h1, h2, h3, h4 {
       font-family: 'Montserrat', sans-serif;
       margin: 1.2rem 0 0.6rem;
       color: var(--main);
     }
-
     a {
       color: var(--accent);
       text-decoration: none;
     }
-
     a:hover {
       text-decoration: underline;
     }
-
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 1rem;
     }
-
     /* Header */
     header {
       background: var(--header-bg);
@@ -116,7 +98,6 @@
       top: 0;
       z-index: 1000;
     }
-
     .header-content {
       display: flex;
       justify-content: space-between;
@@ -125,33 +106,27 @@
       margin: 0 auto;
       padding: 0 1rem;
     }
-
     .logo-link {
       text-decoration: none;
     }
-
     .logo {
       font-weight: 700;
       font-size: 1.4rem;
       color: white;
     }
-
     nav ul {
       display: flex;
       list-style: none;
       gap: 1.5rem;
     }
-
     nav a {
       color: white;
       font-size: 0.95rem;
       font-weight: 600;
     }
-
     nav a:hover {
       color: #4fc3f7;
     }
-
     /* Hero Intro */
     .hero {
       text-align: center;
@@ -160,18 +135,31 @@
       margin: 1rem 0;
       border-radius: 12px;
     }
-
     .hero h1 {
       font-size: 1.8rem;
     }
-
     .hero p {
       font-size: 1.1rem;
       color: var(--gray);
       max-width: 800px;
       margin: 0 auto 1rem;
     }
-
+    /* Section Divider */
+    .section-divider {
+      margin: 2.5rem 0;
+      text-align: center;
+      font-weight: 600;
+      color: var(--main);
+      position: relative;
+    }
+    .section-divider::after {
+      content: "";
+      display: block;
+      height: 2px;
+      background: var(--accent);
+      margin: 0.5rem auto;
+      width: 100px;
+    }
     /* Glossary Grid */
     .glossary-grid {
       display: grid;
@@ -179,40 +167,57 @@
       gap: 1rem;
       margin: 1.5rem 0;
     }
-
     .glossary-term {
       background: var(--light-gray);
       padding: 0.8rem;
       border-radius: 8px;
       border-left: 3px solid var(--accent);
     }
-
     .glossary-term dt {
       font-weight: 600;
       color: var(--text);
       margin-bottom: 0.3rem;
     }
-
     .glossary-term dd {
       margin: 0;
       font-size: 0.95rem;
       color: var(--gray);
     }
-
-    /* Drink Code */
-    .drink-code {
-      background: #e3f2fd;
-      border-left: 4px solid var(--accent);
-      padding: 1.2rem;
+    /* Drink Section */
+    .drinks-container {
       margin: 2rem 0;
+      background: #fff8e1;
+      border-radius: 10px;
+      padding: 1.5rem;
+      border: 1px solid #ffecb3;
+    }
+    .drink-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    .drink-table th,
+    .drink-table td {
+      padding: 0.6rem;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    .drink-table th {
+      background-color: var(--accent);
+      color: white;
+    }
+    .drink-table tr:hover {
+      background-color: #f5f5f5;
+    }
+    .pro-tip {
+      background: #e8f5e8;
+      padding: 0.8rem;
       border-radius: 8px;
+      border-left: 3px solid green;
+      margin: 1rem 0;
+      font-size: 0.95rem;
     }
-
-    .drink-code ul {
-      margin: 0.6rem 0;
-      padding-left: 1.3rem;
-    }
-
     /* Footer */
     footer {
       margin-top: 4rem;
@@ -222,23 +227,19 @@
       font-size: 0.9rem;
       text-align: center;
     }
-
     footer a {
       color: #4fc3f7;
     }
-
     .disclaimer {
       font-size: 0.85rem;
       color: #888;
       margin-top: 0.6rem;
     }
-
     @media (max-width: 768px) {
       .header-content {
         flex-direction: column;
         gap: 0.8rem;
       }
-
       .hero h1 {
         font-size: 1.6rem;
       }
@@ -246,7 +247,6 @@
   </style>
 </head>
 <body>
-
   <!-- Header -->
   <header>
     <div class="header-content">
@@ -276,104 +276,138 @@
         <p>No blur-blur. Just real Singapore slang — from hawker stalls to office banter. Learn it. Use it. <em>Wah Lau, you sound like a local!</em></p>
       </section>
 
-      <p>Whether you're here for 3 days or 3 years, understanding Singlish is the <strong>real shortcut</strong> to fitting in. It’s not English. It’s not Malay. It’s not Chinese. It’s <strong>Singaporean</strong> — a chaotic, beautiful mix of everything.</p>
+      <p>Whether you're here for a long weekend, a work transfer, or just trying to survive your in-laws’ dinner, one thing cuts through the noise: <strong>Singlish</strong>. It’s not about grammar. It’s about <em>vibe</em>.</p>
 
-      <p>Here’s your survival guide. Bookmark it. Share it. And next time someone says <em>“Bo jio me!”</em> — you’ll know exactly what to do.</p>
+      <p>This isn’t textbook English. It’s the language of <strong>hawker queues</strong>, <strong>void deck chess battles</strong>, and <strong>WhatsApp group chats</strong> that blow up at 2am. It’s Malay, Hokkien, Tamil, English, and pure Singaporean attitude — all stir-fried with <em>wok hey</em>.</p>
 
-      <!-- Glossary -->
-      <h2>🔥 Essential Singlish Terms & Phrases</h2>
+      <p>So ditch the dictionary. This is how we <strong>really</strong> talk. Bookmark it. Share it. And next time someone says <em>“Bo jio me!”</em> — you’ll know exactly what to do.</p>
+
+      <!-- Singlish Glossary -->
+      <div class="section-divider">🔥 Essential Singlish Terms</div>
       <div class="glossary-grid">
-        <div class="glossary-term"><dt>Alamak</dt><dd>Expression of shock or frustration (e.g., "Alamak! Where my phone?").</dd></div>
-        <div class="glossary-term"><dt>Ang Moh</dt><dd>Caucasian/Westerner (e.g., "That ang moh speak good Singlish.").</dd></div>
-        <div class="glossary-term"><dt>Aiyoh</dt><dd>Oh no! / Frustration (e.g., "Aiyoh, so late already!").</dd></div>
-        <div class="glossary-term"><dt>Aiyah</dt><dd>Softer frustration or pity (e.g., "Aiyah, poor guy.").</dd></div>
-        <div class="glossary-term"><dt>Bo Jio</dt><dd>Didn’t invite (e.g., "You bo jio me for makan!").</dd></div>
-        <div class="glossary-term"><dt>Bong Kar</dt><dd>Loud, chaotic noise (e.g., "This party so bong kar.").</dd></div>
-        <div class="glossary-term"><dt>Cena</dt><dd>Dinner (from "supper" backwards) (e.g., "Where to cena?").</dd></div>
-        <div class="glossary-term"><dt>Chao Keng</dt><dd>Over-the-top, flashy (e.g., "Why so chao keng for simple meal?").</dd></div>
-        <div class="glossary-term"><dt>Chao Tao</dt><dd>To mess up or ruin (e.g., "You chao tao the plan.").</dd></div>
-        <div class="glossary-term"><dt>Cher</dt><dd>Teacher (e.g., "My math cher very strict.").</dd></div>
-        <div class="glossary-term"><dt>Cher, Cher</dt><dd>Repetitive nagging (e.g., "Stop cher cher like my mum.").</dd></div>
-        <div class="glossary-term"><dt>Chio Bu</dt><dd>Attractive girl (playful, use carefully!).</dd></div>
-        <div class="glossary-term"><dt>Chope</dt><dd>To reserve a seat (usually with tissue paper).</dd></div>
-        <div class="glossary-term"><dt>Chui</dt><dd>To laze around or waste time (e.g., "Stop chui, go work!").</dd></div>
-        <div class="glossary-term"><dt>Cheat</dt><dd>Surprisingly good (e.g., "This $3 meal so cheat!").</dd></div>
-        <div class="glossary-term"><dt>Dabao</dt><dd>Takeaway (e.g., "Dabao this chicken rice.").</dd></div>
-        <div class="glossary-term"><dt>Diao Suay</dt><dd>Extremely unlucky (e.g., "Diao suay one, rain during picnic.").</dd></div>
-        <div class="glossary-term"><dt>Dun Play Play</dt><dd>Stop messing around — be serious.</dd></div>
-        <div class="glossary-term"><dt>Dun Anyhow</dt><dd>Don’t be reckless or careless.</dd></div>
-        <div class="glossary-term"><dt>Blur Like Sotong</dt><dd>Clueless (sotong = squid).</dd></div>
-        <div class="glossary-term"><dt>Fully Booked</dt><dd>Sold out, completely full.</dd></div>
-        <div class="glossary-term"><dt>Gahmen</dt><dd>Government (often used mockingly).</dd></div>
-        <div class="glossary-term"><dt>Gostan</dt><dd>To reverse (e.g., "Gostan your car!").</dd></div>
-        <div class="glossary-term"><dt>Haiyah</dt><dd>Exasperation (e.g., "Haiyah, why like that?").</dd></div>
-        <div class="glossary-term"><dt>Hao</dt><dd>Good, great (e.g., "This hao!").</dd></div>
-        <div class="glossary-term"><dt>Heng</dt><dd>Lucky (e.g., "So heng you get table!"). Opposite: siong.</dd></div>
-        <div class="glossary-term"><dt>Jin</dt><dd>Face/dignity (e.g., "He lose jin in front of boss.").</dd></div>
-        <div class="glossary-term"><dt>Kaishin</dt><dd>Very angry (e.g., "Boss kaishin when you late.").</dd></div>
-        <div class="glossary-term"><dt>Kan Cheong</dt><dd>Anxious or nervous (e.g., "Don’t kan cheong, exam will be ok.").</dd></div>
-        <div class="glossary-term"><dt>Kiasu</dt><dd>Fear of losing out (e.g., "So kiasu must take all samples!").</dd></div>
-        <div class="glossary-term"><dt>Kaypoh</dt><dd>Busybody (e.g., "Stop kaypoh, mind your own!").</dd></div>
-        <div class="glossary-term"><dt>Kena</dt><dd>Got (something bad) (e.g., "He kena scold.").</dd></div>
-        <div class="glossary-term"><dt>Kulit</dt><dd>Playful banter or joking (e.g., "We just kulit, don’t take serious.").</dd></div>
-        <div class="glossary-term"><dt>Lah</dt><dd>Ultimate Singlish particle — adds emphasis (e.g., "Don’t worry lah!").</dd></div>
-        <div class="glossary-term"><dt>Leh</dt><dd>Softens tone or shows mild protest (e.g., "Wait leh!", "So tired leh!").</dd></div>
-        <div class="glossary-term"><dt>Liao</dt><dd>Already (e.g., "Eat liao.", "Finish liao.").</dd></div>
-        <div class="glossary-term"><dt>Lor</dt><dd>"Obviously" or dismissive (e.g., "He never come, lor.").</dd></div>
-        <div class="glossary-term"><dt>Makan</dt><dd>To eat (e.g., "Time to makan!").</dd></div>
-        <div class="glossary-term"><dt>Mai Sei</dt><dd>Don’t care / can’t be bothered (e.g., "Mai sei, you decide.").</dd></div>
-        <div class="glossary-term"><dt>MB</dt><dd>Must-buy (e.g., "This durian MB before fly back.").</dd></div>
-        <div class="glossary-term"><dt>Mugger</dt><dd>Something very cheap or a great deal (e.g., "This $2 coffee real mugger!").</dd></div>
-        <div class="glossary-term"><dt>Nia</dt><dd>Sarcasm or disbelief (e.g., "Nia, you say you not hungry?").</dd></div>
-        <div class="glossary-term"><dt>On-Die</dt><dd>"I swear" or "for real" (e.g., "On-die, this best laksa!").</dd></div>
-        <div class="glossary-term"><dt>Orh</dt><dd>Mild surprise (e.g., "Orh, so like that.").</dd></div>
-        <div class="glossary-term"><dt>Paiseh</dt><dd>Embarrassed or shy (e.g., "Paiseh to ask for discount.").</dd></div>
-        <div class="glossary-term"><dt>Pang Sui</dt><dd>Wasteful or extravagant (e.g., "Buying iPhone every year so pang sui.").</dd></div>
-        <div class="glossary-term"><dt>Pao</dt><dd>To run away or flee (e.g., "When teacher come, everyone pao.").</dd></div>
-        <div class="glossary-term"><dt>Press</dt><dd>To rush or hurry (e.g., "Press one, train coming!").</dd></div>
-        <div class="glossary-term"><dt>Proper</dt><dd>Fancy or stylish (e.g., "You dress so proper tonight!").</dd></div>
-        <div class="glossary-term"><dt>Sabo</dt><dd>To prank or set someone up (e.g., "He sabo me by telling boss I was late.").</dd></div>
-        <div class="glossary-term"><dt>Sia</dt><dd>Disgusted or grossed out (e.g., "Sia, so many mosquitoes!").</dd></div>
-        <div class="glossary-term"><dt>Sibei</dt><dd>Very, extremely (e.g., "Sibei kiasu.").</dd></div>
-        <div class="glossary-term"><dt>Suay</dt><dd>Unlucky (e.g., "Suay one, queue so long.").</dd></div>
-        <div class="glossary-term"><dt>Tahan</dt><dd>To endure (e.g., "Can you tahan the heat?").</dd></div>
-        <div class="glossary-term"><dt>Wah Hao</dt><dd>Wow, impressive! (e.g., "Wah hao, you finish all?!").</dd></div>
-        <div class="glossary-term"><dt>Wah Lau</dt><dd>Oh my! / Shock (e.g., "Wah Lau, so expensive!").</dd></div>
-        <div class="glossary-term"><dt>Wah Piang</dt><dd>Strong expletive — intense shock or anger (use carefully!).</dd></div>
-        <div class="glossary-term"><dt>Wah So</dt><dd>Sarcastic "Oh really?" (e.g., "Wah so choy?").</dd></div>
-        <div class="glossary-term"><dt>Wei</dt><dd>Hey! Attention-getter (e.g., "Wei, you forget your bag!").</dd></div>
-        <div class="glossary-term"><dt>Wok Hey</dt><dd>The smoky flavor from stir-fry — also means energy/vibe.</dd></div>
-        <div class="glossary-term"><dt>Wan Ting</dt><dd>One thing (e.g., "Wan ting, I not agree.").</dd></div>
-        <div class="glossary-term"><dt>Yuan Yang</dt><dd>Coffee-tea mix drink — also used socially (e.g., "Let’s yuan yang later?").</dd></div>
-        <div class="glossary-term"><dt>Zai</dt><dd>Skilled or capable (e.g., "He very zai with computers.").</dd></div>
-        <div class="glossary-term"><dt>Zorro</dt><dd>To leave without saying goodbye (e.g., "He just zorro after dinner!").</dd></div>
-
-        <!-- Bonus Terms -->
-        <div class="glossary-term"><dt>Siau</dt><dd>Small, insignificant (e.g., "That problem so siau, don’t mind.").</dd></div>
-        <div class="glossary-term"><dt>Suay</dt><dd>Unlucky (e.g., "Suay one, queue so long.").</dd></div>
-        <div class="glossary-term"><dt>Can or Not?</dt><dd>Can you do it? (e.g., "Can or not, finish by tomorrow?").</dd></div>
-        <div class="glossary-term"><dt>One Chicken Rice, Please</dt><dd>How to order like a local — polite, simple, no blur.</dd></div>
-        <div class="glossary-term"><dt>Don’t Play Play</dt><dd>Stop messing around — be serious.</dd></div>
-        <div class="glossary-term"><dt>Not Bad, Hor?</dt><dd>Praise with a question (e.g., "This chicken rice not bad, hor?").</dd></div>
-        <div class="glossary-term"><dt>Same Same</dt><dd>Very similar (e.g., "This laksa same same like home.").</dd></div>
-        <div class="glossary-term"><dt>Very Shy</dt><dd>Very embarrassed (e.g., "So shy to ask for tissue paper."),</dd></div>
-        <div class="glossary-term"><dt>Never Mind</dt><dd>It's okay, don't worry (e.g., "You late, never mind.").</dd></div>
-        <div class="glossary-term"><dt>Got or Not?</dt><dd>Do you have it? (e.g., "Got toilet paper or not?").</dd></div>
+        <div class="glossary-term"><dt>Alamak</dt><dd>Shock or frustration (e.g., "Alamak! Where my phone?").</dd></div>
+        <div class="glossary-term"><dt>Ang Moh</dt><dd>Westerner (e.g., "That ang moh speak good Singlish.")</dd></div>
+        <div class="glossary-term"><dt>Aiyoh / Aiyah</dt><dd>Frustration (aiyoh) or pity (aiyah) (e.g., "Aiyoh, so late!"; "Aiyah, poor guy.")</dd></div>
+        <div class="glossary-term"><dt>Bo Jio</dt><dd>Didn’t invite — a social crime (e.g., "You bo jio me for makan!")</dd></div>
+        <div class="glossary-term"><dt>Bong Kar</dt><dd>Loud, chaotic (e.g., "This party so bong kar.")</dd></div>
+        <div class="glossary-term"><dt>Cena</dt><dd>Dinner (from "supper" backwards) (e.g., "Where to cena?")</dd></div>
+        <div class="glossary-term"><dt>Chao Keng</dt><dd>Flashy, over-the-top (e.g., "Why so chao keng for $5 meal?")</dd></div>
+        <div class="glossary-term"><dt>Cher</dt><dd>Teacher (e.g., "My math cher very strict.")</dd></div>
+        <div class="glossary-term"><dt>Cher Cher</dt><dd>Nagging (e.g., "Stop cher cher like my mum.")</dd></div>
+        <div class="glossary-term"><dt>Chio Bu</dt><dd>Attractive girl (use carefully!)</dd></div>
+        <div class="glossary-term"><dt>Chope</dt><dd>To reserve a seat — usually with tissue paper (sacred ritual)</dd></div>
+        <div class="glossary-term"><dt>Chui</dt><dd>To laze around (e.g., "Stop chui, go work!")</dd></div>
+        <div class="glossary-term"><dt>Cheat</dt><dd>Surprisingly good (e.g., "This $3 meal so cheat!")</dd></div>
+        <div class="glossary-term"><dt>Dabao</dt><dd>Takeaway (e.g., "Dabao this chicken rice.")</dd></div>
+        <div class="glossary-term"><dt>Diao Suay</dt><dd>Extremely unlucky (e.g., "Diao suay — rain during BBQ.")</dd></div>
+        <div class="glossary-term"><dt>Dun Play Play</dt><dd>Stop messing around — be serious</dd></div>
+        <div class="glossary-term"><dt>Dun Anyhow</dt><dd>Don’t be reckless</dd></div>
+        <div class="glossary-term"><dt>Blur Like Sotong</dt><dd>Clueless (sotong = squid)</dd></div>
+        <div class="glossary-term"><dt>Fully Booked</dt><dd>Sold out, full</dd></div>
+        <div class="glossary-term"><dt>Gahmen</dt><dd>Government (often said with side-eye)</dd></div>
+        <div class="glossary-term"><dt>Gostan</dt><dd>To reverse (e.g., "Gostan your car!")</dd></div>
+        <div class="glossary-term"><dt>Haiyah</dt><dd>Exasperation (e.g., "Haiyah, why like that?")</dd></div>
+        <div class="glossary-term"><dt>Hao / Wah Hao</dt><dd>Good / Wow, impressive! (e.g., "This hao!" / "Wah hao!")</dd></div>
+        <div class="glossary-term"><dt>Heng</dt><dd>Lucky (opposite: siong)</dd></div>
+        <div class="glossary-term"><dt>Jin</dt><dd>Face/dignity (e.g., "He lose jin in front of boss.")</dd></div>
+        <div class="glossary-term"><dt>Kaishin</dt><dd>Very angry (e.g., "Boss kaishin when you late.")</dd></div>
+        <div class="glossary-term"><dt>Kan Cheong</dt><dd>Anxious (e.g., "Don’t kan cheong, exam will be ok.")</dd></div>
+        <div class="glossary-term"><dt>Kiasu</dt><dd>Fear of losing out (e.g., "So kiasu must take all samples!")</dd></div>
+        <div class="glossary-term"><dt>Kaypoh</dt><dd>Busybody (e.g., "Stop kaypoh, mind your own!")</dd></div>
+        <div class="glossary-term"><dt>Kena</dt><dd>Got (something bad) (e.g., "He kena scold.")</dd></div>
+        <div class="glossary-term"><dt>Kulit</dt><dd>Playful teasing (e.g., "We just kulit, don’t take serious.")</dd></div>
+        <div class="glossary-term"><dt>Lah / Leh / Lor / Meh</dt><dd>Singlish seasoning:  
+          <strong>Lah</strong> = emphasis (“Don’t worry lah!”)  
+          <strong>Leh</strong> = softens (“Wait leh!”)  
+          <strong>Lor</strong> = obvious (“He never come, lor.”)  
+          <strong>Meh</strong> = doubt (“Really meh?”)</dd></div>
+        <div class="glossary-term"><dt>Liao</dt><dd>Already (e.g., "Eat liao.")</dd></div>
+        <div class="glossary-term"><dt>Makan</dt><dd>To eat — national sport (e.g., "Time to makan!")</dd></div>
+        <div class="glossary-term"><dt>Mai Sei</dt><dd>Don’t care (e.g., "Mai sei, you decide.")</dd></div>
+        <div class="glossary-term"><dt>MB</dt><dd>Must-buy (e.g., "This durian MB before fly back.")</dd></div>
+        <div class="glossary-term"><dt>Mugger</dt><dd>Great deal (e.g., "$2 coffee real mugger!")</dd></div>
+        <div class="glossary-term"><dt>Nia</dt><dd>Sarcasm (e.g., "Nia, you say you not hungry?")</dd></div>
+        <div class="glossary-term"><dt>On-Die</dt><dd>"I swear" (e.g., "On-die, this best laksa!")</dd></div>
+        <div class="glossary-term"><dt>Orh</dt><dd>Mild surprise (e.g., "Orh, so like that.")</dd></div>
+        <div class="glossary-term"><dt>Paiseh</dt><dd>Embarrassed (e.g., "Paiseh to ask for discount.")</dd></div>
+        <div class="glossary-term"><dt>Pang Sui</dt><dd>Wasteful (e.g., "Buying iPhone every year so pang sui.")</dd></div>
+        <div class="glossary-term"><dt>Pao</dt><dd>To run away (e.g., "When teacher come, everyone pao.")</dd></div>
+        <div class="glossary-term"><dt>Press</dt><dd>To rush (e.g., "Press one, train coming!")</dd></div>
+        <div class="glossary-term"><dt>Proper</dt><dd>Fancy (e.g., "You dress so proper tonight!")</dd></div>
+        <div class="glossary-term"><dt>Sabo</dt><dd>To prank (e.g., "He sabo me by telling boss I was late.")</dd></div>
+        <div class="glossary-term"><dt>Sia</dt><dd>Disgusted (e.g., "Sia, so many mosquitoes!")</dd></div>
+        <div class="glossary-term"><dt>Sibei</dt><dd>Very, extremely (e.g., "Sibei kiasu.")</dd></div>
+        <div class="glossary-term"><dt>Suay</dt><dd>Unlucky (e.g., "Suay one, queue so long.")</dd></div>
+        <div class="glossary-term"><dt>Tahan</dt><dd>To endure (e.g., "Can you tahan the heat?")</dd></div>
+        <div class="glossary-term"><dt>Wah Lau / Wah Piang</dt><dd>Shock ("Wah Lau!") / Strong anger ("Wah Piang!" — use carefully!)</dd></div>
+        <div class="glossary-term"><dt>Wah So</dt><dd>Sarcastic "Oh really?" (e.g., "Wah so choy?")</dd></div>
+        <div class="glossary-term"><dt>Wei</dt><dd>Hey! (e.g., "Wei, you forget your bag!")</dd></div>
+        <div class="glossary-term"><dt>Wok Hey</dt><dd>Smoky flavor — also means energy</dd></div>
+        <div class="glossary-term"><dt>Wan Ting</dt><dd>One thing (e.g., "Wan ting, I not agree.")</dd></div>
+        <div class="glossary-term"><dt>Yuan Yang</dt><dd>Coffee-tea mix — also means "hang out"</dd></div>
+        <div class="glossary-term"><dt>Zai</dt><dd>Skilled (e.g., "He very zai with computers.")</dd></div>
+        <div class="glossary-term"><dt>Zorro</dt><dd>To leave without saying goodbye</dd></div>
+        <div class="glossary-term"><dt>Can or Not?</dt><dd>"Is it possible?" (e.g., "Can or not, finish by tomorrow?")</dd></div>
+        <div class="glossary-term"><dt>Got or Not?</dt><dd>"Do you have it?" (e.g., "Got tissue or not?")</dd></div>
+        <div class="glossary-term"><dt>Never Mind</dt><dd>It's okay (e.g., "You late, never mind.")</dd></div>
+        <div class="glossary-term"><dt>Not Bad, Hor?</dt><dd>Praise with a question (e.g., "This chicken rice not bad, hor?")</dd></div>
+        <div class="glossary-term"><dt>Same Same</dt><dd>Very similar (e.g., "This laksa same same like home.")</dd></div>
       </div>
 
-      <!-- Drink Code -->
-      <div class="drink-code">
-        <h3>🥤 Kopi & Teh Code: How to Order Like a Local</h3>
+      <!-- Drinks Section -->
+      <div class="section-divider">🥤 The Ultimate Kopi & Teh Guide</div>
+      <div class="drinks-container">
+        <p><strong>Singapore runs on two things: makan and kopi.</strong> But ordering drinks here isn’t just about thirst — it’s a cultural ritual. Get it wrong? The uncle might give you the <em>look</em>. Get it right? You’re one of us.</p>
+
+        <h3>🔤 The Drink Code</h3>
+        <table class="drink-table">
+          <thead>
+            <tr>
+              <th>Code</th>
+              <th>Meaning</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Kopi</strong></td><td>Coffee (with sugar & evaporated milk)</td></tr>
+            <tr><td><strong>Teh</strong></td><td>Tea</td></tr>
+            <tr><td><strong>O</strong></td><td>Without sugar (but sweet — uses gula melaka!)</td></tr>
+            <tr><td><strong>C</strong></td><td>With <em>condensed milk</em> (rich, creamy)</td></tr>
+            <tr><td><strong>Kosong</strong></td><td>No sugar at all</td></tr>
+            <tr><td><strong>Peng</strong></td><td>Iced</td></tr>
+            <tr><td><strong>Siew Dai</strong></td><td>Less sugar</td></tr>
+            <tr><td><strong>Gao</strong></td><td>Stronger (more tea/coffee)</td></tr>
+            <tr><td><strong>Wa</strong></td><td>"One" — e.g., "Kopi-O wa!"</td></tr>
+          </tbody>
+        </table>
+
+        <div class="pro-tip">
+          <strong>Pro Tip:</strong> Add <em>"wa"</em> to sound fluent. Instead of “One Kopi-C-Peng”, say <strong>“Kopi-C-Peng wa!”</strong> — instant street cred.
+        </div>
+
+        <h3>🔥 Popular Combinations</h3>
         <ul>
-          <li><strong>Kopi</strong> = Coffee</li>
-          <li><strong>Teh</strong> = Tea</li>
-          <li><strong>O</strong> = Without sugar</li>
-          <li><strong>C</strong> = With condensed milk</li>
-          <li><strong>Peng</strong> = Iced</li>
-          <li><strong>Siew Dai</strong> = Less sugar</li>
-          <li><strong>Gao</strong> = Stronger</li>
+          <li><strong>Kopi-O</strong> – Black coffee, sweetened with palm sugar</li>
+          <li><strong>Kopi-C</strong> – Coffee with condensed milk (classic sweet-creamy)</li>
+          <li><strong>Kopi-C-Peng</strong> – Iced coffee with condensed milk — <em>the OG</em></li>
+          <li><strong>Teh-O-Kosong</strong> – Tea, no sugar — for the health-conscious</li>
+          <li><strong>Teh-C-Siew-Dai-Peng</strong> – Iced tea, condensed milk, less sugar — balanced perfection</li>
+          <li><strong>Kopi-Gao-Kosong</strong> – Super strong black coffee, no sugar — coder fuel</li>
+          <li><strong>Teh-O-Gao-Peng</strong> – Strong unsweetened iced tea — uncle’s favourite</li>
         </ul>
-        <p><strong>Example:</strong> <em>Teh-C-Peng</em> = Iced tea with condensed milk.</p>
+
+        <h3>🍹 Beyond Kopi: Local Drink Slang</h3>
+        <ul>
+          <li><strong>Yuan Yang</strong> – Coffee + tea mix. Also means “Let’s hang out” socially.</li>
+          <li><strong>Soft Drink</strong> – Any fizzy drink (Coke, 7-Up). “One soft drink, kosong!” = Coke Zero.</li>
+          <li><strong>Bandung</strong> – Rose syrup + milk. Pink, sweet, nostalgic.</li>
+          <li><strong>Sugarcane Juice</strong> – Freshly pressed. “One sugarcane, peng!”</li>
+          <li><strong>Ice Lemon Tea</strong> – Always <em>Teh-O-Peng + lemon</em>. Never ask without “ice” — it’s assumed.</li>
+        </ul>
+      </div>
+
+      <!-- Final Tip -->
+      <div class="pro-tip">
+        <strong>Final Tip:</strong> Speak with <em>feeling</em>, not perfection. End with <em>lah</em>, use <em>sibei</em> for emphasis, and if you forget a word — just point and say <strong>“That one, wa!”</strong> You’ll be fine.
       </div>
 
       <a href="#top" class="btn" style="font-size: 0.9rem;">⬆️ Back to Top</a>
@@ -401,7 +435,6 @@
   <script>
     const darkModeToggle = document.getElementById('darkModeToggle');
     const html = document.documentElement;
-
     if (localStorage.theme === 'dark') {
       html.setAttribute('data-theme', 'dark');
       darkModeToggle.textContent = '☀️';
@@ -409,7 +442,6 @@
       html.setAttribute('data-theme', 'light');
       darkModeToggle.textContent = '🌙';
     }
-
     darkModeToggle.addEventListener('click', () => {
       if (html.getAttribute('data-theme') === 'dark') {
         html.setAttribute('data-theme', 'light');
@@ -422,6 +454,5 @@
       }
     });
   </script>
-
 </body>
 </html>
