@@ -1,1 +1,451 @@
+<!DOCTYPE html>
+<html lang="en-SG" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About ScanSG: A no-frills guide to Singapore built from personal experience. Honest, updated, and free." />
+  <link rel="canonical" href="https://scansg.com/about.html" />
+  <!-- Preload Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <!-- Open Graph -->
+  <meta property="og:title" content="About ScanSG | A Love Letter to Singapore" />
+  <meta property="og:description" content="A personal guide built by someone who loves Singapore. No corporate fluff. Just real tips." />
+  <meta property="og:image" content="https://scansg.com/images/og-about.jpg" />
+  <meta property="og:url" content="https://scansg.com/about.html" />
+  <meta property="og:type" content="website" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@ScanSG365" />
+  <!-- Title -->
+  <title>About ScanSG | A Love Letter to Singapore</title>
+  <!-- Favicon -->
+  <link rel="icon" href="/images/favicon.ico" sizes="32x32" />
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4636396521329327" crossorigin="anonymous"></script>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HL77S9PP18"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HL77S9PP18', {
+      'anonymize_ip': true
+    });
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "sp1isxvzim");
+  </script>
+  <!-- Load Your links.js -->
+  <script src="/js/links.js" defer></script>
+  <!-- Inline CSS -->
+  <style>
+    :root {
+      --main: #c62828;
+      --accent: #1565c0;
+      --text: #222;
+      --bg: #fff;
+      --gray: #555;
+      --light-gray: #f9f9f9;
+      --border: #ec9a9a;
+      --header-bg: #111;
+    }
+    [data-theme="dark"] {
+      --text: #eee;
+      --bg: #121212;
+      --gray: #aaa;
+      --light-gray: #1e1e1e;
+      --border: #444;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      margin: 1.2rem 0 0.6rem;
+      color: var(--main);
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    /* Header */
+    header {
+      background: var(--header-bg);
+      color: white;
+      padding: 0.8rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .logo-link {
+      text-decoration: none;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: white;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+    nav a {
+      color: white;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+    nav a:hover {
+      color: #4fc3f7;
+    }
+    /* Hero Intro */
+    .hero {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      background: linear-gradient(135deg, #fff9c4 0%, #ffecb3 100%);
+      margin: 1rem 0;
+      border-radius: 12px;
+      border: 1px solid #ffe082;
+    }
+    [data-theme="dark"] .hero {
+      background: linear-gradient(135deg, #332a00 0%, #2a2000 100%);
+      border-color: #554400;
+    }
+    .hero h1 {
+      font-size: 1.8rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--gray);
+      max-width: 800px;
+      margin: 0 auto 1rem;
+    }
+    /* About Content */
+    .about-content {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: var(--light-gray);
+      border-radius: 12px;
+      border-left: 5px solid var(--accent);
+    }
+    [data-theme="dark"] .about-content {
+      background: #1e1e1e;
+    }
+    .about-content h3 {
+      color: #fff;
+      margin-top: 0;
+      font-size: 1.1rem;
+      border-bottom: 1px solid #555;
+      padding-bottom: 0.4rem;
+    }
+    .about-content p {
+      margin: 1rem 0;
+      font-size: 1rem;
+    }
+    .about-content em {
+      font-style: italic;
+      color: var(--gray);
+    }
+    .about-content strong {
+      color: var(--main);
+    }
+    .thank-you-note {
+      font-weight: 600;
+      color: var(--accent);
+      margin-top: 1rem;
+    }
+    .support-box {
+      background: #333;
+      padding: 0.8rem;
+      border-radius: 6px;
+      margin: 1.5rem 0;
+      font-style: italic;
+    }
+    .support-box ul {
+      padding-left: 1.3rem;
+      margin: 0.5rem 0 0;
+    }
+    .support-box li {
+      margin: 0.4rem 0;
+    }
+    .support-box a {
+      color: #4fc3f7;
+      text-decoration: underline;
+    }
+    /* Footer */
+    footer {
+      margin-top: 4rem;
+      padding: 1.5rem 1rem;
+      background: #1a1a1a;
+      color: #aaa;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    [data-theme="dark"] footer {
+      background: #000;
+      color: #888;
+    }
+    footer a {
+      color: #4fc3f7;
+    }
+    .disclaimer {
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 0.6rem;
+    }
+    [data-theme="dark"] .disclaimer {
+      color: #666;
+    }
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="logo-link">
+        <div class="logo">ScanSG</div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="food.html">Explore</a></li>
+          <li><a href="transport.html">Transport</a></li>
+          <li><a href="shopping.html">Shopping</a></li>
+          <li><a href="glossary.html">Singlish</a></li>
+          <li><a href="penalties.html">Penalties</a></li>
+          <li><a href="gst-refund.html">GST Refund</a></li>
+          <li><a href="attractions.html">Attractions</a></li>
+          <li><button class="dark-mode-toggle" id="darkModeToggle">🌙</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  <!-- Main -->
+  <div class="container">
+    <main>
+      <!-- Hero Intro -->
+      <section class="hero">
+        <h1>✨ About ScanSG</h1>
+        <p>A quiet project by someone who just really likes Singapore.</p>
+      </section>
+
+      <!-- About Content -->
+      <div class="about-content">
+        <h3>✨ About ScanSG</h3>
+        <p><em>A quiet project by someone who just really likes Singapore.</em></p>
+
+        <p>
+          Look, I’ll be honest — I’m not the government. Not a travel company. Not even a proper website guy. Just a <strong>foreigner who’s been living in Singapore for 4 years</strong>, falling in love with this place one kaya toast at a time.
+        </p>
+
+        <p>
+          It all started as a personal list of notes: where to eat, how not to get fined, which MRT pass saves money, why durian smells like that… Then one day I thought: <em>“Hey, maybe someone else could use this too.”</em>
+        </p>
+
+        <p>
+          So I cleaned it up. Added some structure. Fixed a million typos. And here we are — <strong>ScanSG</strong>, a no-frills, no-ego guide built entirely from <strong>personal experience and public info</strong>.
+        </p>
+
+        <p>
+          Everything here is gathered from official sources, forums, friends, and my own trial-and-error (sometimes <em>a lot</em> of error). I update it regularly because I care — not because I’m selling anything.
+        </p>
+
+        <p>
+          This is <strong>not an official website</strong>. It’s not affiliated with any government agency, tourism board, or corporation. Just one person trying to help others navigate Singapore a little easier — whether you're here for 3 days or 3 years.
+        </p>
+
+        <p>
+          If you found this useful, I’m glad. And if you want to say thanks?
+        </p>
+
+        <div class="support-box">
+          You can:
+          <ul>
+            <li>📧 <strong>Email me</strong> at <a href="mailto:scansg365@gmail.com" data-link-key="contact_email">scansg365@gmail.com</a> — just say hi or share your feedback.</li>
+            <li>☕ <strong>Buy me a </strong> Teh Tarik — purely optional :)</li>
+            <li>📢 <strong>Share this page</strong> with someone who’s coming to SG</li>
+            <li>📢 <strong>Give me PR if you can—no pressure, just a hopeful heart here! :)</strong></li>
+          </ul>
+        </div>
+
+        <p>
+          Either way, thank you for reading. <strong>Thank you, Singapore</strong>, for being such a safe, clean, efficient, and surprisingly warm place to call home — even if just for a while.
+        </p>
+
+        <p class="thank-you-note">
+          Stay curious. Stay kind. And don’t chew gum on the MRT. 😉 🇸🇬
+        </p>
+      </div>
+
+      <a href="#top" class="btn" style="font-size: 0.9rem;">⬆️ Back to Top</a>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 ScanSG. All rights reserved.</p>
+      <div style="margin: 1rem 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; font-size: 0.9rem;">
+        <a href="index.html">Home</a>
+        <a href="food.html">Explore</a>
+        <a href="transport.html">Transport</a>
+        <a href="shopping.html">Shopping</a>
+        <a href="glossary.html">Singlish</a>
+        <a href="penalties.html">Penalties</a>
+        <a href="gst-refund.html">GST Refund</a>
+        <a href="attractions.html">Attractions</a>
+        <a href="about.html">About</a>
+      </div>
+      <p class="disclaimer">⚠️ Not affiliated with any government or organization. For personal use.</p>
+    </div>
+
+    <!-- =============== PRIVACY POLICY SECTION =============== -->
+
+<!-- Visitor Counter -->
+<div style="text-align: center; padding: 0.5rem 0; margin-top: 0.5rem; font-size: 0.85rem; color: #aaa; border-top: 1px solid #555;">
+  <a href="https://www.scansg.com" title="Visitor statistics">
+    <img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=28qj1py2f4xx477zcg8eqg6uxusuha75" 
+         border="0" alt="visitor counter" 
+         style="height: 12px; margin-left: 0.2rem; vertical-align: middle;">
+    Views
+  </a>
+</div>
+
+<!-- Privacy Policy Toggle -->
+<div style="text-align: center; margin: 0.5rem 0;">
+  <button id="privacyToggle" style="background: none; border: none; color: #888; font-size: 0.85rem; cursor: pointer; text-decoration: underline;">
+    🔐 Privacy Policy
+  </button>
+</div>
+
+<!-- Privacy Policy Content (Hidden by Default) -->
+<div id="privacy-policy" style="display: none; margin-top: 1.5rem; padding: 1.4rem; background: #232323; color: #ddd; border-radius: 8px; text-align: left; font-size: 0.92rem; line-height: 1.6; border: 1px solid #444;">
+  <h3 style="color: #fff; margin-top: 0; font-size: 1.1rem; border-bottom: 1px solid #555; padding-bottom: 0.4rem;">🔐 Privacy Policy</h3>
+  <p><strong>Last Updated:</strong> 27-07-2025</p>
+  <p>Welcome to <strong>ScanSG</strong>. We keep things simple and honest. This policy explains how we handle your information when you visit <strong>scansg.com</strong>.</p>
+
+  <p><strong>1. We Don’t Collect Your Personal Data</strong></p>
+  <ul style="padding-left: 1.3rem; margin: 0.4rem 0;">
+    <li>We do <strong>not collect</strong> your name, email, location, or any personal information — unless you contact us directly via email.</li>
+    <li>We do <strong>not use cookies, trackers, or local storage</strong> for advertising, profiling, or user monitoring.</li>
+  </ul>
+
+  <p><strong>2. Analytics: Just the Basics</strong></p>
+  <p>We use <strong>Google Analytics</strong> in a privacy-friendly way to understand how many people visit our site and how they use it. This includes:</p>
+  <ul style="padding-left: 1.3rem; margin: 0.4rem 0;">
+    <li>Total number of visitors</li>
+    <li>Which pages are viewed most</li>
+    <li>General location (country/city, not your address)</li>
+    <li>Device type (phone, laptop, etc.)</li>
+  </ul>
+  <p>This data is <strong>fully anonymized</strong> — no individual is identified. We use this info only to improve our content and help more people find useful Singapore tips.</p>
+
+  <p><strong>3. Third-Party Services</strong></p>
+  <p>While we don’t track you, this site includes services that may involve limited data use:</p>
+  <ul style="padding-left: 1.3rem; margin: 0.4rem 0;">
+    <li><strong>Google AdSense:</strong> Serves ads and may use cookies for ad personalization (controlled by Google).</li>
+    <li><strong>Affiliate Links:</strong> If you click a link (e.g., Klook, Pelago), the destination site may use tracking.</li>
+    <li>We do not control these third parties and are not responsible for their privacy practices.</li>
+  </ul>
+
+  <p><strong>4. Your Privacy Choices</strong></p>
+  <ul style="padding-left: 1.3rem; margin: 0.4rem 0;">
+    <li>You can disable Google Analytics tracking by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener" style="color: #4fc3f7;">Google Analytics Opt-out Browser Add-on</a>.</li>
+    <li>You can opt out of personalized ads at <a href="https://adssettings.google.com" target="_blank" rel="noopener" style="color: #4fc3f7;">Google Ads Settings</a>.</li>
+    <li>You can browse in incognito/private mode for full anonymity.</li>
+  </ul>
+
+  <p><strong>5. No Data Sharing or Selling</strong></p>
+  <p>We do <strong>not sell, share, or rent</strong> any user data to third parties. Ever.</p>
+
+  <p><strong>6. Policy Changes</strong></p>
+  <p>If our practices change, we’ll update this page and the "Last Updated" date. But our promise stays: <strong>No personal data collection. No creepy tracking.</strong></p>
+
+  <p><strong>7. Contact Us</strong></p>
+  <p>For questions, email: 
+    <a href="mailto:scansg365@gmail.com" data-link-key="contact_email" style="color: #4fc3f7; text-decoration: none;">scansg365@gmail.com</a>
+  </p>
+</div>
+
+<script>
+  // Toggle Privacy Policy
+  const privacyToggle = document.getElementById('privacyToggle');
+  const privacyPolicy = document.getElementById('privacy-policy');
+  privacyToggle.addEventListener('click', () => {
+    if (privacyPolicy.style.display === 'block') {
+      privacyPolicy.style.display = 'none';
+    } else {
+      privacyPolicy.style.display = 'block';
+    }
+  });
+</script>
+
+    
+  </footer>
+
+  <!-- Dark Mode Script -->
+  <script>
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const html = document.documentElement;
+    if (localStorage.theme === 'dark') {
+      html.setAttribute('data-theme', 'dark');
+      darkModeToggle.textContent = '☀️';
+    } else {
+      html.setAttribute('data-theme', 'light');
+      darkModeToggle.textContent = '🌙';
+    }
+    darkModeToggle.addEventListener('click', () => {
+      if (html.getAttribute('data-theme') === 'dark') {
+        html.setAttribute('data-theme', 'light');
+        localStorage.theme = 'light';
+        darkModeToggle.textContent = '🌙';
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        localStorage.theme = 'dark';
+        darkModeToggle.textContent = '☀️';
+      }
+    });
+  </script>
+</body>
+</html>
