@@ -3,69 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="How to get around Singapore: MRT, buses, EZ-Link, tourist SIM & more. Real tips from 4 years in SG." />
+  <meta name="description" content="Singapore Transport Guide 2025: MRT, buses, taxis, cycling, walking & self-drive. Complete guide for tourists and locals." />
   <link rel="canonical" href="https://scansg.com/transport.html" />
-
   <!-- Preload Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-
   <!-- Open Graph -->
-  <meta property="og:title" content="Singapore Transport Guide 2025 | MRT, Buses & SIM Cards" />
-  <meta property="og:description" content="How to move like a pro in Singapore — from Changi Airport to your hotel." />
+  <meta property="og:title" content="Singapore Transport Guide 2025 | MRT, Buses, Taxis & More" />
+  <meta property="og:description" content="The only transport guide you need: How to move like a local in Singapore — fast, cheap, and stress-free." />
   <meta property="og:image" content="https://scansg.com/images/og-transport.jpg" />
   <meta property="og:url" content="https://scansg.com/transport.html" />
   <meta property="og:type" content="article" />
-
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@ScanSG365" />
-
   <!-- Title -->
-  <title>Singapore Transport Guide 2025 | MRT, Buses & SIM Cards</title>
-
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4636396521329327" crossorigin="anonymous"></script>
-
+  <title>Singapore Transport Guide 2025 | MRT, Buses, Taxis & More</title>
   <!-- Favicon -->
   <link rel="icon" href="/images/favicon.ico" sizes="32x32" />
-
-  <!-- Redirect & HTTPS Enforcer -->
-<script>
-  (function() {
-    const targetHostname = 'scansg.com';
-    const currentHostname = window.location.hostname.toLowerCase();
-    const currentProtocol = window.location.protocol;
-    let pathname = window.location.pathname;
-    const search = window.location.search;
-    const hash = window.location.hash;
-
-    // ✅ FIX: Remove .html trailing slash
-    if (pathname.endsWith('/index.html')) {
-      pathname = '/'; // Redirect /index.html → /
-    } else if (pathname !== '/' && !pathname.endsWith('/') && !pathname.endsWith('.html')) {
-      pathname += '/'; // Only add slash if not root, not ending in /, and not an .html file
-    }
-
-    // Ensure no double slashes
-    pathname = pathname.replace(/\/+/g, '/');
-
-    const needsRedirect = 
-      currentHostname !== targetHostname || 
-      currentProtocol !== 'https:' || 
-      window.location.pathname !== pathname;
-
-    if (needsRedirect) {
-      const newUrl = 'https://' + targetHostname + pathname + search + hash;
-      if (window.location.href !== newUrl) {
-        window.location.href = newUrl;
-      }
-    }
-  })();
-</script>
-
-  
-
-  <!-- Inline Critical CSS -->
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4636396521329327" crossorigin="anonymous"></script>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HL77S9PP18"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HL77S9PP18', {
+      'anonymize_ip': true
+    });
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "sp1isxvzim");
+  </script>
+  <!-- Load Your links.js -->
+  <script src="/js/links.js" defer></script>
+  <!-- Inline CSS -->
   <style>
     :root {
       --main: #c62828;
@@ -77,49 +54,42 @@
       --border: #ec9a9a;
       --header-bg: #111;
     }
-
     [data-theme="dark"] {
       --text: #eee;
       --bg: #121212;
+      --gray: #aaa;
       --light-gray: #1e1e1e;
       --border: #444;
     }
-
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-
     body {
       font-family: 'Open Sans', sans-serif;
       line-height: 1.6;
       color: var(--text);
       background: var(--bg);
-      transition: background 0.3s ease;
+      transition: background 0.3s ease, color 0.3s ease;
     }
-
     h1, h2, h3, h4 {
       font-family: 'Montserrat', sans-serif;
       margin: 1.2rem 0 0.6rem;
       color: var(--main);
     }
-
     a {
       color: var(--accent);
       text-decoration: none;
     }
-
     a:hover {
       text-decoration: underline;
     }
-
     .container {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 0 1rem;
     }
-
     /* Header */
     header {
       background: var(--header-bg);
@@ -129,7 +99,6 @@
       top: 0;
       z-index: 1000;
     }
-
     .header-content {
       display: flex;
       justify-content: space-between;
@@ -138,55 +107,98 @@
       margin: 0 auto;
       padding: 0 1rem;
     }
-
+    .logo-link {
+      text-decoration: none;
+    }
     .logo {
       font-weight: 700;
       font-size: 1.4rem;
       color: white;
     }
-
     nav ul {
       display: flex;
       list-style: none;
       gap: 1.5rem;
     }
-
     nav a {
       color: white;
       font-size: 0.95rem;
       font-weight: 600;
     }
-
     nav a:hover {
       color: #4fc3f7;
     }
-
-    /* Content */
-    main {
-      margin: 2rem 0;
-    }
-
-    .btn {
-      display: inline-block;
-      background: var(--main);
-      color: white;
-      padding: 0.6rem 1.2rem;
-      border-radius: 4px;
-      font-weight: 600;
-      margin: 0.2rem;
-      transition: background 0.2s;
-    }
-
-    .btn:hover {
-      background: #a52121;
-    }
-
-    /* Ad Unit */
-    .ad-container {
-      margin: 2rem 0;
+    /* Hero Intro */
+    .hero {
       text-align: center;
+      padding: 2.5rem 1rem;
+      background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+      margin: 1rem 0;
+      border-radius: 12px;
+      border: 1px solid #90caf9;
     }
-
+    [data-theme="dark"] .hero {
+      background: linear-gradient(135deg, #0a1929 0%, #081422 100%);
+      border-color: #1a3a6c;
+    }
+    .hero h1 {
+      font-size: 1.8rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--gray);
+      max-width: 800px;
+      margin: 0 auto 1rem;
+    }
+    /* Transport Grid */
+    .transport-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .transport-category {
+      background: var(--light-gray);
+      padding: 1.2rem;
+      border-radius: 10px;
+      border-left: 4px solid var(--accent);
+    }
+    [data-theme="dark"] .transport-category {
+      background: #1e1e1e;
+    }
+    .transport-category h3 {
+      color: var(--main);
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--accent);
+    }
+    .transport-category ul {
+      margin: 0.8rem 0;
+      padding-left: 1.2rem;
+    }
+    .transport-category li {
+      margin: 0.4rem 0;
+      font-size: 0.95rem;
+      color: var(--gray);
+    }
+    [data-theme="dark"] .transport-category li {
+      color: #aaa;
+    }
+    .cheat {
+      font-size: 0.9rem;
+      color: #d81b60;
+      font-style: italic;
+      padding: 0.5rem 0.8rem;
+      margin: 0.6rem 0 0;
+      background: #fce4ec;
+      border-radius: 6px;
+      border-left: 3px solid #d81b60;
+    }
+    [data-theme="dark"] .cheat {
+      background: #381423;
+      color: #f8bbd0;
+    }
     /* Footer */
     footer {
       margin-top: 4rem;
@@ -196,216 +208,239 @@
       font-size: 0.9rem;
       text-align: center;
     }
-
+    [data-theme="dark"] footer {
+      background: #000;
+      color: #888;
+    }
     footer a {
       color: #4fc3f7;
     }
-
     .disclaimer {
       font-size: 0.85rem;
       color: #888;
       margin-top: 0.6rem;
     }
-
+    [data-theme="dark"] .disclaimer {
+      color: #666;
+    }
     @media (max-width: 768px) {
       .header-content {
         flex-direction: column;
         gap: 0.8rem;
       }
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+      .transport-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
-
-  <!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HL77S9PP18"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-HL77S9PP18');
-</script>
-  
-
-  
 </head>
 <body>
-
   <!-- Header -->
   <header>
     <div class="header-content">
-      <div class="logo">ScanSG</div>
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="food.html">Explore</a></li>
-    <li><a href="transport.html">Transport</a></li>
-    <li><a href="shopping.html">Shopping</a></li>
-    <li><a href="glossary.html">Singlish</a></li>
-    <li><a href="penalties.html">Penalties</a></li>
-    <li><a href="gst-refund.html">GST Refund</a></li>
-    <li><a href="attractions.html" style="font-weight:700;color:#fff;">Attractions</a></li>
-    <li><button class="dark-mode-toggle" id="darkModeToggle">🌙</button></li>
-  </ul>
-</nav>
+      <a href="index.html" class="logo-link">
+        <div class="logo">ScanSG</div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li><a href="transport.html" style="font-weight:700;color:#fff;">Transport</a></li>
+          <li><a href="shopping.html">Shopping</a></li>
+          <li><a href="glossary.html">Singlish</a></li>
+          <li><a href="penalties.html">Penalties</a></li>
+          <li><a href="gst-refund.html">GST Refund</a></li>
+          <li><a href="attractions.html">Attractions</a></li>
+          <li><button class="dark-mode-toggle" id="darkModeToggle">🌙</button></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
   <!-- Main -->
   <div class="container">
     <main>
-      <h1>🚀 Singapore Transport Guide 2025</h1>
-      <p>From Changi Airport to your hotel — here’s how to move like a pro.</p>
+      <!-- Hero Intro -->
+      <section class="hero">
+        <h1>🚀 Singapore Transport Guide 2025: Move Like a Local</h1>
+        <p>Forget the tourist shuffle. This is how **real Singaporeans get around** — fast, cheap, and without breaking a sweat.</p>
+        <p>Whether you’re at Changi Airport or chilling at East Coast Park, this guide covers **every way to move**: MRT, bus, taxi, cycling, walking, self-drive, and group tours.</p>
+      </section>
 
-      <!-- AdSense Unit -->
-      <div class="ad-container">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-4636396521329327"
-             data-ad-slot="INSERT_SLOT_ID"
-             data-ad-format="auto"
-             data-full-width-responsive="true">
-        </ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      <p>Singapore’s transport isn’t just efficient — it’s a **lifestyle**. And once you know the hacks, you’ll zip across the island like you’ve lived here your whole life.</p>
+
+      <!-- Transport Grid -->
+      <div class="transport-grid">
+        <!-- MRT -->
+        <div class="transport-category">
+          <h3>🚇 MRT (Mass Rapid Transit)</h3>
+          <p>The backbone of Singapore’s transport. Fast, clean, and connects everywhere.</p>
+          <ul>
+            <li><strong>Lines:</strong> North-South, East-West, Circle, Downtown, Thomson-East Coast</li>
+            <li><strong>Fare:</strong> $0.80 – $3.00 (depends on distance)</li>
+            <li><strong>Operating Hours:</strong> 5:30 AM – 12:30 AM (Fri/Sat: up to 1:30 AM)</li>
+            <li><strong>Top Tip:</strong> Use Google Maps or TransitLink app for real-time schedules.</li>
+          </ul>
+          <div class="cheat">💡 <strong>Cheat:</strong> Tap in AND out — or you’ll be charged the max fare!</div>
+        </div>
+
+        <!-- Bus -->
+        <div class="transport-category">
+          <h3>🚌 Bus</h3>
+          <p>Great for last-mile connections and scenic routes. Buses go where MRT doesn’t.</p>
+          <ul>
+            <li><strong>Operators:</strong> SBS Transit, SMRT Buses, Tower Transit, Go-Ahead</li>
+            <li><strong>Fare:</strong> $0.92 – $2.50 (distance-based)</li>
+            <li><strong>Free Transfers:</strong> Switch from MRT to bus (or vice versa) within 45 mins.</li>
+            <li><strong>Apps:</strong> SBS Transit, MyTransport.SG, Google Maps</li>
+          </ul>
+          <div class="cheat">💡 <strong>Cheat:</strong> Senior citizens & students get 50% off with Concession Card.</div>
+        </div>
+
+        <!-- Taxi & Ride-Hailing -->
+        <div class="transport-category">
+          <h3>🚕 Taxi & Ride-Hailing</h3>
+          <p>Comfortable, but pricier. Best for late nights or group travel.</p>
+          <ul>
+            <li><strong>Providers:</strong> Grab, Gojek, ComfortDelGro, CDG Premier, Strides</li>
+            <li><strong>Fare:</strong> $3.50 base + $0.22–$0.33/km. Grab app shows estimated fare.</li>
+            <li><strong>Tipping:</strong> Not expected, but rounding up is common.</li>
+            <li><strong>Surge Pricing:</strong> High during rain, peak hours, or events.</li>
+          </ul>
+          <div class="cheat">💡 <strong>Cheat:</strong> Book via Grab — often cheaper than hailing on the street.</div>
+        </div>
+
+        <!-- Self-Drive & Car Rentals -->
+        <div class="transport-category">
+          <h3>🚗 Self-Drive & Car Rentals</h3>
+          <p>Not common for tourists, but possible if you want flexibility.</p>
+          <ul>
+            <li><strong>Rental Companies:</strong> Avis, Hertz, Europcar, Klook Car Rental</li>
+            <li><strong>License:</strong> International Driving Permit (IDP) required if your license isn’t in English.</li>
+            <li><strong>ERP (Electronic Road Pricing):</strong> Tolls apply during peak hours. Rental cars include an In-Vehicle Unit (IU).</li>
+            <li><strong>Parking:</strong> Use apps like Parking.sg for on-street parking.</li>
+          </ul>
+          <div class="cheat">💡 <strong>Cheat:</strong> Avoid driving in the CBD — parking is expensive and traffic is heavy.</div>
+        </div>
+
+        <!-- Cycling -->
+        <div class="transport-category">
+          <h3>🚲 Cycling</h3>
+          <p>Singapore is bike-friendly! Dedicated paths and rentals available.</p>
+          <ul>
+            <li><strong>Cycling Paths:</strong> Park Connector Network (PCN) spans 300+ km.</li>
+            <li><strong>Rental Spots:</strong> Changi Beach, East Coast Park, Punggol Waterway, Gardens by the Bay</li>
+            <li><strong>Rental Cost:</strong> $3–$8/hour for regular bikes, $10–$20 for e-bikes.</li>
+            <li><strong>Rules:</strong> No cycling on sidewalks. Helmets recommended.</li>
+          </ul>
+          <div class="cheat">💡 <strong>Cheat:</strong> Rent from local shops — cheaper than tourist kiosks.</div>
+        </div>
+
+        <!-- Walking -->
+        <div class="transport-category">
+          <h3>🚶 Walking</h3>
+          <p>Many areas are walkable, especially in the city and parks.</p>
+          <ul>
+            <li><strong>Walkable Zones:</strong> Marina Bay, Clarke Quay, East Coast Park, Sentosa, Tiong Bahru</li>
+            <li><strong>Underground Walkways:</strong> Connected from Raffles Place to City Hall to Marina Bay.</li>
+            <li><strong>Sheltered Paths:</strong> Most sidewalks have covered walkways — perfect in rain.</li>
+            <li><strong>Distance:</strong> Most MRT stations are 5–10 mins apart on foot.</li>
+          </ul>
+          <div class="cheat">💡 <strong>Cheat:</strong> Wear light clothes — it’s hot and humid year-round.</div>
+        </div>
+
+        <!-- Group Tours & Guided Transport -->
+        <div class="transport-category">
+          <h3>🚌 Group Tours & Guided Transport</h3>
+          <p>See Singapore with experts — great for first-timers.</p>
+          <ul>
+            <li><strong>Hop-On Hop-Off Bus:</strong> Open-top double-decker. Covers Marina Bay, Sentosa, Orchard.</li>
+            <li><strong>Guided Walking Tours:</strong> Chinatown, Little India, Kampong Glam — learn history & food culture.</li>
+            <li><strong>Private Tours:</strong> Custom itineraries via Klook, Pelago, or Viator.</li>
+            <li><strong>River Cruises:</strong> 40-min bumboat ride from Boat Quay to Marina Bay.</li>
+          </ul>
+          <div class="cheat">💡 <strong>Cheat:</strong> Book combo tours (e.g., HOHO + Sentosa) for 20% off.</div>
+        </div>
+
+        <!-- Essential Tools & Apps -->
+        <div class="transport-category">
+          <h3>📱 Essential Tools & Apps</h3>
+          <p>These will save your trip.</p>
+          <ul>
+            <li><strong>TransitLink App:</strong> Real-time MRT/bus schedules, fare calculator.</li>
+            <li><strong>Google Maps:</strong> Still the best for walking & transit directions.</li>
+            <li><strong>Grab:</strong> Ride-hailing, food delivery, and even motorbike taxis.</li>
+            <li><strong>MyTransport.SG:</strong> Official app for ERP, parking, and public transport.</li>
+            <li><strong>Citymapper:</strong> Alternative to Google Maps with better transit focus.</li>
+          </ul>
+          <div class="cheat">💡 <strong>Cheat:</strong> Download offline maps — saves data and works without signal.</div>
+        </div>
       </div>
 
-      <h2>1. From Changi Airport to City</h2>
-      <ul>
-        <li><strong>MRT (East-West Line)</strong>: Fastest & cheapest. From Terminal 2/3 → City Hall (~25 mins).</li>
-        <li><strong>Taxi</strong>: ~SGD $30–$40 to CBD. Use Grab app.</li>
-        <li><strong>Bus</strong>: Cheaper but slower. Check SBS Transit app.</li>
-      </ul>
-
-      <h2>2. Get an EZ-Link or NETS FlashPay Card</h2>
-      <ul>
-        <li>Buy at MRT stations or 7-Eleven.</li>
-        <li>Top up at machines or convenience stores.</li>
-        <li>Use for MRT, buses, and even small purchases.</li>
-      </ul>
-
-      <h2>3. Buy a Tourist SIM</h2>
-      <p>Available at Changi Airport (T1, T2, T3) or pre-book eSIM:</p>
-      <ul>
-        <li><a href="https://klook.com" target="_blank" rel="noopener">Klook eSIM</a> – Instant setup</li>
-        <li><a href="https://singtel.com" target="_blank" rel="noopener">Singtel</a> – 5G coverage</li>
-      </ul>
-
-      <h2>4. Use These Apps</h2>
-      <ul>
-        <li><strong>TransitLink</strong>: Real-time MRT/bus schedules</li>
-        <li><strong>Grab</strong>: Ride-hailing, food delivery</li>
-        <li><strong>Google Maps</strong>: Still works great</li>
-      </ul>
-
-      <h2>5. Pro Tips</h2>
-      <ul>
-        <li>✅ <strong>Tap in AND tap out</strong> — or pay max fare.</li>
-        <li>✅ <strong>Free transfers</strong> between MRT and bus within 45 mins.</li>
-        <li>✅ <strong>Off-peak hours</strong> = cheaper fares (after 9:30 AM on weekdays).</li>
-      </ul>
-
-      <!-- Affiliate CTA -->
-      <div style="margin: 2rem 0; padding: 1.2rem; background: #f0f8ff; border-left: 4px solid #1565c0; border-radius: 8px;">
-        <h3 style="color: #1565c0; margin: 0;">💡 Save on Transport & Tours</h3>
-        <p>Book your airport transfer, SIM, or city tour with our partners:</p>
-        <a href="https://klook.com" class="btn" target="_blank" rel="noopener">Klook Deals</a>
-        <a href="https://grab.com" class="btn" target="_blank" rel="noopener">Grab App</a>
+      <!-- Pro Tips -->
+      <div class="transport-category">
+        <h3>🔥 Pro Tips for Smart Travel</h3>
+        <ul>
+          <li>✅ <strong>Tap in AND tap out</strong> — or pay max fare.</li>
+          <li>✅ <strong>Free transfers</strong> between MRT and bus within 45 mins.</li>
+          <li>✅ <strong>Use EZ-Link or NETS FlashPay</strong> — buy at MRT stations or 7-Eleven.</li>
+          <li>✅ <strong>Top up online</strong> via TransitLink app or at any machine.</li>
+          <li>✅ <strong>Tourist Pass:</strong> Unlimited rides for 1/2/3 days — great for heavy users.</li>
+          <li>✅ <strong>Buy a tourist SIM</strong> at Changi Airport (Singtel, StarHub, M1) for data.</li>
+          <li>✅ <strong>Grab is cheaper than taxis</strong> — especially for short trips.</li>
+          <li>✅ <strong>Walk between City Hall and Raffles Place</strong> — only 10 mins, no need to MRT.</li>
+        </ul>
       </div>
 
-      <!-- Back to Top -->
+      <p><strong>Final Tip:</strong> Mix transport modes. MRT to the city, walk to the hawker centre, Grab back to hotel. That’s how locals do it.</p>
       <a href="#top" class="btn" style="font-size: 0.9rem;">⬆️ Back to Top</a>
     </main>
   </div>
 
   <!-- Footer -->
-<footer>
-  <div class="container">
-    <p>&copy; 2025 ScanSG. All rights reserved.</p>
-
-    <!-- Full Site Links -->
-    <div style="margin: 1rem 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; font-size: 0.9rem;">
-      <a href="index.html">Home</a>
-      <a href="transport.html">Transport</a>
-      <a href="food.html">Food</a>
-      <a href="shopping.html">Shopping</a>
-      <a href="glossary.html">Singlish</a>
-      <a href="penalties.html">Penalties</a>
-      <a href="gst-refund.html">GST Refund</a>
-      <a href="about.html">About</a>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 ScanSG. All rights reserved.</p>
+      <div style="margin: 1rem 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; font-size: 0.9rem;">
+        <a href="index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="transport.html">Transport</a>
+        <a href="shopping.html">Shopping</a>
+        <a href="glossary.html">Singlish</a>
+        <a href="penalties.html">Penalties</a>
+        <a href="gst-refund.html">GST Refund</a>
+        <a href="attractions.html">Attractions</a>
+        <a href="about.html">About</a>
+      </div>
+      <p class="disclaimer">⚠️ Info is for general use. Verify before acting.</p>
     </div>
+  </footer>
 
-    <p class="disclaimer">⚠️ Info is for general use. Verify before acting.</p>
-  </div>
-</footer>
-
-  <!-- Structured Data: FAQPage (for AI & Google) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I get from Changi Airport to the city?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Take the MRT East-West Line from Terminal 2 or 3 to City Hall (about 25 minutes). Taxis cost SGD $30–$40. Buses are cheaper but slower."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I need an EZ-Link card?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. It's the easiest way to pay for MRT and buses. Buy at any MRT station or 7-Eleven."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Where can I buy a tourist SIM card?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "At Changi Airport (T1, T2, T3) or pre-book an eSIM via Klook for instant activation."
-        }
-      }
-    ]
-  }
-  </script>
-
-
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "sp1isxvzim");
-</script>
-
+  <!-- Dark Mode Script -->
   <script>
-  const darkModeToggle = document.getElementById('darkModeToggle');
-  const html = document.documentElement;
-
-  if (localStorage.theme === 'dark') {
-    html.setAttribute('data-theme', 'dark');
-    darkModeToggle.textContent = '☀️';
-  } else {
-    html.setAttribute('data-theme', 'light');
-    darkModeToggle.textContent = '🌙';
-  }
-
-  darkModeToggle.addEventListener('click', () => {
-    if (html.getAttribute('data-theme') === 'dark') {
-      html.setAttribute('data-theme', 'light');
-      localStorage.theme = 'light';
-      darkModeToggle.textContent = '🌙';
-    } else {
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const html = document.documentElement;
+    if (localStorage.theme === 'dark') {
       html.setAttribute('data-theme', 'dark');
-      localStorage.theme = 'dark';
       darkModeToggle.textContent = '☀️';
+    } else {
+      html.setAttribute('data-theme', 'light');
+      darkModeToggle.textContent = '🌙';
     }
-  });
-</script>
-
-  <!-- Load links.js -->
-<script src="/js/links.js" defer></script>
-  
+    darkModeToggle.addEventListener('click', () => {
+      if (html.getAttribute('data-theme') === 'dark') {
+        html.setAttribute('data-theme', 'light');
+        localStorage.theme = 'light';
+        darkModeToggle.textContent = '🌙';
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        localStorage.theme = 'dark';
+        darkModeToggle.textContent = '☀️';
+      }
+    });
+  </script>
 </body>
 </html>
