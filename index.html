@@ -2,94 +2,34 @@
 <html lang="en-SG">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="description" content="Your ultimate Singapore guide: local food, transport, deals & cultural tips. No blur-blur. Just real info for tourists and expats." />
-  <meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Your ultimate Singapore guide: transport, food, deals & Singlish. No blur-blur. Just real tips." />
   <link rel="canonical" href="https://scansg.com/" />
 
-  <!-- Preload critical fonts -->
+  <!-- Preload Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
-  <!-- Google Site Verification -->
-  <meta name="google-site-verification" content="bebioypvO9RL2jy_HTj_o7feXXajLDY9WK2yyTCy7pg" />
-
-  <!-- Open Graph / Social -->
-  <meta property="og:title" content="ScanSG - Ultimate Singapore Guide 2025" />
-  <meta property="og:description" content="Local food, MRT hacks, GST refunds, Singlish & more. Real tips from 4 years in SG." />
-  <meta property="og:image" content="https://scansg.com/images/og-preview.jpg" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="ScanSG - Real Singapore Tips (No Blur-Blur)" />
+  <meta property="og:description" content="Hawker food, MRT hacks, GST refund, Singlish & more. From 4 years in SG." />
+  <meta property="og:image" content="https://scansg.com/images/og-home.jpg" />
   <meta property="og:url" content="https://scansg.com" />
   <meta property="og:type" content="website" />
-  <meta property="og:locale" content="en_SG" />
-  <meta property="og:site_name" content="ScanSG" />
 
-  <!-- Twitter Card -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@ScanSG365" />
-  <meta name="twitter:title" content="ScanSG - Ultimate Singapore Guide 2025" />
-  <meta name="twitter:description" content="Local food, MRT hacks, GST refunds, Singlish & more. Real tips from 4 years in SG." />
-  <meta name="twitter:image" content="https://scansg.com/images/og-preview.jpg" />
-
-  <!-- Favicon (optional) -->
-  <link rel="icon" href="/images/favicon.ico" sizes="32x32" />
-  <link rel="icon" href="/images/logo.svg" type="image/svg+xml" />
 
   <!-- Title -->
   <title>ScanSG - Your Real Singapore Guide (No Blur-Blur)</title>
 
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4636396521329327" crossorigin="anonymous"></script>
-  <meta name="google-adsense-account" content="ca-pub-4636396521329327">
 
-  <!-- Redirect & HTTPS Enforcer -->
-  <script>
-    (function() {
-      const targetHostname = 'scansg.com';
-      const currentHostname = window.location.hostname.toLowerCase();
-      const currentProtocol = window.location.protocol;
-      let pathname = window.location.pathname;
-      const search = window.location.search;
-      const hash = window.location.hash;
+  <!-- Favicon -->
+  <link rel="icon" href="/images/favicon.ico" sizes="32x32" />
 
-      if (pathname !== '/' && !pathname.endsWith('/')) {
-        pathname += '/';
-      }
-
-      const needsRedirect = 
-        currentHostname !== targetHostname || 
-        currentProtocol !== 'https:' || 
-        window.location.pathname !== pathname;
-
-      if (needsRedirect) {
-        const newUrl = 'https://' + targetHostname + pathname + search + hash;
-        if (window.location.href !== newUrl) {
-          window.location.href = newUrl;
-        }
-      }
-    })();
-  </script>
-
-  <!-- Structured Data: Website -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "ScanSG",
-    "url": "https://scansg.com",
-    "description": "The no-BS Singapore guide for tourists and expats.",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://scansg.com/?s={search_term_string}",
-      "query-input": "required name=search_term_string"
-    },
-    "sameAs": [
-      "https://www.facebook.com/ScanSG",
-      "https://www.instagram.com/ScanSG",
-      "https://twitter.com/ScanSG"
-    ]
-  }
-  </script>
-
-  <!-- Inline Critical CSS (for speed) -->
+  <!-- Inline Critical CSS -->
   <style>
     :root {
       --main: #c62828;
@@ -99,6 +39,15 @@
       --gray: #555;
       --light-gray: #f9f9f9;
       --border: #ec9a9a;
+      --header-bg: #111;
+      --footer-bg: #1a1a1a;
+    }
+
+    [data-theme="dark"] {
+      --text: #eee;
+      --bg: #121212;
+      --light-gray: #1e1e1e;
+      --border: #444;
     }
 
     * {
@@ -112,6 +61,7 @@
       line-height: 1.6;
       color: var(--text);
       background: var(--bg);
+      transition: background 0.3s ease;
     }
 
     h1, h2, h3, h4 {
@@ -137,7 +87,7 @@
 
     /* Header */
     header {
-      background: #111;
+      background: var(--header-bg);
       color: white;
       padding: 0.8rem 0;
       position: sticky;
@@ -209,29 +159,46 @@
       background: #a52121;
     }
 
-    /* Main Layout */
-    .main-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
+    /* Cards Grid */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
       margin: 2rem 0;
     }
 
-    main {
-      flex: 1 1 65%;
-      min-width: 300px;
+    .card {
+      background: var(--light-gray);
+      border-radius: 8px;
+      padding: 1.2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
     }
 
-    .sidebar {
-      flex: 1 1 30%;
-      min-width: 280px;
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.6rem;
+    }
+
+    /* Dark Mode Toggle */
+    .dark-mode-toggle {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+      padding: 0.4rem;
     }
 
     /* Footer */
     footer {
       margin-top: 4rem;
       padding: 1.5rem 1rem;
-      background: #111;
+      background: var(--footer-bg);
       color: #aaa;
       font-size: 0.9rem;
       text-align: center;
@@ -247,20 +214,10 @@
       margin-top: 0.6rem;
     }
 
-    /* Mobile */
     @media (max-width: 768px) {
       .header-content {
         flex-direction: column;
         gap: 0.8rem;
-      }
-
-      nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .main-wrapper {
-        flex-direction: column;
       }
 
       .hero h1 {
@@ -277,11 +234,12 @@
       <div class="logo">ScanSG</div>
       <nav>
         <ul>
-          <li><a href="#transport">Transport</a></li>
-          <li><a href="#food">Food</a></li>
-          <li><a href="#shopping">Shopping</a></li>
-          <li><a href="#glossary">Singlish</a></li>
-          <li><a href="#penalties">Penalties</a></li>
+          <li><a href="transport.html">Transport</a></li>
+          <li><a href="food.html">Food</a></li>
+          <li><a href="shopping.html">Shopping</a></li>
+          <li><a href="glossary.html">Singlish</a></li>
+          <li><a href="penalties.html">Penalties</a></li>
+          <li><button class="dark-mode-toggle" id="darkModeToggle">🌙</button></li>
         </ul>
       </nav>
     </div>
@@ -291,81 +249,37 @@
   <section class="hero container">
     <h1>Wah Lau… Welcome Lah! 🇸🇬</h1>
     <p>No blur-blur. Just real Singapore tips from 4 years on the ground.</p>
-    <a href="#transport" class="btn">Start with Transport</a>
-    <a href="#glossary" class="btn">Learn Singlish</a>
+    <a href="transport.html" class="btn">Start with Transport</a>
+    <a href="glossary.html" class="btn">Learn Singlish</a>
   </section>
 
-  <!-- Main Content -->
+  <!-- Content Cards -->
   <div class="container">
-    <div class="main-wrapper">
-
-      <!-- Main -->
-      <main>
-        <section id="transport">
-          <h2>🚀 First Steps in Singapore</h2>
-          <p>Welcome to Changi! Here’s how to get into the city like a pro.</p>
-          <!-- Add content here -->
-        </section>
-
-        <section id="food">
-          <h2>🍜 Eat Like a Local</h2>
-          <p>Hawker centres, $2 meals, and how to order Kopi-C-Peng.</p>
-          <!-- Add content here -->
-        </section>
-
-        <section id="shopping">
-          <h2>🛒 Smart Shopping & Deals</h2>
-          <p>Mustafa, Shopee, Carousell, and $2 stores.</p>
-          <!-- Add content here -->
-        </section>
-
-        <section id="glossary">
-          <h2>💬 Singlish Glossary</h2>
-          <p>Kopi-O? Teh-C-Peng? Alamak? We break it down.</p>
-          <!-- Add content here -->
-        </section>
-
-        <section id="penalties">
-          <h2>🚨 Don’t Get Fined!</h2>
-          <p>Chewing gum, jaywalking, littering — what’s really illegal.</p>
-          <!-- Add content here -->
-        </section>
-      </main>
-
-      <!-- Sidebar -->
-      <aside class="sidebar">
-        <div style="background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.1);">
-          <h3 style="color: var(--main); border-bottom: 2px solid var(--accent); padding-bottom: 0.3rem;">🔥 Top Deals</h3>
-          <ul style="list-style: none; padding: 0;">
-            <li style="margin: 0.6rem 0;">
-              <a href="https://klook.com" target="_blank" rel="noopener" style="font-weight: 600;">Klook</a>
-              <p style="font-size: 0.85rem; color: #666; margin: 0.2rem 0 0;">Tours, attractions, SIM cards</p>
-            </li>
-            <li style="margin: 0.6rem 0;">
-              <a href="https://shopee.sg" target="_blank" rel="noopener" style="font-weight: 600;">Shopee</a>
-              <p style="font-size: 0.85rem; color: #666; margin: 0.2rem 0 0;">Free shipping, flash sales</p>
-            </li>
-            <li style="margin: 0.6rem 0;">
-              <a href="https://booking.com" target="_blank" rel="noopener" style="font-weight: 600;">Booking.com</a>
-              <p style="font-size: 0.85rem; color: #666; margin: 0.2rem 0 0;">Hotels with flexible booking</p>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Ad Placeholder -->
-        <div style="margin-top: 1.5rem; text-align: center;">
-          <ins class="adsbygoogle"
-               style="display:block"
-               data-ad-client="ca-pub-4636396521329327"
-               data-ad-slot="INSERT_SLOT_ID"
-               data-ad-format="auto"
-               data-full-width-responsive="true">
-          </ins>
-          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-          <p style="font-size: 0.8rem; color: #888; margin-top: 0.5rem;">Advertisement</p>
-        </div>
-      </aside>
-
+    <div class="card-grid">
+      <a href="transport.html" class="card">
+        <h3>🚀 Transport Guide</h3>
+        <p>From Changi to MRT, SIM cards to EZ-Link — move like a pro.</p>
+      </a>
+      <a href="food.html" class="card">
+        <h3>🍜 Eat Like a Local</h3>
+        <p>Hawker centres, $2 meals, Kopi-C-Peng — where to eat & how to order.</p>
+      </a>
+      <a href="shopping.html" class="card">
+        <h3>🛒 Smart Shopping</h3>
+        <p>Mustafa, Shopee, $2 stores, Carousell hacks — save big.</p>
+      </a>
+      <a href="glossary.html" class="card">
+        <h3>💬 Singlish Dictionary</h3>
+        <p>Kopi-O? Teh-C-Peng? Shiok? We break it down.</p>
+      </a>
+      <a href="penalties.html" class="card">
+        <h3>🚨 Don’t Get Fined!</h3>
+        <p>Chewing gum, jaywalking, littering — what’s really illegal.</p>
+      </a>
+      <a href="gst-refund.html" class="card">
+        <h3>💰 GST Refund Guide</h3>
+        <p>How to claim your tax back — step by step.</p>
+      </a>
     </div>
   </div>
 
@@ -374,17 +288,35 @@
     <div class="container">
       <p>&copy; 2025 ScanSG. All rights reserved.</p>
       <p>
-        <a href="#privacy" style="color: #bbb; margin: 0 0.5rem;">Privacy</a>
-        <a href="#about" style="color: #bbb; margin: 0 0.5rem;">About</a>
-        <a href="mailto:scansg365@gmail.com" style="color: #bbb; margin: 0 0.5rem;">Contact</a>
+        <a href="about.html">About</a> • 
+        <a href="mailto:scansg365@gmail.com">Contact</a>
       </p>
       <p class="disclaimer">⚠️ Info is for general use. Verify laws & prices before acting.</p>
     </div>
   </footer>
 
-  <!-- Optional: Add Google Analytics later -->
+  <!-- Dark Mode Script -->
   <script>
-    // Add Clarity or GA4 here when ready
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    // Check user preference
+    if (localStorage.theme === 'dark') {
+      body.setAttribute('data-theme', 'dark');
+      darkModeToggle.textContent = '☀️';
+    }
+
+    darkModeToggle.addEventListener('click', () => {
+      if (body.getAttribute('data-theme') === 'dark') {
+        body.removeAttribute('data-theme');
+        localStorage.theme = 'light';
+        darkModeToggle.textContent = '🌙';
+      } else {
+        body.setAttribute('data-theme', 'dark');
+        localStorage.theme = 'dark';
+        darkModeToggle.textContent = '☀️';
+      }
+    });
   </script>
 
 </body>
