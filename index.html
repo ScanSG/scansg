@@ -30,66 +30,41 @@
   <link rel="icon" href="/images/favicon.ico" sizes="32x32" />
   <link rel="icon" href="/images/logo.svg" type="image/svg+xml" />
 
-  <!-- Title -->
-  <title>ScanSG - Your Real Singapore Guide (No Blur-Blur)</title>
-
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4636396521329327" crossorigin="anonymous"></script>
   <meta name="google-adsense-account" content="ca-pub-4636396521329327">
 
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HL77S9PP18"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-HL77S9PP18', {
-      'anonymize_ip': true  // PDPA-friendly
-    });
-  </script>
-
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "sp1isxvzim");
-  </script>
-
   <!-- Redirect & HTTPS Enforcer -->
-<script>
-  (function() {
-    const targetHostname = 'scansg.com';
-    const currentHostname = window.location.hostname.toLowerCase();
-    const currentProtocol = window.location.protocol;
-    let pathname = window.location.pathname;
-    const search = window.location.search;
-    const hash = window.location.hash;
+  <script>
+    (function() {
+      const targetHostname = 'scansg.com';
+      const currentHostname = window.location.hostname.toLowerCase();
+      const currentProtocol = window.location.protocol;
+      let pathname = window.location.pathname;
+      const search = window.location.search;
+      const hash = window.location.hash;
 
-    // ✅ FIX: Remove .html trailing slash
-    if (pathname.endsWith('/index.html')) {
-      pathname = '/'; // Redirect /index.html → /
-    } else if (pathname !== '/' && !pathname.endsWith('/') && !pathname.endsWith('.html')) {
-      pathname += '/'; // Only add slash if not root, not ending in /, and not an .html file
-    }
-
-    // Ensure no double slashes
-    pathname = pathname.replace(/\/+/g, '/');
-
-    const needsRedirect = 
-      currentHostname !== targetHostname || 
-      currentProtocol !== 'https:' || 
-      window.location.pathname !== pathname;
-
-    if (needsRedirect) {
-      const newUrl = 'https://' + targetHostname + pathname + search + hash;
-      if (window.location.href !== newUrl) {
-        window.location.href = newUrl;
+      if (pathname.endsWith('/index.html')) {
+        pathname = '/';
+      } else if (pathname !== '/' && !pathname.endsWith('/') && !pathname.endsWith('.html')) {
+        pathname += '/';
       }
-    }
-  })();
-</script>
+      pathname = pathname.replace(/\/+/g, '/');
+
+      const needsRedirect = 
+        currentHostname !== targetHostname || 
+        currentProtocol !== 'https:' || 
+        window.location.pathname !== pathname;
+
+      if (needsRedirect) {
+        const newUrl = 'https://' + targetHostname + pathname + search + hash;
+        if (window.location.href !== newUrl) {
+          window.location.href = newUrl;
+        }
+      }
+    })();
+  </script>
+
   <!-- Structured Data: Website -->
   <script type="application/ld+json">
   {
@@ -181,6 +156,10 @@
       align-items: center;
     }
 
+    .logo-link {
+      text-decoration: none;
+    }
+
     .logo {
       font-weight: 700;
       font-size: 1.4rem;
@@ -206,78 +185,124 @@
     /* Hero */
     .hero {
       text-align: center;
-      padding: 2.5rem 1rem;
+      padding: 3rem 1rem;
       background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
       margin: 1rem 0;
-      border-radius: 8px;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('https://source.unsplash.com/random/1600x900/?singapore,city') no-repeat center center;
+      background-size: cover;
+      opacity: 0.05;
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
     }
 
     .hero h1 {
-      font-size: 1.8rem;
+      font-size: 2.2rem;
       margin-bottom: 0.6rem;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.1);
     }
 
     .hero p {
       font-size: 1.1rem;
       color: var(--gray);
       max-width: 700px;
-      margin: 0 auto 1rem;
+      margin: 0 auto 1.2rem;
     }
 
     .btn {
       display: inline-block;
       background: var(--main);
       color: white;
-      padding: 0.6rem 1.2rem;
+      padding: 0.7rem 1.4rem;
       border-radius: 4px;
       font-weight: 600;
-      margin: 0.2rem;
-      transition: background 0.2s;
+      margin: 0.3rem;
+      transition: all 0.2s;
+      box-shadow: 0 2px 6px rgba(198, 40, 40, 0.2);
     }
 
     .btn:hover {
       background: #a52121;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(198, 40, 40, 0.3);
+    }
+
+    /* Intro Section */
+    .intro {
+      text-align: center;
+      padding: 2rem 1rem;
+      margin: 2rem 0;
+      background: var(--light-gray);
+      border-radius: 12px;
+    }
+
+    .intro h2 {
+      font-size: 1.8rem;
+      color: var(--text);
+    }
+
+    .intro p {
+      max-width: 800px;
+      margin: 0 auto 1rem;
+      font-size: 1.1rem;
+      color: var(--gray);
     }
 
     /* Cards Grid */
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
+      gap: 1.8rem;
       margin: 2rem 0;
     }
 
     .card {
-      background: var(--light-gray);
-      border-radius: 8px;
-      padding: 1.2rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid var(--border);
     }
 
     .card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
 
     .card h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.6rem;
+      font-size: 1.2rem;
+      margin: 0;
+      padding: 1rem;
+      background: var(--main);
+      color: white;
+      text-align: center;
     }
 
-    /* Dark Mode Toggle */
-    .dark-mode-toggle {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 1.2rem;
-      cursor: pointer;
-      padding: 0.4rem;
+    .card p {
+      padding: 1.2rem;
+      line-height: 1.6;
+      color: var(--text);
+      font-size: 0.95rem;
     }
 
     /* Footer */
     footer {
       margin-top: 4rem;
-      padding: 1.5rem 1rem;
+      padding: 1.8rem 1rem;
       background: #1a1a1a;
       color: #aaa;
       font-size: 0.9rem;
@@ -294,39 +319,6 @@
       margin-top: 0.6rem;
     }
 
-    /* Scroll Buttons */
-    .scroll-controls {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      z-index: 999;
-      pointer-events: none;
-    }
-
-    .scroll-btn {
-      width: 44px;
-      height: 44px;
-      border: none;
-      border-radius: 50%;
-      background: var(--accent);
-      color: white;
-      font-size: 1.3rem;
-      cursor: pointer;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      pointer-events: auto;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .scroll-btn:hover {
-      transform: scale(1.1);
-    }
-
     @media (max-width: 768px) {
       .header-content {
         flex-direction: column;
@@ -334,20 +326,12 @@
       }
 
       .hero h1 {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
       }
 
-      .logo-link {
-  text-decoration: none;
-}
-
-.logo {
-  font-weight: 700;
-  font-size: 1.4rem;
-  color: white;
-}
-
-      
+      .intro h2 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
@@ -356,32 +340,38 @@
   <!-- Header -->
   <header>
     <div class="container header-content">
-<a href="/" class="logo-link">
-  <div class="logo">ScanSG</div>
-</a>
-</a>
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="transport.html">Transport</a></li>
-    <li><a href="food.html">Food</a></li>
-    <li><a href="shopping.html">Shopping</a></li>
-    <li><a href="glossary.html">Singlish</a></li>
-    <li><a href="penalties.html">Penalties</a></li>
-    <li><a href="gst-refund.html">GST Refund</a></li>
-    <li><button class="dark-mode-toggle" id="darkModeToggle">🌙</button></li>
-  </ul>
-</nav>
-      
+      <a href="/" class="logo-link">
+        <div class="logo">ScanSG</div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="transport.html">Transport</a></li>
+          <li><a href="food.html">Food</a></li>
+          <li><a href="shopping.html">Shopping</a></li>
+          <li><a href="glossary.html">Singlish</a></li>
+          <li><a href="penalties.html">Penalties</a></li>
+          <li><a href="gst-refund.html">GST Refund</a></li>
+          <li><button class="dark-mode-toggle" id="darkModeToggle">🌙</button></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="hero container">
-    <h1>Wah Lau… Welcome Lah! 🇸🇬</h1>
-    <p>No blur-blur. Just real Singapore tips from 4 years on the ground.</p>
-    <a href="transport.html" class="btn">Start with Transport</a>
-    <a href="glossary.html" class="btn">Learn Singlish</a>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Wah Lau… Welcome Lah! 🇸🇬</h1>
+      <p>No blur-blur. Just real Singapore tips from 4 years on the ground.</p>
+      <a href="transport.html" class="btn">Start with Transport</a>
+      <a href="glossary.html" class="btn">Learn Singlish</a>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="intro container">
+    <h2>Your Real Singapore Guide</h2>
+    <p>Whether you're here for 3 days or 3 years, this guide cuts through the noise. No corporate fluff. No tourist traps. Just real tips on food, transport, deals, and how not to get fined.</p>
+    <p>Built by a foreigner who’s lived here 4 years — from first-day confusion to “I know a better hawker stall” confidence.</p>
   </section>
 
   <!-- Content Cards -->
@@ -389,130 +379,74 @@
     <div class="card-grid">
       <a href="transport.html" class="card">
         <h3>🚀 Transport Guide</h3>
-        <p>From Changi to MRT, SIM cards to EZ-Link — move like a pro.</p>
+        <p>From Changi Airport to your hotel — how to move like a pro with MRT, buses, SIM cards & EZ-Link.</p>
       </a>
       <a href="food.html" class="card">
         <h3>🍜 Eat Like a Local</h3>
-        <p>Hawker centres, $2 meals, Kopi-C-Peng — where to eat & how to order.</p>
+        <p>Hawker centres, $2 meals, Kopi-C-Peng — where to eat & how to order like a boss.</p>
       </a>
       <a href="shopping.html" class="card">
         <h3>🛒 Smart Shopping</h3>
-        <p>Mustafa, Shopee, $2 stores, Carousell hacks — save big.</p>
+        <p>Mustafa, Shopee, $2 stores, Carousell hacks — save big without blur-blur.</p>
       </a>
       <a href="glossary.html" class="card">
         <h3>💬 Singlish Dictionary</h3>
-        <p>Kopi-O? Teh-C-Peng? Shiok? We break it down.</p>
+        <p>Kopi-O? Teh-C-Peng? Shiok? We break it down so you can chat like a local.</p>
       </a>
       <a href="penalties.html" class="card">
         <h3>🚨 Don’t Get Fined!</h3>
-        <p>Chewing gum, jaywalking, littering — what’s really illegal.</p>
+        <p>Chewing gum, jaywalking, littering — what’s really illegal and how much it costs.</p>
       </a>
       <a href="gst-refund.html" class="card">
         <h3>💰 GST Refund Guide</h3>
-        <p>How to claim your tax back — step by step.</p>
+        <p>How to claim your 8–9% tax back — step by step, no stress.</p>
       </a>
     </div>
   </div>
 
   <!-- Footer -->
-<footer>
-  <div class="container">
-    <p>&copy; 2025 ScanSG. All rights reserved.</p>
-
-    <!-- Full Site Links -->
-    <div style="margin: 1rem 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; font-size: 0.9rem;">
-      <a href="index.html">Home</a>
-      <a href="transport.html">Transport</a>
-      <a href="food.html">Food</a>
-      <a href="shopping.html">Shopping</a>
-      <a href="glossary.html">Singlish</a>
-      <a href="penalties.html">Penalties</a>
-      <a href="gst-refund.html">GST Refund</a>
-      <a href="about.html">About</a>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 ScanSG. All rights reserved.</p>
+      <div style="margin: 1rem 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; font-size: 0.9rem;">
+        <a href="index.html">Home</a>
+        <a href="transport.html">Transport</a>
+        <a href="food.html">Food</a>
+        <a href="shopping.html">Shopping</a>
+        <a href="glossary.html">Singlish</a>
+        <a href="penalties.html">Penalties</a>
+        <a href="gst-refund.html">GST Refund</a>
+        <a href="about.html">About</a>
+      </div>
+      <p class="disclaimer">⚠️ Info is for general use. Verify laws & prices before acting.</p>
     </div>
-
-    <p class="disclaimer">⚠️ Info is for general use. Verify before acting.</p>
-  </div>
-</footer>
-
-  <!-- Scroll Buttons -->
-  <div class="scroll-controls">
-    <button id="scrollToTop" class="scroll-btn" aria-label="Back to top">⬆️</button>
-    <button id="scrollToFooter" class="scroll-btn" aria-label="Go to footer">⬇️</button>
-  </div>
+  </footer>
 
   <!-- Dark Mode Script -->
   <script>
     const darkModeToggle = document.getElementById('darkModeToggle');
-    const body = document.body;
+    const html = document.documentElement;
 
-    // Check user preference
     if (localStorage.theme === 'dark') {
-      body.setAttribute('data-theme', 'dark');
+      html.setAttribute('data-theme', 'dark');
       darkModeToggle.textContent = '☀️';
+    } else {
+      html.setAttribute('data-theme', 'light');
+      darkModeToggle.textContent = '🌙';
     }
 
     darkModeToggle.addEventListener('click', () => {
-      if (body.getAttribute('data-theme') === 'dark') {
-        body.removeAttribute('data-theme');
+      if (html.getAttribute('data-theme') === 'dark') {
+        html.setAttribute('data-theme', 'light');
         localStorage.theme = 'light';
         darkModeToggle.textContent = '🌙';
       } else {
-        body.setAttribute('data-theme', 'dark');
+        html.setAttribute('data-theme', 'dark');
         localStorage.theme = 'dark';
         darkModeToggle.textContent = '☀️';
       }
     });
-
-    // Scroll buttons
-    const scrollToTopBtn = document.getElementById("scrollToTop");
-    const scrollToFooterBtn = document.getElementById("scrollToFooter");
-
-    // Show "Back to Top" after scrolling down
-    window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 300) {
-        scrollToTopBtn.style.display = "flex";
-      } else {
-        scrollToTopBtn.style.display = "none";
-      }
-    });
-
-    // Click: Scroll to Top
-    scrollToTopBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-
-    // Click: Scroll to Footer
-    scrollToFooterBtn.addEventListener("click", () => {
-      document.querySelector("footer").scrollIntoView({ behavior: "smooth" });
-    });
   </script>
 
-  <script>
-  const darkModeToggle = document.getElementById('darkModeToggle');
-  const html = document.documentElement;
-
-  if (localStorage.theme === 'dark') {
-    html.setAttribute('data-theme', 'dark');
-    darkModeToggle.textContent = '☀️';
-  } else {
-    html.setAttribute('data-theme', 'light');
-    darkModeToggle.textContent = '🌙';
-  }
-
-  darkModeToggle.addEventListener('click', () => {
-    if (html.getAttribute('data-theme') === 'dark') {
-      html.setAttribute('data-theme', 'light');
-      localStorage.theme = 'light';
-      darkModeToggle.textContent = '🌙';
-    } else {
-      html.setAttribute('data-theme', 'dark');
-      localStorage.theme = 'dark';
-      darkModeToggle.textContent = '☀️';
-    }
-  });
-</script>
-
-  
 </body>
 </html>
