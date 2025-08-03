@@ -392,12 +392,10 @@
   }
   </script>
 
-  <script>
-  // Dark Mode Toggle
+<script>
   const darkModeToggle = document.getElementById('darkModeToggle');
-  const html = document.documentElement; // Targets <html>
+  const html = document.documentElement;
 
-  // Check saved preference
   if (localStorage.theme === 'dark') {
     html.setAttribute('data-theme', 'dark');
     darkModeToggle.textContent = '☀️';
@@ -406,7 +404,6 @@
     darkModeToggle.textContent = '🌙';
   }
 
-  // Toggle on click
   darkModeToggle.addEventListener('click', () => {
     if (html.getAttribute('data-theme') === 'dark') {
       html.setAttribute('data-theme', 'light');
