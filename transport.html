@@ -178,19 +178,6 @@
       }
     }
   </style>
-
-  <!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HL77S9PP18"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-HL77S9PP18', {
-    'anonymize_ip': true  // ✅ PDPA-FRIENDLY: Hides full IP
-  });
-</script>
-
-  
 </head>
 <body>
 
@@ -265,4 +252,63 @@
 
       <!-- Affiliate CTA -->
       <div style="margin: 2rem 0; padding: 1.2rem; background: #f0f8ff; border-left: 4px solid #1565c0; border-radius: 8px;">
-        <h3 style="color: #
+        <h3 style="color: #1565c0; margin: 0;">💡 Save on Transport & Tours</h3>
+        <p>Book your airport transfer, SIM, or city tour with our partners:</p>
+        <a href="https://klook.com" class="btn" target="_blank" rel="noopener">Klook Deals</a>
+        <a href="https://grab.com" class="btn" target="_blank" rel="noopener">Grab App</a>
+      </div>
+
+      <!-- Back to Top -->
+      <a href="#top" class="btn" style="font-size: 0.9rem;">⬆️ Back to Top</a>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 ScanSG. All rights reserved.</p>
+      <p>
+        <a href="index.html">Home</a> • 
+        <a href="glossary.html">Singlish</a> • 
+        <a href="mailto:scansg365@gmail.com">Contact</a>
+      </p>
+      <p class="disclaimer">⚠️ Info is for general use. Verify prices & rules before acting.</p>
+    </div>
+  </footer>
+
+  <!-- Structured Data: FAQPage (for AI & Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I get from Changi Airport to the city?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Take the MRT East-West Line from Terminal 2 or 3 to City Hall (about 25 minutes). Taxis cost SGD $30–$40. Buses are cheaper but slower."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need an EZ-Link card?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. It's the easiest way to pay for MRT and buses. Buy at any MRT station or 7-Eleven."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where can I buy a tourist SIM card?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "At Changi Airport (T1, T2, T3) or pre-book an eSIM via Klook for instant activation."
+        }
+      }
+    ]
+  }
+  </script>
+
+</body>
+</html>
