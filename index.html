@@ -58,33 +58,38 @@
   </script>
 
   <!-- Redirect & HTTPS Enforcer -->
-  <script>
-    (function() {
-      const targetHostname = 'scansg.com';
-      const currentHostname = window.location.hostname.toLowerCase();
-      const currentProtocol = window.location.protocol;
-      let pathname = window.location.pathname;
-      const search = window.location.search;
-      const hash = window.location.hash;
+<script>
+  (function() {
+    const targetHostname = 'scansg.com';
+    const currentHostname = window.location.hostname.toLowerCase();
+    const currentProtocol = window.location.protocol;
+    let pathname = window.location.pathname;
+    const search = window.location.search;
+    const hash = window.location.hash;
 
-      if (pathname !== '/' && !pathname.endsWith('/')) {
-        pathname += '/';
+    // ✅ FIX: Remove .html trailing slash
+    if (pathname.endsWith('/index.html')) {
+      pathname = '/'; // Redirect /index.html → /
+    } else if (pathname !== '/' && !pathname.endsWith('/') && !pathname.endsWith('.html')) {
+      pathname += '/'; // Only add slash if not root, not ending in /, and not an .html file
+    }
+
+    // Ensure no double slashes
+    pathname = pathname.replace(/\/+/g, '/');
+
+    const needsRedirect = 
+      currentHostname !== targetHostname || 
+      currentProtocol !== 'https:' || 
+      window.location.pathname !== pathname;
+
+    if (needsRedirect) {
+      const newUrl = 'https://' + targetHostname + pathname + search + hash;
+      if (window.location.href !== newUrl) {
+        window.location.href = newUrl;
       }
-
-      const needsRedirect = 
-        currentHostname !== targetHostname || 
-        currentProtocol !== 'https:' || 
-        window.location.pathname !== pathname;
-
-      if (needsRedirect) {
-        const newUrl = 'https://' + targetHostname + pathname + search + hash;
-        if (window.location.href !== newUrl) {
-          window.location.href = newUrl;
-        }
-      }
-    })();
-  </script>
-
+    }
+  })();
+</script>
   <!-- Structured Data: Website -->
   <script type="application/ld+json">
   {
