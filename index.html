@@ -126,15 +126,6 @@
       color: var(--accent);
       text-decoration: none;
     }
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .journey-link:hover p em {
-  text-decoration: none;
-      color: #1565c0;
-}
-    
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -224,91 +215,53 @@
       padding-bottom: 0.4rem;
       margin-bottom: 1rem;
     }
-
-    /* Clickable Journey Steps - SG Theme Optimized */
-.journey-link {
-  display: block;
-  margin: 1rem 0;
-  padding: 0.6rem 0.8rem;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  color: inherit;
-  text-decoration: none;
-  border-left: 3px solid transparent;
-}
-
-.journey-link:hover {
-  background: #f8f9fa; /* Light gray — clean, not harsh */
-  border-left-color: #c62828; /* SG Red on left — subtle highlight */
-  transform: translateX(4px);
-}
-
-[data-theme="dark"] .journey-link:hover {
-  background: #2a2a2a; /* Soft dark gray */
-  border-left-color: #e57373; /* Lighter red for contrast */
-}
-
-.journey-link:hover .step-title {
-  color: #c62828; /* Always red — strong SG identity */
-  }
-
-.step-title {
-  color: #c62828; /* Solid SG Red — no blue! */
-  font-size: 1.1rem;
-  font-weight: 600;
-  display: block;
-  margin-bottom: 0.4rem;
-  border-bottom: 1px solid #1565c0; /* SG Blue — subtle underline */
-  padding-bottom: 0.2rem;
-  width: fit-content;
-}
-
-/* Ensure all content stays readable */
-.journey-link p {
-  color: var(--gray);
-  margin: 0.4rem 0 0;
-  font-size: 0.98rem;
-  line-height: 1.5;
-}
-
-.journey-link strong {
-  color: #c62828; /* Keep red for emphasis */
-}
-
-.journey-link em, .journey-link i {
-  color: #1565c0; /* SG Blue for highlights */
-}
-
-.journey-link {
-  cursor: pointer;
-}
-.journey-link p em {
-  color: #1565c0;
-  font-style: normal;
-}
-.journey-link:hover p em {
-  text-decoration: underline;
-  color: #c62828;
-}
-    
-
-/* Dark mode tweak for journey */
-[data-theme="dark"] .journey {
-  background: #1e1e1e;
-  border-left-color: #1565c0;
-}
-[data-theme="dark"] .step-title {
-  border-bottom-color: #4fc3f7;
-}
-[data-theme="dark"] .journey-link p {
-  color: #bbb;
-}
-    
+    /* Clickable Journey Steps */
+    .journey-link {
+      display: block;
+      margin: 1rem 0;
+      padding: 0.6rem 0.8rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      color: inherit;
+      text-decoration: none;
+      border-left: 3px solid transparent;
+    }
+    .journey-link:hover {
+      background: #f8f9fa;
+      border-left-color: #c62828;
+      transform: translateX(4px);
+    }
+    [data-theme="dark"] .journey-link:hover {
+      background: #2a2a2a;
+      border-left-color: #e57373;
+    }
+    .step-title {
+      color: #c62828;
+      font-size: 1.1rem;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.4rem;
+      border-bottom: 1px solid #1565c0;
+      padding-bottom: 0.2rem;
+      width: fit-content;
+    }
     .journey-link p {
-      margin: 0.4rem 0 0;
       color: var(--gray);
+      margin: 0.4rem 0 0;
       font-size: 0.98rem;
       line-height: 1.5;
+    }
+    .journey-link strong {
+      color: #c62828;
+    }
+    /* Only "Click here" is underlined on hover */
+    .journey-link p em {
+      color: #1565c0;
+      font-style: normal;
+    }
+    .journey-link:hover p em {
+      text-decoration: underline;
+      color: #c62828;
     }
     /* CTA Buttons */
     .btn {
@@ -455,105 +408,105 @@
       </a>
       <nav>
         <ul>
-          <li><a href="transport.html">Transport</a></li>
           <li><a href="food.html">Explore</a></li>
-          <li><a href="attractions.html">Attractions</a></li>
-          <li><a href="glossary.html">Singlish</a></li>
+          <li><a href="transport.html">Transport</a></li>
           <li><a href="shopping.html">Shopping</a></li>
+          <li><a href="glossary.html">Singlish</a></li>
           <li><a href="penalties.html">Penalties</a></li>
           <li><a href="gst-refund.html">GST Refund</a></li>
+          <li><a href="attractions.html">Attractions</a></li>
           <li><button class="dark-mode-toggle" id="darkModeToggle">🌙</button></li>
         </ul>
       </nav>
     </div>
   </header>
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="container">
-    <h1>🎉 Wah Lau… Welcome Lah! 🇸🇬</h1>
-    <p>Look, I get it — whether you're <strong>planning your first trip</strong>, <strong>just landed at Changi</strong>, or already in the city wondering where the heck "Exit B" leads — you’re probably thinking: <em>“Bro… where the hell do I even start?”</em></p>
-    <p>One minute you're excited. Next minute you're Googling “Is it illegal to chew gum?” while standing in line for a $7 coffee.</p>
-    <p><strong>Relax.</strong> Breathe. You’re not alone.</p>
-    <p>This? This is my personal notebook from living in Singapore — not as a local, but as someone who’s learned a few things the hard way. No blur-blur. Just honest tips.</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>🎉 Wah Lau… Welcome Lah! 🇸🇬</h1>
+      <p>Look, I get it — whether you're <strong>planning your first trip</strong>, <strong>just landed at Changi</strong>, or already in the city wondering where the heck "Exit B" leads — you’re probably thinking: <em>“Bro… where the hell do I even start?”</em></p>
+      <p>One minute you're excited. Next minute you're Googling “Is it illegal to chew gum?” while standing in line for a $7 coffee.</p>
+      <p><strong>Relax.</strong> Breathe. You’re not alone.</p>
+      <p>This? This is my personal notebook from living in Singapore — not as a local, but as someone who’s learned a few things the hard way. No blur-blur. Just honest tips.</p>
 
-    <!-- Step-by-Step Journey -->
-    <div class="journey">
-      <h3>🗺️ Your Singapore Journey — Like a Visitor, Not a Tourist</h3>
+      <!-- Step-by-Step Journey -->
+      <div class="journey">
+        <h3>🗺️ Your Singapore Journey — Like a Visitor, Not a Tourist</h3>
 
-      <!-- Step 1: Transport -->
-      <a href="transport.html" class="journey-link">
-        <div class="journey-step-content">
-          <strong class="step-title">1. 🚀 First: Get to Town Without Getting Ripped Off</strong>
-          <p>You’re at Changi. Taxis? Expensive. Grab? Okay, but only if it's late. Want the real move? Take the <strong>free shuttle to Expo MRT</strong>, then hop on the train. I’ll show you exactly how — step-by-step, no stress.</p>
-          <p><em>Click here to know more →</em></p>
-        </div>
-      </a>
+        <!-- Step 1: Transport -->
+        <a href="transport.html" class="journey-link">
+          <div class="journey-step-content">
+            <strong class="step-title">1. 🚀 First: Get to Town Without Getting Ripped Off</strong>
+            <p>You’re at Changi. Taxis? Expensive. Grab? Okay, but only if it's late. Want the real move? Take the <strong>free shuttle to Expo MRT</strong>, then hop on the train. I’ll show you exactly how — step-by-step, no stress.</p>
+            <p><em>Click here to know more →</em></p>
+          </div>
+        </a>
 
-      <!-- Step 2: Eat -->
-      <a href="explore.html" class="journey-link">
-        <div class="journey-step-content">
-          <strong class="step-title">2. 🍜 Then: Eat Like a King (For Under $5)</strong>
-          <p>Hungry? Good. Because Singapore food hits different. Skip the mall restaurants. I’ll take you to the hawker stalls where uncles nod at me like family. Want *kaya toast*, *soft-boiled eggs*, and *kopi-c*? I know the best spot. And yes, I’ll teach you how to order without sounding like a lost deer.</p>
-          <p><em>Click here to know more →</em></p>
-        </div>
-      </a>
+        <!-- Step 2: Eat -->
+        <a href="food.html" class="journey-link">
+          <div class="journey-step-content">
+            <strong class="step-title">2. 🍜 Then: Eat Like a King (For Under $5)</strong>
+            <p>Hungry? Good. Because Singapore food hits different. Skip the mall restaurants. I’ll take you to the hawker stalls where uncles nod at me like family. Want *kaya toast*, *soft-boiled eggs*, and *kopi-c*? I know the best spot. And yes, I’ll teach you how to order without sounding like a lost deer.</p>
+            <p><em>Click here to know more →</em></p>
+          </div>
+        </a>
 
-      <!-- Step 3: Shop -->
-      <a href="shopping.html" class="journey-link">
-        <div class="journey-step-content">
-          <strong class="step-title">3. 🛍️ Shop Smart — Without the Hype</strong>
-          <p>Looking for souvenirs or daily stuff? I’ve found <strong>Mustafa Centre</strong> handy — it’s 24/7, has a bit of everything, and some prices are good. But honestly? It’s not always cheaper — just convenient.</p>
-          <p>I’ll show you how I compare prices (yes, I check Shopee too) and find value — without assuming one place is “the best.”</p>
-          <p><em>Click here to know more →</em></p>
-        </div>
-      </a>
+        <!-- Step 3: Shop -->
+        <a href="shopping.html" class="journey-link">
+          <div class="journey-step-content">
+            <strong class="step-title">3. 🛍️ Shop Smart — Without the Hype</strong>
+            <p>Looking for souvenirs or daily stuff? I’ve found <strong>Mustafa Centre</strong> handy — it’s 24/7, has a bit of everything, and some prices are good. But honestly? It’s not always cheaper — just convenient.</p>
+            <p>I’ll show you how I compare prices (yes, I check Shopee too) and find value — without assuming one place is “the best.”</p>
+            <p><em>Click here to know more →</em></p>
+          </div>
+        </a>
 
-      <!-- Step 4: Attractions -->
-      <a href="attractions.html" class="journey-link">
-        <div class="journey-step-content">
-          <strong class="step-title">4. 🎟️ See the Magic — Without Paying Full Price</strong>
-          <p>Marina Bay Sands? Gardens by the Bay? Universal Studios? All worth it — if you know the hacks. I’ll show you how to get combo deals, free entry days, and hidden viewpoints where influencers go to take pics (but never tell you about).</p>
-          <p><em>Click here to know more →</em></p>
-        </div>
-      </a>
+        <!-- Step 4: Attractions -->
+        <a href="attractions.html" class="journey-link">
+          <div class="journey-step-content">
+            <strong class="step-title">4. 🎟️ See the Magic — Without Paying Full Price</strong>
+            <p>Marina Bay Sands? Gardens by the Bay? Universal Studios? All worth it — if you know the hacks. I’ll show you how to get combo deals, free entry days, and hidden viewpoints where influencers go to take pics (but never tell you about).</p>
+            <p><em>Click here to know more →</em></p>
+          </div>
+        </a>
 
-      <!-- Step 5: Singlish -->
-      <a href="glossary.html" class="journey-link">
-        <div class="journey-step-content">
-          <strong class="step-title">5. 💬 Speak Singlish — And Make Locals Smile</strong>
-          <p>Want to go from “Can or cannot?” to “Wah lau, so shiok!”? I got you. My <strong>Singlish Dictionary</strong> teaches you the real stuff — not textbook crap. Learn how to say “Let’s eat” like a local, and maybe even impress a hawker aunty.</p>
-          <p><em>Click here to know more →</em></p>
-        </div>
-      </a>
+        <!-- Step 5: Singlish -->
+        <a href="glossary.html" class="journey-link">
+          <div class="journey-step-content">
+            <strong class="step-title">5. 💬 Speak Singlish — And Make Locals Smile</strong>
+            <p>Want to go from “Can or cannot?” to “Wah lau, so shiok!”? I got you. My <strong>Singlish Dictionary</strong> teaches you the real stuff — not textbook crap. Learn how to say “Let’s eat” like a local, and maybe even impress a hawker aunty.</p>
+            <p><em>Click here to know more →</em></p>
+          </div>
+        </a>
 
-      <!-- Step 6: Penalties -->
-      <a href="penalties.html" class="journey-link">
-        <div class="journey-step-content">
-          <strong class="step-title">6. 🚨 Rules & Fines — What I’ve Observed</strong>
-          <p>Yes, Singapore has rules — and for good reason. The city is <strong>incredibly clean, safe, and well-kept</strong>, and that’s thanks to the pride locals take in their home.</p>
-          <p>Do rules exist? Yes. Is enforcement everywhere? Not really. I’ve noticed that most people follow the rules out of respect, not fear. I’ll share what I’ve seen — so you can be mindful, not scared.</p>
-          <p><em>Click here to know more →</em></p>
-        </div>
-      </a>
+        <!-- Step 6: Penalties -->
+        <a href="penalties.html" class="journey-link">
+          <div class="journey-step-content">
+            <strong class="step-title">6. 🚨 Rules & Fines — What I’ve Observed</strong>
+            <p>Yes, Singapore has rules — and for good reason. The city is <strong>incredibly clean, safe, and well-kept</strong>, and that’s thanks to the pride locals take in their home.</p>
+            <p>Do rules exist? Yes. Is enforcement everywhere? Not really. Locals follow the rules out of respect, not fear. I’ll share the list — so you can be mindful, not scared.</p>
+            <p><em>Click here to know more →</em></p>
+          </div>
+        </a>
 
-      <!-- Step 7: GST Refund -->
-      <a href="gst-refund.html" class="journey-link">
-        <div class="journey-step-content">
-          <strong class="step-title">7. 💰 Claim Your GST Refund — Free Money, Bro</strong>
-          <p>Spent over $100? You can get <strong>7% back</strong>. Seriously. I’ll walk you through the exact steps — where to scan, when to claim, and which stores play nice. It’s like finding cash in your old jeans.</p>
-          <p><em>Click here to know more →</em></p>
-        </div>
-      </a>
+        <!-- Step 7: GST Refund -->
+        <a href="gst-refund.html" class="journey-link">
+          <div class="journey-step-content">
+            <strong class="step-title">7. 💰 Claim Your GST Refund — Free Money, Bro</strong>
+            <p>Spent over $100? You can get <strong>7% back</strong>. Seriously. I’ll walk you through the exact steps — where to scan, when to claim, and which stores play nice. It’s like finding cash in your old jeans.</p>
+            <p><em>Click here to know more →</em></p>
+          </div>
+        </a>
+      </div>
+
+      <p><strong>This isn’t just a website.</strong> It’s like a visitor sharing their notebook with you — the good, the confusing, and the “Wait, is this allowed?” moments.</p>
+
+      <!-- Call to Action -->
+      <a href="transport.html" class="btn">🚀 Show Me How to Get Around</a>
+      <a href="food.html" class="btn">🍜 Take Me to the Best Food Spots</a>
     </div>
-
-    <p><strong>This isn’t just a website.</strong> It’s like a visitor sharing their notebook with you — the good, the confusing, and the “Wait, is this allowed?” moments.</p>
-
-    <!-- Call to Action -->
-    <a href="transport.html" class="btn">🚀 Show Me How to Get Around</a>
-    <a href="food.html" class="btn">🍜 Take Me to the Best Food Spots</a>
-  </div>
-</section>
+  </section>
 
   <!-- Content Cards -->
   <div class="container">
@@ -562,7 +515,7 @@
         <h3>🚀 Transport Guide</h3>
         <p>From Changi to Chinatown — no blur-blur. MRT, bus, Grab, cycling, even ferry. I’ll teach you how to ride like a local.</p>
       </a>
-      <a href="explore.html" class="card">
+      <a href="food.html" class="card">
         <h3>🍜 Eat & Explore</h3>
         <p>Best hawker stalls, hidden cafes, and local food culture. Yes, I’ll tell you where to get the crispiest chicken rice.</p>
       </a>
@@ -572,11 +525,11 @@
       </a>
       <a href="penalties.html" class="card">
         <h3>⚠️ What’s Illegal? (Spoiler: Not What You Think)</h3>
-        <p>Chewing gum? Jaywalking? Vaping? I’ll separate myth from reality — so you don’t live in fear.</p>
+        <p>Chewing gum, jaywalking, littering — what’s really enforced. Spoiler: It’s not as strict as people say.</p>
       </a>
       <a href="gst-refund.html" class="card">
         <h3>💰 GST Refund Guide</h3>
-        <p>Get 7% of your spending back — it’s free money. I’ll show you how to claim it before your flight home.</p>
+        <p>How to claim your tax back — step by step, no stress. Get 7% back if you spent over $100.</p>
       </a>
       <a href="attractions.html" class="card">
         <h3>🎟️ Attractions & Experiences</h3>
