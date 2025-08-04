@@ -707,6 +707,50 @@
     });
   </script>
 
+  <script>
+  // Mobile Nav Toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const mainNav = document.getElementById('mainNav');
+
+  // Show/hide menu when button is clicked
+  menuToggle.addEventListener('click', () => {
+    if (mainNav.style.display === 'none' || mainNav.style.display === '') {
+      mainNav.style.display = 'flex';
+      menuToggle.textContent = '✕'; // Optional: change ☰ to ✕
+    } else {
+      mainNav.style.display = 'none';
+      menuToggle.textContent = '☰';
+    }
+  });
+
+  // Handle window resize
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      mainNav.style.display = 'flex';
+      menuToggle.style.display = 'none';
+    } else {
+      menuToggle.style.display = 'block';
+      if (!menuToggle.textContent.includes('✕')) {
+        mainNav.style.display = 'none';
+      }
+    }
+  });
+
+  // On load: set initial state
+  window.addEventListener('load', () => {
+    if (window.innerWidth <= 768) {
+      menuToggle.style.display = 'block';
+      mainNav.style.display = 'none';
+    } else {
+      menuToggle.style.display = 'none';
+      mainNav.style.display = 'flex';
+    }
+  });
+</script>
+
+  
+
+  
   <!-- Load links.js -->
   <script src="/js/links.js" defer></script>
 </body>
