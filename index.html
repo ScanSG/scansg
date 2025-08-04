@@ -244,8 +244,7 @@
 
 .journey-link:hover .step-title {
   color: #c62828; /* Always red — strong SG identity */
-  text-decoration: underline;
-}
+  }
 
 .step-title {
   color: #c62828; /* Solid SG Red — no blue! */
@@ -273,6 +272,19 @@
 .journey-link em, .journey-link i {
   color: #1565c0; /* SG Blue for highlights */
 }
+
+.journey-link {
+  cursor: pointer;
+}
+.journey-link p em {
+  color: #1565c0;
+  font-style: normal;
+}
+.journey-link:hover p em {
+  text-decoration: underline;
+  color: #c62828;
+}
+    
 
 /* Dark mode tweak for journey */
 [data-theme="dark"] .journey {
@@ -450,65 +462,92 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <h1>🎉 Wah Lau… Welcome Lah! 🇸🇬</h1>
-      <p>Look, I get it — you just stepped out of Changi, bags in hand, eyes wide, thinking: <em>“Bro… where the hell do I even start?”</em></p>
-      <p>One minute you're excited. Next minute you're lost at the MRT station, trying to figure out if “Exit B” leads to your hostel or a construction site.</p>
-      <p><strong>Relax.</strong> Breathe. You’re not alone.</p>
-      <p>This? This is your <strong>SG survival kit</strong>. No tourist traps. No corporate blur-blur. Just real tips from someone who’s lived here for 4 years, eaten $3 chicken rice every Monday, and still hasn’t gotten fined for jaywalking. (Knock on wood.)</p>
+ <!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <h1>🎉 Wah Lau… Welcome Lah! 🇸🇬</h1>
+    <p>Look, I get it — you just stepped out of Changi, bags in hand, eyes wide, thinking: <em>“Bro… where the hell do I even start?”</em></p>
+    <p>One minute you're excited. Next minute you're lost at the MRT station, trying to figure out if “Exit B” leads to your hostel or a construction site.</p>
+    <p><strong>Relax.</strong> Breathe. You’re not alone.</p>
+    <p>This? This is my personal notebook from living in Singapore — not as a local, but as someone who’s learned a few things the hard way. No blur-blur. Just honest tips.</p>
 
-      <!-- Step-by-Step Journey -->
-      <div class="journey">
-        <h3>🗺️ Your Singapore Journey — Like a Local, Not a Lost Tourist</h3>
+    <!-- Step-by-Step Journey -->
+    <div class="journey">
+      <h3>🗺️ Your Singapore Journey — Like a Visitor, Not a Tourist</h3>
 
-        <a href="transport.html" class="journey-link">
+      <!-- Step 1: Transport -->
+      <a href="transport.html" class="journey-link">
+        <div class="journey-step-content">
           <strong class="step-title">1. 🚀 First: Get to Town Without Getting Ripped Off</strong>
           <p>You’re at Changi. Taxis? Expensive. Grab? Okay, but only if it's late. Want the real move? Take the <strong>free shuttle to Expo MRT</strong>, then hop on the train. I’ll show you exactly how — step-by-step, no stress.</p>
-        </a>
+          <p><em>Click here to know more →</em></p>
+        </div>
+      </a>
 
-        <a href="explore.html" class="journey-link">
+      <!-- Step 2: Eat -->
+      <a href="explore.html" class="journey-link">
+        <div class="journey-step-content">
           <strong class="step-title">2. 🍜 Then: Eat Like a King (For Under $5)</strong>
           <p>Hungry? Good. Because Singapore food hits different. Skip the mall restaurants. I’ll take you to the hawker stalls where uncles nod at me like family. Want *kaya toast*, *soft-boiled eggs*, and *kopi-c*? I know the best spot. And yes, I’ll teach you how to order without sounding like a lost deer.</p>
-        </a>
+          <p><em>Click here to know more →</em></p>
+        </div>
+      </a>
 
-        <a href="shopping.html" class="journey-link">
-          <strong class="step-title">3. 🛍️ Shop Smart — Not Hard</strong>
-<p>Looking for souvenirs or daily stuff? I’ve found <strong>Mustafa Centre</strong> handy — it’s 24/7, has a bit of everything, and some prices are good. But honestly? It’s not always cheaper — just convenient.</p>
-<p>I’ll show you how I compare prices (yes, I check Shopee too) and find value — without assuming one place is “the best.”</p>        
-        </a>
+      <!-- Step 3: Shop -->
+      <a href="shopping.html" class="journey-link">
+        <div class="journey-step-content">
+          <strong class="step-title">3. 🛍️ Shop Smart — Without the Hype</strong>
+          <p>Looking for souvenirs or daily stuff? I’ve found <strong>Mustafa Centre</strong> handy — it’s 24/7, has a bit of everything, and some prices are good. But honestly? It’s not always cheaper — just convenient.</p>
+          <p>I’ll show you how I compare prices (yes, I check Shopee too) and find value — without assuming one place is “the best.”</p>
+          <p><em>Click here to know more →</em></p>
+        </div>
+      </a>
 
-        <a href="attractions.html" class="journey-link">
+      <!-- Step 4: Attractions -->
+      <a href="attractions.html" class="journey-link">
+        <div class="journey-step-content">
           <strong class="step-title">4. 🎟️ See the Magic — Without Paying Full Price</strong>
           <p>Marina Bay Sands? Gardens by the Bay? Universal Studios? All worth it — if you know the hacks. I’ll show you how to get combo deals, free entry days, and hidden viewpoints where influencers go to take pics (but never tell you about).</p>
-        </a>
+          <p><em>Click here to know more →</em></p>
+        </div>
+      </a>
 
-        <a href="glossary.html" class="journey-link">
+      <!-- Step 5: Singlish -->
+      <a href="glossary.html" class="journey-link">
+        <div class="journey-step-content">
           <strong class="step-title">5. 💬 Speak Singlish — And Make Locals Smile</strong>
           <p>Want to go from “Can or cannot?” to “Wah lau, so shiok!”? I got you. My <strong>Singlish Dictionary</strong> teaches you the real stuff — not textbook crap. Learn how to say “Let’s eat” like a local, and maybe even impress a hawker aunty.</p>
-        </a>
+          <p><em>Click here to know more →</em></p>
+        </div>
+      </a>
 
-        <a href="penalties.html" class="journey-link">
-          <strong class="step-title">6. 🚨 Avoid Fines — Without Living in Fear</strong>
-<strong>6. 🚨 Fines & Rules — What I’ve Actually Seen</strong>
-<p>You’ve probably heard the stories: “Chewing gum = jail.” “Jaywalking = fine.” But after living here a while, I’ve noticed — <strong>not everything is as strict as people say</strong>.</p>
-<p>Yes, rules exist. But enforcement? It’s not always black and white. I’ll share what I’ve observed, so you can stay respectful — without living in fear.</p>        
-        </a>
+      <!-- Step 6: Penalties (Respectful Tone) -->
+      <a href="penalties.html" class="journey-link">
+        <div class="journey-step-content">
+          <strong class="step-title">6. 🚨 Rules & Fines — What I’ve Observed</strong>
+          <p>Yes, Singapore has rules — and for good reason. The city is <strong>incredibly clean, safe, and well-kept</strong>, and that’s thanks to the pride locals take in their home.</p>
+          <p>Do rules exist? Yes. Is enforcement everywhere? Not really. I’ve noticed that most people follow the rules out of respect, not fear. I’ll share what I’ve seen — so you can be mindful, not scared.</p>
+          <p><em>Click here to know more →</em></p>
+        </div>
+      </a>
 
-        <a href="gst-refund.html" class="journey-link">
+      <!-- Step 7: GST Refund -->
+      <a href="gst-refund.html" class="journey-link">
+        <div class="journey-step-content">
           <strong class="step-title">7. 💰 Claim Your GST Refund — Free Money, Bro</strong>
           <p>Spent over $100? You can get <strong>7% back</strong>. Seriously. I’ll walk you through the exact steps — where to scan, when to claim, and which stores play nice. It’s like finding cash in your old jeans.</p>
-        </a>
-      </div>
-
-      <p><strong>This isn’t just a website.</strong> It’s like having a friend in Singapore — one who doesn’t flake, doesn’t charge you for drinks, and always tells you the truth.</p>
-
-      <!-- Call to Action -->
-      <a href="transport.html" class="btn">🚀 Show Me How to Get Around</a>
-      <a href="explore.html" class="btn">🍜 Take Me to the Best Food Spots</a>
+          <p><em>Click here to know more →</em></p>
+        </div>
+      </a>
     </div>
-  </section>
+
+    <p><strong>This isn’t just a website.</strong> It’s like a visitor sharing their notebook with you — the good, the confusing, and the “Wait, is this allowed?” moments.</p>
+
+    <!-- Call to Action -->
+    <a href="transport.html" class="btn">🚀 Show Me How to Get Around</a>
+    <a href="explore.html" class="btn">🍜 Take Me to the Best Food Spots</a>
+  </div>
+</section>
 
   <!-- Content Cards -->
   <div class="container">
