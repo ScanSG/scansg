@@ -128,7 +128,6 @@
       color: var(--text);
       background: var(--bg);
       transition: background 0.4s ease, color 0.4s ease;
-      overflow-x: hidden;
     }
     h1, h2, h3, h4 {
       font-family: 'Montserrat', sans-serif;
@@ -185,7 +184,7 @@
     /* Hero Section */
     .hero {
       text-align: center;
-      padding: 5rem 1rem 4rem;
+      padding: 4rem 1rem;
       background: linear-gradient(135deg, #fff3e0 0%, #f3e5f5 100%);
       margin: 0;
       border-bottom: 1px solid var(--border);
@@ -195,33 +194,60 @@
       border-color: #444;
     }
     .hero h1 {
-      font-size: 2.5rem;
+      font-size: 2.6rem;
       margin: 0.5rem 0;
       color: var(--main);
       text-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       color: var(--gray);
       max-width: 700px;
       margin: 0.8rem auto;
     }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
+    /* Journey Map */
+    .journey {
+      max-width: 850px;
+      margin: 2rem auto;
+      padding: 1.8rem;
+      background: #f8f9fa;
+      border-radius: 14px;
+      border-left: 5px solid var(--accent);
+      line-height: 1.7;
+      font-size: 1rem;
+      color: var(--text);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
+    [data-theme="dark"] .journey {
+      background: #1e1e1e;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .journey h3 {
+      color: var(--main);
+      margin-top: 0;
+      font-size: 1.4rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.4rem;
+    }
+    .journey p {
+      margin: 0.8rem 0;
+      font-size: 1rem;
+    }
+    .journey strong {
+      color: var(--main);
+    }
+    /* CTA Buttons */
     .btn {
       display: inline-block;
-      margin: 1rem 0.5rem;
-      padding: 0.8rem 1.5rem;
+      margin: 1.2rem 0.6rem;
+      padding: 0.9rem 1.6rem;
       background: var(--main);
       color: white;
       border-radius: 30px;
       font-weight: 600;
+      font-size: 1rem;
       box-shadow: 0 4px 12px rgba(198, 40, 40, 0.2);
       transition: all 0.3s ease;
-      animation: pulse 2s infinite;
     }
     .btn:hover {
       transform: translateY(-3px);
@@ -236,18 +262,19 @@
     }
     .card {
       background: var(--light-gray);
-      padding: 1.5rem;
+      padding: 1.6rem;
       border-radius: 12px;
       text-align: center;
       transition: all 0.3s ease;
       border-left: 4px solid var(--accent);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
     }
     [data-theme="dark"] .card {
       background: #1e1e1e;
     }
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
     }
     .card h3 {
       color: var(--main);
@@ -320,10 +347,15 @@
         gap: 0.8rem;
       }
       .hero h1 {
-        font-size: 2rem;
+        font-size: 2.1rem;
       }
-      .hero p {
-        font-size: 1rem;
+      .journey {
+        padding: 1.4rem;
+        font-size: 0.95rem;
+      }
+      .btn {
+        margin: 0.8rem 0.5rem;
+        font-size: 0.95rem;
       }
     }
   </style>
@@ -350,47 +382,46 @@
     </div>
   </header>
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="container">
-    <h1>🎉 Wah Lau… Welcome Lah! 🇸🇬</h1>
-    <p>You’ve landed in Singapore — one of the safest, cleanest, and most delicious cities on Earth. But let’s be real: it can also be <strong>confusing, expensive, and full of blur-blur rules</strong>.</p>
-    <p><strong>That’s where ScanSG comes in.</strong></p>
-    <p>After 4 years of eating, riding, surviving, and loving this island, I built this guide to help you:</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>🎉 Wah Lau… Welcome Lah! 🇸🇬</h1>
+      <p>You’ve landed in Singapore — one of the safest, cleanest, and most delicious cities on Earth. But let’s be real: it can also be <strong>confusing, expensive, and full of blur-blur rules</strong>.</p>
+      <p><strong>That’s where ScanSG comes in.</strong></p>
 
-    <!-- Journey Map -->
-    <div style="max-width: 800px; margin: 2rem auto; padding: 1.5rem; background: #f8f9fa; border-radius: 12px; border-left: 5px solid #1565c0; line-height: 1.7; font-size: 1rem; color: #222;">
-      <h3 style="color: #c62828; margin-top: 0;">🗺️ Your Singapore Journey, Step by Step</h3>
+      <!-- Journey Map -->
+      <div class="journey">
+        <h3>🗺️ Your Singapore Journey, Step by Step</h3>
 
-      <p><strong>1. 🚀 Start with Transport</strong><br>
-      You just landed at <strong>Changi Airport</strong>. How do you get to your hotel? What’s MRT? What’s Grab? Where do I buy a SIM card? Our <strong>Transport Guide</strong> answers it all — from <strong>free airport shuttles</strong> to <strong>EV car rentals</strong>.</p>
+        <p><strong>1. 🚀 Start with Transport</strong><br>
+        You just landed at <strong>Changi Airport</strong>. How do you get to your hotel? What’s MRT? What’s Grab? Where do I buy a SIM card? Our <strong>Transport Guide</strong> answers it all — from <strong>free airport shuttles</strong> to <strong>EV car rentals</strong>.</p>
 
-      <p><strong>2. 🍜 Eat & Explore Like a Local</strong><br>
-      You’re in the city. Hungry? Skip the tourist traps. Our <strong>Explore (Food) page</strong> shows you the <strong>best hawker stalls</strong>, <strong>hidden cafes</strong>, and <strong>must-try dishes</strong> — all under $5. Learn how to order <em>Kopi-C-Peng</em> like a pro.</p>
+        <p><strong>2. 🍜 Eat & Explore Like a Local</strong><br>
+        You’re in the city. Hungry? Skip the tourist traps. Our <strong>Explore (Food) page</strong> shows you the <strong>best hawker stalls</strong>, <strong>hidden cafes</strong>, and <strong>must-try dishes</strong> — all under $5. Learn how to order <em>Kopi-C-Peng</em> like a pro.</p>
 
-      <p><strong>3. 🛍️ Shop Smart — Online & Offline</strong><br>
-      Want souvenirs or a bargain? Our <strong>Shopping Guide</strong> covers <strong>Mustafa 24/7 mall</strong>, <strong>Carousell hacks</strong>, <strong>Shopee vouchers</strong>, and <strong>$2 stores</strong> locals love. Save big without blur-blur.</p>
+        <p><strong>3. 🛍️ Shop Smart — Online & Offline</strong><br>
+        Want souvenirs or a bargain? Our <strong>Shopping Guide</strong> covers <strong>Mustafa 24/7 mall</strong>, <strong>Carousell hacks</strong>, <strong>Shopee vouchers</strong>, and <strong>$2 stores</strong> locals love. Save big without blur-blur.</p>
 
-      <p><strong>4. 🎟️ See the Best Attractions — Free & Paid</strong><br>
-      Ready to explore? Our <strong>Attractions page</strong> splits everything by <strong>cost</strong> and <strong>region</strong>. See <strong>Marina Bay Sands</strong>, <strong>USS</strong>, <strong>Gardens by the Bay</strong> — and discover <strong>hidden gems</strong> like <strong>Haw Par Villa</strong> and <strong>Pulau Ubin</strong>.</p>
+        <p><strong>4. 🎟️ See the Best Attractions — Free & Paid</strong><br>
+        Ready to explore? Our <strong>Attractions page</strong> splits everything by <strong>cost</strong> and <strong>region</strong>. See <strong>Marina Bay Sands</strong>, <strong>USS</strong>, <strong>Gardens by the Bay</strong> — and discover <strong>hidden gems</strong> like <strong>Haw Par Villa</strong> and <strong>Pulau Ubin</strong>.</p>
 
-      <p><strong>5. 💬 Speak Singlish — No More "Can or Cannot?"</strong><br>
-      Want to sound like a local? Our <strong>Singlish Dictionary</strong> teaches you <strong>real slang</strong> — from <em>Shiok</em> to <em>Bo Jio</em> to <em>Wah Lau</em>. Impress your friends and hawker uncles alike.</p>
+        <p><strong>5. 💬 Speak Singlish — No More "Can or Cannot?"</strong><br>
+        Want to sound like a local? Our <strong>Singlish Dictionary</strong> teaches you <strong>real slang</strong> — from <em>Shiok</em> to <em>Bo Jio</em> to <em>Wah Lau</em>. Impress your friends and hawker uncles alike.</p>
 
-      <p><strong>6. 🚨 Avoid Fines & Penalties</strong><br>
-      Chewing gum? Jaywalking? Vaping? Our <strong>Penalties page</strong> separates <strong>myth from reality</strong>. Learn what’s <strong>actually enforced</strong> — and what’s just tourist fear-mongering.</p>
+        <p><strong>6. 🚨 Avoid Fines & Penalties</strong><br>
+        Chewing gum? Jaywalking? Vaping? Our <strong>Penalties page</strong> separates <strong>myth from reality</strong>. Learn what’s <strong>actually enforced</strong> — and what’s just tourist fear-mongering.</p>
 
-      <p><strong>7. 💰 Claim Your GST Refund</strong><br>
-      Spent over $100? You can get <strong>7% tax back</strong>. Our <strong>step-by-step GST Refund Guide</strong> tells you where to scan, how to claim, and what stores participate.</p>
+        <p><strong>7. 💰 Claim Your GST Refund</strong><br>
+        Spent over $100? You can get <strong>7% tax back</strong>. Our <strong>step-by-step GST Refund Guide</strong> tells you where to scan, how to claim, and what stores participate.</p>
+      </div>
+
+      <p><strong>No corporate fluff. No affiliate spam.</strong> Just <strong>real tips from someone who lives here</strong>.</p>
+
+      <!-- Call to Action -->
+      <a href="transport.html" class="btn">🚀 Start with Transport</a>
+      <a href="attractions.html" class="btn">🎟️ See All Attractions</a>
     </div>
-
-    <p><strong>No corporate fluff. No affiliate spam.</strong> Just <strong>real tips from someone who lives here</strong>.</p>
-
-    <!-- Call to Action -->
-    <a href="transport.html" class="btn">🚀 Start with Transport</a>
-    <a href="attractions.html" class="btn">🎟️ See All Attractions</a>
-  </div>
-</section>
+  </section>
 
   <!-- Content Cards -->
   <div class="container">
