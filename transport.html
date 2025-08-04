@@ -280,28 +280,92 @@
         padding: 1.4rem;
       }
     }
+
+    /* Mobile Nav Toggle */
+#menuToggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    padding: 0.6rem 1rem;
+  }
+
+  #menuToggle {
+    display: block;
+    order: 2;
+    width: 100%;
+    text-align: right;
+  }
+
+  #mainNav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: var(--header-bg);
+    padding: 0.6rem 0;
+    border-radius: 8px;
+    order: 1;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+
+  nav li {
+    width: 100%;
+  }
+
+  nav a {
+    display: block;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 4px;
+  }
+
+  nav a:hover {
+    background: rgba(255,255,255,0.1);
+  }
+
+  #mainNav[style="display:none"] {
+    display: none !important;
+  }
+}
+
+    
   </style>
 </head>
 <body>
+
+
   <!-- Header -->
-  <header>
-    <div class="container header-content">
-      <a href="index.html" class="logo-link">
-        <div class="logo">ScanSG</div>
-      </a>
-      <nav>
-        <ul>
-          <li><a href="food.html">Explore</a></li>
-          <li><a href="transport.html" style="font-weight:700;color:#fff;">Transport</a></li>
-          <li><a href="shopping.html">Shopping</a></li>
-          <li><a href="glossary.html">Singlish</a></li>
-          <li><a href="penalties.html">Penalties</a></li>
-          <li><a href="attractions.html">Attractions</a></li>
-          <li><button class="dark-mode-toggle" id="darkModeToggle">🌙</button></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header>
+  <div class="container header-content">
+    <a href="index.html" class="logo-link">
+      <div class="logo">ScanSG</div>
+    </a>
+    <button id="menuToggle" aria-label="Toggle menu" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; display: none;">☰</button>
+    <nav id="mainNav">
+      <ul>
+        <li><a href="food.html">Explore</a></li>
+        <li><a href="transport.html">Transport</a></li>
+        <li><a href="shopping.html">Shopping</a></li>
+        <li><a href="glossary.html">Singlish</a></li>
+        <li><a href="penalties.html">Penalties</a></li>
+        <li><a href="attractions.html">Attractions</a></li>
+        <li><button class="dark-mode-toggle" id="darkModeToggle">🌙</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  
 
   <!-- Main -->
   <div class="container">
@@ -716,5 +780,48 @@
       policy.style.display = policy.style.display === 'block' ? 'none' : 'block';
     });
   </script>
+
+  <script>
+  // Mobile Nav Toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const mainNav = document.getElementById('mainNav');
+
+  // Show/hide menu when button is clicked
+  menuToggle.addEventListener('click', () => {
+    if (mainNav.style.display === 'none' || mainNav.style.display === '') {
+      mainNav.style.display = 'flex';
+      menuToggle.textContent = '✕'; // Optional: change ☰ to ✕
+    } else {
+      mainNav.style.display = 'none';
+      menuToggle.textContent = '☰';
+    }
+  });
+
+  // Handle window resize
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      mainNav.style.display = 'flex';
+      menuToggle.style.display = 'none';
+    } else {
+      menuToggle.style.display = 'block';
+      if (!menuToggle.textContent.includes('✕')) {
+        mainNav.style.display = 'none';
+      }
+    }
+  });
+
+  // On load: set initial state
+  window.addEventListener('load', () => {
+    if (window.innerWidth <= 768) {
+      menuToggle.style.display = 'block';
+      mainNav.style.display = 'none';
+    } else {
+      menuToggle.style.display = 'none';
+      mainNav.style.display = 'flex';
+    }
+  });
+</script>
+
+  
 </body>
 </html>
