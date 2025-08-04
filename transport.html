@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Singapore Transport Guide 2025: MRT, buses, taxis, cycling, walking & self-drive. Complete guide for tourists and locals." />
+  <meta name="description" content="Singapore Transport Guide 2025: MRT hacks, bus tips, Grab tricks, cycling paths & hidden free rides. The only guide you need — from someone who lives here." />
   <link rel="canonical" href="https://scansg.com/transport.html" />
   <!-- Preload Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <!-- Open Graph -->
-  <meta property="og:title" content="Singapore Transport Guide 2025| MRT, Buses, Taxis & More" />
-  <meta property="og:description" content="The only transport guide you need: How to move like a local in Singapore — fast, cheap, and stress-free." />
+  <meta property="og:title" content="Singapore Transport Guide 2025: MRT, Bus, Grab & Local Hacks" />
+  <meta property="og:description" content="The only transport guide you need — real tips from a long-term resident. Free shuttles, hidden routes, EZ-Link tricks & more." />
   <meta property="og:image" content="https://scansg.com/images/og-transport.jpg" />
   <meta property="og:url" content="https://scansg.com/transport.html" />
   <meta property="og:type" content="article" />
@@ -17,7 +17,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@ScanSG365" />
   <!-- Title -->
-  <title>Singapore Transport Guide 2025| MRT, Buses, Taxis & More</title>
+  <title>Singapore Transport Guide 2025: MRT, Bus, Grab & Local Hacks | ScanSG</title>
   <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico" sizes="32x32" />
   <!-- Google AdSense -->
@@ -38,14 +38,14 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "sp1isxvzim");
   </script>
-  <!-- NO REDIRECT — fixes broken link issue -->
+  <!-- NO REDIRECT — keeps transport.html working -->
   <!-- Structured Data: Article -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Singapore Transport Guide 2025: MRT, Buses, Taxis & More",
-    "description": "The only transport guide you need: How to move like a local in Singapore — fast, cheap, and stress-free.",
+    "headline": "Singapore Transport Guide 2025: MRT, Bus, Grab & Local Hacks",
+    "description": "The only transport guide you need — real tips from a long-term resident. Free shuttles, hidden routes, EZ-Link tricks & more.",
     "author": {
       "@type": "Person",
       "name": "ScanSG"
@@ -149,25 +149,26 @@
     nav a:hover {
       color: #4fc3f7;
     }
-    /* Hero Intro */
-    .hero {
+    /* Intro */
+    .transport-intro {
       padding: 3rem 1rem;
       text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
     }
-    .hero h1 {
+    .transport-intro h1 {
       font-size: 2.4rem;
       color: var(--main);
     }
-    .hero p {
+    .transport-intro p {
       font-size: 1.1rem;
       color: var(--gray);
-      max-width: 700px;
-      margin: 0.5rem auto;
+      margin: 0.6rem auto;
     }
     /* Transport Category */
     .transport-category {
-      margin: 2.4rem 0;
-      padding: 1.6rem;
+      margin: 2.6rem 0;
+      padding: 1.8rem;
       background: var(--light-gray);
       border-radius: 12px;
       border-left: 4px solid var(--accent);
@@ -191,28 +192,12 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 1.8rem;
-      margin: 2rem 0;
-    }
-    /* App List */
-    .app-list {
-      margin: 2rem 0;
-      padding: 1.6rem;
-      background: #f8f9fa;
-      border-radius: 12px;
-    }
-    [data-theme="dark"] .app-list {
-      background: #1e1e1e;
-    }
-    .app-list ul {
-      padding-left: 1.4rem;
-    }
-    .app-list li {
-      margin: 0.5rem 0;
+      margin: 2.6rem 0;
     }
     /* Tips Box */
     .tips-box {
-      margin: 2.6rem 0;
-      padding: 1.6rem;
+      margin: 3rem 0;
+      padding: 1.8rem;
       background: #e8f5e9;
       border-left: 4px solid #4caf50;
       border-radius: 12px;
@@ -228,7 +213,7 @@
     /* Footer */
     footer {
       margin-top: 4rem;
-      padding: 2rem 1rem;
+      padding: 2.4rem 1rem;
       background: #1a1a1a;
       color: #aaa;
       font-size: 0.9rem;
@@ -240,18 +225,30 @@
     footer a {
       color: #4fc3f7;
     }
+    .next-step {
+      margin: 2.4rem 0;
+      padding: 1.6rem;
+      background: #fff3e0;
+      border-radius: 12px;
+      text-align: center;
+      border-left: 4px solid #c62828;
+    }
+    [data-theme="dark"] .next-step {
+      background: #2a1a1a;
+    }
+    .next-step a {
+      color: #c62828;
+      font-weight: 600;
+    }
     @media (max-width: 768px) {
-      .hero h1 {
+      .transport-intro h1 {
         font-size: 2rem;
       }
-      .hero {
-        padding: 2.4rem 1rem;
-      }
       .transport-category {
-        padding: 1.2rem;
+        padding: 1.4rem;
       }
-      .app-list {
-        padding: 1.2rem;
+      .tips-box {
+        padding: 1.4rem;
       }
     }
   </style>
@@ -281,10 +278,12 @@
   <!-- Main -->
   <div class="container">
     <main>
-      <!-- Hero Intro -->
-      <section class="hero">
+      <!-- Intro -->
+      <section class="transport-intro">
         <h1>🚀 Singapore Transport Guide 2025: Move Like a Local</h1>
-        <p>From Changi Airport to your hotel, this is how <strong>real Singaporeans get around</strong> — fast, cheap, and without breaking a sweat.</p>
+        <p>You’ve landed. Now what? This isn’t just a list of buses and trains. This is your <strong>real SG transport survival guide</strong> — the kind of stuff you only learn after years here.</p>
+        <p>From <strong>free shuttles at Changi</strong> to <strong>hidden MRT transfers</strong>, <strong>Grab hacks</strong>, and <strong>why you should never tap twice</strong> — I’ll show you how to get around <strong>faster, cheaper, and without looking like a tourist</strong>.</p>
+        <p>No blur-blur. Just real tips from someone who’s lived here 4 years, missed trains, overpaid, and learned the hard way.</p>
       </section>
 
       <!-- Just Landed at Changi? -->
@@ -337,6 +336,8 @@
           <li><strong>Peak Hours:</strong> 7:30–9:30 AM & 5:30–7:30 PM — avoid if you hate crowds</li>
         </ul>
         <p><strong>Transfers:</strong> Most are underground and signposted. Use Google Maps — it shows you the exact path (even which escalator).</p>
+        <p><strong>Local Hack:</strong> At City Hall, transfer between NS and EW lines via the <strong>underground link</strong> — faster than going outside. Look for signs to “Esplanade” or “Raffles City”.</p>
+        <p><strong>Don’t Tap Twice:</strong> If your EZ-Link beeps red, <strong>don’t tap again</strong>. Just walk to the wide gate for manual check.</p>
       </div>
 
       <!-- Bus -->
@@ -349,7 +350,9 @@
           <li><strong>Boarding:</strong> Tap your EZ-Link when you get on</li>
           <li><strong>Alighting:</strong> Tap again when you get off (distance-based pricing)</li>
         </ul>
-        <p><em>Fun fact: Some buses have USB ports. Look for the “SBS Green” ones.</em></p>
+        <p><strong>Local Hack:</strong> Some buses (like 124, 131) go through hawker centres. Use them to reach hidden food spots.</p>
+        <p><strong>Free City Loop:</strong> Route <strong>97</strong> runs from Raffles Place to Marina Bay Sands and back — perfect for quick city views.</p>
+        <p><strong>No Cash?</strong> No problem — just tap your Visa/Mastercard contactless card. Works on all buses and MRT.</p>
       </div>
 
       <!-- Taxi & Ride-Hailing -->
@@ -362,7 +365,8 @@
           <li><strong>Motorbike Taxis:</strong> Yes, Grab offers them — fast for short trips in traffic</li>
           <li><strong>ERP Charges:</strong> Taxis pay these, not you (unlike car rentals)</li>
         </ul>
-        <p><em>My rule: Use Grab only after 10 PM or in heavy rain. Otherwise, MRT is king.</em></p>
+        <p><strong>Local Hack:</strong> In heavy rain, use <strong>GrabCar Lite</strong> — it’s cheaper than full GrabCar.</p>
+        <p><strong>Pro Tip:</strong> Always confirm the pickup point. Some drivers go to the wrong terminal at Changi.</p>
       </div>
 
       <!-- Walking & Cycling -->
@@ -375,7 +379,8 @@
           <li><strong>Bike Rentals:</strong> SG Bike, Anywheel — dockless, pay per minute</li>
           <li><strong>Helmet Rule:</strong> Not required, but recommended for longer rides</li>
         </ul>
-        <p><em>Walk from Clarke Quay to Robertson Quay at night — the lights are Instagram gold.</em></p>
+        <p><strong>Local Hack:</strong> Walk from Clarke Quay to Robertson Quay at night — the lights are Instagram gold.</p>
+        <p><strong>BlueSG:</strong> Electric cars for rent by the hour. Perfect for day trips to Sentosa or East Coast.</p>
       </div>
 
       <!-- Self-Drive -->
@@ -388,7 +393,8 @@
           <li><strong>Parking:</strong> HDB lots are cheap; CBD is expensive ($4/hour+)</li>
           <li><strong>International License:</strong> Valid for 12 months. Bring your home license + IDP if required</li>
         </ul>
-        <p><em>Only rent if you're leaving the city (e.g., to Johor). Inside SG? MRT wins.</em></p>
+        <p><strong>ERP Hack:</strong> Avoid driving into the city between 7:30–9:30 AM — ERP rates spike.</p>
+        <p><strong>Only rent if you're leaving the city</strong> (e.g., to Johor). Inside SG? MRT wins.</p>
       </div>
 
       <!-- Tours & Airport Transfers -->
@@ -396,7 +402,7 @@
         <h3>🎫 Tours & Airport Transfers</h3>
         <p>If you want zero stress, these are worth it.</p>
         <ul>
-          <li><strong>Airport Transfers:</strong> Pre-book via Klook or Grab for fixed rates</li>
+          <li><strong>Airport Transfers:</strong> Pre-book via <a href="#" data-link-key="klook-transfers" target="_blank">Klook</a> or <a href="#" data-link-key="grab-transfers" target="_blank">Grab</a> for fixed rates</li>
           <li><strong>City Tours:</strong> 
             <ul style="padding-left: 1.6rem; margin: 0.4rem 0;">
               <li><strong>Free Walking Tours:</strong> Check <a href="#" data-link-key="namhoe-tours" target="_blank">NamHoe Tour</a> or <a href="#" data-link-key="walkscape-tours" target="_blank">WalkScape</a></li>
@@ -442,8 +448,17 @@
           <li><strong>Weekend MRT:</strong> Runs longer on weekends — perfect for night owls.</li>
           <li><strong>Lost EZ-Link?</strong> Report it via TransitLink app — they can freeze it.</li>
           <li><strong>No Cash on Bus?</strong> That’s fine — just tap your credit card.</li>
+          <li><strong>Tap at the back of the bus:</strong> When boarding, tap at the back door — it’s faster and less crowded.</li>
+          <li><strong>Use Klook for combo deals:</strong> Save 20% on Sentosa + Cable Car + attractions.</li>
         </ul>
         <p><em>Remember: You don’t need to be a local to move like one. Just be smart, not scared.</em></p>
+      </div>
+
+      <!-- Next Step -->
+      <div class="next-step">
+        <h3>🎯 What’s Next?</h3>
+        <p>You’ve mastered transport. Now it’s time to <strong>explore the real Singapore</strong> — from hidden hawker stalls to local-only cafes.</p>
+        <p><a href="explore.html">👉 Click here to discover the best food & hidden gems</a></p>
       </div>
     </main>
   </div>
