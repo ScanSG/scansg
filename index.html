@@ -6,10 +6,8 @@
   <meta name="description" content="The Real Singapore Guide 2025: MRT hacks, hawker food, Singlish, GST refunds & more. No blur-blur. Just real tips from 4 years in SG." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://scansg.com/" />
-
   <!-- Preload Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-
   <!-- Open Graph / Social -->
   <meta property="og:title" content="ScanSG - The Real Singapore Guide 2025 | No Blur-Blur" />
   <meta property="og:description" content="Local food, transport hacks, Singlish, GST refunds & cultural tips. Real advice from someone who lives here." />
@@ -18,20 +16,16 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="ScanSG" />
   <meta property="og:locale" content="en_SG" />
-
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@ScanSG365" />
   <meta name="twitter:title" content="ScanSG - The Real Singapore Guide 2025" />
   <meta name="twitter:description" content="No tourist traps. No fluff. Just real Singapore tips from 4 years on the ground." />
   <meta name="twitter:image" content="https://scansg.com/images/og-preview.jpg" />
-
   <!-- Favicon -->
   <link rel="icon" href="/images/favicon.ico" sizes="32x32" />
-
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4636396521329327" crossorigin="anonymous"></script>
-
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HL77S9PP18"></script>
   <script>
@@ -40,7 +34,6 @@
     gtag('js', new Date());
     gtag('config', 'G-HL77S9PP18', { 'anonymize_ip': true });
   </script>
-
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -49,7 +42,6 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "sp1isxvzim");
   </script>
-
   <!-- Redirect to HTTPS & Clean URL -->
   <script>
     (function() {
@@ -59,14 +51,12 @@
       let pathname = window.location.pathname;
       const search = window.location.search;
       const hash = window.location.hash;
-
       if (pathname.endsWith('/index.html')) {
         pathname = '/';
       } else if (pathname !== '/' && !pathname.endsWith('/') && !pathname.endsWith('.html')) {
         pathname += '/';
       }
       pathname = pathname.replace(/\/+/g, '/');
-
       const needsRedirect = currentHostname !== targetHostname || currentProtocol !== 'https:' || window.location.pathname !== pathname;
       if (needsRedirect) {
         const newUrl = 'https://' + targetHostname + pathname + search + hash;
@@ -76,7 +66,6 @@
       }
     })();
   </script>
-
   <!-- Structured Data: Website -->
   <script type="application/ld+json">
   {
@@ -97,7 +86,6 @@
     ]
   }
   </script>
-
   <!-- Inline CSS -->
   <style>
     :root {
@@ -184,7 +172,7 @@
     /* Hero Section */
     .hero {
       text-align: center;
-      padding: 4rem 1rem;
+      padding: 3.2rem 1rem;
       background: linear-gradient(135deg, #fff3e0 0%, #f3e5f5 100%);
       margin: 0;
       border-bottom: 1px solid var(--border);
@@ -200,27 +188,27 @@
       text-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     .hero p {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       color: var(--gray);
       max-width: 700px;
-      margin: 0.8rem auto;
+      margin: 0.6rem auto;
     }
     /* Journey Map */
     .journey {
       max-width: 850px;
-      margin: 2rem auto;
-      padding: 1.8rem;
+      margin: 1.8rem auto;
+      padding: 1.6rem;
       background: #f8f9fa;
       border-radius: 14px;
       border-left: 5px solid var(--accent);
-      line-height: 1.7;
+      line-height: 1.65;
       font-size: 1rem;
       color: var(--text);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
     }
     [data-theme="dark"] .journey {
       background: #1e1e1e;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
     }
     .journey h3 {
       color: var(--main);
@@ -228,82 +216,95 @@
       font-size: 1.4rem;
       border-bottom: 1px solid var(--border);
       padding-bottom: 0.4rem;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1rem;
     }
-    .journey-step {
-      margin: 1.4rem 0;
-      padding-bottom: 1.2rem;
-      border-bottom: 1px dashed var(--border);
-    }
-    .journey-step:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-      margin-bottom: 0;
-    }
-    .journey-step strong {
-      color: var(--main);
+    /* Clickable Journey Steps */
+    .journey-link {
       display: block;
-      font-size: 1.1rem;
-      margin-bottom: 0.4rem;
+      margin: 1rem 0;
+      padding: 0.6rem 0.8rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      color: inherit;
+      text-decoration: none;
     }
-    .journey-step p {
-      margin: 0;
+    .journey-link:hover {
+      background: var(--accent);
+      color: white;
+    }
+    .journey-link:hover .step-title {
+      color: white;
+    }
+    .step-title {
+      color: var(--main);
+      font-size: 1.1rem;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.3rem;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.2rem;
+      width: fit-content;
+    }
+    .journey-link p {
+      margin: 0.4rem 0 0;
       color: var(--gray);
-      font-size: 1rem;
+      font-size: 0.98rem;
+      line-height: 1.5;
     }
     /* CTA Buttons */
     .btn {
       display: inline-block;
-      margin: 1.2rem 0.6rem;
-      padding: 0.9rem 1.6rem;
+      margin: 1rem 0.6rem;
+      padding: 0.85rem 1.5rem;
       background: var(--main);
       color: white;
       border-radius: 30px;
       font-weight: 600;
       font-size: 1rem;
-      box-shadow: 0 4px 12px rgba(198, 40, 40, 0.2);
+      box-shadow: 0 4px 10px rgba(198, 40, 40, 0.2);
       transition: all 0.3s ease;
     }
     .btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 6px 16px rgba(198, 40, 40, 0.3);
+      box-shadow: 0 6px 14px rgba(198, 40, 40, 0.3);
     }
     /* Card Grid */
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      padding: 3rem 0;
+      gap: 1.8rem;
+      padding: 2.8rem 0;
     }
     .card {
       background: var(--light-gray);
-      padding: 1.6rem;
+      padding: 1.4rem;
       border-radius: 12px;
       text-align: center;
       transition: all 0.3s ease;
       border-left: 4px solid var(--accent);
-      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
     }
     [data-theme="dark"] .card {
       background: #1e1e1e;
     }
     .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
     }
     .card h3 {
       color: var(--main);
       margin-top: 0;
-      font-size: 1.3rem;
+      font-size: 1.25rem;
     }
     .card p {
       color: var(--gray);
       font-size: 0.95rem;
+      margin: 0.4rem 0 0;
     }
     /* Footer */
     footer {
-      margin-top: 4rem;
-      padding: 2rem 1rem 1rem;
+      margin-top: 3.5rem;
+      padding: 1.8rem 1rem 1rem;
       background: #1a1a1a;
       color: #aaa;
       font-size: 0.9rem;
@@ -364,13 +365,24 @@
       .hero h1 {
         font-size: 2.1rem;
       }
+      .hero {
+        padding: 2.6rem 1rem;
+      }
       .journey {
-        padding: 1.4rem;
+        padding: 1.2rem;
         font-size: 0.95rem;
       }
       .btn {
-        margin: 0.8rem 0.5rem;
+        margin: 0.7rem 0.5rem;
         font-size: 0.95rem;
+      }
+      .card-grid {
+        gap: 1.5rem;
+        padding: 2.4rem 0;
+      }
+      footer {
+        margin-top: 3rem;
+        padding: 1.5rem 1rem 1rem;
       }
     }
   </style>
@@ -398,138 +410,135 @@
   </header>
 
   <!-- Hero Section -->
-<!-- Hero Section -->
-<section class="hero">
-  <div class="container">
-    <h1>🎉 Wah Lau… Welcome Lah! 🇸🇬</h1>
-    <p>Look, I get it — you just stepped out of Changi, bags in hand, eyes wide, thinking: <em>“Bro… where the hell do I even start?”</em></p>
-    <p>One minute you're excited. Next minute you're lost at the MRT station, trying to figure out if “Exit B” leads to your hostel or a construction site.</p>
-    <p><strong>Relax.</strong> Breathe. You’re not alone.</p>
-    <p>This? This is your <strong>SG survival kit</strong>. No tourist traps. No corporate blur-blur. Just real tips from someone who’s lived here for 4 years, eaten $3 chicken rice every Monday, and still hasn’t gotten fined for jaywalking. (Knock on wood.)</p>
+  <section class="hero">
+    <div class="container">
+      <h1>🎉 Wah Lau… Welcome Lah! 🇸🇬</h1>
+      <p>Look, I get it — you just stepped out of Changi, bags in hand, eyes wide, thinking: <em>“Bro… where the hell do I even start?”</em></p>
+      <p>One minute you're excited. Next minute you're lost at the MRT station, trying to figure out if “Exit B” leads to your hostel or a construction site.</p>
+      <p><strong>Relax.</strong> Breathe. You’re not alone.</p>
+      <p>This? This is your <strong>SG survival kit</strong>. No tourist traps. No corporate blur-blur. Just real tips from someone who’s lived here for 4 years, eaten $3 chicken rice every Monday, and still hasn’t gotten fined for jaywalking. (Knock on wood.)</p>
 
-    <!-- Step-by-Step Journey -->
-    <div class="journey">
-      <h3>🗺️ Your Singapore Journey — Like a Local, Not a Lost Tourist</h3>
+      <!-- Step-by-Step Journey -->
+      <div class="journey">
+        <h3>🗺️ Your Singapore Journey — Like a Local, Not a Lost Tourist</h3>
 
-      <div class="journey-step">
-        <strong>1. 🚀 First: Get to Town Without Getting Ripped Off</strong>
-        <p>You’re at Changi. Taxis? Expensive. Grab? Okay, but only if it's late. Want the real move? Take the <strong>free shuttle to Expo MRT</strong>, then hop on the train. I’ll show you exactly how — step-by-step, no stress.</p>
+        <a href="transport.html" class="journey-link">
+          <strong class="step-title">1. 🚀 First: Get to Town Without Getting Ripped Off</strong>
+          <p>You’re at Changi. Taxis? Expensive. Grab? Okay, but only if it's late. Want the real move? Take the <strong>free shuttle to Expo MRT</strong>, then hop on the train. I’ll show you exactly how — step-by-step, no stress.</p>
+        </a>
+
+        <a href="explore.html" class="journey-link">
+          <strong class="step-title">2. 🍜 Then: Eat Like a King (For Under $5)</strong>
+          <p>Hungry? Good. Because Singapore food hits different. Skip the mall restaurants. I’ll take you to the hawker stalls where uncles nod at me like family. Want *kaya toast*, *soft-boiled eggs*, and *kopi-c*? I know the best spot. And yes, I’ll teach you how to order without sounding like a lost deer.</p>
+        </a>
+
+        <a href="shopping.html" class="journey-link">
+          <strong class="step-title">3. 🛍️ Shop Smart — Not Hard</strong>
+          <p>Need souvenirs? Don’t go to Orchard Road yet. First, hit <strong>Mustafa Centre</strong> — 24/7, tax-free, and full of surprises. Or check Carousell for second-hand gems. I’ll show you how to haggle (nicely) and save 50%.</p>
+        </a>
+
+        <a href="attractions.html" class="journey-link">
+          <strong class="step-title">4. 🎟️ See the Magic — Without Paying Full Price</strong>
+          <p>Marina Bay Sands? Gardens by the Bay? Universal Studios? All worth it — if you know the hacks. I’ll show you how to get combo deals, free entry days, and hidden viewpoints where influencers go to take pics (but never tell you about).</p>
+        </a>
+
+        <a href="glossary.html" class="journey-link">
+          <strong class="step-title">5. 💬 Speak Singlish — And Make Locals Smile</strong>
+          <p>Want to go from “Can or cannot?” to “Wah lau, so shiok!”? I got you. My <strong>Singlish Dictionary</strong> teaches you the real stuff — not textbook crap. Learn how to say “Let’s eat” like a local, and maybe even impress a hawker aunty.</p>
+        </a>
+
+        <a href="penalties.html" class="journey-link">
+          <strong class="step-title">6. 🚨 Avoid Fines — Without Living in Fear</strong>
+          <p>Look, I know you’ve heard the horror stories: “Chewing gum = jail.” “Jaywalking = deportation.” Most of it? <strong>Myths.</strong> I’ll tell you what’s actually enforced, what’s not, and how to stay safe without being paranoid.</p>
+        </a>
+
+        <a href="gst-refund.html" class="journey-link">
+          <strong class="step-title">7. 💰 Claim Your GST Refund — Free Money, Bro</strong>
+          <p>Spent over $100? You can get <strong>7% back</strong>. Seriously. I’ll walk you through the exact steps — where to scan, when to claim, and which stores play nice. It’s like finding cash in your old jeans.</p>
+        </a>
       </div>
 
-      <div class="journey-step">
-        <strong>2. 🍜 Then: Eat Like a King (For Under $5)</strong>
-        <p>Hungry? Good. Because Singapore food hits different. Skip the mall restaurants. I’ll take you to the hawker stalls where uncles nod at me like family. Want *kaya toast*, *soft-boiled eggs*, and *kopi-c*? I know the best spot. And yes, I’ll teach you how to order without sounding like a lost deer.</p>
-      </div>
+      <p><strong>This isn’t just a website.</strong> It’s like having a friend in Singapore — one who doesn’t flake, doesn’t charge you for drinks, and always tells you the truth.</p>
 
-      <div class="journey-step">
-        <strong>3. 🛍️ Shop Smart — Not Hard</strong>
-        <p>Need souvenirs? Don’t go to Orchard Road yet. First, hit <strong>Mustafa Centre</strong> — 24/7, tax-free, and full of surprises. Or check Carousell for second-hand gems. I’ll show you how to haggle (nicely) and save 50%.</p>
-      </div>
-
-      <div class="journey-step">
-        <strong>4. 🎟️ See the Magic — Without Paying Full Price</strong>
-        <p>Marina Bay Sands? Gardens by the Bay? Universal Studios? All worth it — if you know the hacks. I’ll show you how to get combo deals, free entry days, and hidden viewpoints where influencers go to take pics (but never tell you about).</p>
-      </div>
-
-      <div class="journey-step">
-        <strong>5. 💬 Speak Singlish — And Make Locals Smile</strong>
-        <p>Want to go from “Can or cannot?” to “Wah lau, so shiok!”? I got you. My <strong>Singlish Dictionary</strong> teaches you the real stuff — not textbook crap. Learn how to say “Let’s eat” like a local, and maybe even impress a hawker aunty.</p>
-      </div>
-
-      <div class="journey-step">
-        <strong>6. 🚨 Avoid Fines — Without Living in Fear</strong>
-        <p>Look, I know you’ve heard the horror stories: “Chewing gum = jail.” “Jaywalking = deportation.” Most of it? <strong>Myths.</strong> I’ll tell you what’s actually enforced, what’s not, and how to stay safe without being paranoid.</p>
-      </div>
-
-      <div class="journey-step">
-        <strong>7. 💰 Claim Your GST Refund — Free Money, Bro</strong>
-        <p>Spent over $100? You can get <strong>7% back</strong>. Seriously. I’ll walk you through the exact steps — where to scan, when to claim, and which stores play nice. It’s like finding cash in your old jeans.</p>
-      </div>
+      <!-- Call to Action -->
+      <a href="transport.html" class="btn">🚀 Show Me How to Get Around</a>
+      <a href="explore.html" class="btn">🍜 Take Me to the Best Food Spots</a>
     </div>
-
-    <p><strong>This isn’t just a website.</strong> It’s like having a friend in Singapore — one who doesn’t flake, doesn’t charge you for drinks, and always tells you the truth.</p>
-
-    <!-- Call to Action -->
-    <a href="transport.html" class="btn">🚀 Show Me How to Get Around</a>
-    <a href="explore.html" class="btn">🍜 Take Me to the Best Food Spots</a>
-  </div>
   </section>
 
-<!-- Content Cards -->
-<div class="container">
-  <div class="card-grid">
-    <a href="transport.html" class="card">
-      <h3>🚀 Transport Guide</h3>
-      <p>From Changi to Chinatown — no blur-blur. MRT, bus, Grab, cycling, even ferry. I’ll teach you how to ride like a local.</p>
-    </a>
-    <a href="explore.html" class="card">
-      <h3>🍜 Eat & Explore</h3>
-      <p>Best hawker stalls, hidden cafes, and local food culture. Yes, I’ll tell you where to get the crispiest chicken rice.</p>
-    </a>
-    <a href="glossary.html" class="card">
-      <h3>💬 Singlish Dictionary</h3>
-      <p>Stop saying “Can or cannot?” Start saying “Wah lau, so bo jio!” I’ll teach you the real slang — fast, fun, no exam.</p>
-    </a>
-    <a href="penalties.html" class="card">
-      <h3>⚠️ What’s Illegal? (Spoiler: Not What You Think)</h3>
-      <p>Chewing gum? Jaywalking? Vaping? I’ll separate myth from reality — so you don’t live in fear.</p>
-    </a>
-    <a href="gst-refund.html" class="card">
-      <h3>💰 GST Refund Guide</h3>
-      <p>Get 7% of your spending back — it’s free money. I’ll show you how to claim it before your flight home.</p>
-    </a>
-    <a href="attractions.html" class="card">
-      <h3>🎟️ Attractions & Experiences</h3>
-      <p>Paid vs Free, cheat codes, combo deals & local hacks. I’ll help you see more, spend less.</p>
-    </a>
-  </div>
-</div>
-
-<footer>
+  <!-- Content Cards -->
   <div class="container">
-    <p>&copy; 2025 ScanSG. Made with ❤️ in Singapore.</p>
-    
-    <div style="margin: 1rem 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; font-size: 0.9rem;">
-      <a href="index.html">Home</a>
-      <a href="explore.html">Explore</a>
-      <a href="transport.html">Transport</a>
-      <a href="shopping.html">Shopping</a>
-      <a href="glossary.html">Singlish</a>
-      <a href="penalties.html">Penalties</a>
-      <a href="gst-refund.html">GST Refund</a>
-      <a href="attractions.html">Attractions</a>
-      <a href="about.html">About</a>
-    </div>
-
-    <!-- Visitor Counter -->
-    <div style="text-align: center; padding: 0.5rem 0; margin-top: 0.5rem; font-size: 0.85rem; color: #aaa; border-top: 1px solid #555;">
-      <a href="https://www.scansg.com" title="Visitor statistics">
-        <img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=28qj1py2f4xx477zcg8eqg6uxusuha75" 
-             border="0" alt="visitor counter" 
-             style="height: 12px; margin-left: 0.2rem; vertical-align: middle;">
-        Views
+    <div class="card-grid">
+      <a href="transport.html" class="card">
+        <h3>🚀 Transport Guide</h3>
+        <p>From Changi to Chinatown — no blur-blur. MRT, bus, Grab, cycling, even ferry. I’ll teach you how to ride like a local.</p>
+      </a>
+      <a href="explore.html" class="card">
+        <h3>🍜 Eat & Explore</h3>
+        <p>Best hawker stalls, hidden cafes, and local food culture. Yes, I’ll tell you where to get the crispiest chicken rice.</p>
+      </a>
+      <a href="glossary.html" class="card">
+        <h3>💬 Singlish Dictionary</h3>
+        <p>Stop saying “Can or cannot?” Start saying “Wah lau, so bo jio!” I’ll teach you the real slang — fast, fun, no exam.</p>
+      </a>
+      <a href="penalties.html" class="card">
+        <h3>⚠️ What’s Illegal? (Spoiler: Not What You Think)</h3>
+        <p>Chewing gum? Jaywalking? Vaping? I’ll separate myth from reality — so you don’t live in fear.</p>
+      </a>
+      <a href="gst-refund.html" class="card">
+        <h3>💰 GST Refund Guide</h3>
+        <p>Get 7% of your spending back — it’s free money. I’ll show you how to claim it before your flight home.</p>
+      </a>
+      <a href="attractions.html" class="card">
+        <h3>🎟️ Attractions & Experiences</h3>
+        <p>Paid vs Free, cheat codes, combo deals & local hacks. I’ll help you see more, spend less.</p>
       </a>
     </div>
+  </div>
 
-    <!-- Privacy Policy Toggle -->
-    <div style="text-align: center; margin: 0.5rem 0;">
-      <button id="privacyToggle" style="background: none; border: none; color: #888; font-size: 0.85rem; cursor: pointer; text-decoration: underline;">
-        🔐 Privacy? I Got You.
-      </button>
-    </div>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 ScanSG. Made with ❤️ in Singapore.</p>
+      <div style="margin: 1rem 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; font-size: 0.9rem;">
+        <a href="index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="transport.html">Transport</a>
+        <a href="shopping.html">Shopping</a>
+        <a href="glossary.html">Singlish</a>
+        <a href="penalties.html">Penalties</a>
+        <a href="gst-refund.html">GST Refund</a>
+        <a href="attractions.html">Attractions</a>
+        <a href="about.html">About</a>
+      </div>
+
+      <!-- Visitor Counter -->
+      <div style="text-align: center; padding: 0.5rem 0; margin-top: 0.5rem; font-size: 0.85rem; color: #aaa; border-top: 1px solid #555;">
+        <a href="https://www.scansg.com" title="Visitor statistics">
+          <img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=28qj1py2f4xx477zcg8eqg6uxusuha75" 
+               border="0" alt="visitor counter" 
+               style="height: 12px; margin-left: 0.2rem; vertical-align: middle;">
+          Views
+        </a>
+      </div>
+
+      <!-- Privacy Policy Toggle -->
+      <div style="text-align: center; margin: 0.5rem 0;">
+        <button id="privacyToggle" style="background: none; border: none; color: #888; font-size: 0.85rem; cursor: pointer; text-decoration: underline;">
+          🔐 Privacy? I Got You.
+        </button>
+      </div>
 
       <!-- Privacy Policy Content -->
       <div id="privacy-policy" style="display: none; margin-top: 1.5rem; padding: 1.4rem; background: #232323; color: #ddd; border-radius: 8px; text-align: left; font-size: 0.92rem; line-height: 1.6; border: 1px solid #444;">
         <h3 style="color: #fff; margin-top: 0; font-size: 1.1rem; border-bottom: 1px solid #555; padding-bottom: 0.4rem;">🔐 Privacy Policy</h3>
         <p><strong>Last Updated:</strong> 27-07-2025</p>
         <p>Welcome to <strong>ScanSG</strong>. We keep things simple and honest. This policy explains how we handle your information when you visit <strong>scansg.com</strong>.</p>
-
         <p><strong>1. We Don’t Collect Your Personal Data</strong></p>
         <ul style="padding-left: 1.3rem; margin: 0.4rem 0;">
           <li>We do <strong>not collect</strong> your name, email, location, or any personal information — unless you contact us directly via email.</li>
           <li>We do <strong>not use cookies, trackers, or local storage</strong> for advertising, profiling, or user monitoring.</li>
         </ul>
-
         <p><strong>2. Analytics: Just the Basics</strong></p>
         <p>We use <strong>Google Analytics</strong> in a privacy-friendly way to understand how many people visit our site and how they use it. This includes:</p>
         <ul style="padding-left: 1.3rem; margin: 0.4rem 0;">
@@ -539,7 +548,6 @@
           <li>Device type (phone, laptop, etc.)</li>
         </ul>
         <p>This data is <strong>fully anonymized</strong> — no individual is identified. We use this info only to improve our content and help more people find useful Singapore tips.</p>
-
         <p><strong>3. Third-Party Services</strong></p>
         <p>While we don’t track you, this site includes services that may involve limited data use:</p>
         <ul style="padding-left: 1.3rem; margin: 0.4rem 0;">
@@ -547,20 +555,16 @@
           <li><strong>Affiliate Links:</strong> If you click a link (e.g., Klook, Pelago), the destination site may use tracking.</li>
           <li>We do not control these third parties and are not responsible for their privacy practices.</li>
         </ul>
-
         <p><strong>4. Your Privacy Choices</strong></p>
         <ul style="padding-left: 1.3rem; margin: 0.4rem 0;">
           <li>You can disable Google Analytics tracking by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener" style="color: #4fc3f7;">Google Analytics Opt-out Browser Add-on</a>.</li>
           <li>You can opt out of personalized ads at <a href="https://adssettings.google.com" target="_blank" rel="noopener" style="color: #4fc3f7;">Google Ads Settings</a>.</li>
           <li>You can browse in incognito/private mode for full anonymity.</li>
         </ul>
-
         <p><strong>5. No Data Sharing or Selling</strong></p>
         <p>We do <strong>not sell, share, or rent</strong> any user data to third parties. Ever.</p>
-
         <p><strong>6. Policy Changes</strong></p>
         <p>If our practices change, we’ll update this page and the "Last Updated" date. But our promise stays: <strong>No personal data collection. No creepy tracking.</strong></p>
-
         <p><strong>7. Contact Us</strong></p>
         <p>For questions, email: 
           <a href="mailto:scansg365@gmail.com" data-link-key="contact_email" style="color: #4fc3f7; text-decoration: underline;">scansg365@gmail.com</a>
