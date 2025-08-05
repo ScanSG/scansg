@@ -754,9 +754,21 @@
 
 <!-- Dangling Snake to Top -->
 <a href="#top" class="dangling-snake" aria-label="Click the snake to go to top">
-  <svg width="24" height="60" viewBox="0 0 24 60" class="snake-svg">
-    <path d="M12 0 C12 10, 8 15, 12 25 C16 35, 8 40, 12 50 C12 55, 12 60, 12 60" stroke="#222" fill="none" stroke-width="2" />
-    <circle cx="10" cy="58" r="2" fill="red"/> <!-- Eyes -->
+  <svg width="40" height="90" viewBox="0 0 40 90" class="snake-svg">
+    <!-- Thicker, wavy body -->
+    <path d="M20 0 
+             C20 15, 12 20, 20 35 
+             C28 50, 12 60, 20 75 
+             C20 80, 20 90, 20 90"
+          stroke="#222" 
+          stroke-width="6" 
+          fill="none" 
+          stroke-linecap="round"/>
+    <!-- Eyes -->
+    <circle cx="17" cy="86" r="3" fill="red"/>
+    <circle cx="23" cy="86" r="1.5" fill="white"/>
+    <!-- Tongue -->
+    <path d="M20 90 L18 98 L20 94 L22 98 L20 90" stroke="#ff0000" stroke-width="2" fill="none"/>
   </svg>
 </a>
 
@@ -764,20 +776,28 @@
   .dangling-snake {
     position: fixed;
     left: 20px;
-    top: -100px;
+    top: -120px;
     z-index: 100;
     opacity: 0;
     transition: top 0.4s ease, opacity 0.3s ease;
+    cursor: pointer;
+    /* Add slight shadow for depth */
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
   }
 
   .dangling-snake.visible {
     top: 80px;
-    opacity: 0.6;
+    opacity: 0.8;
   }
 
   .dangling-snake:hover .snake-svg {
-    stroke: #c62828;
-    stroke-width: 2.5;
+    stroke: #c62828; /* Turns red on hover */
+    animation: wiggle 0.6s ease-in-out infinite alternate;
+  }
+
+  @keyframes wiggle {
+    0% { transform: rotate(-2deg); }
+    100% { transform: rotate(2deg); }
   }
 </style>
 
