@@ -748,11 +748,49 @@
     }
   });
 </script>
-
-  
-
   
   <!-- Load links.js -->
   <script src="/js/links.js" defer></script>
+
+  <!-- Dangling Rope to Top -->
+<a href="#top" class="dangling-rope" aria-label="Pull to go to top">🪢</a>
+
+<style>
+  .dangling-rope {
+    position: fixed;
+    left: 20px;
+    top: -100px;
+    font-size: 2rem;
+    color: #555;
+    text-decoration: none;
+    z-index: 100;
+    opacity: 0;
+    transition: top 0.3s ease, opacity 0.3s ease;
+  }
+
+  .dangling-rope.visible {
+    top: 80px;
+    opacity: 0.7;
+  }
+
+  .dangling-rope:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+</style>
+
+<script>
+  // Show rope after scrolling down 300px
+  const rope = document.querySelector('.dangling-rope');
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      rope.classList.add('visible');
+    } else {
+      rope.classList.remove('visible');
+    }
+  });
+</script>
+
+  
 </body>
 </html>
