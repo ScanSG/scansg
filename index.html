@@ -752,45 +752,45 @@
   <!-- Load links.js -->
   <script src="/js/links.js" defer></script>
 
-  <!-- Dangling Rope to Top -->
-<a href="#top" class="dangling-rope" aria-label="Pull to go to top">🪢</a>
+<!-- Dangling Snake to Top -->
+<a href="#top" class="dangling-snake" aria-label="Click the snake to go to top">
+  <svg width="24" height="60" viewBox="0 0 24 60" class="snake-svg">
+    <path d="M12 0 C12 10, 8 15, 12 25 C16 35, 8 40, 12 50 C12 55, 12 60, 12 60" stroke="#222" fill="none" stroke-width="2" />
+    <circle cx="10" cy="58" r="2" fill="red"/> <!-- Eyes -->
+  </svg>
+</a>
 
 <style>
-  .dangling-rope {
+  .dangling-snake {
     position: fixed;
     left: 20px;
     top: -100px;
-    font-size: 2rem;
-    color: #555;
-    text-decoration: none;
     z-index: 100;
     opacity: 0;
-    transition: top 0.3s ease, opacity 0.3s ease;
+    transition: top 0.4s ease, opacity 0.3s ease;
   }
 
-  .dangling-rope.visible {
+  .dangling-snake.visible {
     top: 80px;
-    opacity: 0.7;
+    opacity: 0.6;
   }
 
-  .dangling-rope:hover {
-    opacity: 1;
-    transform: scale(1.1);
+  .dangling-snake:hover .snake-svg {
+    stroke: #c62828;
+    stroke-width: 2.5;
   }
 </style>
 
 <script>
-  // Show rope after scrolling down 300px
-  const rope = document.querySelector('.dangling-rope');
+  const snake = document.querySelector('.dangling-snake');
   window.addEventListener('scroll', () => {
     if (window.pageYOffset > 300) {
-      rope.classList.add('visible');
+      snake.classList.add('visible');
     } else {
-      rope.classList.remove('visible');
+      snake.classList.remove('visible');
     }
   });
 </script>
-
   
 </body>
 </html>
