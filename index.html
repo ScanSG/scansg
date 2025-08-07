@@ -460,7 +460,6 @@
 </head>
 <body>
 
-  
 <!-- Header -->
 <header>
   <div class="container header-content">
@@ -475,12 +474,51 @@
         <li><a href="shopping.html">Shopping</a></li>
         <li><a href="glossary.html">Singlish</a></li>
         <li><a href="penalties.html">Penalties</a></li>
-        <li><a href="attractions.html">Attractions</a></li>
+        <li>
+          <a href="attractions.html" 
+             style="
+               position: relative;
+               color: #ff8a80 !important;
+               font-weight: 700;
+               animation: pulse 2s infinite;
+             "
+             onmouseover="this.style.color='#c62828'; this.style.transform='scale(1.05)';"
+             onmouseout="this.style.color='#ff8a80'; this.style.transform='none';">
+            🎯 Attractions
+          </a>
+        </li>
         <li><button class="dark-mode-toggle" id="darkModeToggle">🌙</button></li>
       </ul>
     </nav>
   </div>
 </header>
+
+<!-- Pulse Animation -->
+<style>
+  @keyframes pulse {
+    0% {
+      text-shadow: 0 0 5px rgba(198, 40, 40, 0.3);
+    }
+    50% {
+      text-shadow: 0 0 15px rgba(198, 40, 40, 0.6);
+    }
+    100% {
+      text-shadow: 0 0 5px rgba(198, 40, 40, 0.3);
+    }
+  }
+  nav a:hover {
+    color: #4fc3f7;
+  }
+  /* Mobile Nav Attractions Fix */
+  [data-theme="dark"] nav a[href="attractions.html"] {
+    color: #ef9a9a !important;
+  }
+</style>
+
+
+
+
+  
 
   <!-- Hero Section -->
   <section class="hero">
