@@ -699,11 +699,11 @@ function ready(fn) {
 function populateLinks() {
   const linkElements = document.querySelectorAll('a[data-link-key]');
   const affiliateDomains = [
-    'klook.com', 'pelago.', 'getyourguide.', 'viator.', 'tiqets.', 
-    'shopee.', 'lazada.', 'grab.com', 'foodpanda.', 'deliveroo.', 
-    'airalo.', 'saily.', 'expressvpn.', 'duolingo.', 'preply.', 
-    'coursera.', 'airbnb.', 'booking.', 'agoda.', 'expedia.', 
-    'hotels.com', 'amazon.', 'qoo10.', 'anker.', 'peakdesign.', 
+    'klook.com', 'pelago.', 'getyourguide.', 'viator.', 'tiqets.',
+    'shopee.', 'lazada.', 'grab.com', 'foodpanda.', 'deliveroo.',
+    'airalo.', 'saily.', 'expressvpn.', 'duolingo.', 'preply.',
+    'coursera.', 'airbnb.', 'booking.', 'agoda.', 'expedia.',
+    'hotels.com', 'amazon.', 'qoo10.', 'anker.', 'peakdesign.',
     'sony.', 'gopro.', 'apple.', 'daiso-', 'ikea.', 'mustafa'
   ];
 
