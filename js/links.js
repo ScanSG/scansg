@@ -685,77 +685,26 @@ const scanSgLinks = {
   "tan_tock_seng_hospital": "https://www.ttsh.com.sg", // (File 2)
   "duolingo_sg_aff": "https://www.duolingo.com", // Duplicate key from File 3
 };
-// ==========================================
-// 🔍 IDENTIFIED DUPLICATES & NEAR-DUPLICATES (Updated Notes)
-// ==========================================
-/*
-EXACT DUPLICATES (Same URL - Consider consolidating keys):
-- mustafa_centre_aff & mustafa_centre_main
-- mom_sg & mom_resources
-- sentosa_island & sentosa_island_planner & sentosa_island_resources
-- esplanade & esplanade_free_events & esplanade_resources (Note: esplanade_free_events had different path in File 2, but same base)
-- national_gallery_sg & national_gallery_sg_resources
-- little_india_sg & little_india_singapore
-- southern_ridges & southern_ridges_sg
-- kampong_glam_sg & kampong_glam_shophouses (Note: URLs are different, likely incorrect mapping, kept original)
-- marina_bay_sg & marina_bay_singapore
-- raffles_hotel_sg & raffles_hotel
-- esplanade_theatres_on_the_bay & esplanade (File 3)
-- moh_sg & moh_resources (File 3)
-- mom_sg & mom_public_holidays (File 3)
-- nparks_sg & nparks_resources (File 3)
-- gss_official & visit_sg_gss (File 3)
-- orchardcentral_sg & orchard_central_food_street (File 3)
-- orchardgateway_sg & orchard_gateway (File 3)
-- plazasingapura_sg & plaza_singapura (File 3)
-- vivo_city & vivocity (File 3)
-- sea_aquarium_sg & sea_aquarium (File 3)
-- peranakan_museum_sg & peranakan_museum (File 3)
-- sim_lim_square & simlimsquare_sg (Not present, but noted)
-- ezlink_card & ezlink_card_transport (File 3)
-- simplygo & simplygo_transport (File 3)
-- transitlink_eguide & transitlink_app & transitlink_bus_service & transitlink_good_to_know & transitlink_resources (File 3)
-- capitol_sg & capitol_singapore (File 3)
-- grab_food_main & grab_food_aff (File 3)
-- grab_main & grab_good_to_know & grab_tips (File 3)
-- lau_pa_sat & lau_pa_sat_tour (File 3)
-- shopback_aff & shopback_main (File 3)
-- shopee_sg & shopee_main (File 3)
-- qoo10_sg & qoo10_main (File 3)
-- ezlink_app & ezlink_card (File 3)
-- yoursingapore_com & visitsingapore_com & visit_sg_cny_sales (File 3)
-- sg_cooking_class & sg_spa & sg_wine_tasting (File 3)
-- singhealth & singapore_general_hospital (File 3)
-- pelago_pass & pelago_uss_aff (File 3)
-- USS_aff & uss_aff (File 3)
-- klook_aff & Klook_Pass (File 3)
-- Pelago_aff & pelago_pass (File 3)
-- national_gallery_sg & national_gallery_sg_resources (File 3)
-- changi_airport & changi_airport_tour (File 3)
-- siloso_beach & sentosa_beaches (File 3)
-- f1_sg_gp & formula1_sg (File 3)
-- lau_pa_sat & lau_pa_sat_tour (File 3)
-- sg_art_class & sg_cooking_class & sg_spa & sg_wine_tasting (File 3)
-NEAR-DUPLICATES (Same domain, different paths):
-- esplanade, esplanade_free_events, esplanade_mall, esplanade_outdoor
-- capitol_sg & capitol_sg_free (different domains)
-- chinatown_sg & chinatown_main (different sources)
-- marina_bay_sg & marina_bay_promenade & marina_bay_singapore (different domains/purposes)
-SIMILAR FUNCTION:
-- kitchener_complex_food_stalls & kitchener_complex_mall (same complex)
-- serangoon_road & little_india_shopping_belt (related areas)
-*/
 
+// ✅ Reliable DOM Ready Function
+function ready(fn) {
+  if (document.readyState !== 'loading') {
+    fn();
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+}
 
-// ===== FINAL populateLinks() FUNCTION =====
+// ✅ Populate Links Function
 function populateLinks() {
   const linkElements = document.querySelectorAll('a[data-link-key]');
   const affiliateDomains = [
-    'klook.com', 'shopee.', 'lazada.', 'grab.com', 'foodpanda.', 'deliveroo.', 'pelago.', 
-    'getyourguide.', 'viator.', 'tiqets.', 'skyscanner.', 'kayak.', 'google.com/flights', 
-    'momondo.', 'airalo.', 'saily.', 'expressvpn.', 'duolingo.', 'preply.', 'coursera.', 
-    'airbnb.', 'booking.', 'agoda.', 'expedia.', 'hotels.com', 'amazon.', 'qoo10.', 
-    'anker.', 'peakdesign.', 'sony.', 'gopro.', 'apple.', 'daiso-', 'ikea.', 'mustafa'
+    'klook.com', 'pelago.', 'getyourguide.', 'viator.', 'tiqets.', 
+    'shopee.', 'lazada.', 'grab.com', 'foodpanda.', 'deliveroo.', 
+    'airalo.', 'saily.', 'expressvpn.', 'duolingo.', 'preply.', 
+    'coursera.', 'airbnb.', 'booking.', 'agoda.', 'expedia.', 
+    'hotels.com', 'amazon.', 'qoo10.', 'anker.', 'peakdesign.', 
+    'sony.', 'gopro.', 'apple.', 'daiso-', 'ikea.', 'mustafa'
   ];
 
   linkElements.forEach(element => {
@@ -763,37 +712,28 @@ function populateLinks() {
     const url = scanSgLinks[key];
 
     if (!url || url === '') {
-      console.warn(`Link key '${key}' has no URL or is invalid`);
+      console.warn(`❌ Link key '${key}' has no URL or is invalid`);
       return;
     }
 
     // ✅ Set href
     element.href = url;
 
-    // 🔐 Add rel="noopener" for security if target="_blank"
-    let rel = '';
-    if (element.getAttribute('target') === '_blank') {
-      rel += 'noopener ';
-    }
-
-    // 🚫 Add rel="sponsored" for affiliate/commercial links
-    if (affiliateDomains.some(domain => url.includes(domain))) {
-      rel += 'sponsored ';
-    }
-
-    // 📦 Set rel attribute if needed
-    if (rel.trim()) {
-      element.setAttribute('rel', rel.trim());
+    // 🔐 Add security & SEO attributes if opening in new tab
+    if (element.target === '_blank') {
+      let rel = 'noopener';
+      if (affiliateDomains.some(domain => url.includes(domain))) {
+        rel += ' sponsored';
+      }
+      element.setAttribute('rel', rel);
     }
   });
+
+  console.log(`✅ scanSgLinks: Applied ${linkElements.length} links successfully!`);
 }
 
-// Run on DOM load
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', populateLinks);
-} else {
-  populateLinks();
-}
+// ✅ Run after DOM is ready
+ready(populateLinks);
 
-// Make available globally for debugging
+// ✅ Make available globally for debugging
 window.scanSgLinks = scanSgLinks;
