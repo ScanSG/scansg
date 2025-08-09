@@ -147,7 +147,7 @@ const scanSgLinks = {
   "marquee_sg": "https://marqueesingapore.com/",
   "rainforest_lumiere": "https://www.mandai.com/en/singapore-zoo/things-to-do/what-to-see/rainforest-lumina.html",
   "rws_casino": "https://www.rwsentosa.com/en/attractions/casino",
-  "royal_albatross": "https://invl.me/clmvupk",
+  "royal_albatross": "https://invl.me/clmvusu",
   "singapore_yacht_party": "https://singaporeyachtcharter.com.sg/private-yacht-party-singapore/",
   "singapore_river_cruise_aff": "https://invl.me/clmvupl",
   "jewel_changi_night": "https://invl.me/clmvupe",
