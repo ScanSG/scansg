@@ -6,17 +6,17 @@
 
 const scanSgLinks = {
   // === 🏁 INDEX.HTML ===
-  "contact_email": "bnot found",
+  "contact_email": "mailto:scansg365@gmail.com",
 
   // === 🎯 ATTRACTIONS.HTML ===
-  "mbs_sky_park": "https://invl.me/clmvuq2",
+  "mbs_sky_park": "https://invl.me/clmvuov",
   "artscience_museum": "https://invl.me/clmvuoc",
-  "artscience-museum": "https://www.marinabaysands.com/artscience-museum.html",
+  "artscience-museum": "https://invl.me/clmvuoc",
   "singapore-zoo": "https://www.mandai.com/en/singapore-zoo.html",
   "singapore_zoo_aff": "https://invl.me/clmvup6",
   "night_safari_aff": "https://invl.me/clmvuoi",
-  "night-safari": "https://www.mandai.com/en/singapore-night-safari.html",
-  "river_wonders_aff": "bnot found",
+  "night-safari": "https://invl.me/clmvupj",
+  "river_wonders_aff": "https://www.mandai.com/en/river-wonders.html",
   "river-safari": "https://www.mandai.com/en/river-wonders.html",
   "bird_park": "https://www.mandai.com/en/bird-park.html",
   "gardens_bay_combo": "https://www.gardensbythebay.com.sg/en/attractions/attraction-combos.html",
@@ -26,15 +26,15 @@ const scanSgLinks = {
   "flower_dome": "https://www.gardensbythebay.com.sg/en/conservatories/flower-dome.html",
   "supertree_grove": "https://www.gardensbythebay.com.sg/en/attractions/supertree-grove.html",
   "jewel-changi": "https://invl.me/clmvuon",
-  "sentosa_cable_car": "https://www.sentosa.com.sg/en/plan-your-visit/attractions/sentosa-cable-car",
+  "sentosa_cable_car": "https://invl.me/clmvuof",
   "cable-car-sg-aff": "https://invl.me/clmvuom",
-  "luge_skyride_sentosa": "https://invl.me/clmvuq0",
-  "luge-skyride-sentosa": "https://www.klook.com/en-SG/activity/379-sentosa-luge-and-skyride/",
+  "luge_skyride_sentosa": "https://invl.me/clmvuop",
+  "luge-skyride-sentosa": "https://invl.me/clmvuop",
   "skyhelix-sentosa": "https://invl.me/clmvup8",
   "megazip-sentosa": "https://invl.me/clmvuok",
-  "adventure_cove_aff": "https://invl.me/clmvupx",
+  "adventure_cove_aff": "https://invl.me/clmvuoa",
   "escape-theme-park": "https://www.escape.com.sg",
-  "tiger-sky-tower": "bnot found",
+  "tiger-sky-tower": "https://www.tigersky.com.sg",
   "trickeye-museum": "https://invl.me/clmvup9",
   "battle-box-sg": "https://invl.me/clmvuod",
   "ocbc-skypark": "https://invl.me/clmvuoz",
@@ -46,24 +46,24 @@ const scanSgLinks = {
   "klook_uss_aff": "https://invl.me/clmv1p7",
   "uss-aff": "https://invl.me/clmv1p7",
   "universal_studios_sg": "https://www.rwsentosa.com/en/attractions/universal-studios-singapore",
-  "sea_aquarium_aff": "https://invl.me/clmvuq4",
-  "wings_of_time_aff": "https://invl.me/clmvuq5",
-  "wings-of-time-aff": "https://www.klook.com/en-SG/activity/380-sentosa-wings-of-time/",
+  "sea_aquarium_aff": "https://invl.me/clmvuoj",
+  "wings_of_time_aff": "https://invl.me/clmvupa",
+  "wings-of-time-aff": "https://invl.me/clmvupm",
   "pottery_class": "https://invl.me/clmvup0",
   "sg_cooking_class": "https://invl.me/clmvup5",
-  "clarke_quay_dinner_cruise": "https://www.klook.com/en-SG/activity/377-singapore-restaurant-cruise/",
-  "river_cruise": "https://www.klook.com/en-SG/activity/377-singapore-restaurant-cruise/",
+  "clarke_quay_dinner_cruise": "https://invl.me/clmvupl",
+  "river_cruise": "https://invl.me/clmvupl",
   "mbs_dining": "https://invl.me/clmvuou",
   "mbs-canal-cruise": "https://invl.me/clmvuow",
-  "mbs-sky-park": "https://www.marinabaysands.com/museum.html",
+  "mbs-sky-park": "https://invl.me/clmvuq2",
   "mbs-yacht-ride": "https://invl.me/clmvuox",
   "dolphin-island-sentosa": "https://www.rwsentosa.com/en/attractions/dolphin-island",
-  "camel-ride-sentosa": "bnot found",
+  "camel-ride-sentosa": "https://www.sentosa.com.sg/en/plan-your-visit/attractions/camel-ride",
   "national-gallery-sg": "https://invl.me/clmvuoy",
   "maxwell_food_centre": "https://invl.me/clmvuq1",
-  "queenstown_food": "https://eatbook.sg/queenstown-food/",
+  "queenstown_food": "https://invl.me/clmvup2",
   "punggol_waterway": "https://invl.me/clmvup1",
-  "east_coast_park": "https://www.nparks.gov.sg/gardens-parks-and-nature/parks-and-nature-reserves/east-coast-park",
+  "east_coast_park": "https://www.nparks.gov.sg/visit/parks/park-detail/east-coast-park",
   "coney_island": "https://www.nparks.gov.sg/visit/parks/park-detail/coney-island-park",
   "little_india_singapore": "https://invl.me/clmvuoo",
   "chinatown_sg": "https://invl.me/clmvuog",
@@ -115,7 +115,7 @@ const scanSgLinks = {
   "yishun_duck_rice": "https://sethlui.com/yishun-79a-early-morning-market-duck-rice/",
   "hougang_bak_kut_teh": "https://sethlui.com/hougang-bak-kut-teh-singapore/",
   "serangoon_laksa": "https://danielfooddiary.com/2022/09/12/928yishunlaksa/",
-  "outtram_park_kway_teow": "https://www.straitstimes.com/singapore/food/outtram-park-kway-teow-tao-por",
+  "outtram_park_kway_teow": "https://danielfooddiary.com/2019/12/08/outramparkfriedkwayteowmee/",
   "marina_bay_promenade": "https://www.visitsingapore.com/see-do-singapore/recreation-leisure/viewpoints/marina-bay/",
   "marina_bay_sands_shoppes": "https://www.marinabaysands.com/shopping.html",
   "west_coast_food": "https://eatbook.sg/west-coast-food/",
@@ -127,7 +127,7 @@ const scanSgLinks = {
   "piano_bar_1880": "https://www.1880.com.sg/",
   "mcsheas": "https://www.mcsheas.com.sg/",
   "the_working_title": "https://workingtitle.sg/",
-  "jumbo_kingdom": "bnot found",
+  "jumbo_kingdom": "https://www.jumbokingdom.com.sg",
   "1880_heritage": "https://www.1880.com.sg/",
   "ce_la_vi_rooftop": "https://invl.me/clmvupd",
   "one_altitude": "https://www.1-altitude.com/",
@@ -135,17 +135,17 @@ const scanSgLinks = {
   "manhattan_sg": "https://www.regenthotels.com/en/regent-singapore/dining/manhattan/",
   "two_eight_hong_kong_street": "https://28hks.com/",
   "nutt_meg_clove": "https://www.nutmegandclove.com.sg/",
-  "elephant_paradox": "bnot found",
+  "elephant_paradox": "https://www.theelephantparadox.com",
   "the_other_room": "https://www.theotherroom.com.sg/",
   "operation_dagger": "https://www.timeout.com/singapore/bars/operation-dagger",
-  "jigger_and_pony": "https://jiggerandpony.com/",
+  "jigger_and_pony": "https://www.jiggerandpony.com",
   "mo-bar": "https://www.mandarinoriental.com/en/singapore/mo-bar",
   "tanjong_beach_club": "https://www.tanjongbeachclub.com/",
-  "ministry_of_sound": "bnot found",
+  "ministry_of_sound": "https://www.mos-singapore.com",
   "zoukout_sg": "https://www.zoukout.com/",
-  "f1_paddock_club": "https://singaporegp.sg/en/tickets/paddock-club",
+  "f1_paddock_club": "https://www.singaporegp.sg/en/tickets/paddock-club",
   "marquee_sg": "https://marqueesingapore.com/",
-  "rainforest_lumiere": "bnot found",
+  "rainforest_lumiere": "https://www.mandai.com/en/singapore-zoo/things-to-do/what-to-see/rainforest-lumina.html",
   "rws_casino": "https://www.rwsentosa.com/en/attractions/casino",
   "royal_albatross": "https://invl.me/clmvupk",
   "singapore_yacht_party": "https://singaporeyachtcharter.com.sg/private-yacht-party-singapore/",
@@ -154,10 +154,10 @@ const scanSgLinks = {
   "skai_rooftop": "https://www.skai.sg/",
   "level33_sg": "https://www.level33.com.sg/",
   "luma_skybar": "https://lumabar.com.sg/",
-  "herringbone_sg": "bnot found",
+  "herringbone_sg": "https://www.capellasingapore.com/en/dining/herringbone.html",
   "majestic_dinner_cruise": "https://invl.me/clmvupg",
   "marina_speedboat_tour": "https://invl.me/clmvuph",
-  "celavi_sunset_cruise": "https://www.celavi.com/en/singapore/",
+  "celavi_sunset_cruise": "https://www.klook.com/en-SG/activity/25555-ce-la-vi-sunset-cruise-singapore/",
 
   // === 🛍️ SHOPPING.HTML ===
   "shopee_main": "https://shopee.sg/",
@@ -190,7 +190,7 @@ const scanSgLinks = {
   "mytransport-app": "https://www.mytransport.sg/",
   "parking-sg-app": "https://www.parking.sg/",
   "klook-app": "https://invl.me/clmvupo",
-  "klook-esim": "https://invl.me/clmvupy",
+  "klook-esim": "https://invl.me/clmvupq",
   "klook-car-rental": "https://invl.me/clmvupp",
   "klook-hoho": "https://invl.me/clmvupr",
   "klook-private-tours": "https://invl.me/clmvups",
@@ -211,8 +211,8 @@ const scanSgLinks = {
   // === ⚖️ PENALTIES.HTML ===
   "klook-insurance": "https://www.klook.com/en-SG/insurance/",
   "world-nomads": "https://www.worldnomads.com",
-  "hsa_med_check": "https://www.hsa.gov.sg/",
-  "contact_email": "bnot found",
+  "hsa_med_check": "https://www.hsa.gov.sg",
+  "contact_email": "mailto:scansg365@gmail.com",
 
   // === 🛒 TOURS & BOOKING (USED SITE-WIDE) ===
   "klook-home": "https://invl.me/clmvupz",
@@ -223,7 +223,7 @@ const scanSgLinks = {
   "helix_bridge": "https://www.visitsingapore.com/see-do-singapore/architecture/modern/helix-bridge/",
 
   // === 📚 GLOSSARY.HTML, GST-REFUND.HTML, ABOUT.HTML ===
-  "contact_email": "bnot found"
+  "contact_email": "mailto:scansg365@gmail.com"
 };
 
 // ✅ DOM Ready Function
@@ -256,7 +256,7 @@ function populateLinks() {
       return;
     }
 
-    element.href = url;
+    element.href = url.trim();
 
     if (element.target === '_blank') {
       let rel = 'noopener';
