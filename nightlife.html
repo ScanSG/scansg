@@ -338,26 +338,42 @@
   </style>
 </head>
 <body>
+
   <!-- Header -->
-  <header>
-    <div class="container header-content">
-      <a href="index.html" class="logo-link">
-        <div class="logo">ScanSG</div>
-      </a>
-      <nav>
-        <ul>
-          <li><a href="transport.html">Commute</a></li>
-          <li><a href="food.html">Roam</a></li>
-          <li><a href="shopping.html">Deals</a></li>
-          <li><a href="glossary.html">Lingo</a></li>
-          <li><a href="penalties.html">CivicFee</a></li>
-          <li><a href="attractions.html">Attractions</a></li>
-          <li><a href="nightlife.html" style="color: #ff8a80 !important; font-weight: 700;">🌙 Nightlife</a></li>
-          <li><button class="dark-mode-toggle" id="darkModeToggle">🌙</button></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header>
+  <div class="container header-content">
+    <a href="index.html" class="logo-link">
+      <div class="logo">ScanSG</div>
+    </a>
+    <button id="menuToggle" aria-label="Toggle menu" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; display: none;">☰</button>
+    <nav id="mainNav">
+      <ul>
+       
+        <li><a href="transport.html">Commute</a></li>
+        <li><a href="food.html">Roam</a></li>
+        <li><a href="shopping.html">Deals</a></li>
+        <li><a href="glossary.html">Lingo</a></li>
+        <li><a href="penalties.html">CivicFee</a></li>
+        <li><a href="nightlife.html" style="color: #ff8a80 !important; font-weight: 700;">🌙 Nightlife</a></li>
+        <li>
+          <a href="attractions.html" 
+             style="
+               position: relative;
+               color: #ff8a80 !important;
+               font-weight: 700;
+               animation: pulse 2s infinite;
+             "
+             onmouseover="this.style.color='#c62828'; this.style.transform='scale(1.05)';"
+             onmouseout="this.style.color='#ff8a80'; this.style.transform='none';">
+            🎯 Attractions
+          </a>
+        </li>
+        <li><button class="dark-mode-toggle" id="darkModeToggle">🌙</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+  
 
   <!-- Main -->
   <div class="container">
