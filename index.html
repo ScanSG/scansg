@@ -15,8 +15,8 @@
   <meta content="ScanSG - The Real Singapore Guide 2025 | No Blur-Blur" property="og:title"/>
   <meta content="Local food, transport hacks, Singlish, GST refunds &amp; cultural tips. Real advice from someone who lives here." property="og:description"/>
   <meta content="https://scansg.com/images/og-preview.jpg" property="og:image"/>
-  <meta content="https://scansg.com" property="og:url">
-   <meta content="website" property="og:type"/>
+  <meta content="https://scansg.com" property="og:url"/>
+  <meta content="website" property="og:type">
    <meta content="ScanSG" property="og:site_name"/>
    <meta content="en_SG" property="og:locale"/>
    <!-- Twitter Card -->
@@ -472,6 +472,33 @@
 }
    
 
+[data-theme="dark"] .logo {
+  color: white !important;
+}
+   
+
+/* Ensure horizontal menu on desktop */
+@media (min-width: 769px) {
+  nav ul {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  nav li {
+    display: inline-block;
+  }
+}
+
+/* Mobile - keep hamburger functionality */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+/* Dark mode logo text stays white */
 [data-theme="dark"] .logo {
   color: white !important;
 }
