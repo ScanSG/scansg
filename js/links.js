@@ -94,7 +94,7 @@ const scanSgLinks = {
   "westgate_sg": "https://www.westgate.com.sg/",
   "jem_west": "https://www.jem.sg/",
   "alexandra_centre": "https://www.arc4u.com.sg/",
-  "amoy_street_food": "https://www.visitsingapore.com/en/see-do-singapore/food-drinks/central/amoy-street-food-centre",
+  "amoy_street_food": "https://chinatown.sg/dine/amoy-street-food-centre/",
   "outram_park_food": "https://eatbook.sg/chinatown-complex-food-centre/",
   "serangoon_garden_food": "https://www.eatbook.sg/serangoon-food/",
   "hougang_food": "https://eatbook.sg/hougang-food-guide/",
