@@ -9,7 +9,7 @@ const scanSgLinks = {
   "contact_email": "mailto:scansg365@gmail.com",
 
   // === 🎯 ATTRACTIONS.HTML ===
-  "mbs_sky_park": "https://www.marinabaysands.com/museum.html",
+  "mbs_sky_park": "https://invl.me/clmvuge",
   "artscience_museum": "https://www.marinabaysands.com/artscience-museum.html",
   "artscience-museum": "https://www.marinabaysands.com/artscience-museum.html",
   "singapore-zoo": "https://www.mandai.com/en/singapore-zoo.html",
