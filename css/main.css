@@ -108,3 +108,23 @@ a:hover {
 [data-theme="dark"] .logo {
   color: white !important;
 }
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 900;
+  font-size: 2rem;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.logo img {
+  height: 36px;
+  width: 36px;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
