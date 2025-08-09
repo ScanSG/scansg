@@ -71,7 +71,8 @@ const scanSgLinks = {
   "arab_street": "https://invl.me/clmvv78",
 
   // === 🍽️ FOOD.HTML ===
-  "lau_pa_sat": "https://www.nea.gov.sg/our-services/hawker-management/overview/hawker-centres/lau-pa-sat",
+  "lau_pa_sat": "https://akasa.sg/blog/lau-pa-sat-opening-hours",
+  "chinatown_food_street":"https://chinatown.sg/",
   "chicken_rice_chinatown": "https://www.timeout.com/singapore/restaurants/best-hainanese-chicken-rice-in-singapore",
   "tian_tian_chicken_rice": "https://danielfooddiary.com/2023/06/30/tiantianchickenrice/",
   "katong_laksa": "https://danielfooddiary.com/2021/09/15/katonglaksa/",
