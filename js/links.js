@@ -169,7 +169,7 @@ const scanSgLinks = {
   "celavi_sunset_cruise": "https://invl.me/clmvv84",
 
   // === 🛍️ SHOPPING.HTML ===
-  "shopee_main": "https://shopee.sg/",
+  "shopee_main": "https://invl.me/clmvvdk",
   "lazada_main": "https://www.lazada.sg/",
   "carousell_main": "https://www.carousell.sg/",
   "uniqlo_main": "https://www.uniqlo.com/sg/en/",
