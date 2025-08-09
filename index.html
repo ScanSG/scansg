@@ -153,11 +153,19 @@
     .logo-link {
       text-decoration: none;
     }
-    .logo {
-      font-weight: 700;
-      font-size: 1.4rem;
-      color: white;
-    }
+.logo {
+  font-weight: 900;
+  font-size: 2rem;
+  background: linear-gradient(90deg, #ff5252, #ff8a80);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease, background 0.5s ease;
+}
+.logo:hover {
+  transform: scale(1.08);
+  background: linear-gradient(90deg, #ff8a80, #ff5252);
+}
     nav ul {
       display: flex;
       list-style: none;
