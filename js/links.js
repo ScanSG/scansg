@@ -190,7 +190,7 @@ const scanSgLinks = {
   "mytransport-app": "https://www.mytransport.sg/",
   "parking-sg-app": "https://www.parking.sg/",
   "klook-app": "https://www.klook.com/en-SG/",
-  "klook-esim": "https://invl.me/clmvv8f",
+  "klook-esim": "https://invl.me/clmvvae",
   "klook-car-rental": "https://www.klook.com/en-SG/car-rental/",
   "klook-hoho": "https://invl.me/clmvv8g",
   "klook-private-tours": "https://invl.me/clmvv8h",
