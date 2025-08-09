@@ -69,7 +69,30 @@ const scanSgLinks = {
   "transitlink_good_to_know": "https://www.transitlink.com.sg", // Duplicate key from File 3
   "transitlink_resources": "https://www.transitlink.com.sg", // Duplicate key from File 3
 
+// === ROOFTOP LOUNGES ===
+"skai_rooftop": "https://www.swissotel.com/en/hotels/singapore/swissotel-the-stamford/dining/skai-bar-restaurant/",
+"level33_sg": "https://www.level33.com.sg",
+"luma_skybar": "https://www.ionorchard.com/en/dining/luma-skybar.html",
+"herringbone_sg": "https://www.capellasingapore.com/en/dining/herringbone.html",
 
+// === CRUISES & SAILING ===
+"majestic_dinner_cruise": "https://www.majesticsingapore.com/dinner-cruise",
+"marina_speedboat_tour": "https://www.klook.com/en-SG/activity/3861-marina-bay-speedboat-tour-singapore/",
+"celavi_sunset_cruise": "https://www.klook.com/en-SG/activity/25555-ce-la-vi-sunset-cruise-singapore/",
+
+// === SPEAKEASIES & HIDDEN BARS ===
+"two_eight_hong_kong_street": "https://www.28hongkongstreet.com",
+"nutt_meg_clove": "https://www.nutmegandclove.com",
+"elephant_paradox": "https://www.theelephantparadox.com",
+"the_other_room": "https://www.1925speakeasy.com/the-other-room",
+"operation_dagger": "https://www.operationdagger.com",
+"jigger_and_pony": "https://www.jiggerandpony.com",
+"mo-bar": "https://www.mondriansingapore.com/dining/mo-bar",
+
+// === CLARKE QUAY BARS ===
+"hooters_clarke_quay": "https://www.hooters.com.sg",
+"the_working_title": "https://www.theworkingtitle.com.sg",
+"jumbo_kingdom": "https://www.jumbokingdom.com.sg",
 
 
 
