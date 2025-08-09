@@ -86,7 +86,7 @@ const scanSgLinks = {
   "vivo_city": "https://www.vivocity.com.sg/",
   "plazasingapura_sg": "https://www.plazasingapura.com.sg/",
   "queensway_shopping_centre": "https://queenswayshoppingcentre.com.sg/",
-  "raffles_place_food": "https://www.visitsingapore.com/en/see-do-singapore/food-drinks/central/raffles-place/",
+  "raffles_place_food": "https://eatbook.sg/the-food-place-raffles-city/",
   "redhill_food": "https://eatbook.sg/redhill-food-guide-singapore/",
   "tanjong_pagar_food": "https://eatbook.sg/tanjong-pagar-food/",
   "bedok_food_centre": "https://www.visitsingapore.com/en/see-do-singapore/food-drinks/heartlands/bedok-food-centre",
