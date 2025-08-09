@@ -104,3 +104,7 @@ a:hover {
   color: white;
   cursor: pointer;
 }
+
+[data-theme="dark"] .logo {
+  color: white !important;
+}
