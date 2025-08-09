@@ -237,22 +237,27 @@
   color: white;
   transition: transform 0.3s ease;
 }
-.logo a {
-  text-decoration: none; /* removes underline */
+
+    .logo a {
+  text-decoration: none !important;
   display: flex;
   align-items: center;
   gap: 8px;
+  color: inherit; /* keeps text color same */
 }
 
 .logo a:hover {
-  text-decoration: none; /* also remove underline on hover */
+  text-decoration: none !important;
 }
 
+/* Fix favicon/logo image size */
 .logo img {
-  height: 36px;
-  width: 36px;
-  object-fit: contain; /* prevents image from looking squished/pinched */
+  height: 36px !important;
+  width: 36px !important;
+  object-fit: contain;
+  vertical-align: middle;
 }
+    
     nav ul {
       display: flex;
       list-style: none;
