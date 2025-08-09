@@ -12,8 +12,8 @@
   <!-- Preload Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;family=Open+Sans&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
   <!-- Open Graph / Social -->
-  <meta content="ScanSG - The Real Singapore Guide 2025 | No Blur-Blur" property="og:title">
-   <meta content="Local food, transport hacks, Singlish, GST refunds &amp; cultural tips. Real advice from someone who lives here." property="og:description"/>
+  <meta content="ScanSG - The Real Singapore Guide 2025 | No Blur-Blur" property="og:title"/>
+  <meta content="Local food, transport hacks, Singlish, GST refunds &amp; cultural tips. Real advice from someone who lives here." property="og:description">
    <meta content="https://scansg.com/images/og-preview.jpg" property="og:image"/>
    <meta content="https://scansg.com" property="og:url"/>
    <meta content="website" property="og:type"/>
@@ -551,7 +551,7 @@
     <h1>
      🎉 Wah Lau&hellip; Welcome Lah! 🇸🇬
      <br/>
-     Your Real Singapore Guide 2025
+     Your Real Singapore Travel Guide 2025
     </h1>
     <p>
      Look, I get it &mdash; whether you're
@@ -1079,41 +1079,51 @@
   </script>
   <!-- Dangling Snake to Top -->
   <a aria-label="Click the snake to go to top" class="dangling-snake" href="#top">
-   <svg class="snake-svg" height="60" viewbox="0 0 24 60" width="24">
-    <path d="M12 0 C12 10, 8 15, 12 25 C16 35, 8 40, 12 50 C12 55, 12 60, 12 60" fill="none" stroke="#222" stroke-width="2">
+   <svg class="snake-svg" height="100" viewbox="0 0 24 60" width="40">
+    <path d="M12 0 C12 10, 8 15, 12 25 C16 35, 8 40, 12 50 C12 55, 12 60, 12 60" fill="none" stroke="#222" stroke-width="3">
     </path>
-    <circle cx="10" cy="58" fill="red" r="2">
+    <circle cx="9" cy="58" fill="white" r="4">
     </circle>
-    <!-- Eyes -->
+    <!-- Eye white -->
+    <circle cx="9" cy="58" fill="black" r="2">
+    </circle>
+    <!-- Eye pupil -->
+    <path d="M10 60 L10 65 L12 63 L14 65 L14 60" fill="red" stroke="red">
+     <animate attributename="d" dur="0.5s" repeatcount="indefinite" values="M10 60 L10 65 L12 63 L14 65 L14 60;
+                       M10 60 L10 67 L12 65 L14 67 L14 60;
+                       M10 60 L10 65 L12 63 L14 65 L14 60">
+     </animate>
+    </path>
    </svg>
   </a>
   <style>
    .dangling-snake {
-    position: fixed;
-    left: 20px;
-    top: -100px;
-    z-index: 100;
-    opacity: 0;
-    transition: top 0.4s ease, opacity 0.3s ease;
-  }
-
-  .dangling-snake.visible {
-    top: 80px;
-    opacity: 0.6;
-  }
-
-  .dangling-snake:hover .snake-svg {
-    stroke: #c62828;
-    stroke-width: 2.5;
-  }
+  position: fixed;
+  left: 20px;
+  top: 50px;
+  z-index: 100;
+  opacity: 0.85;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+.dangling-snake:hover {
+  transform: rotate(-5deg) translateY(-5px);
+}
+.snake-svg {
+  animation: wiggle 3s infinite ease-in-out;
+}
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(3deg); }
+  75% { transform: rotate(-3deg); }
+}
   </style>
   <script>
    const snake = document.querySelector('.dangling-snake');
   window.addEventListener('scroll', () => {
     if (window.pageYOffset > 300) {
-      snake.classList.add('visible');
+      snake.style.opacity = '0.85';
     } else {
-      snake.classList.remove('visible');
+      snake.style.opacity = '0';
     }
   });
   </script>
