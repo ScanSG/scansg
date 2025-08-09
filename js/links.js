@@ -186,7 +186,7 @@ const scanSgLinks = {
   "grab-app": "https://www.grab.com/sg/",
   "gojek-app": "https://www.gojek.com/sg/",
   "comfort-app": "https://www.cdgtaxi.com.sg/",
-  "transitlink-app": "https://www.transitlink.com.sg/apps/",
+  "transitlink-app": "https://simplygo.com.sg/",
   "mytransport-app": "https://www.mytransport.sg/",
   "parking-sg-app": "https://www.parking.sg/",
   "klook-app": "https://www.klook.com/en-SG/",
