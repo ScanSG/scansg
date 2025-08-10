@@ -4,9 +4,9 @@
 Applied Fixes & Optimizations:
 1. Synced navigation bar & logo sizing with index page.
 2. Added SEO meta tags & description.
-3. Added Apple Touch icon & favicon.
+3. Added Apple Touch icon & favicon from index.
 4. Preloaded critical assets (logo + fonts).
-5. Replaced dangling snake with transport page version.
+5. Replaced dangling snake with index page version.
 6. Dark mode text color fix.
 7. Lazy-loaded all non-logo images.
 8. Deferred non-critical scripts for faster load.
@@ -16,24 +16,23 @@ Applied Fixes & Optimizations:
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Singapore Shopping Guide 2025: Mustafa, Bugis, Carousell, Shopee, Shein & GST refunds. Save big." />
-  <title>Singapore Shopping Guide 2025 | Mustafa, Bugis, GST Refund & Online Deals</title>
-  <link rel="canonical" href="https://scansg.com/shopping.html" />
+  <meta name="description" content="The Real Singlish Dictionary 2025: Kopi-O, Teh-C-Peng, Shiok, Bo Jio & more. Learn real Singapore slang like a local — no blur-blur." />
+  <link rel="canonical" href="https://scansg.com/glossary.html" />
   <!-- Preload Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <!-- Open Graph -->
-  <meta property="og:title" content="Singapore Shopping Guide 2025 | Offline & Online Deals | ScanSG" />
-  <meta property="og:description" content="The only shopping guide you need: Where to buy, how to save, and real delivery times. Includes GST refund steps." />
-  <meta property="og:image" content="https://scansg.com/images/og-shopping.jpg" />
-  <meta property="og:url" content="https://scansg.com/shopping.html" />
+  <meta property="og:title" content="The Real Singlish Dictionary 2025 | No Blur-Blur Guide" />
+  <meta property="og:description" content="Learn real Singlish: Kopi-O, Teh-C-Peng, Shiok, Bo Jio & more. From hawker stalls to office banter." />
+  <meta property="og:image" content="https://scansg.com/images/og-glossary.jpg" />
+  <meta property="og:url" content="https://scansg.com/glossary.html" />
   <meta property="og:type" content="article" />
-  <!-- Twitter Card -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@ScanSG365" />
   <!-- Title -->
-  <title>Singapore Shopping Guide 2025 | Offline & Online Deals | ScanSG</title>
+  <title>The Real Singlish Dictionary 2025 | No Blur-Blur Guide</title>
   <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" sizes="32x32" />
+  <link href="images/favicon.png" rel="icon" sizes="32x32" type="image/png"/>
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4636396521329327" crossorigin="anonymous"></script>
   <!-- Google Analytics 4 -->
@@ -42,7 +41,9 @@ Applied Fixes & Optimizations:
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-HL77S9PP18', { 'anonymize_ip': true });
+    gtag('config', 'G-HL77S9PP18', {
+      'anonymize_ip': true
+    });
   </script>
   <!-- Microsoft Clarity -->
   <script defer type="text/javascript">
@@ -52,34 +53,8 @@ Applied Fixes & Optimizations:
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "sp1isxvzim");
   </script>
-  <!-- NO REDIRECT -->
-  <!-- Structured Data: Article -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Singapore Shopping Guide 2025: Offline & Online Deals",
-    "description": "Where to shop in Singapore — from Bugis Street to Shein. Real delivery times, GST refunds, and affiliate links.",
-    "author": {
-      "@type": "Person",
-      "name": "ScanSG"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "ScanSG",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://scansg.com/images/logo-small.png"
-      }
-    },
-    "datePublished": "2025-07-27",
-    "image": "https://scansg.com/images/og-shopping.jpg",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://scansg.com/shopping.html"
-    }
-  }
-  </script>
+  <!-- Load Your links.js -->
+  <script src="/js/links.js" defer></script>
   <!-- Inline CSS -->
   <style>
     :root {
@@ -91,25 +66,27 @@ Applied Fixes & Optimizations:
       --light-gray: #f9f9f9;
       --border: #ec9a9a;
       --header-bg: #111;
+      --card-bg: #f8f9fa;
     }
     [data-theme="dark"] {
       --text: #eee;
       --bg: #121212;
-      --light-gray: #1e1e1e;
+      --gray: #aaa;
+      --light-gray: #2a2a2a;
       --border: #444;
+      --card-bg: #1e1e1e;
     }
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      scroll-behavior: smooth;
     }
     body {
       font-family: 'Open Sans', sans-serif;
       line-height: 1.6;
       color: var(--text);
       background: var(--bg);
-      transition: background 0.4s ease, color 0.4s ease;
+      transition: background 0.3s ease, color 0.3s ease;
     }
     h1, h2, h3, h4 {
       font-family: 'Montserrat', sans-serif;
@@ -141,6 +118,9 @@ Applied Fixes & Optimizations:
       display: flex;
       justify-content: space-between;
       align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
     }
     .logo-link {
       text-decoration: none;
@@ -163,98 +143,143 @@ Applied Fixes & Optimizations:
     nav a:hover {
       color: #4fc3f7;
     }
-    /* Intro */
-    .shopping-intro {
-      padding: 3rem 1rem;
+    /* Hero Intro */
+    .hero {
       text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
+      padding: 2.5rem 1rem;
+      background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+      margin: 1rem 0;
+      border-radius: 12px;
     }
-    .shopping-intro h1 {
-      font-size: 2.4rem;
-      color: var(--main);
+    [data-theme="dark"] .hero {
+      background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
     }
-    .shopping-intro p {
+    .hero h1 {
+      font-size: 1.8rem;
+    }
+    .hero p {
       font-size: 1.1rem;
       color: var(--gray);
-      margin: 0.6rem auto;
+      max-width: 800px;
+      margin: 0 auto 1rem;
     }
-    /* Two-Column Grid */
-    .shopping-grid {
+    /* Section Divider */
+    .section-divider {
+      margin: 2.5rem 0;
+      text-align: center;
+      font-weight: 600;
+      color: var(--main);
+      position: relative;
+    }
+    .section-divider::after {
+      content: "";
+      display: block;
+      height: 2px;
+      background: var(--accent);
+      margin: 0.5rem auto;
+      width: 100px;
+    }
+    /* Glossary Grid */
+    .glossary-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-      gap: 2rem;
-      margin: 2.6rem 0;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
     }
-    /* Section Headers */
-    .section-header {
+    .glossary-term {
+      background: var(--card-bg);
+      padding: 0.8rem;
+      border-radius: 8px;
+      border-left: 3px solid var(--accent);
+      color: var(--text);
+    }
+    [data-theme="dark"] .glossary-term {
+      background: #2a2a2a;
+      color: #eee;
+    }
+    .glossary-term dt {
+      font-weight: 600;
       color: var(--main);
-      font-size: 1.3rem;
-      margin: 0 0 1.2rem;
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 0.4rem;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
+      margin-bottom: 0.3rem;
     }
-    /* Category Box */
-    .shopping-category {
-      background: #fff;
+    .glossary-term dd {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--gray);
+    }
+    [data-theme="dark"] .glossary-term dd {
+      color: #aaa;
+    }
+    /* Drinks Section */
+    .drinks-container {
+      margin: 2rem 0;
+      background: #fff8e1;
       border-radius: 10px;
-      padding: 1.4rem;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-      border: 1px solid #eee;
+      padding: 1.5rem;
+      border: 1px solid #ffecb3;
     }
-    [data-theme="dark"] .shopping-category {
-      background: #1e1e1e;
-      border-color: #444;
+    [data-theme="dark"] .drinks-container {
+      background: #332a00;
+      border: 1px solid #665500;
+      color: #fff;
     }
-    .shopping-category ul {
-      padding-left: 1.3rem;
-      margin: 0.4rem 0;
-      line-height: 1.5;
+    [data-theme="dark"] .drinks-container h3 {
+      color: #ffd54f;
     }
-    .shopping-category li {
-      margin: 0.4rem 0;
+    [data-theme="dark"] .drink-table th {
+      background-color: #1565c0 !important;
     }
-    /* GST Section */
-    .gst-section {
-      margin: 3rem 0;
-      padding: 1.8rem;
-      background: #e3f2fd;
-      border-left: 4px solid #1565c0;
-      border-radius: 12px;
+    [data-theme="dark"] .drink-table td,
+    [data-theme="dark"] .drink-table th {
+      color: #eee;
+      border-bottom: 1px solid #444;
     }
-    [data-theme="dark"] .gst-section {
-      background: #0a1a2a;
+    [data-theme="dark"] .pro-tip {
+      background: #0a3d0a;
+      color: #e8f5e8;
+      border-left-color: #4caf50;
     }
-    .gst-step {
-      margin: 1.2rem 0;
+    [data-theme="dark"] .pro-tip * {
+      color: #e8f5e8 !important;
     }
-    .gst-step h4 {
-      color: var(--main);
-      margin: 0 0 0.4rem;
+    .drink-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.95rem;
     }
-    /* Tips Box */
-    .tips-box {
-      margin: 3rem 0;
-      padding: 1.8rem;
-      background: #e8f5e9;
-      border-left: 4px solid #4caf50;
-      border-radius: 12px;
-      font-style: italic;
+    .drink-table th,
+    .drink-table td {
+      padding: 0.6rem;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
     }
-    [data-theme="dark"] .tips-box {
-      background: #1a2e1a;
+    .drink-table th {
+      background-color: var(--accent);
+      color: white;
     }
-    .tips-box h3 {
+    .drink-table tr:hover {
+      background-color: #f5f5f5;
+    }
+    [data-theme="dark"] .drink-table tr:hover {
+      background-color: #2d2d2d;
+    }
+    .pro-tip {
+      background: #e8f5e8;
+      padding: 0.8rem;
+      border-radius: 8px;
+      border-left: 3px solid green;
+      margin: 1rem 0;
+      font-size: 0.95rem;
       color: #2e7d32;
-      margin-top: 0;
+    }
+    .pro-tip * {
+      color: inherit;
     }
     /* Footer */
     footer {
       margin-top: 4rem;
-      padding: 2.4rem 1rem;
+      padding: 1.5rem 1rem;
       background: #1a1a1a;
       color: #aaa;
       font-size: 0.9rem;
@@ -262,24 +287,10 @@ Applied Fixes & Optimizations:
     }
     [data-theme="dark"] footer {
       background: #000;
+      color: #888;
     }
     footer a {
       color: #4fc3f7;
-    }
-    .next-step {
-      margin: 2.4rem 0;
-      padding: 1.6rem;
-      background: #fff3e0;
-      border-radius: 12px;
-      text-align: center;
-      border-left: 4px solid #c62828;
-    }
-    [data-theme="dark"] .next-step {
-      background: #2a1a1a;
-    }
-    .next-step a {
-      color: #c62828;
-      font-weight: 600;
     }
     .disclaimer {
       font-size: 0.85rem;
@@ -289,43 +300,17 @@ Applied Fixes & Optimizations:
     [data-theme="dark"] .disclaimer {
       color: #666;
     }
-    /* Privacy Policy */
-    #privacyToggle {
-      background: none;
-      border: none;
-      color: #888;
-      font-size: 0.85rem;
-      cursor: pointer;
-      text-decoration: underline;
-    }
-    #privacy-policy {
-      display: none;
-      margin-top: 1.5rem;
-      padding: 1.4rem;
-      background: #232323;
-      color: #ddd;
-      border-radius: 8px;
-      text-align: left;
-      font-size: 0.92rem;
-      line-height: 1.6;
-      border: 1px solid #444;
-    }
     @media (max-width: 768px) {
-      .shopping-grid {
-        grid-template-columns: 1fr;
+      .header-content {
+        flex-direction: column;
+        gap: 0.8rem;
       }
-      .shopping-intro h1 {
-        font-size: 2rem;
-      }
-      .shopping-category {
-        padding: 1.2rem;
-      }
-      .tips-box {
-        padding: 1.4rem;
+      .hero h1 {
+        font-size: 1.6rem;
       }
     }
 
-/* Mobile Nav Toggle */
+    /* Mobile Nav Toggle */
 #menuToggle {
   display: none;
 }
@@ -384,118 +369,30 @@ Applied Fixes & Optimizations:
 
     
   </style>
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
 
 <!-- Preload critical assets for faster rendering -->
 <link rel="preload" href="images/logo.png" as="image">
 <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" as="style">
 <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" as="style">
 
+
 <style>
-/* Synced Navbar & Logo Styles from Index */
-header {
-  background: var(--header-bg);
-  color: white;
-  padding: 0.8rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.logo-link {
-  text-decoration: none;
-}
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 900;
-  font-size: 2rem;
-  color: white;
-  transition: transform 0.3s ease;
-}
-.logo img {
-  height: 36px !important;
-  width: 36px !important;
-  object-fit: contain;
-  vertical-align: middle;
-}
-.logo:hover {
-  transform: scale(1.05);
-}
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0;
-}
-nav a {
-  color: white;
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-nav a:hover {
-  color: #4fc3f7;
-}
-.dark-mode-toggle {
-  font-size: 1.1rem;
-  padding: 0.4rem 0.8rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-[data-theme="dark"] .logo {
-  color: white !important;
-}
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    width: 100%;
-    background: var(--header-bg);
-    padding: 0.6rem 0;
-    border-radius: 8px;
-  }
-  nav li {
-    width: 100%;
-  }
-  nav a {
-    display: block;
-    padding: 0.6rem 1rem;
-    font-size: 1rem;
-    text-align: center;
-    border-radius: 4px;
-  }
-  nav a:hover {
-    background: rgba(255,255,255,0.1);
-  }
-}
-</style>
-<style>
-/* Dark mode text override */
 [data-theme="dark"] {
   --text: #ffffff !important;
   --gray: #dddddd !important;
 }
 </style>
+
 </head>
 <body>
 
 
-
-    <!-- Header -->
+  <!-- Header -->
 <header>
   <div class="container header-content">
     <a class="logo-link" href="index.html">
       <div class="logo">
-        <img alt="ScanSG Logo" src="images/favicon.png" width="36" height="36">
+        <img alt="" src="images/favicon.png" width="36" height="36">
         ScanSG
       </div>
     </a>
@@ -552,281 +449,251 @@ nav a:hover {
 
   
 
-  
-
   <!-- Main -->
   <div class="container">
     <main>
-      <!-- Intro -->
-      <section class="shopping-intro">
-        <h1>🛍️ Singapore Shopping Guide 2025: Save Big, Shop Smart</h1>
-        <p>You’ve landed. Now what? This isn’t just a list of stores. This is your <strong>real SG shopping survival guide</strong> — the kind of stuff you only learn after years here.</p>
-        <p>From <strong>Bugis Street bargains</strong> to <strong>Shein delivery hacks</strong>, <strong>duty-free at Changi</strong>, and <strong>how to claim 7% GST refund</strong> — I’ll show you how to shop like a pro.</p>
-        <p>No blur-blur. Just real tips from someone who’s lived here for a few years, overpaid, and learned the hard way.</p>
+      <!-- Hero Intro -->
+      <section class="hero">
+        <h1>💬 The Real Singlish Dictionary 2025</h1>
+        <p>No blur-blur. Just real Singapore slang — from hawker stalls to office banter. Learn it. Use it. <em>Wah Lau, you sound like a local!</em></p>
       </section>
 
-      <!-- Two-Column: Offline & Online -->
-      <div class="shopping-grid">
-        <!-- LEFT: OFFLINE SHOPPING -->
-        <div class="shopping-category">
-          <h3 class="section-header"><span>🛒</span> Offline Shopping</h3>
-          <p>Yes, Singapore has shiny malls. But the real deals? They’re in 24/7 warehouses, $2 stores, and street markets.</p>
+      <p>Whether you're here for a long weekend, a work transfer, or just trying to survive your in-laws’ dinner, one thing cuts through the noise: <strong>Singlish</strong>. It’s not about grammar. It’s about <em>vibe</em>.</p>
 
-          <h4>🏪 Supermarkets & Grocers</h4>
-          <ul>
-            <li><strong><a href="https://ntucfairprice.com.sg" data-link-key="fairprice" target="_blank">NTUC FairPrice</a>:</strong> Largest supermarket chain. Great for daily essentials. Check “Everyday Low Prices” section.</li>
-            <li><strong><a href="https://coldsstorage.com.sg" data-link-key="cold_storage" target="_blank">Cold Storage</a>:</strong> Premium supermarket. Great for imported goods, cheese, wine, and ready-to-eat meals.</li>
-            <li><strong><a href="https://giant.sg" data-link-key="giant_hypermarket" target="_blank">Giant</a>:</strong> Large format stores. Good for weekly family shopping. Frequent discounts.</li>
-            <li><strong><a href="https://shengsiong.com.sg" data-link-key="shengsiong" target="_blank">Sheng Siong</a>:</strong> Budget-friendly. Prices often lower than FairPrice.</li>
-          </ul>
+      <p>This isn’t textbook English. It’s the language of <strong>hawker queues</strong>, <strong>void deck chess battles</strong>, and <strong>WhatsApp group chats</strong> that blow up at 2am. It’s Malay, Hokkien, Tamil, English, and pure Singaporean attitude — all stir-fried with <em>wok hey</em>.</p>
 
-          <h4>🛍️ Mustafa Centre (Little India)</h4>
-          <p>The legendary 24/7 store with everything — groceries, clothes, electronics, travel gear.</p>
-          <ul>
-            <li><strong>Why it’s famous:</strong> Open 24/7, tax-free, and packed with surprises.</li>
-            <li><strong>Reality check:</strong> Not always cheaper. Compare prices with Cold Storage or Sheng Siong.</li>
-            <li><strong>Pro Tip:</strong> Go late at night — less crowd, easier to navigate.</li>
-          </ul>
+      <p>So ditch the dictionary. This is how we <strong>really</strong> talk. Bookmark it. Share it. And next time someone says <em>“Bo jio me!”</em> — you’ll know exactly what to do.</p>
 
-          <h4>🛍️ Street Markets & Malls</h4>
-          <ul>
-            <li><strong>Bugis Street Market:</strong> Haggle hard — start at 50% below asking price. Best for T-shirts, accessories, souvenirs.</li>
-            <li><strong>Lucky Plaza (Orchard):</strong> Filipino hub. Great for SIM cards, souvenirs, affordable fashion.</li>
-            <li><strong>Pasar Bella (Tiong Bahru):</strong> Local market with vintage finds and handmade goods.</li>
-            <li><strong>Sim Lim Square:</strong> Electronics heaven. Negotiate hard. Check for warranty.</li>
-            <li><strong>VivoCity:</strong> Largest mall. Close to Sentosa. Good mix of mid-range brands.</li>
-          </ul>
-
-          <h4>🛍️ $2 Stores (Popular with Locals)</h4>
-          <ul>
-            <li><strong><a href="https://www.daisosingapore.com.sg/" data-link-key="daiso_sg" target="_blank">Daiso</a>:</strong> Japanese variety store. Great for souvenirs, kitchenware, stationery.</li>
-            <li><strong><a href="https://miniso.com/sg" data-link-key="miniso_sg" target="_blank">Miniso</a>:</strong> Trendy, minimalist design. Good for phone accessories and small gifts.</li>
-            <li><strong><a href="https://www.mrdiy.com/sg/" data-link-key="mr_diy_online" target="_blank">Mr DIY</a>:</strong> Local $2 chain. Socks, towels, phone stands — all $2.</li>
-          </ul>
-
-          <h4>✈️ Duty-Free at Changi Airport</h4>
-          <p>Don’t leave without checking — prices are often better than online.</p>
-          <ul>
-            <li><strong>What’s good:</strong> Perfume, alcohol, chocolate, electronics.</li>
-            <li><strong>Tip:</strong> Shop at Terminal 3 — widest selection.</li>
-          </ul>
-        </div>
-
-        <!-- RIGHT: ONLINE SHOPPING -->
-        <div class="shopping-category">
-          <h3 class="section-header"><span>🌐</span> Online Shopping</h3>
-          <p>Most locals shop online — fast, cheap, and with real deals. Here’s where to go and what to expect.</p>
-
-          <h4>🛒 Major Marketplaces</h4>
-          <ul>
-            <li><strong><a href="https://shopee.sg" data-link-key="shopee_main" target="_blank">Shopee.sg</a>:</strong> The most popular e-commerce platform in SG. Great for fashion, electronics, home goods. Frequent flash sales and free shipping.</li>
-            <li><strong><a href="https://lazada.sg" data-link-key="lazada_main" target="_blank">Lazada</a>:</strong> Fast delivery, reliable sellers. Good for branded items.</li>
-            <li><strong><a href="https://carousell.com" data-link-key="carousell_main" target="_blank">Carousell</a>:</strong> SG’s #1 secondhand platform. Haggle, meet at MRT stations, or use verified courier.</li>
-          </ul>
-
-          <h4>👗 Fashion & Lifestyle</h4>
-          <ul>
-            <li><strong><a href="https://uniqlo.com/sg" data-link-key="uniqlo_main" target="_blank">Uniqlo SG</a>:</strong> Free delivery over $50. 3–5 day delivery. Frequent sales.</li>
-            <li><strong><a href="https://zalora.sg" data-link-key="zalora_sg" target="_blank">Zalora</a>:</strong> Local fashion hub with brands like Charles & Keith, Pedro. Regular sales.</li>
-            <li><strong><a href="https://shein.com" data-link-key="shein_main" target="_blank">Shein</a>:</strong> 7–14 days to SG. Free shipping over $10. Easy returns.</li>
-            <li><strong><a href="https://aliexpress.com" data-link-key="aliexpress_main" target="_blank">AliExpress</a>:</strong> 10–21 days. Use “ePacket” for faster shipping.</li>
-            <li><strong><a href="https://amazon.sg" data-link-key="amazon_sg" target="_blank">Amazon SG</a>:</strong> Fast delivery (1–3 days). Good for books, electronics, Prime members.</li>
-          </ul>
-
-          <h4>🛍️ Local Online Stores</h4>
-          <ul>
-            <li><strong><a href="https://mrdiy.com.sg" data-link-key="mr_diy_online" target="_blank">Mr. DIY Online</a>:</strong> Now available online! Buy household essentials at fixed low prices.</li>
-            <li><strong><a href="https://watsons.com.sg" data-link-key="watsons_online" target="_blank">Watsons</a>:</strong> Beauty, health, skincare. Frequent promotions and member discounts.</li>
-            <li><strong><a href="https://guardian.com.sg" data-link-key="guardian_online" target="_blank">Guardian</a>:</strong> Similar to Watsons. Good for travel-sized items.</li>
-          </ul>
-
-          <h4>📦 Delivery & Returns</h4>
-          <ul>
-            <li><strong>Delivery:</strong> Shopee/Lazada — 1–3 days. Same-day in some areas.</li>
-            <li><strong>Returns:</strong> Most sites allow 7–30 day returns. Check policy before buying.</li>
-            <li><strong>Sales:</strong> 9.9, 11.11, 12.12 — up to 70% off.</li>
-            <li><strong>Pro Tip:</strong> Use Shopee Coins or Lazada Vouchers for extra discounts.</li>
-          </ul>
-        </div>
+      <!-- Singlish Glossary -->
+      <div class="section-divider">🔥 Essential Singlish Terms</div>
+      <div class="glossary-grid">
+        <div class="glossary-term"><dt>Alamak</dt><dd>Shock or frustration (e.g., "Alamak! Where my phone?").</dd></div>
+        <div class="glossary-term"><dt>Ang Moh</dt><dd>Westerner (e.g., "That ang moh speak good Singlish.")</dd></div>
+        <div class="glossary-term"><dt>Aiyoh / Aiyah</dt><dd>Frustration (aiyoh) or pity (aiyah) (e.g., "Aiyoh, so late!"; "Aiyah, poor guy.")</dd></div>
+        <div class="glossary-term"><dt>Bo Jio</dt><dd>Didn’t invite — a social crime (e.g., "You bo jio me for makan!")</dd></div>
+        <div class="glossary-term"><dt>Bong Kar</dt><dd>Loud, chaotic (e.g., "This party so bong kar.")</dd></div>
+        <div class="glossary-term"><dt>Cena</dt><dd>Dinner (from "supper" backwards) (e.g., "Where to cena?")</dd></div>
+        <div class="glossary-term"><dt>Chao Keng</dt><dd>Flashy, over-the-top (e.g., "Why so chao keng for $5 meal?")</dd></div>
+        <div class="glossary-term"><dt>Cher</dt><dd>Teacher (e.g., "My math cher very strict.")</dd></div>
+        <div class="glossary-term"><dt>Cher Cher</dt><dd>Nagging (e.g., "Stop cher cher like my mum.")</dd></div>
+        <div class="glossary-term"><dt>Chio Bu</dt><dd>Attractive girl (use carefully!)</dd></div>
+        <div class="glossary-term"><dt>Chope</dt><dd>To reserve a seat — usually with tissue paper (sacred ritual)</dd></div>
+        <div class="glossary-term"><dt>Chui</dt><dd>To laze around (e.g., "Stop chui, go work!")</dd></div>
+        <div class="glossary-term"><dt>Cheat</dt><dd>Surprisingly good (e.g., "This $3 meal so cheat!")</dd></div>
+        <div class="glossary-term"><dt>Dabao</dt><dd>Takeaway (e.g., "Dabao this chicken rice.")</dd></div>
+        <div class="glossary-term"><dt>Diao Suay</dt><dd>Extremely unlucky (e.g., "Diao suay — rain during BBQ.")</dd></div>
+        <div class="glossary-term"><dt>Dun Play Play</dt><dd>Stop messing around — be serious</dd></div>
+        <div class="glossary-term"><dt>Dun Anyhow</dt><dd>Don’t be reckless</dd></div>
+        <div class="glossary-term"><dt>Blur Like Sotong</dt><dd>Clueless (sotong = squid)</dd></div>
+        <div class="glossary-term"><dt>Fully Booked</dt><dd>Sold out, full</dd></div>
+        <div class="glossary-term"><dt>Gahmen</dt><dd>Government (often said with side-eye)</dd></div>
+        <div class="glossary-term"><dt>Gostan</dt><dd>To reverse (e.g., "Gostan your car!")</dd></div>
+        <div class="glossary-term"><dt>Haiyah</dt><dd>Exasperation (e.g., "Haiyah, why like that?")</dd></div>
+        <div class="glossary-term"><dt>Hao / Wah Hao</dt><dd>Good / Wow, impressive! (e.g., "This hao!" / "Wah hao!")</dd></div>
+        <div class="glossary-term"><dt>Heng</dt><dd>Lucky (opposite: siong)</dd></div>
+        <div class="glossary-term"><dt>Jin</dt><dd>Face/dignity (e.g., "He lose jin in front of boss.")</dd></div>
+        <div class="glossary-term"><dt>Kaishin</dt><dd>Very angry (e.g., "Boss kaishin when you late.")</dd></div>
+        <div class="glossary-term"><dt>Kan Cheong</dt><dd>Anxious (e.g., "Don’t kan cheong, exam will be ok.")</dd></div>
+        <div class="glossary-term"><dt>Kiasu</dt><dd>Fear of losing out (e.g., "So kiasu must take all samples!")</dd></div>
+        <div class="glossary-term"><dt>Kaypoh</dt><dd>Busybody (e.g., "Stop kaypoh, mind your own!")</dd></div>
+        <div class="glossary-term"><dt>Kena</dt><dd>Got (something bad) (e.g., "He kena scold.")</dd></div>
+        <div class="glossary-term"><dt>Kulit</dt><dd>Playful teasing (e.g., "We just kulit, don’t take serious.")</dd></div>
+        <div class="glossary-term"><dt>Lah / Leh / Lor / Meh</dt><dd>Singlish seasoning:  
+          <strong>Lah</strong> = emphasis (“Don’t worry lah!”)  
+          <strong>Leh</strong> = softens tone (“Wait leh!”)  
+          <strong>Lor</strong> = obvious (“He never come, lor.”)  
+          <strong>Meh</strong> = doubt (“Really meh?”)</dd></div>
+        <div class="glossary-term"><dt>Liao</dt><dd>Already (e.g., "Eat liao.")</dd></div>
+        <div class="glossary-term"><dt>Makan</dt><dd>To eat — national sport (e.g., "Time to makan!")</dd></div>
+        <div class="glossary-term"><dt>Mai Sei</dt><dd>Don’t care (e.g., "Mai sei, you decide.")</dd></div>
+        <div class="glossary-term"><dt>MB</dt><dd>Must-buy (e.g., "This durian MB before fly back.")</dd></div>
+        <div class="glossary-term"><dt>Mugger</dt><dd>Great deal (e.g., "$2 coffee real mugger!")</dd></div>
+        <div class="glossary-term"><dt>Nia</dt><dd>Sarcasm (e.g., "Nia, you say you not hungry?")</dd></div>
+        <div class="glossary-term"><dt>On-Die</dt><dd>"I swear" (e.g., "On-die, this best laksa!")</dd></div>
+        <div class="glossary-term"><dt>Orh</dt><dd>Mild surprise (e.g., "Orh, so like that.")</dd></div>
+        <div class="glossary-term"><dt>Paiseh</dt><dd>Embarrassed (e.g., "Paiseh to ask for discount.")</dd></div>
+        <div class="glossary-term"><dt>Pang Sui</dt><dd>Wasteful (e.g., "Buying iPhone every year so pang sui.")</dd></div>
+        <div class="glossary-term"><dt>Pao</dt><dd>To run away (e.g., "When teacher come, everyone pao.")</dd></div>
+        <div class="glossary-term"><dt>Press</dt><dd>To rush (e.g., "Press one, train coming!")</dd></div>
+        <div class="glossary-term"><dt>Proper</dt><dd>Fancy (e.g., "You dress so proper tonight!")</dd></div>
+        <div class="glossary-term"><dt>Sabo</dt><dd>To prank (e.g., "He sabo me by telling boss I was late.")</dd></div>
+        <div class="glossary-term"><dt>Sia</dt><dd>Disgusted (e.g., "Sia, so many mosquitoes!")</dd></div>
+        <div class="glossary-term"><dt>Sibei</dt><dd>Very, extremely (e.g., "Sibei kiasu.")</dd></div>
+        <div class="glossary-term"><dt>Suay</dt><dd>Unlucky (e.g., "Suay one, queue so long.")</dd></div>
+        <div class="glossary-term"><dt>Tahan</dt><dd>To endure (e.g., "Can you tahan the heat?")</dd></div>
+        <div class="glossary-term"><dt>Wah Lau / Wah Piang</dt><dd>Shock ("Wah Lau!") / Strong anger ("Wah Piang!" — use carefully!)</dd></div>
+        <div class="glossary-term"><dt>Wah So</dt><dd>Sarcastic "Oh really?" (e.g., "Wah so choy?")</dd></div>
+        <div class="glossary-term"><dt>Wei</dt><dd>Hey! (e.g., "Wei, you forget your bag!")</dd></div>
+        <div class="glossary-term"><dt>Wok Hey</dt><dd>Smoky flavor — also means energy</dd></div>
+        <div class="glossary-term"><dt>Wan Ting</dt><dd>One thing (e.g., "Wan ting, I not agree.")</dd></div>
+        <div class="glossary-term"><dt>Yuan Yang</dt><dd>Coffee-tea mix — also means "hang out"</dd></div>
+        <div class="glossary-term"><dt>Zai</dt><dd>Skilled (e.g., "He very zai with computers.")</dd></div>
+        <div class="glossary-term"><dt>Zorro</dt><dd>To leave without saying goodbye</dd></div>
+        <div class="glossary-term"><dt>Can or Not?</dt><dd>"Is it possible?" (e.g., "Can or not, finish by tomorrow?")</dd></div>
+        <div class="glossary-term"><dt>Got or Not?</dt><dd>"Do you have it?" (e.g., "Got tissue or not?")</dd></div>
+        <div class="glossary-term"><dt>Never Mind</dt><dd>It's okay (e.g., "You late, never mind.")</dd></div>
+        <div class="glossary-term"><dt>Not Bad, Hor?</dt><dd>Praise with a question (e.g., "This chicken rice not bad, hor?")</dd></div>
+        <div class="glossary-term"><dt>Same Same</dt><dd>Very similar (e.g., "This laksa same same like home.")</dd></div>
       </div>
 
-<!-- GST Refund Section -->
-<div class="gst-section">
-  <h3>💰 How to Claim Your GST Refund (Tourist Refund Scheme)</h3>
-  <p>Spent over $100? You can get <strong>7–9% of your money back</strong> — yes, it’s free money. The exact rate depends on the store and service fee. Here’s the full step-by-step guide:</p>
+      <!-- Drinks Section -->
+      <div class="section-divider">🥤 The Ultimate Kopi & Teh Guide</div>
+      <div class="drinks-container">
+        <p><strong>Singapore runs on two things: makan and kopi.</strong> But ordering drinks here isn’t just about thirst — it’s a cultural ritual. Get it wrong? The uncle might give you the <em>look</em>. Get it right? You’re one of us.</p>
 
-  <div class="gst-step">
-    <h4>✅ Step 1: Check Eligibility</h4>
-    <ul>
-      <li>You are a tourist (not a resident)</li>
-      <li>You spend at least SGD $100 (including GST) at a single store in one day</li>
-      <li>You leave Singapore within 2 days of purchase</li>
-    </ul>
-  </div>
+        <h3>🔤 The Drink Code</h3>
+        <table class="drink-table">
+          <thead>
+            <tr>
+              <th>Code</th>
+              <th>Meaning</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Kopi</strong></td><td>Coffee (with sugar & evaporated milk)</td></tr>
+            <tr><td><strong>Teh</strong></td><td>Tea</td></tr>
+            <tr><td><strong>O</strong></td><td>Without sugar (but sweet — uses gula melaka!)</td></tr>
+            <tr><td><strong>C</strong></td><td>With <em>condensed milk</em> (rich, creamy)</td></tr>
+            <tr><td><strong>Kosong</strong></td><td>No sugar at all</td></tr>
+            <tr><td><strong>Peng</strong></td><td>Iced</td></tr>
+            <tr><td><strong>Siew Dai</strong></td><td>Less sugar</td></tr>
+            <tr><td><strong>Gao</strong></td><td>Stronger (more tea/coffee)</td></tr>
+            <tr><td><strong>Wa</strong></td><td>"One" — e.g., "Kopi-O wa!"</td></tr>
+          </tbody>
+        </table>
 
-  <div class="gst-step">
-    <h4>🛍️ Step 2: Shop at Participating Stores</h4>
-    <p>Look for the <strong>“Tax Free”</strong> or <strong>“TRS”</strong> sticker at the store or checkout counter.</p>
-    <p><strong>Stores that qualify:</strong> 
-      <a href="https://mustafa.com.sg" data-link-key="mustafa_gst" target="_blank"><strong>Mustafa Centre</strong></a>, 
-      <a href="https://takashimaya.com.sg" data-link-key="takashimaya_gst" target="_blank"><strong>Takashimaya</strong></a>, 
-      department stores (e.g., Robinsons, Metro), and most mall retailers.</p>
-  </div>
+        <div class="pro-tip">
+          <strong>Pro Tip:</strong> Add <em>"wa"</em> to sound fluent. Instead of “One Kopi-C-Peng”, say <strong>“Kopi-C-Peng wa!”</strong> — instant street cred.
+        </div>
 
-  <div class="gst-step">
-    <h4>🎫 Step 3: Get Your Tax-Free Form (IGST Form)</h4>
-    <p>At checkout, <strong>ask for the IGST refund form</strong>. The cashier will print it and attach it to your receipt.</p>
-    <p><strong>You must get this form at the time of purchase.</strong> No form = no refund.</p>
-    <p>Keep your receipt and form safe — don’t lose them.</p>
-  </div>
-
-  <div class="gst-step">
-    <h4>🛃 Step 4: Present at Tax Refund Counter</h4>
-    <p>Go to the <strong>Tax Refund counters</strong> at:</p>
-    <ul>
-      <li><strong>Changi Airport:</strong> Terminals 1, 2, 3 & 4 (after immigration, before security)</li>
-      <li><strong>ICA Building:</strong> Before immigration clearance (if departing via land/sea)</li>
-    </ul>
-    <p><strong>Bring:</strong></p>
-    <ul>
-      <li>Passport</li>
-      <li>Boarding pass (printed or digital)</li>
-      <li>All receipts and IGST forms</li>
-      <li>Purchased items (for random inspection — keep in carry-on)</li>
-    </ul>
-  </div>
-
-  <div class="gst-step">
-    <h4>💵 Step 5: Get Your Refund</h4>
-    <p>You’ll get your refund via:</p>
-    <ul>
-      <li><strong>Cash:</strong> Fastest option. In SGD.</li>
-      <li><strong>Credit Card:</strong> Takes 3–10 days to reflect.</li>
-      <li><strong>PayNow:</strong> Instant to Singapore bank accounts (less common for tourists).</li>
-    </ul>
-    <p><strong>Cash is recommended</strong> — no waiting, no bank fees.</p>
-  </div>
-
-  <div class="gst-step">
-    <h4>💡 Pro Tips for a Smooth Refund</h4>
-    <ul>
-      <li><strong>Go early:</strong> Lines get long before peak flights. Arrive at least 2–3 hours before departure.</li>
-      <li><strong>Keep items in original packaging:</strong> Inspectors may check if the item matches the receipt.</li>
-      <li><strong>Some stores offer eTRS:</strong> Digital refunds via app (e.g., at Takashimaya). Ask at checkout.</li>
-      <li><strong>Not all stores participate:</strong> Hawker centres, small shops, and food outlets don’t qualify.</li>
-    </ul>
-  </div>
-
-  <!-- Shop Smart CTA -->
-  <div style="margin: 1.8rem 0; padding: 1.4rem; background: #fff3e0; border-radius: 12px; border-left: 4px solid #c62828;">
-    <h4 style="color: #c62828; margin: 0 0 0.6rem; font-size: 1.1rem;">💡 Shop Smart, Claim Big</h4>
-    <p>Maximize your refund with big purchases at tax-free stores like <a href="https://mustafa.com.sg" data-link-key="mustafa_gst_cta" target="_blank"><strong>Mustafa Centre</strong></a> or <a href="https://takashimaya.com.sg" data-link-key="takashimaya_gst_cta" target="_blank"><strong>Takashimaya</strong></a>.</p>
-    <p>Buy electronics, perfume, or fashion in one go — hit that $100 minimum and claim back 7–9%.</p>
-  </div>
-</div>
-
-      <!-- Tips Box -->
-      <div class="tips-box">
-        <h3>💡 Bro, Here’s My Real Talk Shopping Hacks</h3>
+        <h3>🔥 Popular Combinations</h3>
         <ul>
-          <li><strong>Mustafa is not always cheaper:</strong> Compare prices with supermarkets.</li>
-          <li><strong>Haggle on Bugis Street:</strong> Start at 50% below asking price.</li>
-          <li><strong>Shop during sales:</strong> June & December — up to 70% off.</li>
-          <li><strong>Use Shopee coins:</strong> They stack up — use them for discounts.</li>
-          <li><strong>Check duty-free at Changi:</strong> Sometimes cheaper than online.</li>
-          <li><strong>Claim GST refund:</strong> It’s free money — scan your receipts before flying out.</li>
-          <li><strong>Shein delivery:</strong> Takes 7–14 days — plan ahead.</li>
+          <li><strong>Kopi-O</strong> – Black coffee, sweetened with palm sugar</li>
+          <li><strong>Kopi-C</strong> – Coffee with condensed milk (classic sweet-creamy)</li>
+          <li><strong>Kopi-C-Peng</strong> – Iced coffee with condensed milk — <em>the OG</em></li>
+          <li><strong>Teh-O-Kosong</strong> – Tea, no sugar — for the health-conscious</li>
+          <li><strong>Teh-C-Siew-Dai-Peng</strong> – Iced tea, condensed milk, less sugar — balanced perfection</li>
+          <li><strong>Kopi-Gao-Kosong</strong> – Super strong black coffee, no sugar — coder fuel</li>
+          <li><strong>Teh-O-Gao-Peng</strong> – Strong unsweetened iced tea — uncle’s favourite</li>
         </ul>
-        <p><em>Remember: You don’t need to spend big to shop smart. Just be aware, not afraid.</em></p>
+
+        <h3>🍹 Beyond Kopi: Local Drink Slang</h3>
+        <ul>
+          <li><strong>Yuan Yang</strong> – Coffee + tea mix. Also means “Let’s hang out” socially.</li>
+          <li><strong>Soft Drink</strong> – Any fizzy drink (Coke, 7-Up). “One soft drink, kosong!” = Coke Zero.</li>
+          <li><strong>Bandung</strong> – Rose syrup + milk. Pink, sweet, nostalgic.</li>
+          <li><strong>Sugarcane Juice</strong> – Freshly pressed. “One sugarcane, peng!”</li>
+          <li><strong>Ice Lemon Tea</strong> – Always <em>Teh-O-Peng + lemon</em>. Never ask without “ice” — it’s assumed.</li>
+        </ul>
       </div>
 
-      <!-- Next Step -->
-      <div class="next-step">
-        <h3>🎯 What’s Next?</h3>
-        <p>You’ve mastered shopping. Now it’s time to <strong>explore the real Singapore</strong> — from hidden hawker stalls to local-only cafes.</p>
-        <p><a href="food.html">👉 Click here to discover the best food & hidden gems</a></p>
+      <!-- Final Tip -->
+      <div class="pro-tip">
+        <strong>Final Tip:</strong> Speak with <em>feeling</em>, not perfection. End with <em>lah</em>, use <em>sibei</em> for emphasis, and if you forget a word — just point and say <strong>“That one, wa!”</strong> You’ll be fine.
       </div>
+
+      <a href="#top" class="btn" style="font-size: 0.9rem;">⬆️ Back to Top</a>
     </main>
   </div>
 
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 ScanSG. Made with ❤️ in Singapore.</p>
+      <p>&copy; 2025 ScanSG. All rights reserved.</p>
       <div style="margin: 1rem 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; font-size: 0.9rem;">
         <a href="index.html">Home</a>
-        <a href="food.html">Explore</a>
-        <a href="transport.html">Transport</a>
+        <a href="food.html">In a Glance</a>
         <a href="shopping.html">Shopping</a>
         <a href="glossary.html">Singlish</a>
         <a href="penalties.html">Penalties</a>
-        <a href="attractions.html">Attractions</a>
+        <a href="gst-refund.html">GST Refund</a>
         <a href="about.html">About</a>
       </div>
-
-      <!-- Visitor Counter -->
-      <div style="text-align: center; padding: 0.5rem 0; margin-top: 0.5rem; font-size: 0.85rem; color: #aaa; border-top: 1px solid #555;">
-        <a href="https://www.scansg.com" title="Visitor statistics">
-          <img loading="lazy" src="https://counter1.optistats.ovh/private/freecounterstat.php?c=28qj1py2f4xx477zcg8eqg6uxusuha75" 
-               border="0" alt="visitor counter" 
-               style="height: 12px; margin-left: 0.2rem; vertical-align: middle;">
-          Views
-        </a>
-      </div>
-
-      <!-- Privacy Policy Toggle -->
-      <div style="text-align: center; margin: 0.5rem 0;">
-        <button id="privacyToggle" style="background: none; border: none; color: #888; font-size: 0.85rem; cursor: pointer; text-decoration: underline;">
-          🔐 Privacy Policy.
-        </button>
-      </div>
-
-      <!-- Privacy Policy Content -->
-      <div id="privacy-policy" style="display: none; margin-top: 1.5rem; padding: 1.4rem; background: #232323; color: #ddd; border-radius: 8px; text-align: left; font-size: 0.92rem; line-height: 1.6; border: 1px solid #444;">
-        <h3 style="color: #fff; margin-top: 0; font-size: 1.1rem; border-bottom: 1px solid #555; padding-bottom: 0.4rem;">🔐 Privacy Policy</h3>
-        <p><strong>Last Updated:</strong> 27-07-2025</p>
-        <p>Welcome to <strong>ScanSG</strong>. We keep things simple and honest. This policy explains how we handle your information when you visit <strong>scansg.com</strong>.</p>
-        <p><strong>1. We Don’t Collect Your Personal Data</strong></p>
-        <ul style="padding-left: 1.3rem; margin: 0.4rem 0;">
-          <li>We do <strong>not collect</strong> your name, email, location, or any personal information — unless you contact us directly via email.</li>
-          <li>We do <strong>not use cookies, trackers, or local storage</strong> for advertising, profiling, or user monitoring.</li>
-        </ul>
-        <p><strong>2. Analytics: Just the Basics</strong></p>
-        <p>We use <strong>Google Analytics</strong> in a privacy-friendly way to understand how many people visit our site and how they use it. This includes:</p>
-        <ul style="padding-left: 1.3rem; margin: 0.4rem 0;">
-          <li>Total number of visitors</li>
-          <li>Which pages are viewed most</li>
-          <li>General location (country/city, not your address)</li>
-          <li>Device type (phone, laptop, etc.)</li>
-        </ul>
-        <p>This data is <strong>fully anonymized</strong> — no individual is identified. We use this info only to improve our content and help more people find useful Singapore tips.</p>
-        <p><strong>3. Third-Party Services</strong></p>
-        <p>While we don’t track you, this site includes services that may involve limited data use:</p>
-        <ul style="padding-left: 1.3rem; margin: 0.4rem 0;">
-          <li><strong>Google AdSense:</strong> Serves ads and may use cookies for ad personalization (controlled by Google).</li>
-          <li><strong>Affiliate Links:</strong> If you click a link (e.g., Shopee, Lazada, Shein), the destination site may use tracking.</li>
-          <li>We do not control these third parties and are not responsible for their privacy practices.</li>
-        </ul>
-        <p><strong>4. Your Privacy Choices</strong></p>
-        <ul style="padding-left: 1.3rem; margin: 0.4rem 0;">
-          <li>You can disable Google Analytics tracking by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener" style="color: #4fc3f7;">Google Analytics Opt-out Browser Add-on</a>.</li>
-          <li>You can opt out of personalized ads at <a href="https://adssettings.google.com" target="_blank" rel="noopener" style="color: #4fc3f7;">Google Ads Settings</a>.</li>
-          <li>You can browse in incognito/private mode for full anonymity.</li>
-        </ul>
-        <p><strong>5. No Data Sharing or Selling</strong></p>
-        <p>We do <strong>not sell, share, or rent</strong> any user data to third parties. Ever.</p>
-        <p><strong>6. Policy Changes</strong></p>
-        <p>If our practices change, we’ll update this page and the "Last Updated" date. But our promise stays: <strong>No personal data collection. No creepy tracking.</strong></p>
-        <p><strong>7. Contact Us</strong></p>
-        <p>For questions, email: 
-          <a href="mailto:scansg365@gmail.com" data-link-key="contact_email" style="color: #4fc3f7; text-decoration: underline;">scansg365@gmail.com</a>
-        </p>
-      </div>
-
-      <p class="disclaimer" style="font-size: 0.85rem; color: #888; margin-top: 0.6rem;">
-        ⚠️ Info is for general use. Verify before acting.
-      </p>
+      <p class="disclaimer">⚠️ Info is for general use. Verify before acting.</p>
     </div>
+
+    <!-- =============== PRIVACY POLICY SECTION =============== -->
+
+<!-- Visitor Counter -->
+<div style="text-align: center; padding: 0.5rem 0; margin-top: 0.5rem; font-size: 0.85rem; color: #aaa; border-top: 1px solid #555;">
+  <a href="https://www.scansg.com" title="Visitor statistics">
+    <img loading="lazy" src="https://counter1.optistats.ovh/private/freecounterstat.php?c=28qj1py2f4xx477zcg8eqg6uxusuha75" 
+         border="0" alt="visitor counter" 
+         style="height: 12px; margin-left: 0.2rem; vertical-align: middle;">
+    Views
+  </a>
+</div>
+
+<!-- Privacy Policy Toggle -->
+<div style="text-align: center; margin: 0.5rem 0;">
+  <button id="privacyToggle" style="background: none; border: none; color: #888; font-size: 0.85rem; cursor: pointer; text-decoration: underline;">
+    🔐 Privacy Policy
+  </button>
+</div>
+
+<!-- Privacy Policy Content (Hidden by Default) -->
+<div id="privacy-policy" style="display: none; margin-top: 1.5rem; padding: 1.4rem; background: #232323; color: #ddd; border-radius: 8px; text-align: left; font-size: 0.92rem; line-height: 1.6; border: 1px solid #444;">
+  <h3 style="color: #fff; margin-top: 0; font-size: 1.1rem; border-bottom: 1px solid #555; padding-bottom: 0.4rem;">🔐 Privacy Policy</h3>
+  <p><strong>Last Updated:</strong> 27-07-2025</p>
+  <p>Welcome to <strong>ScanSG</strong>. We keep things simple and honest. This policy explains how we handle your information when you visit <strong>scansg.com</strong>.</p>
+
+  <p><strong>1. We Don’t Collect Your Personal Data</strong></p>
+  <ul style="padding-left: 1.3rem; margin: 0.4rem 0;">
+    <li>We do <strong>not collect</strong> your name, email, location, or any personal information — unless you contact us directly via email.</li>
+    <li>We do <strong>not use cookies, trackers, or local storage</strong> for advertising, profiling, or user monitoring.</li>
+  </ul>
+
+  <p><strong>2. Analytics: Just the Basics</strong></p>
+  <p>We use <strong>Google Analytics</strong> in a privacy-friendly way to understand how many people visit our site and how they use it. This includes:</p>
+  <ul style="padding-left: 1.3rem; margin: 0.4rem 0;">
+    <li>Total number of visitors</li>
+    <li>Which pages are viewed most</li>
+    <li>General location (country/city, not your address)</li>
+    <li>Device type (phone, laptop, etc.)</li>
+  </ul>
+  <p>This data is <strong>fully anonymized</strong> — no individual is identified. We use this info only to improve our content and help more people find useful Singapore tips.</p>
+
+  <p><strong>3. Third-Party Services</strong></p>
+  <p>While we don’t track you, this site includes services that may involve limited data use:</p>
+  <ul style="padding-left: 1.3rem; margin: 0.4rem 0;">
+    <li><strong>Google AdSense:</strong> Serves ads and may use cookies for ad personalization (controlled by Google).</li>
+    <li><strong>Affiliate Links:</strong> If you click a link (e.g., Klook, Pelago), the destination site may use tracking.</li>
+    <li>We do not control these third parties and are not responsible for their privacy practices.</li>
+  </ul>
+
+  <p><strong>4. Your Privacy Choices</strong></p>
+  <ul style="padding-left: 1.3rem; margin: 0.4rem 0;">
+    <li>You can disable Google Analytics tracking by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener" style="color: #4fc3f7;">Google Analytics Opt-out Browser Add-on</a>.</li>
+    <li>You can opt out of personalized ads at <a href="https://adssettings.google.com" target="_blank" rel="noopener" style="color: #4fc3f7;">Google Ads Settings</a>.</li>
+    <li>You can browse in incognito/private mode for full anonymity.</li>
+  </ul>
+
+  <p><strong>5. No Data Sharing or Selling</strong></p>
+  <p>We do <strong>not sell, share, or rent</strong> any user data to third parties. Ever.</p>
+
+  <p><strong>6. Policy Changes</strong></p>
+  <p>If our practices change, we’ll update this page and the "Last Updated" date. But our promise stays: <strong>No personal data collection. No creepy tracking.</strong></p>
+
+  <p><strong>7. Contact Us</strong></p>
+  <p>For questions, email: 
+    <a href="mailto:scansg365@gmail.com" data-link-key="contact_email" style="color: #4fc3f7; text-decoration: none;">scansg365@gmail.com</a>
+  </p>
+</div>
+
+<script defer>
+  // Toggle Privacy Policy
+  const privacyToggle = document.getElementById('privacyToggle');
+  const privacyPolicy = document.getElementById('privacy-policy');
+  privacyToggle.addEventListener('click', () => {
+    if (privacyPolicy.style.display === 'block') {
+      privacyPolicy.style.display = 'none';
+    } else {
+      privacyPolicy.style.display = 'block';
+    }
+  });
+</script>
+
+    
   </footer>
 
   <!-- Dark Mode Script -->
@@ -853,15 +720,7 @@ nav a:hover {
     });
   </script>
 
-  <!-- Privacy Toggle Script -->
   <script defer>
-    document.getElementById('privacyToggle').addEventListener('click', () => {
-      const policy = document.getElementById('privacy-policy');
-      policy.style.display = policy.style.display === 'block' ? 'none' : 'block';
-    });
-  </script>
-
-<script defer>
   // Mobile Nav Toggle
   const menuToggle = document.getElementById('menuToggle');
   const mainNav = document.getElementById('mainNav');
@@ -904,8 +763,7 @@ nav a:hover {
 
     <!-- Load links.js -->
   <script src="/js/links.js" defer></script>
-
-  <!-- Dangling Snake to Top -->
+ <!-- Dangling Snake to Top -->
   <a aria-label="Click the snake to go to top" class="dangling-snake" href="#top">
    <svg class="snake-svg" height="100" viewbox="0 0 24 60" width="40">
     <path d="M12 0 C12 10, 8 15, 12 25 C16 35, 8 40, 12 50 C12 55, 12 60, 12 60" fill="none" stroke="#222" stroke-width="3">
