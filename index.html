@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html data-theme="light" lang="en-SG">
  <head>
-<meta name="description" content="ScanSG — Your ultimate Singapore survival guide with transport tips, food spots, attractions, shopping, and local insights.">
-
-    <!-- Preload Logo and Fonts for Faster Rendering -->
-    <link rel="preload" href="assets/img/logo.png" as="image">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" as="style">
-
   <meta charset="utf-8"/>
   <link rel="stylesheet" href="main.css"/>
 
@@ -505,41 +499,69 @@ html[data-theme="dark"], body[data-theme="dark"] {
  <body>
   <!-- Header -->
   <header>
-  <div class="container header-content">
+   <div class="container header-content">
+    
     <a class="logo-link" href="index.html">
       <div class="logo">
-        <img loading="lazy" alt="" src="images/favicon.png" width="36" height="36">
+        <img alt="ScanSG Logo" src="images/favicon.png" width="36" height="36">
         ScanSG
       </div>
     </a>
-    <button id="menuToggle" aria-label="Toggle menu" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; display: none;">☰</button>
+
+    <button aria-label="Toggle menu" id="menuToggle" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; display: none;" aria-expanded="false">
+     ☰
+    </button>
     <nav id="mainNav">
-      <ul>
-       
-        <li><a href="transport.html">Commute</a></li>
-        <li><a href="food.html">Roam</a></li>
-        <li><a href="shopping.html">Deals</a></li>
-        <li><a href="glossary.html">Lingo</a></li>
-        <li><a href="penalties.html">CivicFee</a></li>
-        <li><a href="nightlife.html">NightLife</a></li>
-        <li>
-          <a href="attractions.html" 
-             style="
+     <ul>
+      <li>
+       <a href="transport.html">
+        Commute
+       </a>
+      </li>
+      <li>
+       <a href="food.html">
+        Roam
+       </a>
+      </li>
+      <li>
+       <a href="shopping.html">
+        Deals
+       </a>
+      </li>
+      <li>
+       <a href="glossary.html">
+        Lingo
+       </a>
+      </li>
+      <li>
+       <a href="penalties.html">
+        CivicFee
+       </a>
+      </li>
+      <li>
+       <a href="nightlife.html">
+        NightLife
+       </a>
+      </li>
+      <li>
+       <a href="attractions.html" onmouseout="this.style.color='#ff8a80'; this.style.transform='none';" onmouseover="this.style.color='#c62828'; this.style.transform='scale(1.05)';" style="
                position: relative;
                color: #ff8a80 !important;
                font-weight: 700;
                animation: pulse 2s infinite;
-             "
-             onmouseover="this.style.color='#c62828'; this.style.transform='scale(1.05)';"
-             onmouseout="this.style.color='#ff8a80'; this.style.transform='none';">
-            🎯 Attractions
-          </a>
-        </li>
-        <li><button class="dark-mode-toggle" id="darkModeToggle">🌙</button></li>
-      </ul>
+             ">
+        🎯 Attractions
+       </a>
+      </li>
+      <li>
+       <button class="dark-mode-toggle" id="darkModeToggle">
+        🌙
+       </button>
+      </li>
+     </ul>
     </nav>
-  </div>
-</header>
+   </div>
+  </header>
   <!-- Pulse Animation -->
   <style>
    @keyframes pulse {
@@ -564,37 +586,9 @@ html[data-theme="dark"], body[data-theme="dark"] {
   <!-- Hero Section -->
   <section class="hero">
    <div class="container">
-    <h1>
-     🎉 Wah Lau&hellip; Welcome Lah! 🇸🇬
-     <br/>
-     Your Real Singapore Travel Guide 2025
-    </h1>
-    <p>
-     Look, I get it &mdash; whether you're
-     <strong>
-      planning your first trip
-     </strong>
-     ,
-     <strong>
-      just landed at Changi
-     </strong>
-     , or already in the city wondering where the heck "Exit B" leads &mdash; you&rsquo;re probably thinking:
-     <em>
-      &ldquo;Bro&hellip; where the hell do I even start?&rdquo;
-     </em>
-    </p>
-    <p>
-     One minute you're excited. Next minute you're Googling &ldquo;Is it illegal to chew gum?&rdquo; while standing in line for a $7 coffee.
-    </p>
-    <p>
-     <strong>
-      Relax.
-     </strong>
-     Breathe. You&rsquo;re not alone.
-    </p>
-    <p>
-     This? This is my personal notebook from living in Singapore &mdash; not as a local, but as someone who&rsquo;s learned a few things the hard way. No blur-blur. Just honest tips.
-    </p>
+    <h1>🎉 Wah Lau… Welcome Lah! 🇸🇬<br>Your Ultimate Singapore Travel Guide 2025</h1>
+    <p><strong>Planning your first Singapore trip</strong> or just landed at <strong>Changi Airport</strong>? Maybe you're already in the city, wondering where the heck "Exit B" leads. This is your <em>no-nonsense, no tourist traps</em> guide to exploring the Lion City.</p>
+    <p>From <strong>MRT hacks</strong> and <strong>hawker food gems</strong> to <strong>cheap shopping</strong> spots and <strong>local Singlish phrases</strong> — I’ve compiled everything from my years living here, so you can travel smarter, cheaper, and like a semi-local.</p>
     <!-- Step-by-Step Journey -->
     <div class="journey">
      <h3>
@@ -604,13 +598,10 @@ html[data-theme="dark"], body[data-theme="dark"] {
      <a class="journey-link" href="transport.html">
       <div class="journey-step-content">
        <strong class="step-title">
-        1. 🚀 First: Get to Town Without Getting Ripped Off
+        1. 🚀 Getting Around Singapore Like a Pro
        </strong>
        <p>
-        You&rsquo;re at Changi. Taxis? Expensive. Grab? Okay, but only if it's late. Want the real move? Take the
-        <strong>
-         free shuttle to Expo MRT
-        </strong>
+        You’re at Changi Airport. Taxis? Expensive for long rides. Grab? Okay, but only if it's late. Want the real move? Take the <strong>free shuttle to Expo MRT station</strong>
         , then hop on the train. I&rsquo;ll show you exactly how &mdash; step-by-step, no stress.
        </p>
        <p>
@@ -759,7 +750,7 @@ html[data-theme="dark"], body[data-theme="dark"] {
    <div class="card-grid">
     <a class="card" href="transport.html">
      <h3>
-      🚀 Transport Guide
+      🚆 MRT & Bus Travel Guide
      </h3>
      <p>
       From Changi to Chinatown &mdash; no blur-blur. MRT, bus, Grab, cycling, even ferry. I&rsquo;ll teach you how to ride like a local.
@@ -767,7 +758,7 @@ html[data-theme="dark"], body[data-theme="dark"] {
     </a>
     <a class="card" href="food.html">
      <h3>
-      🍜 Eat &amp; Explore
+      🥢 Hawker Food & Street Eats
      </h3>
      <p>
       Best hawker stalls, hidden cafes, and local food culture. Yes, I&rsquo;ll tell you where to get the crispiest chicken rice.
@@ -775,7 +766,7 @@ html[data-theme="dark"], body[data-theme="dark"] {
     </a>
     <a class="card" href="glossary.html">
      <h3>
-      💬 Singlish Dictionary
+      💬 Singlish Slang & Local Phrases
      </h3>
      <p>
       Stop saying &ldquo;Can or cannot?&rdquo; Start saying &ldquo;Wah lau, so bo jio!&rdquo; I&rsquo;ll teach you the real slang &mdash; fast, fun, no exam.
@@ -783,7 +774,7 @@ html[data-theme="dark"], body[data-theme="dark"] {
     </a>
     <a class="card" href="penalties.html">
      <h3>
-      ⚠️ What&rsquo;s Illegal? (Spoiler: Not What You Think)
+      ⚠️ Singapore Rules & Fines (Spoiler: Not What You Think)
      </h3>
      <p>
       Chewing gum, jaywalking, littering &mdash; what&rsquo;s really enforced. Spoiler: It&rsquo;s not as strict as people say.
@@ -799,7 +790,7 @@ html[data-theme="dark"], body[data-theme="dark"] {
     </a>
     <a class="card" href="attractions.html">
      <h3>
-      🎟️ Attractions &amp; Experiences
+      🎟️ Attractions, Tours & Experiences
      </h3>
      <p>
       Paid vs Free, cheat codes, combo deals &amp; local hacks. I&rsquo;ll help you see more, spend less.
@@ -1019,7 +1010,15 @@ html[data-theme="dark"], body[data-theme="dark"] {
      </p>
     </div>
    </div>
-  </footer>
+  
+<section class="faq container" style="margin-top:2rem;">
+  <h2>❓ Frequently Asked Questions About Visiting Singapore</h2>
+  <div class="faq-item"><h3>Is chewing gum illegal in Singapore?</h3><p>Chewing gum is restricted, but you can bring small amounts for personal use.</p></div>
+  <div class="faq-item"><h3>What's the best way to get from Changi Airport to the city?</h3><p>The MRT is the cheapest and efficient option, taxis are fastest but cost more.</p></div>
+  <div class="faq-item"><h3>Can I drink tap water in Singapore?</h3><p>Yes! Singapore's tap water is safe to drink straight from the tap.</p></div>
+</section>
+
+</footer>
   <!-- Dark Mode Script -->
   <script>
    const darkModeToggle = document.getElementById('darkModeToggle');
@@ -1166,5 +1165,39 @@ html[data-theme="dark"], body[data-theme="dark"] {
     }
   });
   </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is chewing gum illegal in Singapore?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chewing gum is restricted, but you can bring small amounts for personal use."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the best way to get from Changi Airport to the city?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The MRT is the cheapest and efficient option, taxis are fastest but cost more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I drink tap water in Singapore?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Singapore's tap water is safe to drink straight from the tap."
+      }
+    }
+  ]
+}
+</script>
+
 </body>
 </html>
