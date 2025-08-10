@@ -1,3 +1,12 @@
+/* MAIN.CSS - Combined and Final
+   - Global variables and theme overrides
+   - Base styles (typography, container)
+   - Navbar styles (shared across site)
+   - Component styles (cards, buttons)
+   - Transport page specific styles appended at the end
+   NOTE: Keep this file named 'main.css' on your server so all pages inherit styles.
+*/
+
 /* Global Styles */
 :root {
   --main: #c62828;           /* Red */
