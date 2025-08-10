@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html data-theme="light" lang="en-SG">
  <head>
+<meta name="description" content="ScanSG — Your ultimate Singapore survival guide with transport tips, food spots, attractions, shopping, and local insights.">
+
+    <!-- Preload Logo and Fonts for Faster Rendering -->
+    <link rel="preload" href="assets/img/logo.png" as="image">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" as="style">
+
   <meta charset="utf-8"/>
   <link rel="stylesheet" href="main.css"/>
 
@@ -499,69 +505,41 @@ html[data-theme="dark"], body[data-theme="dark"] {
  <body>
   <!-- Header -->
   <header>
-   <div class="container header-content">
-    
+  <div class="container header-content">
     <a class="logo-link" href="index.html">
       <div class="logo">
-        <img alt="ScanSG Logo" src="images/favicon.png" width="36" height="36">
+        <img loading="lazy" alt="" src="images/favicon.png" width="36" height="36">
         ScanSG
       </div>
     </a>
-
-    <button aria-label="Toggle menu" id="menuToggle" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; display: none;" aria-expanded="false">
-     ☰
-    </button>
+    <button id="menuToggle" aria-label="Toggle menu" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; display: none;">☰</button>
     <nav id="mainNav">
-     <ul>
-      <li>
-       <a href="transport.html">
-        Commute
-       </a>
-      </li>
-      <li>
-       <a href="food.html">
-        Roam
-       </a>
-      </li>
-      <li>
-       <a href="shopping.html">
-        Deals
-       </a>
-      </li>
-      <li>
-       <a href="glossary.html">
-        Lingo
-       </a>
-      </li>
-      <li>
-       <a href="penalties.html">
-        CivicFee
-       </a>
-      </li>
-      <li>
-       <a href="nightlife.html">
-        NightLife
-       </a>
-      </li>
-      <li>
-       <a href="attractions.html" onmouseout="this.style.color='#ff8a80'; this.style.transform='none';" onmouseover="this.style.color='#c62828'; this.style.transform='scale(1.05)';" style="
+      <ul>
+       
+        <li><a href="transport.html">Commute</a></li>
+        <li><a href="food.html">Roam</a></li>
+        <li><a href="shopping.html">Deals</a></li>
+        <li><a href="glossary.html">Lingo</a></li>
+        <li><a href="penalties.html">CivicFee</a></li>
+        <li><a href="nightlife.html">NightLife</a></li>
+        <li>
+          <a href="attractions.html" 
+             style="
                position: relative;
                color: #ff8a80 !important;
                font-weight: 700;
                animation: pulse 2s infinite;
-             ">
-        🎯 Attractions
-       </a>
-      </li>
-      <li>
-       <button class="dark-mode-toggle" id="darkModeToggle">
-        🌙
-       </button>
-      </li>
-     </ul>
+             "
+             onmouseover="this.style.color='#c62828'; this.style.transform='scale(1.05)';"
+             onmouseout="this.style.color='#ff8a80'; this.style.transform='none';">
+            🎯 Attractions
+          </a>
+        </li>
+        <li><button class="dark-mode-toggle" id="darkModeToggle">🌙</button></li>
+      </ul>
     </nav>
-   </div>
-  </header>
+  </div>
+</header>
   <!-- Pulse Animation -->
   <style>
    @keyframes pulse {
@@ -1190,4 +1168,3 @@ html[data-theme="dark"], body[data-theme="dark"] {
   </script>
 </body>
 </html>
-
