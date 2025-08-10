@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-SG" data-theme="light">
 <head>
+
+    <!-- Preload Logo and Fonts for Faster Rendering -->
+    <link rel="preload" href="assets/img/logo.png" as="image">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" as="style">
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -567,13 +572,13 @@ nav a:hover {
     <!-- Header -->
 <header>
   <div class="container header-content">
-    <a href="index.html" class="logo-link">
+    <a class="logo-link" href="index.html">
       <div class="logo">
-  <img loading="lazy" loading="lazy" src="/images/favicon.png" alt="ScanSG" style="height:24px; vertical-align:middle; margin-right:8px;">
-  ScanSG
-</div>
+        <img loading="lazy" alt="" src="images/favicon.png" width="36" height="36">
+        ScanSG
+      </div>
     </a>
-    <button id="menuToggle" aria-label="Toggle menu" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; display: none;" aria-expanded="false">☰</button>
+    <button id="menuToggle" aria-label="Toggle menu" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; display: none;">☰</button>
     <nav id="mainNav">
       <ul>
        
@@ -1163,4 +1168,3 @@ nav a:hover {
   </script>
 </body>
 </html>
-
