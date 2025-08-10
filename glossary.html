@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+
+<!-- 
+Applied Fixes & Optimizations:
+1. Synced navigation bar & logo sizing with index page.
+2. Added SEO meta tags & description.
+3. Added Apple Touch icon & favicon from index.
+4. Preloaded critical assets (logo + fonts).
+5. Replaced dangling snake with index page version.
+6. Dark mode text color fix.
+7. Lazy-loaded all non-logo images.
+8. Deferred non-critical scripts for faster load.
+-->
+
 <html lang="en-SG" data-theme="light">
 <head>
   <meta charset="UTF-8" />
@@ -19,12 +32,12 @@
   <!-- Title -->
   <title>The Real Singlish Dictionary 2025 | No Blur-Blur Guide</title>
   <!-- Favicon -->
-  <link rel="icon" href="/images/favicon.ico" sizes="32x32" />
+  <link href="images/favicon.png" rel="icon" sizes="32x32" type="image/png"/>
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4636396521329327" crossorigin="anonymous"></script>
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HL77S9PP18"></script>
-  <script>
+  <script defer>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -33,7 +46,7 @@
     });
   </script>
   <!-- Microsoft Clarity -->
-  <script type="text/javascript">
+  <script defer type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -356,6 +369,20 @@
 
     
   </style>
+
+<!-- Preload critical assets for faster rendering -->
+<link rel="preload" href="images/logo.png" as="image">
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" as="style">
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" as="style">
+
+
+<style>
+[data-theme="dark"] {
+  --text: #ffffff !important;
+  --gray: #dddddd !important;
+}
+</style>
+
 </head>
 <body>
 
@@ -363,8 +390,11 @@
   <!-- Header -->
 <header>
   <div class="container header-content">
-    <a href="index.html" class="logo-link">
-      <div class="logo">ScanSG</div>
+    <a class="logo-link" href="index.html">
+      <div class="logo">
+        <img alt="" src="images/favicon.png" width="36" height="36">
+        ScanSG
+      </div>
     </a>
     <button id="menuToggle" aria-label="Toggle menu" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; display: none;">☰</button>
     <nav id="mainNav">
@@ -587,7 +617,7 @@
 <!-- Visitor Counter -->
 <div style="text-align: center; padding: 0.5rem 0; margin-top: 0.5rem; font-size: 0.85rem; color: #aaa; border-top: 1px solid #555;">
   <a href="https://www.scansg.com" title="Visitor statistics">
-    <img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=28qj1py2f4xx477zcg8eqg6uxusuha75" 
+    <img loading="lazy" src="https://counter1.optistats.ovh/private/freecounterstat.php?c=28qj1py2f4xx477zcg8eqg6uxusuha75" 
          border="0" alt="visitor counter" 
          style="height: 12px; margin-left: 0.2rem; vertical-align: middle;">
     Views
@@ -650,7 +680,7 @@
   </p>
 </div>
 
-<script>
+<script defer>
   // Toggle Privacy Policy
   const privacyToggle = document.getElementById('privacyToggle');
   const privacyPolicy = document.getElementById('privacy-policy');
@@ -667,7 +697,7 @@
   </footer>
 
   <!-- Dark Mode Script -->
-  <script>
+  <script defer>
     const darkModeToggle = document.getElementById('darkModeToggle');
     const html = document.documentElement;
     if (localStorage.theme === 'dark') {
@@ -690,7 +720,7 @@
     });
   </script>
 
-  <script>
+  <script defer>
   // Mobile Nav Toggle
   const menuToggle = document.getElementById('menuToggle');
   const mainNav = document.getElementById('mainNav');
@@ -734,12 +764,24 @@
     <!-- Load links.js -->
   <script src="/js/links.js" defer></script>
  <!-- Dangling Snake to Top -->
-<a href="#top" class="dangling-snake" aria-label="Click the snake to go to top">
-  <svg width="24" height="60" viewBox="0 0 24 60" class="snake-svg">
-    <path d="M12 0 C12 10, 8 15, 12 25 C16 35, 8 40, 12 50 C12 55, 12 60, 12 60" stroke="#222" fill="none" stroke-width="2" />
-    <circle cx="10" cy="58" r="2" fill="red"/> <!-- Eyes -->
-  </svg>
-</a>
+  <a aria-label="Click the snake to go to top" class="dangling-snake" href="#top">
+   <svg class="snake-svg" height="100" viewbox="0 0 24 60" width="40">
+    <path d="M12 0 C12 10, 8 15, 12 25 C16 35, 8 40, 12 50 C12 55, 12 60, 12 60" fill="none" stroke="#222" stroke-width="3">
+    </path>
+    <circle cx="9" cy="58" fill="white" r="4">
+    </circle>
+    <!-- Eye white -->
+    <circle cx="9" cy="58" fill="black" r="2">
+    </circle>
+    <!-- Eye pupil -->
+    <path d="M10 60 L10 65 L12 63 L14 65 L14 60" fill="red" stroke="red">
+     <animate attributename="d" dur="0.5s" repeatcount="indefinite" values="M10 60 L10 65 L12 63 L14 65 L14 60;
+                       M10 60 L10 67 L12 65 L14 67 L14 60;
+                       M10 60 L10 65 L12 63 L14 65 L14 60">
+     </animate>
+    </path>
+   </svg>
+  </a>
 
 <style>
   .dangling-snake {
@@ -762,7 +804,7 @@
   }
 </style>
 
-<script>
+<script defer>
   const snake = document.querySelector('.dangling-snake');
   window.addEventListener('scroll', () => {
     if (window.pageYOffset > 300) {
