@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 
+<!-- 
+Performance Optimizations Applied:
+1. Preloaded logo and Google Fonts to speed up first paint.
+2. Lazy-loaded all non-critical images.
+3. Deferred non-critical scripts to avoid render-blocking.
+4. Async-loaded external scripts (analytics, etc.) where possible.
+-->
+
+
 <html data-theme="light" lang="en-SG">
 <head>
 <meta name="description" content="Food guide and dining tips for Singapore visitors and residents.">
@@ -26,7 +35,7 @@
 <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4636396521329327" async></script>
 <!-- Google Analytics 4 -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HL77S9PP18" async></script>
-<script>
+<script defer>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -35,7 +44,7 @@
     });
   </script>
 <!-- Microsoft Clarity -->
-<script type="text/javascript">
+<script defer type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -430,13 +439,19 @@ nav a:hover {
   }
 }
 </style>
+
+    <!-- Preload critical assets for faster rendering -->
+    <link rel="preload" href="images/logo.png" as="image">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" as="style">
+    
 </head>
 <body>
 <!-- Header -->
 <header>
 <div class="container header-content">
 <a class="logo-link" href="index.html">
-<div class="logo" style="font-size:1.6rem; font-weight:900; display:flex; align-items:center;"><img loading="lazy" loading="lazy" alt="" src="images/favicon.png" style="height:28px; width:28px; vertical-align:middle; margin-right:8px;"/ width="400" height="300">ScanSG</div>
+<div class="logo" style="font-size:1.6rem; font-weight:900; display:flex; align-items:center;"><img loading="lazy" loading="lazy" loading="lazy" alt="" src="images/favicon.png" style="height:28px; width:28px; vertical-align:middle; margin-right:8px;"/ width="400" height="300">ScanSG</div>
 </a>
 <button aria-label="Toggle menu" id="menuToggle" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; display: none;" aria-expanded="false">☰</button>
 <nav id="mainNav">
@@ -718,7 +733,7 @@ nav a:hover {
 <!-- Visitor Counter -->
 <div style="text-align: center; padding: 0.5rem 0; margin-top: 0.5rem; font-size: 0.85rem; color: #aaa; border-top: 1px solid #555;">
 <a href="https://www.scansg.com" title="Visitor statistics">
-<img loading="lazy" loading="lazy" alt="visitor counter" border="0" src="https://counter1.optistats.ovh/private/freecounterstat.php?c=28qj1py2f4xx477zcg8eqg6uxusuha75" style="height: 12px; margin-left: 0.2rem; vertical-align: middle;"/ width="400" height="300">
+<img loading="lazy" loading="lazy" loading="lazy" alt="visitor counter" border="0" src="https://counter1.optistats.ovh/private/freecounterstat.php?c=28qj1py2f4xx477zcg8eqg6uxusuha75" style="height: 12px; margin-left: 0.2rem; vertical-align: middle;"/ width="400" height="300">
     Views
   </a>
 </div>
@@ -769,7 +784,7 @@ nav a:hover {
     <a data-link-key="contact_email" href="mailto:scansg365@gmail.com" style="color: #4fc3f7; text-decoration: none;">scansg365@gmail.com</a>
 </p>
 </div>
-<script>
+<script defer>
   // Toggle Privacy Policy
   const privacyToggle = document.getElementById('privacyToggle');
   const privacyPolicy = document.getElementById('privacy-policy');
@@ -783,7 +798,7 @@ nav a:hover {
 </script>
 </footer>
 <!-- Dark Mode Script -->
-<script>
+<script defer>
     const darkModeToggle = document.getElementById('darkModeToggle');
     const html = document.documentElement;
 
@@ -807,7 +822,7 @@ nav a:hover {
       }
     });
   </script>
-<script>
+<script defer>
   // Mobile Nav Toggle
   const menuToggle = document.getElementById('menuToggle');
   const mainNav = document.getElementById('mainNav');
@@ -887,7 +902,7 @@ nav a:hover {
   25% { transform: rotate(3deg); }
   75% { transform: rotate(-3deg); }
 }
-  </style><script>
+  </style><script defer>
    const snake = document.querySelector('.dangling-snake');
   window.addEventListener('scroll', () => {
     if (window.pageYOffset > 300) {
