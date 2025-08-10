@@ -10,8 +10,13 @@
   <meta content="Plan your Singapore trip with real local tips &mdash; MRT travel hacks, best hawker food, shopping deals, Singlish guide, attractions, fines, and GST refund advice for 2025." name="description"/>
   <meta content="index, follow" name="robots"/>
   <link href="https://scansg.com/" rel="canonical"/>
+  <!-- Preconnect for faster DNS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com"/>
+  <link rel="preconnect" href="https://www.clarity.ms"/>
   <!-- Preload Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;family=Open+Sans&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
   <!-- Open Graph / Social -->
   <meta content="ScanSG - The Real Singapore Guide 2025 | No Blur-Blur" property="og:title"/>
   <meta content="Local food, transport hacks, Singlish, GST refunds &amp; cultural tips. Real advice from someone who lives here." property="og:description"/>
@@ -48,30 +53,7 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "sp1isxvzim");
    </script>
-   <!-- Redirect to HTTPS & Clean URL -->
-   <script>
-    (function() {
-      const targetHostname = 'scansg.com';
-      const currentHostname = window.location.hostname.toLowerCase();
-      const currentProtocol = window.location.protocol;
-      let pathname = window.location.pathname;
-      const search = window.location.search;
-      const hash = window.location.hash;
-      if (pathname.endsWith('/index.html')) {
-        pathname = '/';
-      } else if (pathname !== '/' && !pathname.endsWith('/') && !pathname.endsWith('.html')) {
-        pathname += '/';
-      }
-      pathname = pathname.replace(/\/+/g, '/');
-      const needsRedirect = currentHostname !== targetHostname || currentProtocol !== 'https:' || window.location.pathname !== pathname;
-      if (needsRedirect) {
-        const newUrl = 'https://' + targetHostname + pathname + search + hash;
-        if (window.location.href !== newUrl) {
-          window.location.href = newUrl;
-        }
-      }
-    })();
-   </script>
+   <!-- Redirect Script will run after DOM load -->
    <!-- Structured Data: Website -->
    <script type="application/ld+json">
     {
@@ -878,7 +860,7 @@
     <!-- Visitor Counter -->
     <div style="text-align: center; padding: 0.5rem 0; margin-top: 0.5rem; font-size: 0.85rem; color: #aaa; border-top: 1px solid #555;">
      <a href="https://www.scansg.com" title="Visitor statistics">
-      <img alt="visitor counter" border="0" src="https://counter1.optistats.ovh/private/freecounterstat.php?c=28qj1py2f4xx477zcg8eqg6uxusuha75" style="height: 12px; margin-left: 0.2rem; vertical-align: middle;"/>
+      <img loading="lazy" alt="visitor counter" border="0" src="https://counter1.optistats.ovh/private/freecounterstat.php?c=28qj1py2f4xx477zcg8eqg6uxusuha75" style="height: 12px; margin-left: 0.2rem; vertical-align: middle;"/>
       Views
      </a>
     </div>
@@ -1173,5 +1155,29 @@
     }
   });
   </script>
- </body>
+ 
+  <!-- Redirect Script (runs after DOM load) -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const targetHostname = 'scansg.com';
+    const currentHostname = window.location.hostname.toLowerCase();
+    const currentProtocol = window.location.protocol;
+    let pathname = window.location.pathname;
+    const search = window.location.search;
+    const hash = window.location.hash;
+
+    if (pathname.endsWith('/index.html')) pathname = '/';
+    else if (pathname !== '/' && !pathname.endsWith('/') && !pathname.endsWith('.html')) pathname += '/';
+
+    pathname = pathname.replace(/\/+/g, '/');
+
+    const needsRedirect = currentHostname !== targetHostname || currentProtocol !== 'https:' || window.location.pathname !== pathname;
+    if (needsRedirect) {
+      const newUrl = 'https://' + targetHostname + pathname + search + hash;
+      if (window.location.href !== newUrl) window.location.href = newUrl;
+    }
+  });
+  </script>
+</body>
 </html>
+
