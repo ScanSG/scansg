@@ -445,6 +445,27 @@ nav a:hover {
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" as="style">
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" as="style">
     
+<style>
+/* Consistent logo and ScanSG text sizing */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 900;
+  font-size: 2rem; /* same text size as index page */
+  color: white;
+  transition: transform 0.3s ease;
+}
+.logo img {
+  height: 36px !important;
+  width: 36px !important;
+  object-fit: contain;
+  vertical-align: middle;
+}
+.logo:hover {
+  transform: scale(1.05);
+}
+</style>
 </head>
 <body>
 <!-- Header -->
