@@ -2,7 +2,7 @@
 <html data-theme="light" lang="en-SG">
  <head>
   <meta charset="utf-8"/>
-  <link href="main.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="main.css"/>
   <meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
   <title>
    The Real Singapore Travel Guide 2025 &mdash; MRT Hacks, Hawker Food, Shopping, Singlish, Fines, GST Refunds &amp; Local Tips
@@ -31,25 +31,6 @@
    <meta content="ScanSG - The Real Singapore Guide 2025" name="twitter:title"/>
    <meta content="No tourist traps. No fluff. Just real Singapore tips from 4 years on the ground." name="twitter:description"/>
    <meta content="https://scansg.com/images/og-preview.jpg" name="twitter:image"/>
-
-  <!-- Apple Touch Icon -->
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-
-<!-- Favicon sizes -->
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-
-<!-- Web App Manifest -->
-<link rel="manifest" href="site.webmanifest">
-
-<!-- Safari pinned tab -->
-<link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#c62828">
-
-<!-- Mobile theme color -->
-<meta name="theme-color" content="#c62828">
-
-
-  
    <!-- Favicon -->
    <link href="images/favicon.png" rel="icon" sizes="32x32" type="image/png"/>
    <!-- Google AdSense -->
@@ -105,26 +86,25 @@
       --border: #ec9a9a;
       --header-bg: #111;
     }
-[data-theme="dark"] {
-  --text: #ffffff;        /* pure white for main text */
-  --gray: #dddddd;        /* lighter grey for secondary text */
-  --bg: #121212;
-  --light-gray: #1e1e1e;
-  --border: #444;
-}
+    [data-theme="dark"] {
+      --text: #eee;
+      --bg: #121212;
+      --light-gray: #1e1e1e;
+      --border: #444;
+    }
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
       scroll-behavior: smooth;
     }
-body {
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.6;
-  color: var(--text); /* ensures text color follows dark/light mode vars */
-  background: var(--bg);
-  transition: background 0.4s ease, color 0.4s ease;
-}
+    body {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      transition: background 0.4s ease, color 0.4s ease;
+    }
     h1, h2, h3, h4 {
       font-family: 'Montserrat', sans-serif;
       margin: 1.2rem 0 0.6rem;
@@ -512,12 +492,14 @@ body {
   <!-- Header -->
   <header>
    <div class="container header-content">
+    
     <a class="logo-link" href="index.html">
-     <div class="logo">
-      <img alt="ScanSG Logo" src="images/favicon.png"/>
-      ScanSG
-     </div>
+      <div class="logo">
+        <img alt="ScanSG Logo" src="images/favicon.png" width="36" height="36">
+        ScanSG
+      </div>
     </a>
+
     <button aria-label="Toggle menu" id="menuToggle" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; display: none;">
      ☰
     </button>
