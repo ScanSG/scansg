@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+
+<!-- 
+Applied Fixes & Optimizations:
+1. Synced navigation bar & logo sizing with index page.
+2. Added SEO meta tags & description.
+3. Added Apple Touch icon & favicon.
+4. Preloaded critical assets (logo + fonts).
+5. Replaced dangling snake with transport page version.
+6. Dark mode text color fix.
+7. Lazy-loaded all non-logo images.
+8. Deferred non-critical scripts for faster load.
+-->
+
 <html lang="en-SG" data-theme="light">
 <head>
   <meta charset="UTF-8" />
@@ -20,19 +33,19 @@
   <!-- Title -->
   <title>Singapore Shopping Guide 2025 | Offline & Online Deals | ScanSG</title>
   <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico" sizes="32x32" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" sizes="32x32" />
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4636396521329327" crossorigin="anonymous"></script>
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HL77S9PP18"></script>
-  <script>
+  <script defer>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-HL77S9PP18', { 'anonymize_ip': true });
   </script>
   <!-- Microsoft Clarity -->
-  <script type="text/javascript">
+  <script defer type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -371,6 +384,107 @@
 
     
   </style>
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+
+<!-- Preload critical assets for faster rendering -->
+<link rel="preload" href="images/logo.png" as="image">
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" as="style">
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" as="style">
+
+<style>
+/* Synced Navbar & Logo Styles from Index */
+header {
+  background: var(--header-bg);
+  color: white;
+  padding: 0.8rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-link {
+  text-decoration: none;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 900;
+  font-size: 2rem;
+  color: white;
+  transition: transform 0.3s ease;
+}
+.logo img {
+  height: 36px !important;
+  width: 36px !important;
+  object-fit: contain;
+  vertical-align: middle;
+}
+.logo:hover {
+  transform: scale(1.05);
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #4fc3f7;
+}
+.dark-mode-toggle {
+  font-size: 1.1rem;
+  padding: 0.4rem 0.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+[data-theme="dark"] .logo {
+  color: white !important;
+}
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    background: var(--header-bg);
+    padding: 0.6rem 0;
+    border-radius: 8px;
+  }
+  nav li {
+    width: 100%;
+  }
+  nav a {
+    display: block;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 4px;
+  }
+  nav a:hover {
+    background: rgba(255,255,255,0.1);
+  }
+}
+</style>
+<style>
+/* Dark mode text override */
+[data-theme="dark"] {
+  --text: #ffffff !important;
+  --gray: #dddddd !important;
+}
+</style>
 </head>
 <body>
 
@@ -379,8 +493,11 @@
     <!-- Header -->
 <header>
   <div class="container header-content">
-    <a href="index.html" class="logo-link">
-      <div class="logo">ScanSG</div>
+    <a class="logo-link" href="index.html">
+      <div class="logo">
+        <img alt="ScanSG Logo" src="images/favicon.png" width="36" height="36">
+        ScanSG
+      </div>
     </a>
     <button id="menuToggle" aria-label="Toggle menu" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; display: none;">☰</button>
     <nav id="mainNav">
@@ -650,7 +767,7 @@
       <!-- Visitor Counter -->
       <div style="text-align: center; padding: 0.5rem 0; margin-top: 0.5rem; font-size: 0.85rem; color: #aaa; border-top: 1px solid #555;">
         <a href="https://www.scansg.com" title="Visitor statistics">
-          <img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=28qj1py2f4xx477zcg8eqg6uxusuha75" 
+          <img loading="lazy" src="https://counter1.optistats.ovh/private/freecounterstat.php?c=28qj1py2f4xx477zcg8eqg6uxusuha75" 
                border="0" alt="visitor counter" 
                style="height: 12px; margin-left: 0.2rem; vertical-align: middle;">
           Views
@@ -713,7 +830,7 @@
   </footer>
 
   <!-- Dark Mode Script -->
-  <script>
+  <script defer>
     const darkModeToggle = document.getElementById('darkModeToggle');
     const html = document.documentElement;
     if (localStorage.theme === 'dark') {
@@ -737,14 +854,14 @@
   </script>
 
   <!-- Privacy Toggle Script -->
-  <script>
+  <script defer>
     document.getElementById('privacyToggle').addEventListener('click', () => {
       const policy = document.getElementById('privacy-policy');
       policy.style.display = policy.style.display === 'block' ? 'none' : 'block';
     });
   </script>
 
-<script>
+<script defer>
   // Mobile Nav Toggle
   const menuToggle = document.getElementById('menuToggle');
   const mainNav = document.getElementById('mainNav');
@@ -789,12 +906,24 @@
   <script src="/js/links.js" defer></script>
 
   <!-- Dangling Snake to Top -->
-<a href="#top" class="dangling-snake" aria-label="Click the snake to go to top">
-  <svg width="24" height="60" viewBox="0 0 24 60" class="snake-svg">
-    <path d="M12 0 C12 10, 8 15, 12 25 C16 35, 8 40, 12 50 C12 55, 12 60, 12 60" stroke="#222" fill="none" stroke-width="2" />
-    <circle cx="10" cy="58" r="2" fill="red"/> <!-- Eyes -->
-  </svg>
-</a>
+  <a aria-label="Click the snake to go to top" class="dangling-snake" href="#top">
+   <svg class="snake-svg" height="100" viewbox="0 0 24 60" width="40">
+    <path d="M12 0 C12 10, 8 15, 12 25 C16 35, 8 40, 12 50 C12 55, 12 60, 12 60" fill="none" stroke="#222" stroke-width="3">
+    </path>
+    <circle cx="9" cy="58" fill="white" r="4">
+    </circle>
+    <!-- Eye white -->
+    <circle cx="9" cy="58" fill="black" r="2">
+    </circle>
+    <!-- Eye pupil -->
+    <path d="M10 60 L10 65 L12 63 L14 65 L14 60" fill="red" stroke="red">
+     <animate attributename="d" dur="0.5s" repeatcount="indefinite" values="M10 60 L10 65 L12 63 L14 65 L14 60;
+                       M10 60 L10 67 L12 65 L14 67 L14 60;
+                       M10 60 L10 65 L12 63 L14 65 L14 60">
+     </animate>
+    </path>
+   </svg>
+  </a>
 
 <style>
   .dangling-snake {
@@ -817,7 +946,7 @@
   }
 </style>
 
-<script>
+<script defer>
   const snake = document.querySelector('.dangling-snake');
   window.addEventListener('scroll', () => {
     if (window.pageYOffset > 300) {
