@@ -20,13 +20,7 @@
 }
 
 /* Dark Mode Override */
-[data-theme="dark"] {
-  --text: #ffffff;           /* White text for better readability */
-  --gray: #dddddd;           /* Light gray for secondary text */
-  --bg: #121212;
-  --light-gray: #1e1e1e;
-  --border: #444;
-}
+
 
 /* Base Body Styles */
 body {
@@ -172,6 +166,7 @@ nav a:hover {
    (Merged from inline CSS in transport.html)
    ============================= */
 
+    
     /* Header */
 
 
@@ -202,6 +197,9 @@ nav a:hover {
       border-radius: 12px;
       border-left: 4px solid var(--accent);
     }
+    [data-theme="dark"] .transport-category {
+      background: #1e1e1e;
+    }
     .transport-category h3 {
       color: var(--main);
       font-size: 1.4rem;
@@ -229,6 +227,9 @@ nav a:hover {
       border-radius: 12px;
       font-style: italic;
     }
+    [data-theme="dark"] .tips-box {
+      background: #1a2e1a;
+    }
     .tips-box h3 {
       color: #2e7d32;
       margin-top: 0;
@@ -242,6 +243,9 @@ nav a:hover {
       font-size: 0.9rem;
       text-align: center;
     }
+    [data-theme="dark"] footer {
+      background: #000;
+    }
     footer a {
       color: #4fc3f7;
     }
@@ -253,6 +257,9 @@ nav a:hover {
       text-align: center;
       border-left: 4px solid #c62828;
     }
+    [data-theme="dark"] .next-step {
+      background: #2a1a1a;
+    }
     .next-step a {
       color: #c62828;
       font-weight: 600;
@@ -261,6 +268,9 @@ nav a:hover {
       font-size: 0.85rem;
       color: #888;
       margin-top: 0.6rem;
+    }
+    [data-theme="dark"] .disclaimer {
+      color: #666;
     }
     /* Privacy Policy */
     #privacyToggle {
@@ -344,6 +354,9 @@ nav a:hover {
     }
   }
   /* Mobile Nav Attractions Fix */
+  [data-theme="dark"] nav a[href="attractions.html"] {
+    color: #ef9a9a !important;
+  }
 
 .dangling-snake {
   position: fixed;
