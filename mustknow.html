@@ -704,7 +704,6 @@
         <li><a href="shopping.html">Deals</a></li>
         <li><a href="glossary.html">Singlish</a></li>
         <li><a href="penalties.html">CivicFee</a></li>
-        <li><a href="mustknow.html">MustKnow</a></li>
         <li><a href="nightlife.html">NightLife</a></li>
         <li>
           <a href="attractions.html" 
@@ -724,6 +723,7 @@
     </nav>
   </div>
 </header>
+
 <!-- Hero -->
 <section class="hero">
   <div class="container">
@@ -1572,5 +1572,28 @@
 }
 </script>
 
+
+<script defer>
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const html = document.documentElement;
+    if (localStorage.theme === 'dark') {
+      html.setAttribute('data-theme', 'dark');
+      darkModeToggle.textContent = '☀️';
+    } else {
+      html.setAttribute('data-theme', 'light');
+      darkModeToggle.textContent = '🌙';
+    }
+    darkModeToggle.addEventListener('click', () => {
+      if (html.getAttribute('data-theme') === 'dark') {
+        html.setAttribute('data-theme', 'light');
+        localStorage.theme = 'light';
+        darkModeToggle.textContent = '🌙';
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        localStorage.theme = 'dark';
+        darkModeToggle.textContent = '☀️';
+      }
+    });
+  </script>
 </body>
 </html>
