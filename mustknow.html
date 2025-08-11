@@ -446,6 +446,18 @@
     background: rgba(255,255,255,0.1);
   }
 }
+@media (max-width: 768px) {
+  #mainNav {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  #mainNav.open {
+    display: block !important;
+    max-height: 500px; /* enough to show all items */
+    transition: max-height 0.3s ease-in;
+  }
+}
 
     
   </style>
@@ -732,7 +744,7 @@
         ScanSG
       </div>
     </a>
-    <button id="menuToggle" aria-label="Toggle menu" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; display: none;">☰</button>
+    <button id="menuToggle" aria-label="Toggle menu" style="">☰</button>
     <nav id="mainNav">
       <ul>
        
@@ -1748,21 +1760,20 @@
 
   menuToggle.addEventListener('click', (e) => {
     e.stopPropagation();
-    mainNav.style.display = (mainNav.style.display === 'block') ? 'none' : 'block';
+    mainNav.classList.toggle('open');
   });
 
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
-      mainNav.style.display = 'none';
+      mainNav.classList.remove('open');
     });
   });
 
   document.addEventListener('click', (e) => {
     if (!mainNav.contains(e.target) && !menuToggle.contains(e.target)) {
-      mainNav.style.display = 'none';
+      mainNav.classList.remove('open');
     }
   });
 </script>
-
 </body>
 </html>
