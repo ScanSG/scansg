@@ -687,6 +687,41 @@
 </style>
 </head>
 <body>
+
+<button id="darkModeToggle" aria-label="Toggle dark mode" class="darkmode-floating">🌙</button>
+<style>
+.darkmode-floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 999;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .darkmode-floating {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+.darkmode-floating:hover {
+  background-color: var(--accent-hover, #444);
+  transform: scale(1.05);
+}
+</style>
+
 <header>
   <div class="container header-content">
     <a class="logo-link" href="index.html">
@@ -1595,5 +1630,114 @@
       }
     });
   </script>
+<!-- Dangling Snake to Top -->
+  <a aria-label="Click the snake to go to top" class="dangling-snake" href="#top">
+   <svg class="snake-svg" height="100" viewbox="0 0 24 60" width="40">
+    <path d="M12 0 C12 10, 8 15, 12 25 C16 35, 8 40, 12 50 C12 55, 12 60, 12 60" fill="none" stroke="#222" stroke-width="3">
+    </path>
+    <circle cx="9" cy="58" fill="white" r="4">
+    </circle>
+    <!-- Eye white -->
+    <circle cx="9" cy="58" fill="black" r="2">
+    </circle>
+    <!-- Eye pupil -->
+    <path d="M10 60 L10 65 L12 63 L14 65 L14 60" fill="red" stroke="red">
+     <animate attributename="d" dur="0.5s" repeatcount="indefinite" values="M10 60 L10 65 L12 63 L14 65 L14 60;
+                       M10 60 L10 67 L12 65 L14 67 L14 60;
+                       M10 60 L10 65 L12 63 L14 65 L14 60">
+     </animate>
+    </path>
+   </svg>
+  </a>
+
+<style>
+  .dangling-snake {
+    position: fixed;
+    left: 20px;
+    top: -100px;
+    z-index: 100;
+    opacity: 0;
+    transition: top 0.4s ease, opacity 0.3s ease;
+  }
+
+  .dangling-snake.visible {
+    top: 80px;
+    opacity: 0.6;
+  }
+
+  .dangling-snake:hover .snake-svg {
+    stroke: #c62828;
+    stroke-width: 2.5;
+  }
+</style>
+
+<script defer>
+  const snake = document.querySelector('.dangling-snake');
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      snake.classList.add('visible');
+    } else {
+      snake.classList.remove('visible');
+    }
+  });
+</script>  
+
+  
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://scansg.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Fines & Penalties",
+      "item": "https://scansg.com/penalties.html"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is chewing gum illegal in Singapore?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chewing gum is restricted for sale, but small amounts for personal use are allowed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I smoke in public in Singapore?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Smoking is only allowed in designated areas. Fines apply for smoking in prohibited places."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I litter in Singapore?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Littering can result in a fine or corrective work order for repeat offenders."
+      }
+    }
+  ]
+}
+</script>
+
+
 </body>
 </html>
