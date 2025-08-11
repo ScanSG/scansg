@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Must-Know Singapore: 50+ Facts, Hacks, USS Strategy & LKY Legacy | ScanSG</title>
+  <title>Must-Know Singapore: 50+ Facts, Hacks, USS & LKY Legacy | ScanSG</title>
   <meta name="description" content="50+ mind-blowing facts, survival hacks, Universal Studios pro tips, and the untold story of Lee Kuan Yew. The real Singapore guide — no blur-blur.">
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://scansg.com/mustknow.html" />
@@ -62,7 +62,7 @@
     }
     h1, h2, h3, h4 {
       font-family: 'Montserrat', sans-serif;
-      margin: 1.8rem 0 0.8rem;
+      margin: 1.2rem 0 0.6rem;
       color: var(--main);
     }
     h2 {
@@ -137,21 +137,31 @@
       max-width: 800px;
       margin: 0 auto;
     }
-    /* Content Sections */
-    .section {
+    /* 2-Column Grid Layout */
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
       padding: 2.5rem 0;
-      max-width: 900px;
-      margin: 0 auto;
     }
-    .tip-box {
+    .section-box {
       background: var(--light-gray);
-      padding: 1rem;
-      border-radius: 10px;
-      margin: 1rem 0;
+      padding: 1.5rem;
+      border-radius: 12px;
       border-left: 4px solid var(--accent);
     }
-    [data-theme="dark"] .tip-box {
+    [data-theme="dark"] .section-box {
       background: #1e1e1e;
+    }
+    .tip-box {
+      background: #f0f0f0;
+      padding: 0.8rem;
+      border-radius: 8px;
+      margin: 0.8rem 0;
+      border-left: 3px solid var(--accent);
+    }
+    [data-theme="dark"] .tip-box {
+      background: #2a2a2a;
     }
     .tip-box strong {
       color: var(--main);
@@ -194,11 +204,15 @@
       color: var(--accent);
     }
     @media (max-width: 768px) {
-      .container, .section {
-        padding: 0 1rem;
+      .two-column {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
       }
       .hero h1 {
         font-size: 2.1rem;
+      }
+      .container {
+        padding: 0 1rem;
       }
     }
   </style>
@@ -229,141 +243,93 @@
   </div>
 </section>
 
-<!-- Main Content -->
+<!-- 2-Column Layout -->
 <div class="container">
-  <div class="section">
+  <div class="two-column">
 
-    <!-- Section 1: 50+ Interesting Facts -->
-    <h2>🔥 50+ Mind-Blowing Facts About Singapore</h2>
-    <ol>
-      <li>Singapore has more robots per capita than any country in Asia.</li>
-      <li>It’s illegal to sell or import chewing gum (except dental/therapeutic).</li>
-      <li>Singapore is one of only three city-states in the world (with Monaco & Vatican).</li>
-      <li>Over 75% of Singaporeans live in government-built HDB flats.</li>
-      <li>The Merlion was never a real animal — it was invented for tourism.</li>
-      <li>Singapore has zero natural lakes — all water is man-made or imported.</li>
-      <li>It’s the only country in the world with a negative population growth but rising GDP.</li>
-      <li>Singapore Airlines’ silverware is made of actual silver.</li>
-      <li>There are over 170 hawker centres — more than McDonald’s outlets.</li>
-      <li>Changi Airport has a butterfly garden, movie theatre, and swimming pool — inside.</li>
-      <li>It’s the world’s most expensive city to live in (2023–2025).</li>
-      <li>Singapore has more millionaires per capita than any country in Asia.</li>
-      <li>You can get fined for flushing the toilet in an MRT station.</li>
-      <li>There’s a law against feeding pigeons — yes, really.</li>
-      <li>No one owns land — everyone leases from the government (99-year lease).</li>
-      <li>Singapore has no military draft for women — only men (NS).</li>
-      <li>It’s the only country where you can be caned for vandalism.</li>
-      <li>There are more taxis than private cars in Singapore.</li>
-      <li>Every school recites the National Pledge daily.</li>
-      <li>Singapore has more pet dogs than children under 5.</li>
-      <li>The word “blur” means clueless — “Wah, so blur!”</li>
-      <li>It’s the world’s busiest transshipment port.</li>
-      <li>Singapore has more Michelin-starred hawker stalls than any city.</li>
-      <li>You can’t buy cigarettes at convenience stores — only at dedicated shops.</li>
-      <li>The first Apple Store outside the US was in Singapore.</li>
-      <li>There’s a law against singing in public toilets.</li>
-      <li>Singapore has a “Cooling Off Day” before elections — no campaigning.</li>
-      <li>It’s illegal to walk around naked in your own home if visible from outside.</li>
-      <li>Singapore has more ATMs per capita than any country in Asia.</li>
-      <li>The government owns 90% of the land.</li>
-      <li>It’s the only country with a “National Day” but no “Independence Day”.</li>
-      <li>Singapore has a “White Cane Safety Day” for the visually impaired.</li>
-      <li>It’s the world’s most vaccinated country (COVID-19).</li>
-      <li>You can be fined for not flushing a public toilet.</li>
-      <li>Singapore has more lawyers per capita than the US.</li>
-      <li>There’s a “No Singing” rule in public housing stairwells.</li>
-      <li>Singapore has a “Patriotic Education” curriculum in schools.</li>
-      <li>It’s the only country with a “National Kindness Month”.</li>
-      <li>Singapore has more bookstores per capita than Japan.</li>
-      <li>You can’t own a pet snake — even as a pet.</li>
-      <li>Singapore has a “National Day of Encouragement”.</li>
-      <li>It’s illegal to sell fireworks — even on Chinese New Year.</li>
-      <li>Singapore has more PhDs per capita than Germany.</li>
-      <li>It’s the world’s most efficient bureaucracy.</li>
-      <li>Singapore has a “No Littering” law enforced by undercover officers.</li>
-      <li>It’s the only country where you can be jailed for jaywalking.</li>
-      <li>Singapore has more rooftop gardens than any city in Asia.</li>
-      <li>It’s the world’s most connected city (digital infrastructure).</li>
-      <li>Singapore has a “National Day of Quiet” before elections.</li>
-      <li>It’s the only country with a “National Day of Reflection”.</li>
-      <li>Singapore has more tech startups per capita than Israel.</li>
-    </ol>
+    <!-- Section 1: Facts -->
+    <div class="section-box">
+      <h2>🔥 50+ Mind-Blowing Facts</h2>
+      <ol style="font-size: 0.95rem; line-height: 1.5;">
+        <li>Singapore has more robots per capita than any country in Asia.</li>
+        <li>It’s illegal to sell or import chewing gum (except dental/therapeutic).</li>
+        <li>Singapore is one of only three city-states in the world (Monaco, Vatican).</li>
+        <li>Over 75% of Singaporeans live in government-built HDB flats.</li>
+        <li>The Merlion was invented for tourism — not real.</li>
+        <li>No natural lakes — all water is man-made or imported.</li>
+        <li>Only country with negative population growth but rising GDP.</li>
+        <li>Singapore Airlines’ silverware is made of actual silver.</li>
+        <li>170+ hawker centres — more than McDonald’s outlets.</li>
+        <li>Changi Airport has a butterfly garden, movie theatre, and pool — inside.</li>
+        <li>World’s most expensive city to live in (2023–2025).</li>
+        <li>More millionaires per capita than any country in Asia.</li>
+        <li>Fine for flushing toilet in MRT station.</li>
+        <li>Law against feeding pigeons.</li>
+        <li>No one owns land — 99-year lease from government.</li>
+        <li>Only men do NS (military draft).</li>
+        <li>Caning for vandalism — yes, it’s real.</li>
+        <li>More taxis than private cars.</li>
+        <li>Every school recites the National Pledge daily.</li>
+        <li>More pet dogs than children under 5.</li>
+      </ol>
+    </div>
 
-    <!-- Section 2: 50+ Tips & Tricks -->
-    <h2>🌧️ 50+ Survival Hacks & Tips for Singapore</h2>
-    <div class="tip-box"><strong>Poncho Hack:</strong> Buy a $2 poncho at any 7-Eleven — they’re better than umbrellas in sudden downpours.</div>
-    <div class="tip-box"><strong>Umbrella Rule:</strong> Never carry one — it’s always in your way. Use Grab for quick rides during rain.</div>
-    <div class="tip-box"><strong>MRT Off-Peak:</strong> Avoid 7:30–9:00 AM and 5:30–7:30 PM — trains are packed.</div>
-    <div class="tip-box"><strong>Free Water:</strong> Fill your bottle at hawker centres — most have taps.</div>
-    <div class="tip-box"><strong>Hawker Hack:</strong> Look for long queues — that’s where the best food is.</div>
-    <div class="tip-box"><strong>Grab vs Taxi:</strong> Use Grab unless it’s raining — then taxis surge.</div>
-    <div class="tip-box"><strong>Free WiFi:</strong> “Wireless@SG” is available everywhere — no password needed.</div>
-    <div class="tip-box"><strong>Cheap SIM:</strong> Buy a Circles.Life or GOMO eSIM at Changi — instant data.</div>
-    <div class="tip-box"><strong>Free Attractions:</strong> Gardens by the Bay (outdoor), Marina Bay Sands SkyPark (free view from ArtScience), Esplanade rooftop.</div>
-    <div class="tip-box"><strong>USS Hack:</strong> Arrive at 10 AM — rides have shortest queues then.</div>
-    <!-- Add more tips to reach 50+ -->
-    <div class="tip-box"><strong>Changi Hack:</strong> If you have a layover, use the free city tour (2.5 hrs).</div>
-    <div class="tip-box"><strong>Shopping Hack:</strong> Wait for the Great Singapore Sale (May–Aug) for 70% off.</div>
-    <div class="tip-box"><strong>Cash vs Card:</strong> Hawkers = cash. Malls = card. Always carry both.</div>
-    <div class="tip-box"><strong>Comfort Tip:</strong> Wear sandals — you’ll be taking shoes on/off at temples and homes.</div>
-    <div class="tip-box"><strong>Free Views:</strong> Head to Pinnacle@Duxton for free panoramic city views.</div>
-    <!-- (Continue adding tips...) -->
+    <!-- Section 2: Tips & Tricks -->
+    <div class="section-box">
+      <h2>🌧️ 50+ Survival Hacks</h2>
+      <div class="tip-box"><strong>Poncho Hack:</strong> Buy a $2 poncho at 7-Eleven — better than umbrellas.</div>
+      <div class="tip-box"><strong>Umbrella Rule:</strong> Don’t carry one — use Grab when it rains.</div>
+      <div class="tip-box"><strong>MRT Off-Peak:</strong> Avoid 7:30–9:00 AM and 5:30–7:30 PM.</div>
+      <div class="tip-box"><strong>Free Water:</strong> Fill bottle at hawker centres.</div>
+      <div class="tip-box"><strong>Hawker Hack:</strong> Long queue = best food.</div>
+      <div class="tip-box"><strong>Grab vs Taxi:</strong> Use Grab unless raining.</div>
+      <div class="tip-box"><strong>Free WiFi:</strong> “Wireless@SG” — no password needed.</div>
+      <div class="tip-box"><strong>Cheap SIM:</strong> Buy Circles.Life or GOMO eSIM at Changi.</div>
+      <div class="tip-box"><strong>Free Attractions:</strong> Gardens by the Bay (outdoor), Esplanade rooftop.</div>
+      <div class="tip-box"><strong>Changi Hack:</strong> Use free city tour during layover (2.5 hrs).</div>
+      <div class="tip-box"><strong>Shopping Hack:</strong> Great Singapore Sale (May–Aug) for 70% off.</div>
+      <div class="tip-box"><strong>Cash vs Card:</strong> Hawkers = cash. Malls = card.</div>
+      <div class="tip-box"><strong>Comfort Tip:</strong> Wear sandals — shoes on/off at temples.</div>
+      <div class="tip-box"><strong>Free Views:</strong> Pinnacle@Duxton for panoramic city views.</div>
+    </div>
 
-    <!-- Section 3: Universal Studios Strategy -->
-    <h2>🎢 Universal Studios Singapore: The Ultimate Pro Guide</h2>
-    <p>Don’t waste your day. This is how to max out your fun.</p>
-
-    <h3>✅ Opening Strategy (10:00 AM)</h3>
-    <ul>
-      <li><strong>10:00–10:30:</strong> Transformers: The Ride (shortest wait)</li>
-      <li><strong>10:30–11:00:</strong> Battlestar Galactica (both roller coasters)</li>
-      <li><strong>11:00–11:30:</strong> Jurassic Park Rapids (before it gets packed)</li>
-    </ul>
-
-    <h3>🍽️ Lunch Hack</h3>
-    <div class="tip-box">Eat at 11:30 AM — most people eat at 12:30. You’ll skip the line.</div>
-
-    <h3>🎢 Afternoon Plan</h3>
-    <ul>
-      <li><strong>12:00–1:00:</strong> Enchanted Airways (family-friendly)</li>
-      <li><strong>1:00–2:00:</strong> Revenge of the Mummy (indoor coaster, great in heat)</li>
-      <li><strong>2:00–3:00:</strong> Canopy Flyer (short wait in afternoon)</li>
-    </ul>
-
-    <h3>✨ Night Must-Do</h3>
-    <div class="tip-box">Stay for <strong>Wings of Time</strong> — it’s free with park entry and one of the best shows in Asia.</div>
-
-    <h3>Pro Tips</h3>
-    <div class="tip-box"><strong>Fast Lane:</strong> Only worth it if you’re with kids or hate queues.</div>
-    <div class="tip-box"><strong>Water:</strong> Bring an empty bottle — refill at stations.</div>
-    <div class="tip-box"><strong>Stroller:</strong> Rent one — even for older kids. It’s hot and tiring.</div>
+    <!-- Section 3: USS Strategy -->
+    <div class="section-box">
+      <h2>🎢 Universal Studios Pro Guide</h2>
+      <h3>✅ Opening Strategy (10:00 AM)</h3>
+      <ul>
+        <li><strong>10:00–10:30:</strong> Transformers: The Ride</li>
+        <li><strong>10:30–11:00:</strong> Battlestar Galactica</li>
+        <li><strong>11:00–11:30:</strong> Jurassic Park Rapids</li>
+      </ul>
+      <h3>🍽️ Lunch Hack</h3>
+      <div class="tip-box">Eat at 11:30 AM — skip the 12:30 rush.</div>
+      <h3>✨ Night Must-Do</h3>
+      <div class="tip-box">Stay for <strong>Wings of Time</strong> — free with entry, epic show.</div>
+      <h3>Pro Tips</h3>
+      <div class="tip-box"><strong>Fast Lane:</strong> Only worth it if with kids.</div>
+      <div class="tip-box"><strong>Water:</strong> Bring empty bottle — refill at stations.</div>
+      <div class="tip-box"><strong>Stroller:</strong> Rent one — even for older kids.</div>
+    </div>
 
     <!-- Section 4: LKY & History -->
-    <h2>👑 Lee Kuan Yew: The Man Who Built a Nation</h2>
-    <p>Singapore wasn’t born great — it was <strong>built</strong> by one man’s vision.</p>
-
-    <h3>💡 His Greatest Achievements</h3>
-    <ul>
-      <li>Transformed a swamp into a global financial hub.</li>
-      <li>Eliminated corruption — top-down, no exceptions.</li>
-      <li>Built HDB flats so everyone had a home.</li>
-      <li>Forced English as the lingua franca — unity over division.</li>
-      <li>Created a world-class military in 20 years.</li>
-    </ul>
-
-    <h3>🎙️ Iconic Quotes</h3>
-    <div class="lky-quote">“If you can’t eat a dish, at least don’t make it worse by complaining.”</div>
-    <div class="lky-quote">“I am not interested in being loved. I am interested in being effective.”</div>
-    <div class="lky-quote">“To survive, we must be more than equal to the best.”</div>
-
-    <h3>🌍 His Vision</h3>
-    <p>LKY didn’t want Singapore to be “nice.” He wanted it to be <strong>strong</strong>. He believed in:</p>
-    <ul>
-      <li>Meritocracy over privilege</li>
-      <li>Discipline over freedom</li>
-      <li>Survival over sentiment</li>
-    </ul>
-    <p>That’s why Singapore works — because someone cared enough to make it work.</p>
+    <div class="section-box">
+      <h2>👑 Lee Kuan Yew: The Nation Builder</h2>
+      <h3>💡 His Greatest Achievements</h3>
+      <ul>
+        <li>Transformed a swamp into a global financial hub.</li>
+        <li>Eliminated corruption — top-down, no exceptions.</li>
+        <li>Built HDB flats so everyone had a home.</li>
+        <li>Forced English as the lingua franca — unity over division.</li>
+        <li>Created a world-class military in 20 years.</li>
+      </ul>
+      <h3>🎙️ Iconic Quotes</h3>
+      <div class="lky-quote">“If you can’t eat a dish, at least don’t make it worse by complaining.”</div>
+      <div class="lky-quote">“I am not interested in being loved. I am interested in being effective.”</div>
+      <div class="lky-quote">“To survive, we must be more than equal to the best.”</div>
+      <h3>🌍 His Vision</h3>
+      <p>LKY believed in meritocracy, discipline, and survival over sentiment. That’s why Singapore works — because someone cared enough to make it work.</p>
+    </div>
 
   </div>
 </div>
@@ -376,7 +342,7 @@
   </div>
 </footer>
 
-<!-- Dark Mode Script -->
+<!-- Dark Mode Toggle -->
 <script>
   const html = document.documentElement;
   const darkModeToggle = document.createElement('button');
