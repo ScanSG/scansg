@@ -67,8 +67,8 @@ header {
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;family=Open+Sans&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
 <!-- Open Graph / Social -->
 <meta content="ScanSG - The Real Singapore Guide 2025 | No Blur-Blur" property="og:title"/>
-<meta content="Local food, transport hacks, Singlish, GST refunds &amp; cultural tips. Real advice from someone who lives here." property="og:description">
-<meta content="https://scansg.com/images/og-preview.jpg" property="og:image"/>
+<meta content="Local food, transport hacks, Singlish, GST refunds &amp; cultural tips. Real advice from someone who lives here." property="og:description"/>
+<meta content="https://scansg.com/images/og-preview.jpg" property="og:image">
 <meta content="https://scansg.com" property="og:url"/>
 <meta content="website" property="og:type"/>
 <meta content="ScanSG" property="og:site_name"/>
@@ -78,7 +78,7 @@ header {
 <meta content="@ScanSG365" name="twitter:site"/>
 <meta content="ScanSG - The Real Singapore Guide 2025" name="twitter:title"/>
 <meta content="No tourist traps. No fluff. Just real Singapore tips from 4 years on the ground." name="twitter:description"/>
-<meta content="https://scansg.com/images/og-preview.jpg" name="twitter:image">
+<meta content="https://scansg.com/images/og-preview.jpg" name="twitter:image"/>
 <!-- Favicon -->
 <link href="images/favicon.png" rel="icon" sizes="32x32" type="image/png"/>
 <!-- Google AdSense -->
@@ -538,7 +538,6 @@ header {
   color: white !important;
 }
    </style>
-</meta>
 <!-- Mobile nav + darkmode CSS injected by helper -->
 <style>
 /* Mobile Nav */
@@ -734,7 +733,35 @@ header {
     top: 40px !important; /* Adjust for shorter header */
   }
 }
-</style></head>
+</style>
+<style>
+.scroll-btn {
+  position: fixed;
+  right: 1rem;
+  background: var(--accent);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: opacity 0.3s ease, background 0.3s ease;
+  z-index: 9999;
+}
+.scroll-btn:hover {
+  background: var(--accent-hover, #444);
+}
+.scroll-btn.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+#scrollTopBtn { bottom: 4.5rem; }
+#scrollBottomBtn { bottom: 1rem; }
+</style>
+</head>
 <body>
 <button aria-label="Toggle dark mode" class="darkmode-floating" id="darkModeToggle">🌙</button>
 <!-- Header -->
@@ -1512,6 +1539,36 @@ document.addEventListener('DOMContentLoaded', function () {
     nav.classList.toggle('open');
     this.textContent = nav.classList.contains('open') ? '✖' : '☰';
   });
+</script>
+<div class="scroll-btn hidden" id="scrollTopBtn">↑</div><div class="scroll-btn hidden" id="scrollBottomBtn">↓</div>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  const scrollBottomBtn = document.getElementById('scrollBottomBtn');
+
+  function toggleScrollButtons() {
+    if (window.scrollY > 100) {
+      scrollTopBtn.classList.remove('hidden');
+    } else {
+      scrollTopBtn.classList.add('hidden');
+    }
+    if (window.innerHeight + window.scrollY < document.body.offsetHeight - 100) {
+      scrollBottomBtn.classList.remove('hidden');
+    } else {
+      scrollBottomBtn.classList.add('hidden');
+    }
+  }
+
+  window.addEventListener('scroll', toggleScrollButtons);
+
+  scrollTopBtn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  scrollBottomBtn.addEventListener('click', function() {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  });
+});
 </script>
 </body>
 </html>
