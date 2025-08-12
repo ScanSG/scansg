@@ -68,8 +68,8 @@ header {
 <!-- Open Graph / Social -->
 <meta content="ScanSG - The Real Singapore Guide 2025 | No Blur-Blur" property="og:title"/>
 <meta content="Local food, transport hacks, Singlish, GST refunds &amp; cultural tips. Real advice from someone who lives here." property="og:description"/>
-<meta content="https://scansg.com/images/og-preview.jpg" property="og:image">
-<meta content="https://scansg.com" property="og:url"/>
+<meta content="https://scansg.com/images/og-preview.jpg" property="og:image"/>
+<meta content="https://scansg.com" property="og:url">
 <meta content="website" property="og:type"/>
 <meta content="ScanSG" property="og:site_name"/>
 <meta content="en_SG" property="og:locale"/>
@@ -734,14 +734,14 @@ header {
   }
 }
 </style>
-<style>
+<style><style>
 .scroll-btn {
   position: fixed;
-  right: 1rem;
+  right: 4.5rem; /* shifted left to avoid dark mode button */
   background: var(--accent);
   color: white;
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -750,6 +750,7 @@ header {
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
   transition: opacity 0.3s ease, background 0.3s ease;
   z-index: 9999;
+  font-size: 1.1rem;
 }
 .scroll-btn:hover {
   background: var(--accent-hover, #444);
@@ -760,7 +761,7 @@ header {
 }
 #scrollTopBtn { bottom: 4.5rem; }
 #scrollBottomBtn { bottom: 1rem; }
-</style>
+</style></style>
 </head>
 <body>
 <button aria-label="Toggle dark mode" class="darkmode-floating" id="darkModeToggle">🌙</button>
