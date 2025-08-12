@@ -1426,5 +1426,14 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 <!-- End injected JS -->
 
+
+<script>
+  document.getElementById('menuToggle').addEventListener('click', function() {
+    var nav = document.getElementById('mainNav');
+    nav.classList.toggle('open');
+    this.textContent = nav.classList.contains('open') ? '✖' : '☰';
+  });
+</script>
+
 </body>
 </html>
