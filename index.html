@@ -632,6 +632,48 @@ html[data-theme="dark"], body[data-theme="dark"] {
 }
 </style>
 
+
+<style>
+@media (max-width: 768px) {
+  #mainNav {
+    display: block !important;
+    visibility: visible !important;
+    overflow: hidden !important;
+  }
+  #mainNav ul {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 0.5rem 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    list-style: none !important;
+  }
+  #mainNav li {
+    display: block !important;
+    width: 100% !important;
+  }
+  #mainNav a, #mainNav .dark-mode-toggle {
+    display: block !important;
+    padding: 0.6rem 1rem !important;
+    font-size: 1rem !important;
+    text-align: left !important;
+    border-radius: 6px !important;
+    transition: background 0.25s ease !important;
+    width: 100% !important;
+    color: white !important;
+  }
+  #mainNav a:hover, #mainNav .dark-mode-toggle:hover {
+    background: rgba(255,255,255,0.1) !important;
+  }
+  #mainNav.open {
+    max-height: 500px !important;
+    opacity: 1 !important;
+    display: block !important;
+    visibility: visible !important;
+  }
+}
+</style>
+
 </head>
  <body>
   <!-- Header -->
