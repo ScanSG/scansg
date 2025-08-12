@@ -9,6 +9,47 @@ html[data-theme="dark"], body[data-theme="dark"] {
   --text: #ffffff !important;
   --gray: #dddddd !important;
 }
+
+/* Dark mode variables */
+:root {
+  --main: #c62828;
+  --accent: #1565c0;
+  --text: #222;
+  --bg: #ffffff;
+  --gray: #555;
+  --light-gray: #f9f9f9;
+  --border: #ec9a9a;
+  --header-bg: #111;
+}
+[data-theme="dark"] {
+  --text: #eeeeee;
+  --bg: #121212;
+  --gray: #bbbbbb;
+  --light-gray: #1e1e1e;
+  --border: #444;
+  --header-bg: #000;
+}
+body {
+  color: var(--text);
+  background: var(--bg);
+}
+header {
+  background: var(--header-bg);
+}
+#mainNav a {
+  color: white;
+}
+#mainNav a:hover {
+  background: rgba(255,255,255,0.1);
+}
+.section-box {
+  background: var(--light-gray);
+  border: 1px solid var(--border);
+}
+.section-box h2, .section-box h3 {
+  color: var(--main);
+}
+
 </style>
   
 <!-- Favicon and Apple Touch Icons -->
@@ -1382,19 +1423,12 @@ document.addEventListener('DOMContentLoaded', function () {
       const next = current === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', next);
       try { localStorage.setItem('theme', next); } catch (e) {}
-      // optionally change icon
-      // darkModeToggle.textContent = next === 'dark' ? '☀️' : '🌙';
+      darkModeToggle.textContent = next === 'dark' ? '☀️' : '🌙';
     });
+    // Set icon on load
+    const initial = document.documentElement.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
+    darkModeToggle.textContent = initial;
   }
-
-  // Apply saved theme on load (if any)
-  try {
-    const saved = localStorage.getItem('theme');
-    if (saved) {
-      document.documentElement.setAttribute('data-theme', saved);
-    }
-  } catch (e) {}
-});
 </script>
 <!-- End injected JS -->
 
