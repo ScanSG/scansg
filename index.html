@@ -9,107 +9,6 @@ html[data-theme="dark"], body[data-theme="dark"] {
   --text: #ffffff !important;
   --gray: #dddddd !important;
 }
-/* Mobile Nav */
-@media (max-width: 768px) {
-  .header-content {
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  #menuToggle {
-    display: block;
-    font-size: 1.6rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: white;
-    margin-left: auto;
-  }
-
-  #mainNav {
-    display: none;
-    position: absolute;
-    top: 60px; /* just below header */
-    right: 10px;
-    background: var(--header-bg);
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    width: auto;
-    min-width: 160px;
-    z-index: 999;
-  }
-
-  #mainNav ul {
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-
-  #mainNav li {
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
-
-  #mainNav li:last-child {
-    border-bottom: none;
-  }
-
-  #mainNav a {
-    display: block;
-    padding: 0.7rem 1rem;
-    text-align: left;
-    font-size: 1rem;
-    color: white;
-  }
-
-  #mainNav a:hover {
-    background: rgba(255,255,255,0.1);
-  }
-}
-@media
-
-@media (min-width: 769px) {
-  #mainNav {
-    display: block !important;
-    position: static !important;
-    max-height: none !important;
-    background: none !important;
-    box-shadow: none !important;
-    width: auto !important;
-  }
-  #mainNav ul {
-    flex-direction: row !important;
-    gap: 1.5rem;
-  }
-  #menuToggle {
-    display: none !important;
-  }
-}
-
-.darkmode-floating {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: var(--accent);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  z-index: 999;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-.darkmode-floating {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-    bottom: 15px;
-    right: 15px;
-  }
 </style>
   
 <!-- Favicon and Apple Touch Icons -->
@@ -515,6 +414,70 @@ html[data-theme="dark"], body[data-theme="dark"] {
         padding: 1.5rem 1rem 1rem;
       }
     }
+/* Mobile Nav Toggle */
+#menuToggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    padding: 0.6rem 1rem;
+  }
+
+  #menuToggle {
+    display: block;
+    order: 2;
+    width: 100%;
+    text-align: right;
+  }
+
+  #mainNav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: var(--header-bg);
+    padding: 0.6rem 0;
+    border-radius: 8px;
+    order: 1;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+
+  nav li {
+    width: 100%;
+   list-style: none !important;
+  }
+
+  nav a {
+    display: block;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 4px;
+  }
+
+  nav a:hover {
+    background: rgba(255,255,255,0.1);
+  }
+
+  #mainNav[style="display:none"] {
+    display: none !important;
+  }
+}
+   
+
+[data-theme="dark"] .logo {
+  color: white !important;
+}
+   
+
 /* Ensure horizontal menu on desktop */
 @media (min-width: 769px) {
   nav ul {
@@ -542,14 +505,18 @@ html[data-theme="dark"], body[data-theme="dark"] {
 [data-theme="dark"] .logo {
   color: white !important;
 }
-   /* Mobile Nav */
+   </style>
+  </meta>
+ 
+<!-- Mobile nav + darkmode CSS injected by helper -->
+<style>
+/* Mobile Nav */
 @media (max-width: 768px) {
   .header-content {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
   }
-
   #menuToggle {
     display: block;
     font-size: 1.6rem;
@@ -559,49 +526,50 @@ html[data-theme="dark"], body[data-theme="dark"] {
     color: white;
     margin-left: auto;
   }
-
   #mainNav {
     display: none;
     position: absolute;
-    top: 60px; /* just below header */
+    top: 60px;
     right: 10px;
     background: var(--header-bg);
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    width: auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
     min-width: 160px;
     z-index: 999;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.28s cubic-bezier(.25,.8,.25,1);
   }
-
+  #mainNav.open {
+    display: block !important;
+    max-height: 640px;
+    transition: max-height 0.28s cubic-bezier(.25,.8,.25,1);
+  }
   #mainNav ul {
     flex-direction: column;
     padding: 0;
     margin: 0;
     list-style: none;
   }
-
   #mainNav li {
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
   }
-
   #mainNav li:last-child {
     border-bottom: none;
   }
-
   #mainNav a {
     display: block;
-    padding: 0.7rem 1rem;
+    padding: 0.75rem 1rem;
     text-align: left;
     font-size: 1rem;
     color: white;
   }
-
   #mainNav a:hover {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.06);
   }
 }
-@media
 
+/* Desktop nav always visible override */
 @media (min-width: 769px) {
   #mainNav {
     display: block !important;
@@ -612,14 +580,17 @@ html[data-theme="dark"], body[data-theme="dark"] {
     width: auto !important;
   }
   #mainNav ul {
+    display: flex !important;
     flex-direction: row !important;
     gap: 1.5rem;
+    align-items: center;
   }
   #menuToggle {
     display: none !important;
   }
 }
 
+/* Floating Dark Mode Button */
 .darkmode-floating {
   position: fixed;
   bottom: 20px;
@@ -632,22 +603,27 @@ html[data-theme="dark"], body[data-theme="dark"] {
   height: 50px;
   font-size: 1.5rem;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  z-index: 999;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.16);
+  z-index: 1000;
+  transition: transform 0.18s ease, background-color 0.18s ease;
 }
-.darkmode-floating {
+@media (max-width: 768px) {
+  .darkmode-floating {
     width: 40px;
     height: 40px;
     font-size: 1.2rem;
-    bottom: 15px;
-    right: 15px;
+    bottom: 16px;
+    right: 16px;
   }
+}
+.darkmode-floating:hover { transform: scale(1.05); }
 </style>
-  </meta>
- </head>
+<!-- End injected CSS -->
+
+</head>
  <body>
 <button id="darkModeToggle" aria-label="Toggle dark mode" class="darkmode-floating">🌙</button>
+
   <!-- Header -->
   <header>
    <div class="container header-content">
@@ -659,9 +635,7 @@ html[data-theme="dark"], body[data-theme="dark"] {
       </div>
     </a>
 
-    <button aria-label="Toggle menu" id="menuToggle" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; display: none;" aria-expanded="false">
-     ☰
-    </button>
+    <button id="menuToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
     <nav id="mainNav">
      <ul>
       <li>
@@ -709,8 +683,7 @@ html[data-theme="dark"], body[data-theme="dark"] {
         🎯 Attractions
        </a>
       </li>
-      
-     </ul>
+      </ul>
     </nav>
    </div>
   </header>
@@ -734,108 +707,7 @@ html[data-theme="dark"], body[data-theme="dark"] {
   [data-theme="dark"] nav a[href="attractions.html"] {
     color: #ef9a9a !important;
   }
-  /* Mobile Nav */
-@media (max-width: 768px) {
-  .header-content {
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  #menuToggle {
-    display: block;
-    font-size: 1.6rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: white;
-    margin-left: auto;
-  }
-
-  #mainNav {
-    display: none;
-    position: absolute;
-    top: 60px; /* just below header */
-    right: 10px;
-    background: var(--header-bg);
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    width: auto;
-    min-width: 160px;
-    z-index: 999;
-  }
-
-  #mainNav ul {
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-
-  #mainNav li {
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
-
-  #mainNav li:last-child {
-    border-bottom: none;
-  }
-
-  #mainNav a {
-    display: block;
-    padding: 0.7rem 1rem;
-    text-align: left;
-    font-size: 1rem;
-    color: white;
-  }
-
-  #mainNav a:hover {
-    background: rgba(255,255,255,0.1);
-  }
-}
-@media
-
-@media (min-width: 769px) {
-  #mainNav {
-    display: block !important;
-    position: static !important;
-    max-height: none !important;
-    background: none !important;
-    box-shadow: none !important;
-    width: auto !important;
-  }
-  #mainNav ul {
-    flex-direction: row !important;
-    gap: 1.5rem;
-  }
-  #menuToggle {
-    display: none !important;
-  }
-}
-
-.darkmode-floating {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: var(--accent);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  z-index: 999;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-.darkmode-floating {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-    bottom: 15px;
-    right: 15px;
-  }
-</style>
+  </style>
   <!-- Hero Section -->
   <section class="hero">
    <div class="container">
@@ -1384,108 +1256,7 @@ html[data-theme="dark"], body[data-theme="dark"] {
   25% { transform: rotate(3deg); }
   75% { transform: rotate(-3deg); }
 }
-  /* Mobile Nav */
-@media (max-width: 768px) {
-  .header-content {
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  #menuToggle {
-    display: block;
-    font-size: 1.6rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: white;
-    margin-left: auto;
-  }
-
-  #mainNav {
-    display: none;
-    position: absolute;
-    top: 60px; /* just below header */
-    right: 10px;
-    background: var(--header-bg);
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    width: auto;
-    min-width: 160px;
-    z-index: 999;
-  }
-
-  #mainNav ul {
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-
-  #mainNav li {
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
-
-  #mainNav li:last-child {
-    border-bottom: none;
-  }
-
-  #mainNav a {
-    display: block;
-    padding: 0.7rem 1rem;
-    text-align: left;
-    font-size: 1rem;
-    color: white;
-  }
-
-  #mainNav a:hover {
-    background: rgba(255,255,255,0.1);
-  }
-}
-@media
-
-@media (min-width: 769px) {
-  #mainNav {
-    display: block !important;
-    position: static !important;
-    max-height: none !important;
-    background: none !important;
-    box-shadow: none !important;
-    width: auto !important;
-  }
-  #mainNav ul {
-    flex-direction: row !important;
-    gap: 1.5rem;
-  }
-  #menuToggle {
-    display: none !important;
-  }
-}
-
-.darkmode-floating {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: var(--accent);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  z-index: 999;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-.darkmode-floating {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-    bottom: 15px;
-    right: 15px;
-  }
-</style>
+  </style>
   <script>
    const snake = document.querySelector('.dangling-snake');
   window.addEventListener('scroll', () => {
@@ -1554,23 +1325,78 @@ html[data-theme="dark"], body[data-theme="dark"] {
 </script>
 
 
+<!-- Menu & Dark-mode JS injected by helper -->
 <script>
-document.getElementById('menuToggle').addEventListener('click', function () {
-  const nav = document.getElementById('mainNav');
-  nav.classList.toggle('open');
-  const expanded = this.getAttribute('aria-expanded') === 'true' || false;
-  this.setAttribute('aria-expanded', !expanded);
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.getElementById('menuToggle');
+  const mainNav = document.getElementById('mainNav');
+  const darkModeToggle = document.getElementById('darkModeToggle');
+
+  // defensive guards
+  if (menuToggle && mainNav) {
+    // Click to open/close
+    menuToggle.addEventListener('click', function (e) {
+      mainNav.classList.toggle('open');
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', (!expanded).toString());
+      // change icon
+      this.textContent = mainNav.classList.contains('open') ? '✖' : '☰';
+    });
+
+    // Close on link click in mobile view
+    document.querySelectorAll('#mainNav a').forEach(link => {
+      link.addEventListener('click', function () {
+        if (window.innerWidth <= 768) {
+          mainNav.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          menuToggle.textContent = '☰';
+        }
+      });
+    });
+
+    // Also close menu if the user taps outside it (mobile)
+    document.addEventListener('click', function (ev) {
+      if (window.innerWidth <= 768 && mainNav.classList.contains('open')) {
+        const isClickInside = mainNav.contains(ev.target) || menuToggle.contains(ev.target);
+        if (!isClickInside) {
+          mainNav.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          menuToggle.textContent = '☰';
+        }
+      }
+    });
+
+    // keep behaviour correct on resize
+    window.addEventListener('resize', function () {
+      if (window.innerWidth >= 769) {
+        mainNav.classList.remove('open');
+        if (menuToggle) menuToggle.textContent = '☰';
+      }
+    });
+  }
+
+  // Dark mode toggle
+  if (darkModeToggle) {
+    darkModeToggle.addEventListener('click', function () {
+      const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      // optionally change icon
+      // darkModeToggle.textContent = next === 'dark' ? '☀️' : '🌙';
+    });
+  }
+
+  // Apply saved theme on load (if any)
+  try {
+    const saved = localStorage.getItem('theme');
+    if (saved) {
+      document.documentElement.setAttribute('data-theme', saved);
+    }
+  } catch (e) {}
 });
-document.getElementById('darkModeToggle').addEventListener('click', function () {
-  const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-  document.documentElement.setAttribute('data-theme', theme);
-  localStorage.setItem('theme', theme);
-});
-(function () {
-  const savedTheme = localStorage.getItem('theme') || 'light';
-  document.documentElement.setAttribute('data-theme', savedTheme);
-})();
 </script>
+<!-- End injected JS -->
 
 </body>
 </html>
