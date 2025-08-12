@@ -9,6 +9,88 @@ html[data-theme="dark"], body[data-theme="dark"] {
   --text: #ffffff !important;
   --gray: #dddddd !important;
 }
+/* Mobile Nav */
+@media (max-width: 768px) {
+  .header-content {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #menuToggle {
+    display: block;
+    font-size: 1.6rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    margin-left: auto;
+  }
+
+  #mainNav {
+    display: none;
+    position: absolute;
+    top: 60px; /* just below header */
+    right: 10px;
+    background: var(--header-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: auto;
+    min-width: 160px;
+    z-index: 999;
+  }
+
+  #mainNav ul {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  #mainNav li {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  #mainNav li:last-child {
+    border-bottom: none;
+  }
+
+  #mainNav a {
+    display: block;
+    padding: 0.7rem 1rem;
+    text-align: left;
+    font-size: 1rem;
+    color: white;
+  }
+
+  #mainNav a:hover {
+    background: rgba(255,255,255,0.1);
+  }
+}
+@media
+.darkmode-floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 999;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.darkmode-floating {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    bottom: 15px;
+    right: 15px;
+  }
 </style>
   
 <!-- Favicon and Apple Touch Icons -->
@@ -414,70 +496,6 @@ html[data-theme="dark"], body[data-theme="dark"] {
         padding: 1.5rem 1rem 1rem;
       }
     }
-/* Mobile Nav Toggle */
-#menuToggle {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .header-content {
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    padding: 0.6rem 1rem;
-  }
-
-  #menuToggle {
-    display: block;
-    order: 2;
-    width: 100%;
-    text-align: right;
-  }
-
-  #mainNav {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background: var(--header-bg);
-    padding: 0.6rem 0;
-    border-radius: 8px;
-    order: 1;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  }
-
-  nav ul {
-    flex-direction: column;
-    width: 100%;
-    gap: 0;
-  }
-
-  nav li {
-    width: 100%;
-   list-style: none !important;
-  }
-
-  nav a {
-    display: block;
-    padding: 0.6rem 1rem;
-    font-size: 1rem;
-    text-align: center;
-    border-radius: 4px;
-  }
-
-  nav a:hover {
-    background: rgba(255,255,255,0.1);
-  }
-
-  #mainNav[style="display:none"] {
-    display: none !important;
-  }
-}
-   
-
-[data-theme="dark"] .logo {
-  color: white !important;
-}
-   
-
 /* Ensure horizontal menu on desktop */
 @media (min-width: 769px) {
   nav ul {
@@ -505,248 +523,7 @@ html[data-theme="dark"], body[data-theme="dark"] {
 [data-theme="dark"] .logo {
   color: white !important;
 }
-   </style>
-  </meta>
- <style>
-    :root {
-      --main: #c62828;
-      --accent: #1565c0;
-      --text: #222;
-      --bg: #fff;
-      --gray: #555;
-      --light-gray: #f9f9f9;
-      --border: #ec9a9a;
-      --header-bg: #111;
-    }
-    [data-theme="dark"] {
-      --text: #eee;
-      --bg: #121212;
-      --light-gray: #1e1e1e;
-      --border: #444;
-    }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: 'Open Sans', sans-serif;
-      line-height: 1.6;
-      color: var(--text);
-      background: var(--bg);
-      transition: background 0.4s ease, color 0.4s ease;
-    }
-    h1, h2, h3, h4 {
-      font-family: 'Montserrat', sans-serif;
-      margin: 1.2rem 0 0.6rem;
-      color: var(--main);
-    }
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
-    /* Header */
-    header {
-      background: var(--header-bg);
-      color: white;
-      padding: 0.8rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo-link {
-      text-decoration: none;
-    }
-    .logo {
-      font-weight: 700;
-      font-size: 1.4rem;
-      color: white;
-    }
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 1.5rem;
-    }
-    nav a {
-      color: white;
-      font-size: 0.95rem;
-      font-weight: 600;
-    }
-    nav a:hover {
-      color: #4fc3f7;
-    }
-    /* Intro */
-    .penalties-intro {
-      padding: 3rem 1rem;
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .penalties-intro h1 {
-      font-size: 2.4rem;
-      color: var(--main);
-    }
-    .penalties-intro p {
-      font-size: 1.1rem;
-      color: var(--gray);
-      margin: 0.6rem auto;
-    }
-    /* Penalties Table */
-    .penalties-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 2rem 0;
-      font-size: 0.95rem;
-    }
-    .penalties-table th, .penalties-table td {
-      padding: 0.8rem;
-      border: 1px solid #ddd;
-      text-align: left;
-    }
-    .penalties-table th {
-      background-color: var(--main);
-      color: white;
-    }
-    .penalties-table tr:nth-child(even) {
-      background-color: #f9f9f9;
-    }
-    [data-theme="dark"] .penalties-table tr:nth-child(even) {
-      background-color: #1e1e1e;
-    }
-    [data-theme="dark"] .penalties-table th, .penalties-table td {
-      border-color: #444;
-    }
-    .penalties-table td:first-child {
-      font-weight: 600;
-      color: var(--text);
-    }
-    /* Tips Box */
-    .tips-box {
-      margin: 3rem 0;
-      padding: 1.8rem;
-      background: #e8f5e9;
-      border-left: 4px solid #4caf50;
-      border-radius: 12px;
-      font-style: italic;
-    }
-    [data-theme="dark"] .tips-box {
-      background: #1a2e1a;
-    }
-    .tips-box h3 {
-      color: #2e7d32;
-      margin-top: 0;
-    }
-    /* Warning Box */
-    .warning-box {
-      background: #fff3cd;
-      border: 1px solid #ffeaa7;
-      padding: 1rem;
-      border-radius: 8px;
-      margin: 2.6rem 0;
-      font-size: 1.05rem;
-    }
-    .warning-box ul {
-      margin: 0.5rem 0 0 1.5rem;
-    }
-    /* Affiliate CTA */
-    .affiliate-cta {
-      margin: 2.6rem 0;
-      padding: 1.6rem;
-      background: #f0f8ff;
-      border-left: 4px solid #1565c0;
-      border-radius: 8px;
-    }
-    [data-theme="dark"] .affiliate-cta {
-      background: #0a1a2a;
-    }
-    .affiliate-cta h3 {
-      color: #1565c0;
-      margin: 0 0 0.6rem;
-    }
-    /* Footer */
-    footer {
-      margin-top: 4rem;
-      padding: 2.4rem 1rem;
-      background: #1a1a1a;
-      color: #aaa;
-      font-size: 0.9rem;
-      text-align: center;
-    }
-    [data-theme="dark"] footer {
-      background: #000;
-    }
-    footer a {
-      color: #4fc3f7;
-    }
-    .next-step {
-      margin: 2.4rem 0;
-      padding: 1.6rem;
-      background: #fff3e0;
-      border-radius: 12px;
-      text-align: center;
-      border-left: 4px solid #c62828;
-    }
-    [data-theme="dark"] .next-step {
-      background: #2a1a1a;
-    }
-    .next-step a {
-      color: #c62828;
-      font-weight: 600;
-    }
-    .disclaimer {
-      font-size: 0.85rem;
-      color: #888;
-      margin-top: 0.6rem;
-    }
-    [data-theme="dark"] .disclaimer {
-      color: #666;
-    }
-    /* Privacy Policy */
-    #privacyToggle {
-      background: none;
-      border: none;
-      color: #888;
-      font-size: 0.85rem;
-      cursor: pointer;
-      text-decoration: underline;
-    }
-    #privacy-policy {
-      display: none;
-      margin-top: 1.5rem;
-      padding: 1.4rem;
-      background: #232323;
-      color: #ddd;
-      border-radius: 8px;
-      text-align: left;
-      font-size: 0.92rem;
-      line-height: 1.6;
-      border: 1px solid #444;
-    }
-    @media (max-width: 768px) {
-      .penalties-intro h1 {
-        font-size: 2rem;
-      }
-      .penalties-table th, .penalties-table td {
-        padding: 0.6rem;
-        font-size: 0.9rem;
-      }
-    }
-
-    /* Mobile Nav */
+   /* Mobile Nav */
 @media (max-width: 768px) {
   .header-content {
     flex-wrap: nowrap;
@@ -804,250 +581,7 @@ html[data-theme="dark"], body[data-theme="dark"] {
     background: rgba(255,255,255,0.1);
   }
 }
-@media (max-width: 768px) {
-  #mainNav {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-  }
-  #mainNav.open {
-    display: block !important;
-    max-height: 500px; /* enough to show all items */
-    transition: max-height 0.3s ease-in;
-  }
-}
-
-    
-  </style>
-<style>
-[data-theme="dark"] {
-  --text: #ffffff !important;
-  --gray: #dddddd !important;
-}
-</style>
-<style>
-    :root {
-      --main: #c62828;
-      --accent: #1565c0;
-      --text: #222;
-      --bg: #fff;
-      --gray: #555;
-      --light-gray: #f9f9f9;
-      --border: #ec9a9a;
-      --header-bg: #111;
-    }
-    [data-theme="dark"] {
-      --text: #eee;
-      --bg: #121212;
-      --light-gray: #1e1e1e;
-      --border: #444;
-    }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: 'Open Sans', sans-serif;
-      line-height: 1.6;
-      color: var(--text);
-      background: var(--bg);
-      transition: background 0.4s ease, color 0.4s ease;
-    }
-    h1, h2, h3, h4 {
-      font-family: 'Montserrat', sans-serif;
-      margin: 1.2rem 0 0.6rem;
-      color: var(--main);
-    }
-    h2 {
-      font-size: 1.8rem;
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 0.4rem;
-    }
-    h3 {
-      font-size: 1.4rem;
-      color: var(--accent);
-    }
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-    /* Header */
-    header {
-      background: var(--header-bg);
-      color: white;
-      padding: 0.8rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo-link {
-      text-decoration: none;
-    }
-    .logo {
-      font-weight: 700;
-      font-size: 1.4rem;
-      color: white;
-    }
-    nav a {
-      color: white;
-      font-size: 0.95rem;
-      font-weight: 600;
-      margin: 0 0.8rem;
-    }
-    nav a:hover {
-      color: #4fc3f7;
-    }
-    /* Hero */
-    .hero {
-      text-align: center;
-      padding: 3rem 1rem;
-      background: linear-gradient(135deg, #fff3e0 0%, #f3e5f5 100%);
-      margin: 0;
-      border-bottom: 1px solid var(--border);
-    }
-    [data-theme="dark"] .hero {
-      background: linear-gradient(135deg, #2a1a1a 0%, #1a1a2a 100%);
-      border-color: #444;
-    }
-    .hero h1 {
-      font-size: 2.6rem;
-      margin: 0.5rem 0;
-      color: var(--main);
-    }
-    .hero p {
-      font-size: 1.1rem;
-      color: var(--gray);
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    /* 2-Column Grid Layout */
-    .two-column {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2.5rem;
-      padding: 2.5rem 0;
-    }
-    .section-box {
-      background: var(--light-gray);
-      padding: 1.5rem;
-      border-radius: 12px;
-      border-left: 4px solid var(--accent);
-    }
-    [data-theme="dark"] .section-box {
-      background: #1e1e1e;
-    }
-
-    .tip-inline {
-  display: block;
-  font-size: 0.9rem;
-  color: var(--accent);
-  margin-top: 0.4rem;
-  line-height: 1.4;
-}
-[data-theme="dark"] .tip-inline {
-  color: #9bb7e0;
-}
-    
-    .tip-box {
-      background: #f0f0f0;
-      padding: 0.8rem;
-      border-radius: 8px;
-      margin: 0.8rem 0;
-      border-left: 3px solid var(--accent);
-    }
-    [data-theme="dark"] .tip-box {
-      background: #2a2a2a;
-    }
-    .tip-box strong {
-      color: var(--main);
-    }
-    .uss-tip {
-      background: #fff8e1;
-      border-left-color: #ff8f00 !important;
-    }
-    [data-theme="dark"] .uss-tip {
-      background: #2a2418;
-    }
-    .lky-quote {
-      font-style: italic;
-      color: #c62828;
-      border-left: 3px solid #c62828;
-      padding-left: 1rem;
-      margin: 1rem 0;
-    }
-    /* Footer */
-    footer {
-      margin-top: 4rem;
-      padding: 2rem 1rem;
-      background: #1a1a1a;
-      color: #aaa;
-      text-align: center;
-      font-size: 0.9rem;
-    }
-    [data-theme="dark"] footer {
-      background: #000;
-      color: #888;
-    }
-    footer a {
-      color: #4fc3f7;
-    }
-    .back-link {
-      display: block;
-      margin: 1.5rem auto;
-      text-align: center;
-      font-weight: 600;
-      color: var(--accent);
-    }
-    @media (max-width: 768px) {
-      .two-column {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-      .hero h1 {
-        font-size: 2.1rem;
-      }
-      .container {
-        padding: 0 1rem;
-      }
-    }
-  </style>
-<style>
-  .mindblow-section ul {
-    font-size: 0.95rem;
-    line-height: 1.6; /* taller lines for better readability */
-    padding-left: 1.2rem;
-    margin: 0;
-  }
-  .mindblow-section ul li {
-    margin-bottom: 0.6rem; /* space between bullets */
-  }
-  .mindblow-section h3 {
-    font-size: 1.05rem;
-    margin-top: 1rem;
-    color: var(--accent);
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 0.3rem;
-    font-weight: 600;
-  }
-  @media (max-width: 768px) {
-    .mindblow-section ul li {
-      margin-bottom: 0.8rem;
-    }
-  }
-</style>
-<style>
+@media
 .darkmode-floating {
   position: fixed;
   bottom: 20px;
@@ -1064,105 +598,88 @@ html[data-theme="dark"], body[data-theme="dark"] {
   z-index: 999;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
-@media (max-width: 768px) {
-  .darkmode-floating {
+.darkmode-floating {
     width: 40px;
     height: 40px;
     font-size: 1.2rem;
     bottom: 15px;
     right: 15px;
   }
-}
-.darkmode-floating:hover {
-  background-color: var(--accent-hover, #444);
-  transform: scale(1.05);
-}
 </style>
-<style>
-  .dangling-snake {
-    position: fixed;
-    left: 20px;
-    top: -100px;
-    z-index: 100;
-    opacity: 0;
-    transition: top 0.4s ease, opacity 0.3s ease;
-  }
-
-  .dangling-snake.visible {
-    top: 80px;
-    opacity: 0.6;
-  }
-
-  .dangling-snake:hover .snake-svg {
-    stroke: #c62828;
-    stroke-width: 2.5;
-  }
-</style>
-
-<!-- Open Graph Tags -->
-<meta property="og:title" content="The Real Singapore Travel Guide 2025">
-<meta property="og:description" content="Plan your Singapore trip with real local tips — MRT hacks, hawker food, shopping deals, Singlish, attractions, fines, and GST refund advice for 2025.">
-<meta property="og:image" content="https://scansg.com/images/social-preview.jpg">
-<meta property="og:url" content="https://scansg.com/">
-<meta property="og:type" content="website">
-
-<!-- Twitter Card Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The Real Singapore Travel Guide 2025">
-<meta name="twitter:description" content="Plan your Singapore trip with real local tips — MRT hacks, hawker food, shopping deals, Singlish, attractions, fines, and GST refund advice for 2025.">
-<meta name="twitter:image" content="https://scansg.com/images/social-preview.jpg">
-
-<!-- Schema.org JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "TravelGuide",
-  "name": "The Real Singapore Travel Guide 2025",
-  "description": "Plan your Singapore trip with real local tips — MRT hacks, hawker food, shopping deals, Singlish, attractions, fines, and GST refund advice for 2025.",
-  "url": "https://scansg.com/",
-  "image": "https://scansg.com/images/social-preview.jpg"
-}
-</script>
-
-</head>
+  </meta>
+ </head>
  <body>
+<button id="darkModeToggle" aria-label="Toggle dark mode" class="darkmode-floating">🌙</button>
   <!-- Header -->
   <header>
-  <div class="container header-content">
+   <div class="container header-content">
+    
     <a class="logo-link" href="index.html">
       <div class="logo">
-        <img loading="lazy" alt="" src="images/favicon.png" width="36" height="36">
+        <img alt="ScanSG Logo" src="images/favicon.png" width="36" height="36">
         ScanSG
       </div>
     </a>
-    <button id="menuToggle" aria-label="Toggle menu" style="">☰</button>
+
+    <button aria-label="Toggle menu" id="menuToggle" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; display: none;" aria-expanded="false">
+     ☰
+    </button>
     <nav id="mainNav">
-      <ul>
-       
-        <li><a href="transport.html">Commute</a></li>
-        <li><a href="food.html">Roam</a></li>
-        <li><a href="shopping.html">Deals</a></li>
-        <li><a href="glossary.html">Singlish</a></li>
-        <li><a href="penalties.html">CivicFee</a></li>
-        <li><a href="nightlife.html">NightLife</a></li>
-        <li>
-          <a href="attractions.html" 
-             style="
+     <ul>
+      <li>
+       <a href="transport.html">
+        Commute
+       </a>
+      </li>
+      <li>
+       <a href="food.html">
+        Roam
+       </a>
+      </li>
+      <li>
+       <a href="shopping.html">
+        Deals
+       </a>
+      </li>
+      <li>
+       <a href="glossary.html">
+        Singlish
+       </a>
+      </li>
+      <li>
+       <a href="penalties.html">
+        CivicFee
+       </a>
+      </li>
+      <li>
+<a href="mustknow.html">
+        MustKnow
+       </a>
+      </li>
+      <li>
+       <a href="nightlife.html">
+        NightLife
+       </a>
+      </li>
+      <li>
+       <a href="attractions.html" onmouseout="this.style.color='#ff8a80'; this.style.transform='none';" onmouseover="this.style.color='#c62828'; this.style.transform='scale(1.05)';" style="
                position: relative;
                color: #ff8a80 !important;
                font-weight: 700;
                animation: pulse 2s infinite;
-             "
-             onmouseover="this.style.color='#c62828'; this.style.transform='scale(1.05)';"
-             onmouseout="this.style.color='#ff8a80'; this.style.transform='none';">
-            🎯 Attractions
-          </a>
-        </li>
-        </ul>
+             ">
+        🎯 Attractions
+       </a>
+      </li>
+      <li>
+       <button class="dark-mode-toggle" id="darkModeToggle">
+        🌙
+       </button>
+      </li>
+     </ul>
     </nav>
-  </div>
-</header>
+   </div>
+  </header>
   <!-- Pulse Animation -->
   <style>
    @keyframes pulse {
@@ -1183,7 +700,89 @@ html[data-theme="dark"], body[data-theme="dark"] {
   [data-theme="dark"] nav a[href="attractions.html"] {
     color: #ef9a9a !important;
   }
-  </style>
+  /* Mobile Nav */
+@media (max-width: 768px) {
+  .header-content {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #menuToggle {
+    display: block;
+    font-size: 1.6rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    margin-left: auto;
+  }
+
+  #mainNav {
+    display: none;
+    position: absolute;
+    top: 60px; /* just below header */
+    right: 10px;
+    background: var(--header-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: auto;
+    min-width: 160px;
+    z-index: 999;
+  }
+
+  #mainNav ul {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  #mainNav li {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  #mainNav li:last-child {
+    border-bottom: none;
+  }
+
+  #mainNav a {
+    display: block;
+    padding: 0.7rem 1rem;
+    text-align: left;
+    font-size: 1rem;
+    color: white;
+  }
+
+  #mainNav a:hover {
+    background: rgba(255,255,255,0.1);
+  }
+}
+@media
+.darkmode-floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 999;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.darkmode-floating {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    bottom: 15px;
+    right: 15px;
+  }
+</style>
   <!-- Hero Section -->
   <section class="hero">
    <div class="container">
@@ -1732,7 +1331,89 @@ html[data-theme="dark"], body[data-theme="dark"] {
   25% { transform: rotate(3deg); }
   75% { transform: rotate(-3deg); }
 }
-  </style>
+  /* Mobile Nav */
+@media (max-width: 768px) {
+  .header-content {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #menuToggle {
+    display: block;
+    font-size: 1.6rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    margin-left: auto;
+  }
+
+  #mainNav {
+    display: none;
+    position: absolute;
+    top: 60px; /* just below header */
+    right: 10px;
+    background: var(--header-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: auto;
+    min-width: 160px;
+    z-index: 999;
+  }
+
+  #mainNav ul {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  #mainNav li {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  #mainNav li:last-child {
+    border-bottom: none;
+  }
+
+  #mainNav a {
+    display: block;
+    padding: 0.7rem 1rem;
+    text-align: left;
+    font-size: 1rem;
+    color: white;
+  }
+
+  #mainNav a:hover {
+    background: rgba(255,255,255,0.1);
+  }
+}
+@media
+.darkmode-floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 999;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.darkmode-floating {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    bottom: 15px;
+    right: 15px;
+  }
+</style>
   <script>
    const snake = document.querySelector('.dangling-snake');
   window.addEventListener('scroll', () => {
@@ -1800,318 +1481,22 @@ html[data-theme="dark"], body[data-theme="dark"] {
 }
 </script>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4636396521329327" crossorigin="anonymous"></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HL77S9PP18"></script>
-<script defer>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-HL77S9PP18', { 'anonymize_ip': true });
-  </script>
-<script defer type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "sp1isxvzim");
-  </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the best time of year to visit Singapore?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Singapore is a year-round destination, but February to April generally offers the most pleasant weather with less rainfall."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is Singapore safe for solo travelers?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, Singapore is considered one of the safest cities in the world, with low crime rates and excellent public security."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What currency is used in Singapore?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The Singapore Dollar (SGD) is the official currency. Credit cards are widely accepted, but small cash is useful for hawker centres and small shops."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I drink tap water in Singapore?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, Singapore's tap water meets WHO standards and is safe to drink directly."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I need a visa to visit Singapore?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Visa requirements depend on your nationality. Many countries enjoy visa-free entry for 30 to 90 days."
-      }
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the best time of year to visit Singapore?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Singapore is a year-round destination, but February to April generally offers the most pleasant weather with less rainfall."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is Singapore safe for solo travelers?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, Singapore is considered one of the safest cities in the world, with low crime rates and excellent public security."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What currency is used in Singapore?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The Singapore Dollar (SGD) is the official currency. Credit cards are widely accepted, but small cash is useful for hawker centres and small shops."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I drink tap water in Singapore?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, Singapore's tap water meets WHO standards and is safe to drink directly."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I need a visa to visit Singapore?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Visa requirements depend on your nationality. Many countries enjoy visa-free entry for 30 to 90 days."
-      }
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the best time of year to visit Singapore?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Singapore is a year-round destination, but February to April generally offers the most pleasant weather with less rainfall."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is Singapore safe for solo travelers?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, Singapore is considered one of the safest cities in the world, with low crime rates and excellent public security."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What currency is used in Singapore?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The Singapore Dollar (SGD) is the official currency. Credit cards are widely accepted, but small cash is useful for hawker centres and small shops."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I drink tap water in Singapore?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, Singapore's tap water meets WHO standards and is safe to drink directly."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I need a visa to visit Singapore?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Visa requirements depend on your nationality. Many countries enjoy visa-free entry for 30 to 90 days."
-      }
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the best time of year to visit Singapore?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Singapore is a year-round destination, but February to April generally offers the most pleasant weather with less rainfall."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is Singapore safe for solo travelers?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, Singapore is considered one of the safest cities in the world, with low crime rates and excellent public security."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What currency is used in Singapore?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The Singapore Dollar (SGD) is the official currency. Credit cards are widely accepted, but small cash is useful for hawker centres and small shops."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I drink tap water in Singapore?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, Singapore's tap water meets WHO standards and is safe to drink directly."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I need a visa to visit Singapore?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Visa requirements depend on your nationality. Many countries enjoy visa-free entry for 30 to 90 days."
-      }
-    }
-  ]
-}
-</script>
-<script defer>
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    const html = document.documentElement;
-    if (localStorage.theme === 'dark') {
-      html.setAttribute('data-theme', 'dark');
-      darkModeToggle.textContent = '☀️';
-    } else {
-      html.setAttribute('data-theme', 'light');
-      darkModeToggle.textContent = '🌙';
-    }
-    darkModeToggle.addEventListener('click', () => {
-      if (html.getAttribute('data-theme') === 'dark') {
-        html.setAttribute('data-theme', 'light');
-        localStorage.theme = 'light';
-        darkModeToggle.textContent = '🌙';
-      } else {
-        html.setAttribute('data-theme', 'dark');
-        localStorage.theme = 'dark';
-        darkModeToggle.textContent = '☀️';
-      }
-    });
-  </script>
-<script defer>
-  const snake = document.querySelector('.dangling-snake');
-  window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {
-      snake.classList.add('visible');
-    } else {
-      snake.classList.remove('visible');
-    }
-  });
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://scansg.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Fines & Penalties",
-      "item": "https://scansg.com/penalties.html"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is chewing gum illegal in Singapore?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Chewing gum is restricted for sale, but small amounts for personal use are allowed."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I smoke in public in Singapore?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Smoking is only allowed in designated areas. Fines apply for smoking in prohibited places."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What happens if I litter in Singapore?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Littering can result in a fine or corrective work order for repeat offenders."
-      }
-    }
-  ]
-}
-</script>
+
 <script>
-  const menuToggle = document.getElementById('menuToggle');
-  const mainNav = document.getElementById('mainNav');
-  const navLinks = mainNav.querySelectorAll('a');
-
-  menuToggle.addEventListener('click', (e) => {
-    e.stopPropagation();
-    mainNav.classList.toggle('open');
-  });
-
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      mainNav.classList.remove('open');
-    });
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!mainNav.contains(e.target) && !menuToggle.contains(e.target)) {
-      mainNav.classList.remove('open');
-    }
-  });
+document.getElementById('menuToggle').addEventListener('click', function () {
+  document.getElementById('mainNav').classList.toggle('open');
+});
+document.getElementById('darkModeToggle').addEventListener('click', function () {
+  const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+});
+// Apply saved theme on load
+(function () {
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+})();
 </script>
+
 </body>
 </html>
